@@ -1,0 +1,493 @@
+(c) 2006-2007 by Georgy Berdyshev
+(c) 1998-2006 by Albert L Faber
+
+CDex is released under the terms of the GNU General Public License (GPL) 3
+
+
+// Version 1.70 beta 3
+[ 1532259 ] CDDB HTTP request fixes
+[ 1573057 ] CDex crashes converting more than 7 tracks from mp3 to wav
+[ 1536382 ] Non-Unicode Version Still Requires Unicode To Be Initialized
+[ 1587446 ] Hangs when ripping tracks with long names
+[ 1517458 ] Hangs after cancel
+[ 1525110 ] Track offset problems
+[ 1538182 ] Filename preview lists %2 (album) as "title"
+[ 1569301 ] Cue sheet only contains 1 index
+[ 1587610 ] flac mono does not work
+[ 1584743 ] Crash on exit
+[ 1537774 ] freedb import for artist with 1 letter name goes wrong
+[ 611910 ] CDex hanging if temp folder is deleted
+[ 865443 ] Crash if invalid files are dropped..
+[ 637974 ] CDex writes invalid id3v2 tag
+
+// Version 1.70 beta 2
+Update to lame_enc.dll version 3.97 beta 2
+Update to vorbis version with aoTuVb4.51
+Update links to cdexos.sourceforge.net
+Fixed problem with FLAC encoder
+Add support to write vorbis comment tags into FLAC files
+Initial support for MusicBrainz
+Many bug fixes
+Update copyright statements
+
+
+// Version 1.70 beta 1
+Updated to GNU based winamp plugins
+Support conversion of WAV files > 2 Gig
+Updated Lame encoder
+Updated Ogg encoder libraries
+Add patches CDex 1.60++ (cue sheet generation)
+Updated several language files
+UTF-8 support for CDDB
+Initial support for FLAC encoder
+
+// Version 1.50
+Updated some language files
+Updated copyright strings 
+Fixed eject button not disabled during extracting
+Fixed VBR settings with alt-preset options
+Fixed bug in the resample function when resampling stereo streams
+Fixed bug in reading from WinampDB
+Fixed bug when writing ID3 tag if file existing MP3 file was overwritten
+
+// Version 1.50 b10
+Fixed problem: GOGO / Blade encoder DLL was not found properly.
+Fixed some problems with Native NT SCSI library option
+Fixed error handling when ASPI drivers were not loaded correctly
+CD-Text info was not automatically read when no in_cdda.cbd file was configured
+Fixed problem in file name builder, when tags (e.g. year) are empty but used in the file name builder string
+Switched back to Lame encoder DLL version 3.92 (because of buggy 3.93 release)
+Don't rip the last 10 sectors of the last track of a multi session CD to avoid hangups
+Set MaxBitrate to 320 kbps when alt-presets are selected
+Improved speed when closing the settings dialog box 
+Better error handling in CDDB Batch command
+
+// Version 1.50 B9
+Fixed ASPI driver loading problems
+CDRom settings were not saved to INI file when CDrip.dll could not be initialized
+Added option to create lower or uper case file names (added l or u and c pre-qualifier)
+upgraded to LAME encoder DLL version 3.93
+Don't display warnings when OGG Vorbis encoder DLLs are missing
+Added file TYPE option in Open File dialog boxes
+Improved reading CD-Text information
+No restart of CDex required if ASPI transport layer is toggled between "Native NTSCI library" and true ASPI
+Fixed tooltip text cut-off problem
+
+// Version 1.50 B8
+Exclude ' character to determine word in modify track name
+Fixed problem: on some CDs the track length was not calculated correctly
+Updated several language file
+Selecting track after editting a couple of track names was not working properly
+Don't auto shutdown when abort/cancel button has been pressed
+Switch back to sorted genre combo list, to ease the search of genres
+Removed CDDB default servers, since they won't work anymore
+Removed several language files, added a special WEB page with latest language files
+Added TLEN (track length) ID3V2 tag field
+Made the buttons in the right hand side toolbar a bit more descriptive
+Reset track offset (to zero) when inserting a new CD
+Fixed problems with FLAC external encoder, however, still have to specify the output filename,
+thus the proper parameter string is %"1 -o %2" and set the extension to FLAC
+Don't write default ogg vorbis comment tag when the comment string is empty
+
+// Version 1.50 B7
+Fixed Vorbis comment field problem and track number field problem
+Extended Vorbis quality range from -1.0 to 10.0
+CDDB proxy authentication was not working properly
+Fixed drag 'n' drop problems
+Avoid second file overwrite warnings when ripping to a WAV file
+Fixed bug: CDex could crashed CDDB proxy authentication was enabled
+On some systems the profile settings were not always updated
+Added keyboard short-cuts to Audio CD toolbar controls
+Modified the play audio track (dropped the separate play multi concept)
+Fixed bug: The settings dialog was (sometimes) displayd incorrect (too large fonts)
+Fixed missing help IDs (help file was not always opened correctly)
+Send WAV Header setting in the external encoder option was not persistant
+Added "%y" tag to external encoder, which is replaced by the year field
+CD Volume ID (CDPlayer.ini ID) was not calculated correctly for CD < 3 tracks
+Fixed problem with renaming trackname (first char of every word)
+Fixed problem with non persistant compression settings of the WAV encoder
+New buttons and logo, provided by Dustin Halstead (aka: Mangax, mangax@midsouth.net)
+Upgraded to version 3.97 of the Monkey's APE encoder/decoder libraries 
+
+// Version 1.50 B6
+Fixed the problem with the No button in the File Overwrite dialog
+Added No To All button in the File Overwrite dialog
+Due to error in the language file, only the standard ripping mode was displayed
+Fixed problems with the MusePack external encoder
+Replace illegal character in partial track option
+Add also ID3 tag when ripping a partial track
+Fixed local CDDB problem (entry was not saved) when Genre was set to Unknown
+Fixed analog problems (crash when output directory does not exist, opening device when recording multiple times)
+Use proper CDDB ID to store partial track ripping status instead of 00000000.txt file
+Character replacement dialog box did not accept extended ASCI characters
+CD Status (media loaded or not) was not properly detected when using Native NT Scsi library
+Under certain conditions (e.g. virtual drives), not all host CD-ROM devices were recognized when using Native NT Scsi library
+Added Dutch, Japanese and polish language file
+Added option to read CDDB entries form local Winamp in_cdda.cdb file (Winamp 2.78 file format)
+The track status info was not lined up correctly when trackoffset was set to non zero value.
+Avoid crash when using "Record from analog in"  option when no Windows MP3 codec was installed (thanks to Frank Grotelueschen for tracking down the problem)
+Upgraded Vorbis encoder libraries to version 1.0
+
+// Version 1.50 B5
+More Source code cleanup (split of encoder.cpp file and encoder settings dialogs)
+Add WAV header to STDIN encoder (External Encoder) setting was always cleared after startup
+Support text based language files
+Fixed status display problem (Ripping status showed OK, while there were jitter errors )
+Display the number of jitter errors
+Added 'A' track status when ripping has been aborted
+Fixed remote CDDB submit problem
+Fixed problems with reading information from the local CDDB files
+Fixed status problem (all buttons disabled) when dropping files and hitting the cancel button.
+Fixed problem with ID3V2 genre field
+
+// Version 1.50 B4
+Source code cleanup, separated encoder stuff into seperate directory
+Fixed problems with saving profiles
+Added support for Monkey's APE encoder DLL
+Warn if lame encoder is initialized with invalid bitrate/sample rate settings (could lead to a divide by zero)
+Fixed problem with WMA8 Track number tag that was not filled properly
+Added feature to select local CDDB file type (DOS/Unix text files)
+Fixed problems regarding Native NT SCSI library setting and ASPI warning message boxes
+Added feature to digitally play back a CD, so you can listen to the CD even though it is not connected to the sound card.
+Added MCDI tag to WMA8/MP3 ID3V2 files, so in the Windows Media player can query additional album information (Thanks Sam)
+Added support for the NTT VQF encoder DLL
+Patched vorbis DLLs, fixed managed bitrate problem 
+Many improvements to the Analog Recording function.
+Fixed crash with WinCoded MP3 encoder
+Better support for MPC encoder (now on the fly encoding is supported)
+Added option in the External Encoder settings to send optionally a RIFF-WAV header when encoding from stdin
+Trim leading/trailing spaces when creating a directory.
+
+// Version 1.50 B3
+Fixed problem where encoder type was not correct for all tracks
+
+// Version 1.50 B2
+CD Settings were not saved correctly
+Ripping to WAV file did not always work
+Improved Ogg Vorbis quality setting
+
+
+// Version 1.50 B1
+Added Auto Shutdown feature
+Added option to convert Artist / Track name fields
+Added feature to retain the original directory layout when converting from WAV<->MPEG, or MPEG->MPEG
+Switched to NSIS 1.96 installer
+Added encoder selection when recording from analog in
+CDText read option is now made configurable
+Added option to specify the Sample Rate of the MPEG file for the lame encoder
+Avoid duplicate entries in the playlist files
+Added additional short-cut keys for WAV->MPEG and MPEG->WAV option
+Support for Windows Media Encoder (WMA8) encoder
+Swithced to standard Ogg Vorbis SDK libraries
+Support for libfaac encoding library
+Switched back to standard winsock function (no need anymore for ws2_32.dll)
+Fixed bug in Lame encoder, it did under certain circumstance write an empty frame in front of the MPEG stream
+Check if input file = output file when doing MPEG->MPEG conversions
+Cleanup of genre code
+Cleanup of CD (media) available detection
+Added lame VRB presets
+Added support for user defined profiles (presets)
+
+// Version 1.40 release
+Fixed bug: Ogg vorbis Minimum bitrate was always set to maximum bitrate
+Fixed bug: Ogg vorbis date field was filled out with current date, and not with album year
+Fixed bug: Ogg vorbis field did not handle extended ASCII characters correctly
+Added Spanish resources
+Fixed bug: %tn STILL doesn't work (beta 9)
+Fixed bug: removed purple line next to the multiple play button
+Fixed bug: increased maximum SCSI ID from 7 to 15
+Ogg vorbis RC-3 (added Quality option)
+Latest lame version
+Fixed bug: CDDB artist/trackname split was not performed correctly when artist contained a / character
+
+// Version 1.40 beta 9
+ID3 Tags are now copied when performing MPEG->MPEG transcoding option
+Replaced German select all string in the right button menu
+Upgraded to latest lame encoder version
+Upgraded to latest Vorbis Encoder version(1.0 rc2)
+Fixed bug: CDexGen
+res.txt files was not always found
+Fixed bug: paranoia hangs at end of CD
+Fixed bug: date tag missing in ogg files
+Fixed bug: %tt and %tn place holder were not replaced correctly using the external encoder
+Fixed bug: GPF when no selecting was made in the CDDB multiple match selection box
+
+
+// Version 1.40 beta 8
+The select all menu item did contain a german text
+Fixed the 'Required Resource file was unavailable' but on Win2k OS
+Upgraded to latest lame version
+Disabled min bitrate control when R3Mix option is selected
+
+// Version 1.40 beta 7
+Improved File Player, extended with a small playlist editor
+VBR header was not written when the ABR option was selected
+Fixed a couple of CDDB probems ( EXTT title was cut off)
+Moved genres.txt file to the local CDDB directory
+Improvements to the CDex.ini file ( no more CDex.ini in the Windows Directory)
+Improved thread synchronization ( hopefully this will address the hang-ups that sometimes occur)
+The new placeholder for the external encoder were not always properly substituted
+Improvements to the Playlist writing routines
+
+// Version 1.40 beta 6
+Improved track editing (accepts return to edit the next track, escape to finish)
+Added support for WinAmp input plugins
+Upgraded to CDDB proto level 5
+Fixes to CDPlayer.ini writing routines
+Added option to add/modify the genre fields
+Fixes problems when the RIFF-WAV optiotn is enabled 
+Upgraded Lame encoder DLL ( version 3.90 alpha 2 ) 
+Upgraded Vorbis encoder DLL ( version 1.0 RC 1)
+Fixed bug reagarding the Peak level detection when the CD-Paranoia ripping method is selected 
+The quality setting of the lame encoder was not always set properly.
+Added the "Yes to All" option in the file overwrite message box
+Added Very High Quality lame preset ( q=0 )
+Fixed problems with the partial track option
+Added aditional place holder for the external encoder ( see help file)
+Not always the proper amount of sectors were ripped when using the cdparanoia mode
+
+// Version 1.40 beta 5
+Genre CDDB field was not set to Unknown when data was retreived from the CDPlayer.ini file
+The edit/Change Track did not always change the latest track data
+Added R3Mix LAME encoder option ( to the quality settings )
+Added the Lame VBR method selection
+The wrong VBR method was used in CDex 1.40 beta 4 ( old instead of VBR_MTRH )
+Added CD Paranoia ripping methods for more secure CD-Ripping
+Fixed CD-Text problem
+Fixed small typo's
+
+
+// Version 1.40 beta 4
+Original WAV file was deleted when conversion was aborted
+Fixed MPEG->WAV problem when normalization was enabled
+Fixed small remote CDDB problems
+Title bar progress information was not set correctly
+
+// Version 1.40 beta 3
+Added support for MP+ (external) encoder
+Fixed some normalization problems with the external encoder
+Fixed problems with the MPEG transcoding option
+Fixed Normalization bug when WAV output encoder was selected
+Added option specify if the CD ROM should be locked during extraction process
+
+// Version 1.40 beta 2
+Fixed problems a couple of Normalization problems 
+RIFF WAV conversion routines were not working when MPEG files contained a ID3V2 tag
+CDex now uses a CDex.ini that is placed in the CDex directory in stead of the Windows directory
+Fixed bug regarding the time estimates
+CDex now supports CDPlayer.ini files that are larger than 64 Kb
+Added mutli CD read feature 
+Added Encoded By ID3V2 tag field
+
+// Version 1.40 beta 1
+Added MPEG->MPEG transcoding option
+Avoid long delays between file conversions when ID3V2 Tag option is enabled
+Make sure that the CD-ROM is ulocked after ripping a CD
+Avoid that ID3V2 tag is written to WAV files
+
+
+// Version 1.40 beta 0
+Upgraded to Vorbis Beta 4
+Upgraded to latest lame version
+Added support for ID3V2 tags
+Fixed some minor CDDB problems
+Don't delete file when pressing abort when converting file
+Made recording device setting persistent
+Option to specify the track number filed for ID3V2 tags
+
+
+// Version 1.30 beta 9
+Fixed problem with Vorbis bit rate settings
+Fixed problem when encoding to MP3 mono files (lame crashed) 
+Fixed many CDDB submission bugs
+Added the possibility to add/edit manually Remote CDDB sites
+
+
+// Version 1.30 beta 9
+Upgraded to Vorbis Beta 3
+Upgraded to latest lame encoder version
+Fixed CDDB submission bugs
+Fixed memory leak in MP3 encoding engine
+Last track was not alway completely encoded (CDex did hang at 99%)
+
+
+// Version 1.30 beta 8
+Initial support for WMA decoding
+First character of file Title field was garbled when Split track to Track Artist was enabled
+Run Read CD function in seperate thread (should speed up CD reading process)
+Small bug fixes in remote CDDB option
+Initial support for CDDB batch option
+384 kbits option was missing from MP2 encoder setting
+
+// Version 1.30 beta 6
+Fixed 1 bit rounding errors in MpgLib
+Fixed bug, when root directory is selected in File open dialog box
+Added artist/title/album info to Vorbis files
+Added ABR and MaxBitrate lame option
+Created installer script
+Several MP2 encoder improvements (Added experimental VBR, can select to 
+write ancillary data, disable padding option, support for MPEG2)
+Abort button added to CDex Autodetect
+Select track by default is now configurable option
+Fixed player problems on Windows NT systems
+Added new buttons, thanks to the artist formally known as CHAR$(256)
+Update to latest Lame version
+Keyboard control in OpenFile dialog is now working
+
+
+// Version 1.30 beta 5
+Entries in the M3U files are now terminated with a newline character
+CDDB items are now greyed out properly
+Total number of tracks was not calculated properly
+Fixed some problems regarding multi-session CDs and the generation of the CDDB-ID number
+With some CD Rom drives the duration of the last track was not calculated properly
+Fixed problem in submit-CDDB, track info was not updated proper
+Add Ogg encoder option to select encoding mode + included beta 2 version of Ogg Encoder
+Only disable the track window (instead of delete contents) when CD is ejected
+
+// Version 1.30 beta 4
+Fixed int partial track extract routine (track names were not filled out)
+CDex Logo in the about box shoul be displayed correctly under all resolution settings
+All files will be selected when CD is inserted
+Added feature, so CD is ejected after ripping has been completed
+Better handling of Multisession CDs
+Created a new routine to calculate the CD Volume ID, so hopefully the CDPlayer.ini files
+are now written correctly on all systems
+
+// Version 1.30 beta 3
+Better stream error recovery in MP3 decoder
+Lower/Higher normalization factor can be specified seprately
+Normalization factor will now be logged in the CDRipInfoDB
+Normalization Spin buttons are now spinning the correct way
+Incorrect TrackName was inserted into the ID3 Tag
+Illegal characters replacement can now be set to empty without cutting of the string
+Added vorbis decoding engine, it is now possible to convert and play ogg files 
+Track can be split up into Artist and Track, indicated by separation character
+Leading and trailing space in the directory names could cause problems, therefore they will now be removed
+
+// Version 1.30 beta 2
+Added support for Gogo DLL encoder
+Added support for Vorbis encoder
+Introduced new file selection dialog box, now you should be able to select many files at once
+Fixes problesm with play list generation
+Many other small fixes
+Added functionality to specify how with which character the illegal characters have to be replaced with
+
+// Version 1.30 beta 1
+Avoid double dot when converting MP3 file back to WAV files
+Fixed initialization problem in MPGLib which could produce artifacts
+File name Buffer size is now adjustable through FNBufferSize ini parameter (still does not work)
+Fixed problem in ripping library that the file size was depending on Read Overlap parameter
+Added logo to About box
+Added initial support for CD-Text
+Added initial support for CDDB submission
+Added audible beep when ripping/converting is completed
+ASPI retries was not persistant, is fixed now
+ID3 V1.1 support
+Comment field of ID3 tag can be filled out in config dialog box
+Upgraded to latest lame encoder
+
+
+// Version 1.30 beta 0
+Switched to new MP3 decoder (MPG123 based)
+Fixed CDDB proxy problem
+Increased CDDB receive buffer to 32K
+New lame encoder 3.80 
+Made changes to support latest FAAC encoder DLL
+Added a simple WAV recorder (work in progress) 
+Fixed crash problem when there is not CD-ROM present during startup
+Several small UI touch ups
+Now you can dynamically create the playlist file name
+
+// Version 1.20 release
+Fixed WAV->MPEG bug (option did not work)
+Updated manual
+There were a few problems with the HIGH_QUALITY encoder setting.
+Upgraded really to Lame 3.58 (was 3.57 in beta 9)
+
+
+
+// Version 1.20 beta 9
+Hopefully fixed problem with codec enumeration
+Time out on CDDB Query sites added
+Better handling of CDDB Query Sites
+Automatic match of Logical drive
+Added support for FAAC.dll (see http://www.slimline.net/aac/ how to get encoder)
+Added support for on the fly encoding for external encoders
+Switched to LibSnd (see http://www.zip.com.au/~erikd/libsndfile/) for WAV generation,
+many different WAV types are now supported (u-Law, a-Law, IMA and MS ADPCM)
+Removed BladeDll from package
+Removed Manual.doc file from package
+Moved to GNU license (source available at www.sourceforge.net)
+
+
+
+
+
+// Version 1.20 beta 7
+Just a quick fix to avoid CDex to crash upon startup when not using the Adaptect ASPI
+drivers
+
+
+// Version 1.20 beta 6
+Upgraded to LAME encoder version 3.30
+Added percent complete to title bar.
+Enhanced the extracting status information.
+Fixed some problem in the low-level ripping routines (i.e. crashes with some tracks)
+Added logic to switch to lower CD Speed when CD reading problem occur
+Link against the latest Windows WMA library
+Fixed bug where CD information was not saved when CD was ejected
+Added option to use short/long CDDB directory names
+Added special entry for Xing external encoder
+Added encoder entry for PsyTel AAC encoder
+
+
+
+// Version 1.20 beta 5
+Upgraded to LAME encoder version 3.14
+Normalization of files should now only occur within the specified range
+Bug fix when extracting On the fly (it stopped after one track)
+Fixed time estimate when ripping/normalizing very large files
+Removed some spell check errors in the encoder dialog box
+Fixed bug in lame encoder, which causes CDex to crash for certain files 
+when using the the joint stereo option
+
+// Version 1.20 beta 4
+Fixed time estimate when playing/decoding non VBR MP3 files.
+Added new LAME encoder, now VBR crashes should not occur
+Fixed the MP3 flag settings (private, original, copyright) are now
+properly inserted
+MP3 CRC will now be generated correctly
+
+
+// Version 1.20 beta 3
+Fixed bug when writing to M3U when file is opened
+Added Variable Bit Rate encoding to CDex
+Updated documentation (added manual.doc file, and updated help file)
+
+// Version 1.20 beta 2
+Fixed bug so CD-ROM settings are no stored properly for drive type that contain spaces
+Included latest Lame Encoder (speed & quality improvements)
+Added additional settings for Lame Encoder
+Setting proper logical drive in CD-ROM configuration dialog
+Save the remote CDDB sites properly
+Fixed bugs in normalization code (Thanks to Frank!)
+Decreased normalization buffer in order to avoid stack overflow problems
+Linked to the lates MS-Audio SDK
+
+
+// Version 1.20 beta 1
+Save Correct TAG (Catagory Field) when performing Partial Track copy
+Added Simple MP3 Player
+Switches to Lame Encoder 3.0.2 (slower but improved quality)
+Added Joint stereo and Fake Stereo option in Internal Encoder options
+Fixed problems when converting MP3->RIFF WAV (was not doing anything)
+Made changes to Codec enumeration, hopefully this solves the weird crashes
+Store the CDDB query sites result correctly 
+
+// Version 1.20 beta 0
+Added WMA encoder
+Better handling of ASPI errors
+Fixes problems with pause button
+Avoid system crash when no CD-ROM drive is located
+

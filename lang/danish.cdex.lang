@@ -1,0 +1,940 @@
+//
+// CDex - Open Source Digital Audio CD Extractor
+//
+// Copyright (C) 2006, 2007, 2008 Georgy Berdyshev
+// Copyright (C) 2002 Sean M Burke
+// Copyright (C) 2002 Albert L. Faber
+//
+// http://cdexos.sourceforge.net/
+// http://sourceforge.net/projects/cdexos 
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
+
+
+//////////////////////////////////////////////////////////////////////////////
+// CDex - International Support File                                        //
+//////////////////////////////////////////////////////////////////////////////
+//
+//
+// Welcome to CDex language definition file
+// 
+// This file will be read by CDex if it is put inside \Lang folder
+// of CDex root directory. It also must have the cdex..lang extension
+// yielding something like my_language.cdex.lang
+//
+// 
+// To define a string follow this format:
+//
+// number "my_string"
+//
+// number is the identification of the following string. Each number is related
+// with a string that will appear inside CDex. Padding spaces are not important.
+//  Inside menu definitions use & to give access to the keyboard menu shortcut.
+// You can use returns inside string. They will be preserved in the program.
+//
+// CDex loads the strings on startup. It won't perceive any changes in this file
+//  if you don't reload the program.
+//
+// PLEASE, CHECK THAT STRINGS WON'T BE CLIPPED IN THE PROGRAM. The reserved space 
+// for every string is limited and must be suitable for all languages. If some 
+// of your strings are clipped try shortening the phrase while keeping its 
+// significance
+//  
+//////////////////////////////////////////////////////////////////////////////
+
+// language file revision level
+REVISION=/*$Id: danish.cdex.lang 669 2008-01-18 08:09:12Z codingmaster $*/
+
+// set language characteristics
+LANGUAGE=5
+SUBLANG=1
+
+// use CODEPAGE 65001 if this file is UTF-8 encoded text file
+// otherwhise fill out the proper ANSI codepage
+CODEPAGE=1252
+
+// 99 (063 hex) => LANGUAGE ID, use english description
+// since this value is used to set the LOCALE settings
+#0063# "Danish"
+
+#0001# "OK"
+#0002# "Fortryd"
+#0003# "Afbryd"
+#0004# "Prøv igen"
+#0005# "Ignorer"
+#0006# "Ja"
+#0007# "Nej"
+
+// Ripper Main menu entries
+#M0BD4# "#&Filer#R&ediger#&Omdan#Værk&tøj#C&DDB#&Opsætning#&Hjælp#"
+
+// Ripper File Menu
+#M800D# "&System Info"
+#M802D# "S&ammenlign To Filer"
+#ME141# "E&xit"
+
+// Ripper Edit menu
+#M8026# "Marker Alt\tCtrl+A"
+#M8023# "&Kopier album info til Udklipsholder"
+#M8024# "&Omdøb Spor\tF2"
+#M0BD40000# "&Rediger Spor Navn"
+#M8042# "&Første Bogstaver med Store"
+#M8043# "Første Bogstav in St&ore"
+#M8044# "alle bogstaver med &lille"
+#M8045# "ALLE BOGSTAVER S&TORT"
+#M804D# "&Skift Kunstner<->Spor"
+#M802A# "Op&frisk Spor liste\tF5"
+#M8047# "Tilføj / Rediger &Genre listen"
+
+// Ripper Convert menu
+#M8004# "Udtræk CD spor til WAV fil(er)\tF8"
+#M8005# "Udtræk CD spor til MP3 Fil(er)\tF9"
+#M8007# "Udtræk en sektion af en CD\tF10"
+#M803E# "Gen-indkod MP3 Fil(er)"
+#M8006# "Omdan WAV file(r) til Komprimeret Lyd-fil(er)\tF11"
+#M8029# "Omdan MP3 Fil(er) til WAV-file(r)\tF12"
+#M8022# "Tilføj RIFF-WAV header(e) til MP2- og MP3-file(r)"
+#M8030# "Fjern RIFF-WAV header(e) fra MP2- og MP3-file(r)"
+
+// Ripper Tools menu
+#M802E# "Medie-fil Afs&piller"
+#M8031# "Optage&r fra Analog Input"
+
+// Ripper CDDB Menu
+#M8018# "Læs fra &Lokal CDDB"
+#M801B# "Læs Fje&rn-CDDB"
+#M801A# "Læs fra &CD Player.ini"
+#M8033# "Læs CD-&Text"
+#M80E8# "Læs fra &WinampDB"
+#M8027# "Gem i CDPlayer.ini"
+#M8028# "Gem i Lokal CDDB"
+#M8032# "&Indsend Til Extern-CDDB"
+#M803B# "CDDB B&atch Forespørgsel"
+
+// Ripper Options Menu
+#M8003# "Ind&Stillinger\tF4"
+#M8046# "Indstil &Winamp Plugins"
+#M801C# "Vi&s Afspil-Værktøjer"
+#M801D# "Vis Optage&r-Værktøjer"
+#M80E9# "Vis &Profil-Værktøjer"
+#M802C# "Vis Udtræks-Status &Detaljer\tF3"
+#M802F# "&Nulstil Udtræk Status"
+#M0BD40001# "Væ&lg  Sprog"
+
+// Ripper Help Menu
+#ME143# "&Hjælp med at bruge CDex\tF1"
+#ME140# "&Om CDex..."
+
+// Player Menu
+#M0C80# "#&Filer#&Opsætning#S&pille-liste#&Hjælp#"
+
+// NOTE: File, help menu and Configure &Winamp Plugins entries 
+// are already defined in the main menu
+
+// Ripper Options Menu
+#M804B# "Afs&pil Tilfældige"
+#M0C800000# "&Sprog"
+
+// Ripper Playlist Menu
+#M8049# "&Gem"
+#M804A# "&Rens"
+
+// About Dialog
+#D00640000# "Om CDex audio CD udtrækker program"
+#D00640412# "CDex Version "
+#D006404BC# "Luk"
+// Translator URL
+#D006404BB# "http://www.nimmersoft.com"
+// Translator information
+#D006404BA# "Joergen Larsen, NimmerSoft"
+
+// CD Auto Detection dialog box
+#D0BE20000# "Auto-Undersøg Resultat"
+#D0BE203FB# "Afbryd"
+#D0BE204BE# "Herunder ses en liste med test-måder; vælg en af de måder, der har status 'Godkendt', og klik OK knappen"
+#D0BE204BD# "MMC status"
+
+// CDDB Accessing dialog box
+#D00870000# "Adgang til CDDB (tm)"
+#D008704BF# "Nuværende Handling"
+#D008704C0# "Besked"
+#D008704C1# "Anerkendelse: Ophavsret (c) CDDB, Inc (Steve Scherf && Ti Kan)"
+
+// CDDB Settings dialog box
+#0C8D# "Extern-CDDB"
+#D06030000# "Extern-CDDB"
+#D06030484# "CDDB (default port 888 eller 8880)\nHTTP (default port 80)"
+#D0603043D# "Auto forbind til Extern-CDDB"
+#D06030426# "Tilføj Sted"
+#D06030425# "Udspørg Sites"
+#D06030483# "Genindstil Alle"
+#D06030475# "Anvend Indstil"
+#D0603041E# "Brug Proxy"
+#D06030421# "Ægthed"
+#D060304C7# "Extern Server"
+#D060304CB# "Din E-mail addresse"
+#D060304CF# "Proxy Port"
+#D060304D0# "Kodeord"
+#D060304CE# "Tids-Udløb (sekunder)"
+#D060304C9# "Adresse"
+#D060304CC# "Sti"
+#D060304CA# "Protokol"
+#D060304C8# "Sted"
+#D060304CD# "Port"
+
+// CDDB Found inexact match dialog box
+#D00880000# "Fandt Unøjagtighed ved Sammenligning"
+
+// CD-ROM Settings dialog box
+#0C89# "CD Drev"
+#D0BDB0000# "CD Drev"
+#D0BDB0430# "Ukendt\nToshiba\nToshiba (new)\nIBM\nNEC\nDEC\nIMS\nKodak\nRicoh\nHP\nPhilips\nPlasmon\nGrundig CD-R,\nMitsumi CD-R\nPlextor\nSony\nYamaha\nNRC\nIMS CDD-5\nCustom"
+#D0BDB0444# "Auto-Undersøg"
+#D0BDB0436# "Ombyt Venstre og Højre kanaler"
+#D0BDB047E# "Udskub CDen når Udtrækning er færdig"
+#D0BDB043D# "Brug Rystelse Rettelse"
+#D0BDB047F# "Vælg Alle CD Spor (grundindstilling)"
+#D0BDB043E# "Brug Indbygget NT SCSI bibliotek"
+#D0BDB04D1# "CD Drev"
+#D0BDB04D2# "Læs Sektorer"
+#D0BDB04D3# "Læs Overlap"
+#D0BDB04D9# "Undlad Sammenligning"
+#D0BDB04D6# "CD-ROM Drev Type"
+#D0BDB04DA# "CD Hastighed"
+#D0BDB04D4# "Start Forskydning (sektorer)"
+#D0BDB04D5# "Slut Forskydning (sektorer)"
+#D0BDB04DB# "Spin-up tid (sek)"
+#D0BDB04D8# "Antal Forsøg"
+#D0BDB04D7# "Udtræks Metode"
+#D0BDB0480# "Lås CD under Udtrækning"
+#D0BDB0481# "Brug CD-Text (hvis tilgængelig)"
+#D0BDB0431# "Standard\nParanoia, Kun Overlap\nParanoia, Ej Verificere\nParanoia, Ej ridse reparere\nParanoia, Fuld"
+
+// CDDB Submit Options dialog box
+#D00A00000# "Opsætning af CDDB-Indsendelse"
+#D00A004E2# "Indgiv via (HTTP er ikke tilladt for CDDB.COM)"
+#D00A00414# "E-mail"
+#D00A00401# "Via HTTP"
+#D00A004E4# "SMTP server addresse"
+#D00A004E5# "Indsendelse HTTP addresse (uden stien)"
+#D00A004E3# "Indsendelse e-mail adresse"
+
+// Config Winamp Plugin Dialog box
+#D00AA0000# "Indstil Winamp Input Plugins"
+#D00AA0499# "Om.."
+#D00AA049A# "Indstil"
+
+// CD Ripping dialog box
+#D0BDC0000# "Optag Spor"
+#D0BDC042C# "nominel"
+#D0BDC042E# "max"
+#D0BDC042D# "min"
+
+// Drop Files dialog box
+#D00900000# "Vælg indstilling for Træk-og-Slip"
+#D00900452# "Output RIFF WAV fil"
+#D0090044C# "Slet WAV fil efter indkodning"
+#D0090042F# "Normalisér"
+#D00900430# "Indkod"
+#D00900431# "Normalisér + Indkode"
+
+// Edit Genres dialog box
+#D00AC0000# "Tilføj / Rediger Genrer"
+#D00AC049C# "Indsæt Ny"
+
+// Enter profile Name dialog box
+#D00AF0000# "Indfør profil navn"
+
+// Encoder dialog box
+#0C8A# "Indkoder"
+#D06020000# "Indkoder"
+#D06020537# "Indkoder"
+#D06020452# "Omdan til Riff WAV filer"
+#D06020423# "Lavest\nUnder Normal\nNormal\nOver Normal\nHøjest"
+#D06020536# "Tråd Vigtighed"
+#D06020535# "Indkoder Indstilling"
+#D06020453# "Slet IKKE udtrukken WAV fil efter omdannelse"
+
+
+// Encoder DOS APE dialog box
+#D0BFD0400# "Mono"
+#D0BFD0401# "Stereo"
+#D0BFD04DE# "Kompressions grad"
+#D0BFD04DD# "Kanaler"
+#D0BFD04DF# "Etiket Format"
+#D0BFD04B4# "APE Etiket (default)\nID3V1 Etiket"
+#D0BFD0459# "Hurtig\nNormal\nHøj\nExtra Høj"
+
+// Encoder Blade Dialog box
+#D0BE80409# "Under-Kørsel MP3 Indkodning"
+#D0BE804E0# "Bitrate"
+#D0BE804E1# "Kanaler"
+#D0BE80400# "Stereo"
+#D0BE80401# "J-stereo"
+#D0BE80402# "Dual"
+#D0BE80403# "Mono"
+#D0BE80427# "Privat"
+#D0BE80428# "Checksum"
+#D0BE80429# "Original"
+#D0BE8042A# "Ophavsret"
+
+// Encoder Lame dialog box
+#D008B0548# "Bitrate Min"
+#D008B054A# "Måde"
+#D008B054B# "Kvalitet"
+#D008B054E# "VBR Kvalitet"
+#D008B0549# "Max"
+#D008B054D# "ABR (kpbs)"
+#D008B054C# "VBR Metoden"
+#D008B0547# "Version"
+#D008B054F# "Output Samplerate"
+#D008B0463# "MPEG I\nMPEG II\nMPEG II.5"
+#D008B0400# "Stereo"
+#D008B0401# "J-stereo"
+#D008B0402# "Tvungen Stereo"
+#D008B0403# "Mono"
+#D008B0427# "Privat"
+#D008B0428# "Checksum"
+#D008B0429# "Original"
+#D008B042A# "Ophavsret"
+#D008B0409# "Under-Kørsel MP3 Encoding"
+#D008B0459# "SlåFra\nVBR Default\nVBR-Gammel\nVBR-Ny\nVBR-MTRH\nVBR-ABR"
+#D008B0458# "VBR 0\nVBR 1\nVBR 2\nVBR 3\nVBR 4\nVBR 5\nVBR 6\nVBR 7\nVBR 8\nVBR 9"
+#D008B0414# "Normal ( q=5 )\nLav ( q=9 )\nHøj ( q=2 )\nStemme (for stemme optagelser)\nR3Mix Preset\nMega Høj Kvalitet ( q=0 )\n--alt-preset standard\n--alt-preset fast standard\n--alt-preset extreme\n--alt-preset fast extreme\n--alt-preset insane\n--alt-preset ABR\n--alt-preset CBR"
+
+// Encoder External settings box
+#D008D0000# ""
+#D008D052D# "Parameter streng"
+#D008D052C# "Indkoder sti"
+#D008D052E# "Bitrate"
+#D008D0463# "Under-Kørsel Indkodning"
+#D008D0464# "Skjul DOS box vindue"
+#D008D052F# "Fil Efternavn"
+#D008D0465# "Send WAV header til stdin"
+
+// Encoder Wincodec settings box
+#D008A0000# ""
+#D008A0409# "Under-Kørsel MP3 Indkoding"
+#D008A053A# "Windows MP3 Codec"
+#D008A053B# "Codec Bitrate Udvalg"
+#D008A043E# "Høj Kvalitet"
+
+// Encoder MP2 encoder settings box
+#D0BF9040F# "MPEG-1"
+#D0BF90410# "MPEG-2"
+#D0BF90546# "Bitrate"
+#D0BF90409# "Under-Kørsel MP2 Encoding"
+#D0BF90545# "Kanaler"
+#D0BF90400# "Stereo"
+#D0BF90401# "J-stereo"
+#D0BF90402# "Dual"
+#D0BF90403# "Mono"
+#D0BF90427# "Private"
+#D0BF90428# "Checksum"
+#D0BF90429# "Original"
+#D0BF9042A# "Ophavsret"
+#D0BF9047F# "Skriv Ancillary Data (Antex)"
+#D0BF90480# "Tillad ikke udfyldning"
+#D0BF90544# "VBR (experimentel)"
+#D0BF90458# "Ingen\nVBR 0\nVBR 1\nVBR 2\nVBR 3\nVBR 4\nVBR 5\nVBR 6\nVBR 7\nVBR 8\nVBR 9"
+
+// Encoder external VQF settings box
+#D0BEA0000# ""
+#D0BEA041B# "44KHz-48Kbps\n44KHz-40Kbps\n22KHz-32Kbps\n22KHz-24Kbps\n22KHz-20Kbps\n16KHz-16Kbps\n11KHz-10Kbps\n11KHz-8Kbps\n8KHz-8Kbp"
+#D0BEA0549# "Sti til VQF indkoder"
+#D0BEA0547# "VQF måde"
+
+// Encoder WMA8 settings box
+#D0BEC03F5# "22 Kbit/s\n32 Kbit/s\n36 Kbit/s\n40 Kbit/s\n48 Kbit/s\n64 Kbit/s\n80 Kbit/s\n96 Kbit/s\n128 Kbit/s\n160 Kbit/s"
+#D0BEC0409# "Under-Kørsel MP3 Indkodning"
+#D0BEC0441# "Tillad Digital OPphavsret Styring"
+#D0BEC0414# "Mono"
+#D0BEC04B6# "Stereo"
+#D0BEC0538# "Bitrate"
+#D0BEC0539# "Kanaler"
+
+// Encoder external Xing settings box
+#D0BF00000# ""
+#D0BF00414# "CBR"
+#D0BF00401# "VBR"
+#D0BF00429# "Original"
+#D0BF0042A# "Ophavsret"
+#D0BF0045C# "Filtrér Høje Frekvenser"
+#D0BF0045D# "Tving Simpel Stereo"
+#D0BF0045E# "Ned-mix til mono"
+#D0BF0045F# "Lad inkoderen vælge sample rate"
+#D0BF00532# "Indkoder sti"
+#D0BF00533# "Bitrate"
+#D0BF00534# "VBR Skala"
+
+// Encoder WAV settings box
+#D0BF10000# ""
+#D0BF1053E# "Sample rate"
+#D0BF1053F# "Kanaler"
+#D0BF10414# "Stereo"
+#D0BF10401# "Mono"
+#D0BF1053D# "Kompression"
+#D0BF1053C# "Format"
+#D0BF10439# "WAV\nApple/SGI AIFF\nSun/Næste au (big endian)\nDec au (lille endian))\nRaw PCM (stor endian)\nRaw PCM (lille endian)"
+#D0BF10409# "Under-Kørsel Indkodning"
+
+// Encoder FAAC settings box
+#D0BF20000# ""
+#D0BF20463# "MPEG-2"
+#D0BF20415# "MPEG-4"
+#D0BF20466# "Main\nLav compleksitet\nSSR\nLTD"
+#D0BF204AF# "16000\n18000\n19500"
+#D0BF204B1# "Brug LFE"
+#D0BF20468# "Brug MS Stereo"
+#D0BF20526# "Bitrate / kanal"
+#D0BF20528# "Båndbredde (Hz)"
+#D0BF20527# "Profil"
+#D0BF204B0# "Tillad Midlertidig StøjAfskærmning (TNS)"
+
+// Encoder Vorbis settings box
+#D0BF60000# ""
+#D0BF60400# "Stereo"
+#D0BF60401# "Mono"
+#D0BF60409# "Under-Kørsel Indkodning"
+#D0BF604B3# "Brug Kvalitets Indstilling (anbefalet)"
+#D0BF60540# "Kanaler"
+#D0BF60541# "Brug Bitrate bestyrer"
+#D0BF60550# "Minimal Bitrate"
+#D0BF60551# "Middel Bitrate"
+#D0BF60552# "Maximum Bitrate"
+
+// Encoder Gogo settings box
+#D0BF80000# ""
+#D0BF8040F# "MPEG-1"
+#D0BF80410# "MPEG-2"
+#D0BF80409# "Under-Kørsel MP3 Indkodning"
+#D0BF80458# "Ingen\nVBR 0\nVBR 1\nVBR 2\nVBR 3\nVBR 4\nVBR 5\nVBR 6\nVBR 7\nVBR 8\nVBR 9"
+#D0BF80400# "Mono"
+#D0BF80401# "Stereo"
+#D0BF80402# "J-Stereo"
+#D0BF80403# "MS-Stereo"
+#D0BF8047B# "Brug MMX/3DNow"
+#D0BF8047C# "Brug Psycho-acoustics"
+#D0BF8047D# "Anvend Low-Pass filter for lave bitrates"
+#D0BF80529# "Variabel Bitrate"
+#D0BF8052A# "Bitrate"
+#D0BF8052B# "Måde"
+
+// Encoder External Musepack settings box
+#D00A90000# ""
+#D00A90531# "Parameter streng"
+#D00A90530# "Sti til Musepack Indkoder"
+#D00A90464# "Skjul MSDOS vindue"
+#D00A90463# "Under-Kørsel Indkodning"
+
+// Encoder NTTVQF settings box
+#D0BFB0000# ""
+#D0BFB0409# "Under-Kørsel VQF Indkodning"
+#D0BFB0462# "32 Kbit/s\n40 Kbit/s\n48 Kbit/s\n56 Kbit/s\n64 Kbit/s\n80 Kbit/s\n96 Kbit/s\n112 Kbit/s\n128 Kbit/s\n160 Kbit/s\n192 Kbit/s\n224 Kbit/s\n256 Kbit/s\n320 Kbit/s"
+#D0BFB0400# "Mono"
+#D0BFB0401# "Stereo"
+#D0BFB0542# "Bitrate pr kanal"
+#D0BFB0543# "Kanaler"
+ 
+// File compare two files dialog box
+#D00970000# "Sammenlign to WAV filer"
+#D00970446# "Sammenlign"
+#D00970522# "Første filnavn"
+#D00970523# "Andet filnavn"
+#D00970524# "Forløb"
+
+// File name string info dialog box
+#D00930000# "Filnavn info indstilling"
+#D00930516# "Eksempler:\n%1\%2\%4      laver output filen Kunstner\Album\Spornavn.mp3 (or .wav)\n%1 - %2 - %3  skaber output filen Kunstner - Album - SporNummer.mp3 (or .wav)\n%l1 - %u2 skaber output filen kunstner - ALBUM.mp3 (or .wav)"
+#D00930517# "Fil-navn formatet kan indeholde følgende identifikationer"
+#D00930518# "Bag-skråstregen (\) kan også bruges til at angive Folder adskillelse.\nSelvom Du ikke bør bruge den som første tegn !"
+
+// File name property page
+#0C8E# "Filnavne"
+#D0BF40000# "Filnavne"
+#D0BF40479# "Tegn Subst"
+#D0BF4047D# "Del spornavn i Kunstner, Spor ved at bruge deletegn:"
+#D0BF40443# "Tilføj Filer til M3U Afspilnings-liste"
+#D0BF40444# "Tilføj Filer til PLS Afspilnings-liste"
+#D0BF4051B# "Filnavn"
+#D0BF40519# "Output filnavn format og foldere"
+#D0BF4051C# "WAV -> MP3"
+#D0BF4051D# "Optagne Spor"
+#D0BF4051A# "Filnavn Format"
+#D0BF40520# "Filnavn"
+#D0BF4051E# "Filnavn Format"
+#D0BF40521# "Type"
+#D0BF4051F# "AfspilningsListe"
+
+// File overwrite dialog box
+#D00AE0000# "Fil Overskrivnings Advarsel"
+#D00AE0512# "Ja"
+#D00AE04A1# "Ja til &Alle"
+#D00AE0511# "Nej"
+#D00AE04A2# "Nej til A&lle"
+#D00AE0513# "Filen"
+#D00AE0514# "findes i forvejen.  Erstat eksisterende fil?"
+
+// Generic Property Page
+#0C8B# "Generelt"
+#D06040000# "Generelt"
+#D06040414# "Ingen\nID3-V1\nID3-V2\nID3-V1 &  ID3-V2"
+#D06040411# "Normalisér"
+#D060404AB# "Automatisk nedlukning efter udtrækning / Indkoding"
+#D0604050F# "Hvis signalet er <"
+#D0604050C# "Normaliser Volumen"
+#D0604050D# "Til"
+#D06040510# "Hvis signalet er >"
+#D06040507# "Fil Etiket indstilling"
+#D0604050A# "Etiket kommentar felt"
+#D0604050E# "Til"
+#D06040508# "ID3 Etiket Version"
+#D0604050B# "Indkodet-af felt"
+#D06040506# "Temp folder"
+#D06040509# "Spor Nr Format"
+#D060404AC# "Digital CD Afspilning"
+
+// General Info Dialog Box
+#D0BDF0000# "Generel Information"
+#D0BDF0502# "CD Volume ID"
+#D0BDF0500# "CDDB Disc ID"
+#D0BDF0501# "ASPI Bestyrer"
+#D0BDF0503# "OS Version"
+#D0BDF0504# "SCSI Info"
+#D0BDF0505# "Drev Type(r)"
+#D0BDF0442# "Kopier til Udklipsholder"
+
+// Local CDDB Settings TAB
+#0C8C# "Lokal CDDB"
+#D0BFA0000# "Lokal CDDB"
+#D0BFA044B# "Windows-format CDDB Filer"
+#D0BFA044C# "Unix-format CDDB Filer"
+#D0BFA0459# "Gem i CDPlayer.ini Fil"
+#D0BFA045A# "Gem i local CDDB"
+#D0BFA045B# "Brug Lange Folder Navne"
+#D0BFA04B5# "Skriv som MS-DOS text filer "
+#D0BFA04FE# "CDDB Sti"
+#D0BFA04FF# "Winamp in_cdda.cdb sti (Winamp 2.78 format)"
+#D0BFA04FD# "Lokale CDDB Indstillinger"
+
+// Main Window (Title View)
+#D0BD80000# " "
+#D0BD804C2# "Kunster"
+#D0BD804C3# "Album"
+#D0BD804C4# "Genre"
+#D0BD804C5# "År"
+#D0BD804C6# "Spor Forskydning"
+
+// Mpeg to RIFF-WAV conversion dialog box
+#D00860000# "Omdan MP2/MP3 til RIFF-WAV"
+#D008604FC# "Arbejder"
+
+// Mpeg to WAV conversion dialog box
+#D0BEB0000# "Omdan en komprimeret fil til WAV fil"
+#D0BEB04FB# "Arbejder"
+
+// Open file dialog box
+#D02630000# "Åbn Fil Dialog"
+#D026303EE# "Se i Under-foldere"
+#D026303F1# "Slet Original"
+#D0263042F# "Normalisér"
+#D02630430# "RIFF-WAV"
+#D026303EF# "Vælg Alle"
+#D026303F0# "Åbn"
+#D02630495# "Indstillinger"
+#D026304AC# "Bevar Original Folder Opsætning"
+#D026304FA# "Tilgængelige Filer:"
+#D026304F9# "Folder"
+
+// Partial track copy dialog box
+#D06010000# "Optag delvise spor"
+#D0601041D# "WAV fil"
+#D06010412# "Komprimeret Lyd-Fil (Indkodet)"
+#D060104F5# "Spor"
+#D060104F6# "Min"
+#D060104F7# "Sek"
+#D060104F8# "Ramme"
+#D060104F0# "Fil egenskaber"
+#D060104F2# "Område (fra en fils start position til stop position)"
+#D060104F3# "Start Position"
+#D060104F4# "Stop Position"
+#D060104F1# "Output Type"
+
+// Player view window
+#D0C800489# "Detaljer"
+
+// Record from Analog In dialog box
+#D0BF50000# "Optag fra Analog Input"
+#D0BF50640# "Fri Længde"
+#D0BF50641# "Optag i kun:"
+#D0BF5046E# "Gennemse"
+#D0BF504B7# "Tilføj fortløbende numre til filnavnet, begyndende med: "
+#D0BF504EE# "Optagelses Status"
+#D0BF5046B# "Optag"
+#D0BF50445# "Pause"
+#D0BF50450# "Stop"
+#D0BF50642# "Mono"
+#D0BF50643# "Stereo"
+#D0BF503F5# "Kanaler"
+#D0BF504EB# "Input Kilde"
+#D0BF504EC# "Output Filnavn"
+#D0BF504ED# "Output Fil-type"
+#D0BF504EA# "Sample Rate"
+#D0BF504EF# "sekunder"
+#D0BF504F0# "Output Folder"
+
+// RIFF-WAV to MPEG dialog box
+#D02630064# "Afbryd"
+#D0BF30000# "Fjern RIFF-WAV header fra MPEG file(s)"
+#D0BF304E9# "Arbejder"
+
+// Substitute Characters dialog box
+#D0BF70000# "Tegn Udskiftning"
+#D0BF704E6# "Ulovlig Tegn i Filnavn"
+#D0BF704E7# "Andet (Udskifting er ikke krævet)"
+#D0BF704E8# "plads :="
+
+// Ripper Status dialog box
+#D00960000# "Detaljeret Udtræknings Status Information"
+
+// String Table
+#0065#	"&Om CDex..."
+#0066#	"Gem som..."
+#0067#	"Åbn"
+#0BBA#	"Indikator Kontrol"
+#0BBB#	"Div"
+#0BBC#	"Spil Spor"
+#0BBE#	"Stop Afspil"
+#0BBF#	"Udskub CD"
+#0BC0#	"Kan ikke starte en Internet Session. Tjek venligst din internet opsætning."
+#0BC1#	"CDex"
+#0BC2#	"Windows sockets initialisering mislykkedes"
+#0BC3#	"Hutig Frem\nHurtig Frem"
+#0BC4#	"Hurtig Tilbage\nHurtig Tilbage"
+#0BC5#	"Pause\nPause"
+#0BC6#	"Hop Til Næste Spor\nHop Til Næste Spor"
+#0BC7#	"Hop til Forrige Spor\nHop til Forrige Spor"
+#0BC8#	"Hent Album info fra Extern CDDB"
+#0BD4#	"CDex Udtrækker\n\nCDex Udtrækker\n\n\nCDex.Dokument\nCDex Dokument"
+#0BDE#	"CDex Version "
+#0BDF#	"ingen kunstner"
+#0BE0#	"ingen titel"
+#0BE1#	"Genre"
+#0BE2#	"Titel"
+#0BE3#	"CDDB ID"
+#0BE4#	"Kunstner"
+#0BE5#	"Spor Nummer"
+#0BE6#	"Volume ID"
+#0BE7#	"Spor Navn"
+#0BE8#	"Spor Nummer Leading 0"
+#0BE9#	"Antal Spor"
+#0BEA#	"Navn"
+#0BEB#	"Spor"
+#0BEC#	"Start Tid"
+#0BED#	"Spille Tid"
+#0BEE#	"Størrelse"
+#0BEF#	"Status"
+#0BF0#	"CDex Version "
+#0BF1#	"Kunstner felt indeholder ulovlige tegn\n Udskift ulovlige tegn med mellemrum"
+#0BF2#	"Album felt indeholder ulovlige tegn\n Udskift ulovlige tegn med mellemrum"
+#0BF3#	"SporNavn [%d] indeholder ulovlige tegn\n Udskift ulovlige tegn med mellemrum"
+#0BF4#	"Du har ikke valgt nogen spor.  Vælg venligst et eller flere Spor fra listen."
+#0BF5#	"Lykkedes ikke at sætte i UdklipsHolder"
+#0BF6#	"Søger spor %d (%02d:%02d:%02d)\n"
+#0BF7#	"Udtrækker spor til en Komprimeret Lydfil (%s) til fil %s"
+#0BF8#	"Udtræk/Indkodning afbrudt ved %s"
+#0BF9#	"Udtrækning af spor til en Komprimeret Lydfil er afsluttet tilfredstillende, total varighed: %s"
+#0BFA#	"Udtrækker spor til en WAV fil (%s) til fil %s"
+#0BFB#	"Udtrækning blev afbrudt ved %s"
+#0BFC#	"Udtrækning af spor til WAV file er afsluttet tilfredstillende, total varighed: %s"
+#0BFD#	"Kunne ikke oprette output folder : "
+#0BFE#	"Forløbet tid: %s   ||   Tid tilbage: %s   ||   Total tid: %s"
+#0BFF#	"Udtrækker spor %d (%d%% fuldført, fil %d/%d)"
+#0C00#	"Spids værdi %4.2f dB = %3d %%"
+#0C01#	"Rystelse (fejl: %d)"
+#0C02#	"Omdanner spor %d (%d %% fuldført, fil %d/%d)"
+#0C03#	"Normaliserer spor %d (%d %% fuldført, fil %d/%d)"
+#0C04#	"Bestemmer Spids værdi spor %d (%d %% fuldført, fil %d/%d)"
+#0C05#	"Spids værdi %4.2f dB = %3d %%"
+#0C06#	"To file: %s"
+#0C07#	"Udtrækker spor %d (fil %d/%d)"
+#0C08#	"Omdanner fil til nyt format (fil %d/%d)"
+#0C09#	"Normaliserer spor med faktor %5.2f (fil %d/%d)"
+#0C0A#	"Henter Spids værdi (fil %d/%d)"
+#0C0B#	"Behandler (fil %d/%d)"
+#0C0C#	"Udtrækker CD Spor"
+#0C0D#	"Fil Omdannelse"
+#0C0E#	"%5d fejl ved spor %s\n\n"
+#0C0F#	"Rystelse-fejl forekom.  Se venligst Hjælpefilen for at løse rystelses problemer.\n\n"
+#0C10#	"År"
+#0C11#	"DataSpor"
+#0C12#	"LydSpor"
+#0C13#	"Udfyld venligst alle Spor, Kunstner, and Spor information, og vær\n helt sikker på at the Genren er sat rigtigt \nfør du indgiver infoen til en Extern CD database."
+#0C14#	"Ønskede album information findes ikke i lokal CDDB"
+#0C15#	"Ønskede album information findes ikke i CDPlayer.ini filen"
+#0C16#	"MP3 tag'en er ændret. \nGem ændringerne?"
+#0C17#	"En fejl skete under gemning af ID3V2 tag-en.\nMake sure file is not marked as read only!"
+// is, or isn't?
+#0C18#	"En fejl skete under læsning af ID3v2 tag-en."
+#0C19#	"En fejl skete under åbning af input filen."
+#0C1A#	"Det lykkedes ikke at sætte maskinen til at lukke ned"
+#0C1B#	"Normaliserings factor er %7.4f x"
+#0C1C#	"Ugyldig e-mail addresse.  Indsæt venligst\n\ndin e-mail adresse i den Externe CDDB options menu."
+#0C1D#	"Den Externe server svarede ikke hurtigt nok. \n Forøg Timeout værdien i CDDB Indstillinger, \n Eller prøv bare igen."
+#0C1E#	"læs/skriv tilladt\n"
+#0C1F#	"OK, Skrivebekyttet\n"
+#0C20#	"Ingen ens poster fundet\n"
+#0C21#	"OK Response\n"
+#0C22#	"Fandt adskillige nøjagtige ens poster. Listen følger.\n"
+#0C23#	"Fandt adskillige Uens poster. Listen følger.\n"
+#0C24#	"Specificeret CDDB indhold ej fundet\n"
+#0C25#	"Allerede givet hånd\n"
+#0C26#	"Database indhold er ødelagt.\n"
+#0C27#	"Intet Håndtryk\n"
+#0C28#	"Håndtryk lykkedes ikke, lukker forbindelse\n"
+#0C29#	"Ingen forbindelse tilladt: tilladelse nægtet\n"
+#0C2A#	"Ingen forbindelse, Indlæst for højt\n"
+#0C2B#	"Server Fejl, vælg venligst en anden server\n"
+#0C2C#	"Protokol Level allerede cur_level\n"
+#0C2D#	"Ulovlig Protokol Niveau\n"
+#0C2E#	"Forbindelsen mislykkedes fordi"
+#0C2F#	"Omdan"
+#0C30#	"Modul Navn"
+#0C31#	"Modul Info"
+#0C32#	"Genre Tabellen (genres.txt) blev ikke fundet i CDex folderen\n(prøvede i folder: %s)\nCheck din CDex installation!"
+#0C33#	"Genre"
+#0C34#	"CDDB Genre"
+#0C35#	"ID3 V1 ID"
+#0C36#	"Ny Genre"
+#0C37#	"Ukendt"
+#0C38#	"Ugyldigt Server Svar"
+#0C39#	"%1 = Kunstner\t\t%5 = CD VolumeID\n%2 = Album\t\t%6 = CDDB ID\n%3 = Spor Nummer\t%7 = Spornummer m. foranstillet Nul\n%4 = Spor Navn\t%8 = Total Antal Spor\n%Y = År\t\t%G = Genre\n%A = Kunstner Navn (påvikres ikke af split-funktionen)\nBrug l eller u forgodkendelse for at gennemtvinge små/store bogstaver i strenge"
+#0C3A#	"CDex Player, Version "
+#0C3B#	"CDDB fejl opstod.  Se besked boxen for detaljer\n"
+#0C3C#	"FEJL: Kan ikke starte extern Indkoder"
+#0C3D#	"FEJL: Kan ikke sende data til extern indkoder"
+#0C3E#	"Kunne ikke skabe VQF script filen"
+#0C3F#	"Kunne ikke indlæse Indkoderen %s\nVær sikker på at starte CDex.exe hvor DLL-erne befinder sig\nHvis du har lavet en genvej, så vær sikker på at arbejdsfolderen er sat rigtigt"
+#0C40#	"Ugyldig Input Stream"
+#0C41#	"Kunne ikke åbne/skabe filen: %s"
+#0C42#	"FEJL: Kan ikke skabe hul til extern Indkoder"
+#0C43#	"GoGo DLL-en behøver en Floating Point Enhed"
+#0C44#	"%2d spor (%5.2f MB) Fri disk plads %5d MB"
+#0C45#	"Spiller spor %d (%02d:%02d:%02d)\n"
+#0C46#	" (område)"
+#0C47#	"Kan ikke åbne Udklipsholder"
+#0C48#	"Kan ikke tømme Udklipsholder"
+#0C49#	"Åbner Forbindelse"
+#0C4A#	"Sender Hello Streng"
+#0C4B#	"Sender Statistik Kommando"
+#0C4C#	"Sender Proto Niveau"
+#0C4D#	"Sender Forespørgsel"
+#0C4E#	"Start Extern Forespørgsel"
+#0C4F#	"HGenter Externt Svar"
+#0C50#	"Ukendt SMTP server adresse.  Udfyld med\nSMTP server addresse i CDDB Indsend Indstillings panelet."
+#0C51#	"Lykkedes ikke at sende streng til Extern server"
+#0C52#	"Forbinder til Server"
+#0C53#	"Server ikke klar"
+#0C54#	"Sender"
+#0C55#	"Sender data"
+#0C56#	"Sender indhold-text"
+#0C57#	"Intet server svar"
+#0C58#	" (Indkoder Tilgængelig, ingen version info tilgængelig)"
+#0C59#	" Alpha %d"
+#0C5A#	" Beta %d"
+#0C5B#	"Specificeret bitrate paser ikke med den valgte output frekvens"
+#0C5C#	" (ikee tilgængelig)"
+#0C5D#	"version"
+#0C5E#	"engine"
+#0C5F#	"Kunne ikke åbne filen %s"
+#0C60#	"Filstørrelse for lille til sammenligning"
+#0C61#	"Anden fil har et offset på %d bytes"
+#0C62#	"Første fil har et offset på %d bytes"
+#0C63#	"Filerne er forskellige, kunne ikke finde ens blokke"
+#0C64#	"Filen er forskellig, starter ved placering %d"
+#0C65#	"Ingen forskelle fundet\nIalt %d bytes er blevet sammenlignet"
+#0C66#	"CDex opsætning"
+#0C67#	"Vælg venligst en folder"
+#0C68#	"Vælg venligst et af emnerne i listen, eller klik Fortryd for at bakke ud"
+#0C6A#	"data tag ikke fundet"
+#0C6B#	"Filen %s er ikke en MPEG RIFF-WAV fil"
+#0C6C#	"Kunne ikke finde format tag i filen %s"
+#0C6D#	"Brug kun Auto-Detection hvis den indbyggede indstilling ikke virker!\nFor Auto-detection, skal en Lyd CD lægges i CD-ROM drevet.\nVil du fortsætte?"
+#0C6E#	"Total optagelses tid (MM:SS:FF) %02d:%02d:%02d lig med %d sektorer"
+#0C6F#	"Filnavn"
+#0C70#	"Dato"
+#0C71#	"Sti"
+#0C72#	"Størrelse (MB)"
+#0C73#	"Gem"
+#0C74#	"Fil størrelse for første/anden er %d/%d bytes"
+#0C75#	"OK"
+#0C76#	"Første filnavn is ikke gyldigt"
+#0C77#	"Second filnavn is ikke gyldigt"
+#0C78#	"Kunne ikke initialisere Ogg Encoding stream.  Måske passer den valgte bitrate ikke med den valgte output frekvens.  Prøv at bruge Kvalitets-Indstillingen i stedet for Bitrate indstillingen."
+#0C79#  "Indkodning has been aborted at %s"
+#0C7A#  "Indkodning af spor til en Komprimeret Lydfil afsluttet tilfredstillende. Total varighed: %s"
+#0C7B#	"Type"
+#0C80#	"CDex Player\n\nCDex Player\n\n\nCDex.Document\nCDex Document"
+#0C81#	"Ingen filer valgt"
+#0C82#	"Auto"
+#0C83#	"GrundInst"
+#0C84#	"Omdannelses fejl: Input filnavn er det samme som output filnavn.\nVælg venligst en anden Omdanner-Output-folder!\nInput filnavn  : %s\nOutput filnavn : %s"
+#0C85#	"Indbygget NT SCSI Library understøttes ikke af dette OperativSystem.\nDu skal installere ASPI drivere for at bruge CDex.  Se CDex Hjælp-Filen for mere information.\n"
+#0C86#	"FEJL: Lykkedes IKKE at indlæse Windows ASPI drivere.\nDu skal installere ASPI drivere for at bruge CDex.  Se CDex Hjælp-Filen for mere information.\n"
+#0C87#	"Error: Lykkedes IKKE at få ASPI driver status.\nCheck venligst ASPI driver installationen.  Se CDex Hjælp-Filen for mere information.\n"
+#0C88#	"Engelsk"
+#0C8F#  "..."
+#0C90#  "Vælg Folder"
+#0C91#  "Indkodere (*.exe;*.bat)|*.exe;*.bat|Alle Filer (*.*)|*.*||"
+#0C92#  "Vælg Indkoder"
+#0C93#  "Stor"
+#0C94#  "Lille"
+#0C95#  "ingen"
+#0C96#  "standard"
+#0C97#  "Læs"
+#0C98#  "Atapi"
+#0C99#  "Enable"
+#0C9A#  "Tæthed"
+#0C9B#  "Endian"
+#0C9C#  "Resultat"
+#0C9D#  "Godkendt"
+#0C9E#  "Fejlet"
+#0C9F#  "Mislykkedes at indlæse wnaspi32.dll driveren!\nBrug "Indbygget NT SCSI library" driver indstilling i stedet?"
+#0CA0#  "Led efter Yderligere/opdaterede Sprog filer"
+
+#8003#	"Vælg for at indstille CDex\nIndstille"
+#8004#	"Udtræk CD spor til WAV-fil(er)\nUdtræk CD spor til WAV-fil(er)"
+#8005#	"Udtræk CD spor til komprimeret Lyd-fil(er)\nUdtræk CD spor til komprimeret Lyd-fil(er)"
+#8006#	"Omdan WAV-fil(er) til komprimeret Lyd-fil(er)\nOmdan WAV-fil(er) til komprimeret Lyd-fil(er)"
+#8007#	"Udtræk en sektion af CD-en til WAV- eller komprimeret Lyd-fil(er)\nUdtræk en sektion af CD-en til WAV- eller komprimeret Lyd-fil(er)"
+#800D#	"Vælg her for at få system information\nVælg her for at få system information"
+#800E#	"Indstil CD Opsætning\nIndstil CD Opsætning"
+#800F#	"Udskub CD\nUdskub CD (Shift-F1)"
+#8010#	"Hurtig Frem\nHurtig Frem"
+#8011#	"Hurtig Tilbage\nHurtig Tilbage"
+#8012#	"Hop til næste spor\nHop til næste spor(Shift-F3)"
+#8013#	"Hop til forrige spor\nHop til forrige spor"
+#8015#	"Spil Lydspor\nSpil Lyd spor (Shift-F4)"
+#8016#	"Stop Afspilning\nStop Afspilning (Shift-F5)"
+#8017#	"Pause/Videre Afspilning\nPause/Videre Afspilning"
+#8018#	"Få album oplysninger fra lokal CDDB\nFå album oplysninger fra lokal CDDB"
+#801A#	"Læs album oplysninger fra CDPlayer.ini file\nLæs album oplysninger fra  CDPlayer.ini file"
+#801B#	"Få album oplysninger fra  Extern CDDB\nFå album oplysninger fra Extern CDDB"
+#801C#	"Vis eller Skjul Afspil-Værktøjer"
+#801D#	"Vis eller Skjul Optager-Værktøjer"
+#801E#	"Hop til forrige spor\nHop til forrige spor  (Shift-F2)"
+#801F#	"Hurtig Tilbage\nHurtig Tilbage"
+#8022#	"Omdan MP3 fil(er) to Riff Wav file(er)"
+#8023#	"Kopier album information til Udklipshpolder"
+#8024#	"Omdøb det udvalgte spor"
+#8026#	"Vælg Alle Spor"
+#8027#	"Gem album information i CDPlayer.ini file"
+#8028#	"Gem album information i lokal CDDB fil(er)"
+#8029#	"Omdan Komprimeret Lydfil(er) til WAV-fil(er)\nOmdan Komprimeret Lydfil(er) til WAV-fil(er)"
+#802A#	"Genindlæs album information fra disk"
+#802B#	"Viser status"
+#802C#	"Vis Udtræknings Status Information for de(t) valgte spor\nVis Udtræknings Status Information for de(t) valgte spor"
+#802D#	"Sammenlign indholdet af to WAV-filer\nSammenlign indhold af to WAV-filer"
+#802E#	"Spil Medie Filer\nSpil Medie Filer"
+#802F#	"Nulstil Udtræks-status for denne CD"
+#8030#  "Fjern RIFF-WAV header(e) fra MP2 og MP3 file(r)\nFjern RIFF-WAV header(e) fra MP2 og MP3 file(r)"
+#8031#	"Optag en WAV eller MP3 fra din computer's analoge input\nOptag fra analoge input"
+#8032#	"Indsend album information til Extern CDDB database"
+#8033#	"Få album information CD-Text (hvis understøttet/tilgængelig)"
+#8035#	"Vælg Filer\nVælg Filer"
+#8036#	"Vælg Filer\nVælg Filer"
+#8037#	"Hop til Forrige fil\nHop til Forrige fil"
+#8038#	"Hop til Næste fil\nHop til Næste fil"
+#8039#	"Afspil File(r)\nAfspil File(r)"
+#803A#	"Stop Afspilning\nStop Afspilning"
+#803B#	"CDDB Batch Forespørgsel\nCDDB Batch Forespørgsel"
+#803E#	"Gen-indkod (transcode) Komprimeret Lyd-File(r)\nGen-indkod (transcode) Komprimeret Lyd-File(r)"
+
+#8046#	"Indstil Winamp Plugins\nIndstil Winamp Plugins"
+#8047#	"Rediger liste med kendte genrer\nRediger Genre-Liste"
+#8048#	"Pause Afspil\nPause Afspil (Shift-F6)"
+#804B#	"Spil sporene i tilfældig orden\nSpil sporene i tilfældig orden"
+#804D#	"Udskift gemt Kunstner/Spor (for multi kunstner CDer)\nUdskift gemt Kunstner/Spor (for multi kunstner CDer)"
+#804E#	"Vælg det aktive CD Drev\nVælg det aktive CD Drev"
+#804F#	"Vælg profil\nVælg profil"
+#8050#	"Gem nuværende indstillinger i profil\nGem nuværende indstillinger i profil"
+#8052#	"Slet profil\nSlet valgt profil"
+#80E8#  "Læs album data fra Winamp CD database\nLæs album data fra Winamp CD database"
+#E000#	"CDex"
+#E001#	"Tast F1 for hjælp om CDex audio CD Udtrækker program"
+#E100#	"Opret et nyt dokument\nNy"
+#E101#	"Åbn et eksisterende dokument\nÅbn"
+#E102#	"Luk det aktive dokument\nLuk"
+#E103#	"Gem det aktive dokument\nGem"
+#E104#	"Gem det aktive dokument with a new name\nGem Som"
+#E105#	"Skift udskrivnings-indstillinger\nSide Opsætn."
+#E106#	"Skift printer og udskrivnings-indstillinger\nPrint Opsætn."
+#E107#	"Udskriv det aktive dokument\nUdskriv"
+#E109#	"Vis hele sider\nVis Udskrift"
+#E110#	"Åbn dette dokument"
+#E111#	"Åbn dette dokument"
+#E112#	"Åbn dette dokument"
+#E113#	"Åbn dette dokument"
+#E114#	"Åbn dette dokument"
+#E115#	"Åbn dette dokument"
+#E116#	"Åbn dette dokument"
+#E117#	"Åbn dette dokument"
+#E118#	"Åbn dette dokument"
+#E119#	"Åbn dette dokument"
+#E11A#	"Åbn dette dokument"
+#E11B#	"Åbn dette dokument"
+#E11C#	"Åbn dette dokument"
+#E11D#	"Åbn dette dokument"
+#E11E#	"Åbn dette dokument"
+#E11F#	"Åbn dette dokument"
+#E120#	"Fjern Udvalget\nRens"
+#E121#	"Fjern Alting\nFjern Alt"
+#E123#	"Klip det markerede og læg det i Udklipsholder\nKlip"
+#E124#	"Find en valgt tekst\nFind"
+#E125#	"Indsæt Indhold af UdklipsHolder\nIndsæt"
+#E128#	"Gentag den sidste Handling\nGentag"
+#E129#	"Udskift valgt tekst med anden tekst\nUdskift"
+#E12A#	"Markér hele dokumentet\nMarkér Alt"
+#E12B#	"Fortryd den sidste Handling\nFortryd"
+#E12C#	"Gentag den tidligere Fortrudte Handling\nGentag"
+#E135#	"Opdel det aktive Vindue i Ruder\nOpdel"
+#E140#	"Vis CDex information, version nummer, og copyright\nOm"
+#E141#	"Forlad Programmet\nAfslut"
+#E142#	"Åbner CDex Hjælp\nÅbner CDex Hjælp"
+#E143#	"Vis CDex manualen\nHjælp med brug af CDex"
+#E144#	"Vis instruktioner om at bruge hjælp\nHjælp"
+#E145#	"Vis Hjælp for klikket-på knapper, menuer, and vinduer\nHjælp"
+#E146#	"Vis Hjælp for nuværende opgave el. Kommando\nHjælp"
+#E150#	"Skift til det næste vindue panel\nNæste Vindue"
+#E151#	"Skift tilbage til forrige Vindue\nForrige Vindue"
+#E700#	"EXT"
+#E701#	"CAP"
+#E702#	"NUM"
+#E703#	"SCRL"
+#E704#	"OVR"
+#E705#	"REC"
+#E800#	"Vis el. Skjul Værktøjer\nVeksle Værktøjer"
+#E801#	"Vis el. Skjul status linien\nVeksle StatusLinie"
+#EF00#	"Gendan Vinduet"
+#EF01#	"Flyt Vinduet"
+#EF02#	"Minimer Vinduet til et ikon"
+#EF03#	"Forstør Vinduet til fuld størrelse"
+#EF04#	"Skift til næste dokument-vindue"
+#EF05#	"Skift til forrige dokument-vindue"
+#EF06#	"Afslut Programmet"
+#EF12#	"Gendan vinduet til normal størrelse"
+#EF13#	"Aktiver Opgave Liste"
+#F003#	"Unavngivet"
+#F005#  "Luk Vis Udskrift\nLuk Vis Udskrift"

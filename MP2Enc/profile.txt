@@ -1,0 +1,141 @@
+WAVE : Found WAV header. Assuming 44.1khz 16bit stereo samples
+Encoding d:\projects\lame\bench1.wav to d:\projects\lame\bench1.wav.mp3
+Encoding as 44.1 kHz 128 kbps stereo MPEG-1 LayerIII file
+Profile: Function timing, sorted by time
+Date:    Thu Nov 26 21:53:31 1998
+
+
+Program Statistics
+------------------
+    Command line at 1998 Nov 26 21:46: "D:\Projects\Lame\Profile\Lame" d:\projects\lame\bench1.wav
+    Total time: 72884.827 millisecond
+    Time outside of functions: 41.482 millisecond
+    Call depth: 14
+    Total functions: 226
+    Total hits: 16359081
+    Function coverage: 43.8%
+    Overhead Calculated 6
+    Overhead Average 6
+
+Module Statistics for lame.exe
+------------------------------
+    Time in module: 0.000 millisecond
+    Percent of time in module: 0.0%
+    Functions in module: 113
+    Hits in module: 0
+    Module function coverage: 0.0%
+
+        Func          Func+Child           Hit
+        Time   %         Time      %      Count  Function
+---------------------------------------------------------
+
+Module Statistics for lame.exe
+------------------------------
+    Time in module: 72843.345 millisecond
+    Percent of time in module: 100.0%
+    Functions in module: 113
+    Hits in module: 16359081
+    Module function coverage: 87.6%
+
+        Func          Func+Child           Hit
+        Time   %         Time      %      Count  Function
+---------------------------------------------------------
+   12879.346  17.7    12938.753  17.8   107166 _quantize (loop.obj)
+    6853.498   9.4     6854.130   9.4    82728 _window_subband (encode.obj)
+    6769.195   9.3     6769.195   9.3   916008 _count_bit (loop.obj)
+    5953.376   8.2     5953.376   8.2  1378800 _srrec (subs.obj)
+    5413.342   7.4     5413.342   7.4    18384 _enphinew (subs.obj)
+    4621.023   6.3    20990.125  28.8     4596 _L3psycho_anal (l3psy.obj)
+    4561.158   6.3     4561.158   6.3   412017 _ix_max (loop.obj)
+    3636.432   5.0     9589.808  13.2   156264 _rsrec (subs.obj)
+    2668.903   3.7     2668.903   3.7    33459 _calc_noise (loop.obj)
+    2348.057   3.2     2348.057   3.2    33459 _preemphasis (loop.obj)
+    2116.907   2.9     2119.679   2.9     4596 _quantanf_init (loop.obj)
+    2108.708   2.9     2111.822   2.9    82728 _IDCT32 (encode.obj)
+    2095.873   2.9     2095.873   2.9   147072 _mdct (mdct.obj)
+    2066.627   2.8     4178.449   5.7    82728 _filter_subband (encode.obj)
+    1214.686   1.7     3310.559   4.5     1149 _mdct_sub (mdct.obj)
+     979.146   1.3      979.146   1.3   107166 _calc_runlen (loop.obj)
+     817.790   1.1      817.790   1.1   107166 _count1_bitcount (loop.obj)
+     516.043   0.7      516.043   0.7     9192 _xr_max (loop.obj)
+     504.661   0.7      504.661   0.7    33459 _amp_scalefac_bands (loop.obj)
+     484.910   0.7      484.910   0.7     4596 _sprdngf1 (l3psy.obj)
+     475.103   0.7      745.644   1.0     4596 _calc_scfsi (loop.obj)
+     438.798   0.6      438.798   0.6     4596 _sprdngf2 (l3psy.obj)
+     436.601   0.6      436.605   0.6     1150 _read_samples (encode.obj)
+     392.149   0.5      392.149   0.5    18384 _BR_permute (subs.obj)
+     386.872   0.5        0.000   0.0     1149 _III_format_bitstream (l3bitstream.obj)
+     373.753   0.5    35732.889  49.1     1149 _iteration_loop (loop.obj)
+     324.182   0.4      324.182   0.4      118 _empty_buffer (common.obj)
+     222.673   0.3      222.673   0.3     4596 _calc_xmin (loop.obj)
+     164.486   0.2    32006.746  43.9     4596 _outer_loop (loop.obj)
+     155.421   0.2      592.026   0.8     1150 _get_audio (encode.obj)
+     118.436   0.2     6226.795   8.5   304851 _new_choose_table (loop.obj)
+     104.410   0.1      427.304   0.6  1175022 _putbits (common.obj)
+      90.931   0.1       90.931   0.1   107166 _subdivide (loop.obj)
+      74.792   0.1     6303.343   8.7   107166 _bigv_tab_select (loop.obj)
+      72.665   0.1     1976.447   2.7   107166 _bigv_bitcount (loop.obj)
+      64.439   0.1       64.439   0.1   961528 _nint (loop.obj)
+      64.132   0.1       64.132   0.1    33024 _scale_bitcount (loop.obj)
+      63.102   0.1    70969.948  97.4        1 _main (musicin.obj)
+      35.945   0.0       35.959   0.0  1260615 _BF_addElement (formatbitstream.obj)
+      33.823   0.0       33.823   0.0    33459 _loop_break (loop.obj)
+      27.534   0.0       27.534   0.0        1 _L3para_read (l3psy.obj)
+      18.462   0.0       18.462   0.0    38055 _part2_length (loop.obj)
+      17.792   0.0     8616.013  11.8     4596 _bin_search_StepSize (loop.obj)
+      11.423   0.0    15414.625  21.2    18384 _fft (subs.obj)
+       7.903   0.0     9989.860  13.7    18384 _rsfft (subs.obj)
+       7.592   0.0        7.592   0.0     4596 _ResvMaxBits (reservoir.obj)
+       6.345   0.0        6.345   0.0       34 _mem_alloc (common.obj)
+       5.017   0.0        5.017   0.0    37068 _aint (loop.obj)
+       4.957   0.0        0.000   0.0     1149 _encodeMainData (l3bitstream.obj)
+       4.909   0.0        0.000   0.0    14937 _writePartMainData (formatbitstream.obj)
+       4.419   0.0        4.419   0.0     9192 _BF_PartLength (formatbitstream.obj)
+       3.556   0.0        3.556   0.0     4596 _ResvAdjust (reservoir.obj)
+       3.025   0.0        0.000   0.0     1149 _main_data (formatbitstream.obj)
+       2.867   0.0        2.867   0.0        1 _create_dct_matrix (encode.obj)
+       2.679   0.0        4.769   0.0        1 _parse_args (musicin.obj)
+       2.369   0.0        2.369   0.0     1149 _ResvFrameEnd (reservoir.obj)
+       1.785   0.0        1.785   0.0     4596 _gr_deco (loop.obj)
+       1.757   0.0        1.757   0.0     3272 _choose_table (loop.obj)
+       1.329   0.0        1.329   0.0     1149 _ResvFrameBegin (reservoir.obj)
+       1.323   0.0        1.543   0.0        1 _open_bit_stream_w (common.obj)
+       0.852   0.0        0.000   0.0     1149 _BF_BitstreamFrame (formatbitstream.obj)
+       0.748   0.0        0.748   0.0     1149 _write_ancillary_data (l3bitstream.obj)
+       0.551   0.0        0.551   0.0       30 _BF_newPartHolder (formatbitstream.obj)
+       0.355   0.0        0.355   0.0        1 _read_absthr (psy.obj)
+       0.341   0.0        0.341   0.0        1 _print_config (musicin.obj)
+       0.282   0.0        0.282   0.0        2 _Read16BitsHighLow (portableio.obj)
+       0.241   0.0        1.562   0.0        1 _close_bit_stream_w (common.obj)
+       0.199   0.0        0.482   0.0        1 _Read32BitsHighLow (portableio.obj)
+       0.127   0.0        0.127   0.0     1150 _side_queue_elements (formatbitstream.obj)
+       0.085   0.0        0.085   0.0        1 _read_ana_window (encode.obj)
+       0.061   0.0        0.543   0.0        1 _aiff_read_headers (common.obj)
+       0.034   0.0        0.034   0.0        1 _desalloc_buffer (common.obj)
+       0.013   0.0        0.013   0.0        9 _BF_freePartHolder (formatbitstream.obj)
+       0.003   0.0        0.013   0.0        1 _BF_resizePartHolder (formatbitstream.obj)
+       0.003   0.0        0.003   0.0        1 _DetermineByteOrder (common.obj)
+       0.003   0.0        0.003   0.0        1 _BitrateIndex (common.obj)
+       0.003   0.0        0.012   0.0        1 _free_side_info_link (formatbitstream.obj)
+       0.002   0.0        0.014   0.0        1 _BF_FlushBitstream (formatbitstream.obj)
+       0.002   0.0        0.220   0.0        1 _alloc_buffer (common.obj)
+       0.002   0.0        0.002   0.0        1 _hdr_to_frps (common.obj)
+       0.001   0.0        0.001   0.0        1 _SmpFrqIndex (common.obj)
+       0.001   0.0        0.013   0.0        1 _free_side_queues (formatbitstream.obj)
+       0.000   0.0        7.392   0.0     9192 _BF_LoadHolderFromBitstreamPart (formatbitstream.obj)
+       0.000   0.0        0.000   0.0  1900549 _BF_addEntry (formatbitstream.obj)
+       0.000   0.0        0.000   0.0  1203937 _HuffmanCode (l3bitstream.obj)
+       0.000   0.0        0.000   0.0     4596 _Huffmancodebits (l3bitstream.obj)
+       0.000   0.0        0.014   0.0        1 _III_FlushBitstream (l3bitstream.obj)
+       0.000   0.0        0.000   0.0   108939 _L3_huffman_coder_count1 (l3bitstream.obj)
+       0.000   0.0        0.000   0.0  1087641 _WriteMainDataBits (formatbitstream.obj)
+       0.000   0.0        0.000   0.0  2763710 _abs_and_sign (l3bitstream.obj)
+       0.000   0.0     3924.044   5.4    37068 _count_bits (loop.obj)
+       0.000   0.0        0.000   0.0     1149 _encodeSideInfo (l3bitstream.obj)
+       0.000   0.0        0.000   0.0     1149 _get_side_info (formatbitstream.obj)
+       0.000   0.0    17588.209  24.1    33459 _inner_loop (loop.obj)
+       0.000   0.0        0.000   0.0  1175022 _putMyBits (l3bitstream.obj)
+       0.000   0.0        0.000   0.0     1149 _sstell (common.obj)
+       0.000   0.0       10.412   0.0     1149 _store_side_info (formatbitstream.obj)
+       0.000   0.0        3.961   0.0     9192 _writePartSideInfo (formatbitstream.obj)
+       0.000   0.0        2.720   0.0     1149 _write_side_info (formatbitstream.obj)

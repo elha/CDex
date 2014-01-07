@@ -1,0 +1,3117 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\idr_cdex.ico"
+IDR_PLAYERFRAME         ICON                    "res\\idr_cdex.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_VOLUME              BITMAP                  "res\\Volume.bmp"
+IDB_RECORDU             BITMAP                  "res\\RecordU.bmp"
+IDB_RECORDD             BITMAP                  "res\\RecordD.bmp"
+IDB_RECORDF             BITMAP                  "res\\RecordF.bmp"
+IDB_RECORDX             BITMAP                  "res\\RecordX.bmp"
+IDB_RECORDPAUSEU        BITMAP                  "res\\RecordPauseU.bmp"
+IDB_RECORDPAUSED        BITMAP                  "res\\RecordPauseD.bmp"
+IDB_RECORDPAUSEF        BITMAP                  "res\\RecordPauseF.bmp"
+IDB_RECORDPAUSEX        BITMAP                  "res\\RecordPauseX.bmp"
+IDB_RECORDSTOPU         BITMAP                  "res\\RecordStopU.bmp"
+IDB_RECORDSTOPD         BITMAP                  "res\\RecordStopD.bmp"
+IDB_RECORDSTOPF         BITMAP                  "res\\RecordStopF.bmp"
+IDB_RECORDSTOPX         BITMAP                  "res\\RecordStopX.bmp"
+IDB_CDEXLOGO            BITMAP                  "res\\logo.bmp"
+IDB_RECBAR256           BITMAP                  "res\\Recbar_256.bmp"
+IDB_RECBAR256D          BITMAP                  "res\\Recbar_256D.bmp"
+IDB_CDPLAYTOOLBAR_C     BITMAP                  "res\\CDPlayToolBarC.bmp"
+IDB_CDPLAYTOOLBAR_D     BITMAP                  "res\\CDPlayToolBarD.bmp"
+IDB_CDPLAYTOOLBAR_H     BITMAP                  "res\\CDPlayToolBarH.bmp"
+IDB_FILEPLAYTOOLBAR_C   BITMAP                  "res\\FilePlayToolBarC.bmp"
+IDB_FILEPLAYTOOLBAR_D   BITMAP                  "res\\FilePlayToolBarD.bmp"
+IDB_FILEPLAYTOOLBAR_H   BITMAP                  "res\\FilePlayToolBarH.bmp"
+IDB_UTILTOOLBAR_C       BITMAP                  "res\\UtilToolBarN.bmp"
+IDB_UTILTOOLBAR_D       BITMAP                  "res\\UtilToolBarD.bmp"
+IDB_UTILTOOLBAR_H       BITMAP                  "res\\UtilToolBarH.bmp"
+IDW_PLAYBAR             BITMAP                  "RES\\PlayBar.bmp"
+IDW_RECBAR              BITMAP                  "RES\\RecBar.bmp"
+IDW_PLAYFILEBAR         BITMAP                  "res\\PlayFileBar.bmp"
+IDW_UTILBAR             BITMAP                  "res\\UtilToolBar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "A",            ID_EDIT_SELECTALL,      VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_EJECT,               VIRTKEY, SHIFT, NOINVERT
+    VK_F10,         ID_PTRACKS2MP3,         VIRTKEY, NOINVERT
+    VK_F11,         ID_WAV2MP3,             VIRTKEY, NOINVERT
+    VK_F12,         ID_MP3TOWAV,            VIRTKEY, NOINVERT
+    VK_F2,          ID_EDIT_RENAMETRACK,    VIRTKEY, NOINVERT
+    VK_F2,          ID_PREVTRACK,           VIRTKEY, SHIFT, NOINVERT
+    VK_F3,          ID_VIEWRIPSTATUS,       VIRTKEY, NOINVERT
+    VK_F3,          ID_NEXTTRACK,           VIRTKEY, SHIFT, NOINVERT
+    VK_F4,          ID_CONFIGURE,           VIRTKEY, NOINVERT
+    VK_F4,          ID_PLAYTRACK,           VIRTKEY, SHIFT, NOINVERT
+    VK_F5,          ID_EDIT_REFRESH,        VIRTKEY, NOINVERT
+    VK_F5,          ID_STOPBUTTON,          VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PLAYBARPAUSE,        VIRTKEY, SHIFT, NOINVERT
+    VK_F8,          ID_TRACKS2WAV,          VIRTKEY, NOINVERT
+    VK_F9,          ID_TRACKS2MP3,          VIRTKEY, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#include ""res\\languages.rc""\r\n"
+    "#include ""res\\version.rc2""\r\n"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDW_PLAYBAR TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_EJECT
+    SEPARATOR
+    BUTTON      ID_SKIPBACK
+    BUTTON      ID_SKIPFORWARD
+    BUTTON      ID_PREVTRACK
+    BUTTON      ID_NEXTTRACK
+    SEPARATOR
+    BUTTON      ID_PLAYTRACK
+    BUTTON      ID_STOPBUTTON
+    BUTTON      ID_PLAYBARPAUSE
+    SEPARATOR
+    BUTTON      ID_CONFIGCD
+    SEPARATOR
+    SEPARATOR
+END
+
+IDW_RECBAR TOOLBAR  32, 32
+BEGIN
+    BUTTON      ID_TRACKS2WAV
+    SEPARATOR
+    BUTTON      ID_TRACKS2MP3
+    SEPARATOR
+    BUTTON      ID_PTRACKS2MP3
+    SEPARATOR
+    BUTTON      ID_WAV2MP3
+    BUTTON      ID_MP3TOWAV
+    SEPARATOR
+    BUTTON      ID_REMOTECDDB
+    BUTTON      ID_CONFIGURE
+END
+
+IDW_PLAYFILEBAR TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_FILEOPEN
+    SEPARATOR
+    BUTTON      ID_PREV
+    BUTTON      ID_NEXT
+    SEPARATOR
+    BUTTON      ID_PLAY
+    BUTTON      ID_PAUSE
+    SEPARATOR
+    BUTTON      ID_STOP
+END
+
+IDW_UTILBAR TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_PROFILESELECTION
+    SEPARATOR
+    BUTTON      ID_SAVEPROFILE
+    BUTTON      ID_DELETEPROFILE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PCOPYDIALOG DIALOG  0, 0, 312, 201
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Record partial tracks"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDC_FILENAME,14,25,276,14,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "WAV file",IDC_OUTPUTTYPE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,86,50,69,10
+    CONTROL         "Compressed Audio File (Encoded)",IDC_MP3TYPE,"Button",
+                    BS_AUTORADIOBUTTON,160,50,135,10
+    EDITTEXT        IDC_STARTM,192,100,28,14,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "Spin6",IDC_SPINSM,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | WS_GROUP | WS_TABSTOP,207,100,11,14
+    EDITTEXT        IDC_STARTS,227,100,28,14,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "Spin6",IDC_SPINSS,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | WS_GROUP | WS_TABSTOP,236,100,11,14
+    EDITTEXT        IDC_STARTF,262,100,28,14,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "Spin6",IDC_SPINSF,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | WS_GROUP | WS_TABSTOP,275,100,11,14
+    EDITTEXT        IDC_ENDM,192,122,28,14,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "Spin6",IDC_SPINEM,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | WS_GROUP | WS_TABSTOP,207,117,11,14
+    EDITTEXT        IDC_ENDS,227,122,28,14,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "Spin6",IDC_SPINES,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | WS_GROUP | WS_TABSTOP,236,118,11,14
+    EDITTEXT        IDC_ENDF,262,122,28,14,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "Spin6",IDC_SPINEF,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | WS_GROUP | WS_TABSTOP,275,118,11,14
+    DEFPUSHBUTTON   "OK",IDOK,95,175,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,165,175,50,14,WS_GROUP
+    LTEXT           "Track",IDC_STATIC_PCOPY_TRACK,86,87,100,8,WS_TABSTOP
+    LTEXT           "Min",IDC_STATIC_PCOPY_MINUTE,192,87,24,8,WS_TABSTOP
+    LTEXT           "Sec",IDC_STATIC_PCOPY_SECONDS,227,87,29,8,WS_TABSTOP
+    LTEXT           "Frame",IDC_STATIC_PCOPY_FRAME,262,87,29,8,WS_TABSTOP
+    GROUPBOX        "File properties",IDC_STATIC_PCOPY_FILEPROPS,5,5,295,60,
+                    WS_GROUP | WS_TABSTOP
+    GROUPBOX        "Range (one file from start position to stop position)",
+                    IDC_STATIC_PCOPY_RANGESEL,5,70,295,94,WS_GROUP | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_STARTTRACK,83,100,106,79,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_ENDTRACK,83,124,106,57,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    LTEXT           "INFO",IDC_INFO,14,149,275,10,WS_TABSTOP
+    LTEXT           "Start Position",IDC_STATIC_PCOPY_STARTPOS,14,102,65,8,
+                    WS_TABSTOP
+    LTEXT           "Stop Position",IDC_STATIC_PCOPY_STOPPOS,14,127,65,8,
+                    WS_TABSTOP
+    LTEXT           "Output Type",IDC_STATIC_PCOPY_OUTPUTTYPE,14,50,65,8,
+                    WS_TABSTOP
+END
+
+IDD_ENCODERPROPPAGE DIALOG  0, 0, 312, 201
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Encoder"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Convert to Riff WAV files",IDC_RIFFWAV,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,160,7,145,10
+    CONTROL         "",IDC_ENCOPTS,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,
+                    11,65,286,131
+    COMBOBOX        IDC_THREADPRIORITY,79,5,75,75,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Thread Priority",IDC_STATIC_ENCPROPPAGE_THREADPRIORITY,
+                    5,7,70,9
+    COMBOBOX        IDC_ENCODERSEL,79,23,224,118,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Encoder Options",IDC_STATIC_ENCPROPPAGE_ENCOPTIONS,5,50,
+                    299,150
+    LTEXT           "Encoder",IDC_STATIC_ENCPROPPAGE_ENCODER,5,25,70,9
+    CONTROL         "Don't delete ripped WAV file after conversion",
+                    IDC_RETAINWAVFILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    79,39,225,10
+END
+
+IDD_GENERICPROPPAGE DIALOGEX 0, 0, 317, 218
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "General"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_TEMPDIR,90,5,217,14,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Normalize",IDC_NORMTRACK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,42,57,10
+    EDITTEXT        IDC_LNORMVALUE,105,38,31,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,30,52,11,
+                    14
+    EDITTEXT        IDC_LNORMLEVEL,209,38,31,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,262,37,11,
+                    14
+    EDITTEXT        IDC_HNORMVALUE,105,60,31,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN4,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,120,67,11,
+                    14
+    EDITTEXT        IDC_UNORMLEVEL,209,60,31,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN3,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,262,57,11,
+                    14
+    CONTROL         "Automatic shutdown after ripping / encoding",
+                    IDC_AUTOSHUTDOWN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,
+                    198,172,10
+    LTEXT           "If signal is <",IDC_STATIC_GENERAL_IFSIGNALLT,150,42,56,
+                    8
+    LTEXT           "%",IDC_STATIC,247,63,8,8
+    GROUPBOX        "Normalize Volume",IDC_STATIC_GENERAL_NORMALIZEVOL,5,28,
+                    305,60
+    LTEXT           "To",IDC_STATIC_GENERAL_TO,75,42,24,8
+    LTEXT           "If signal is >",IDC_STATIC_GENERAL_SIGNALGT,150,63,56,8
+    LTEXT           "%",IDC_STATIC,247,42,8,8
+    LTEXT           "To",IDC_STATIC_GENERAL__TO,75,63,24,8
+    LTEXT           "Temp directory",IDC_STATIC_GENERAL_TEMPDIR,8,10,72,8
+    CONTROL         "Digital CD Playback",IDC_DIGITALCDPLAYBACK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,184,198,121,10
+    LTEXT           "%",IDC_STATIC,140,63,8,8
+    LTEXT           "%",IDC_STATIC,140,42,8,8
+END
+
+IDD_COPYDIALOG DIALOGEX 0, 0, 252, 190
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Record Tracks"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,91,167,61,14
+    CONTROL         "Progress1",IDC_RECORDCTRL,"msctls_progress32",WS_BORDER,
+                    7,58,238,14
+    CONTROL         "Progress1",IDC_JITTERCTRL,"msctls_progress32",WS_BORDER,
+                    7,100,238,14
+    LTEXT           "Info1",IDC_INFO1,7,7,238,8,SS_NOPREFIX
+    CONTROL         "Info2",IDC_INFO2,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,7,18,238,8
+    LTEXT           "PEAKVALUE",IDC_PEAKVALUE,7,40,238,8,SS_NOPREFIX
+    LTEXT           "Info3",IDC_INFO3,7,29,238,8,SS_NOPREFIX
+    LTEXT           "Info4",IDC_INFO4,7,86,238,8,SS_NOPREFIX
+    LTEXT           "Info5",IDC_INFO5,7,128,238,8,SS_NOPREFIX
+END
+
+IDD_CDPROPPAGE DIALOGEX 0, 0, 324, 201
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "CD Drive"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_CDROMLIST,94,5,206,87,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_READSIZE,94,24,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_READRETRIES,260,24,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_READOVERLAP,94,42,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_STARTOFFSET,94,60,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CDSPEED,260,60,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ENDOFFSET,94,80,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SPINUPTIME,260,80,40,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_READMETHOD,93,100,116,67,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Auto-Detect",IDC_DETECT,215,100,85,14
+    CONTROL         "Swap Left and Right Channels",IDC_SWAPLEFTRIGHT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,139,174,10
+    CONTROL         "Eject CD when ripping has been completed",
+                    IDC_EJECTWHENFINISHED,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,154,174,10
+    CONTROL         "Enable Jitter Correction",IDC_JITTER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,187,154,133,10
+    CONTROL         "Select All CD Tracks (by default)",
+                    IDC_SELECT_ALL_DEFAULT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,169,174,10
+    CONTROL         "Use Native NT SCSI library",IDC_USENTSCSI,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,187,169,133,10
+    LTEXT           "CD-Rom",IDC_STATIC_CDROMSETTINGS_CDROM,7,5,83,14,
+                    SS_CENTERIMAGE
+    LTEXT           "Read Sectors",IDC_STATIC_CDROMSETTINGS_READSECTORS,7,24,
+                    83,14,SS_CENTERIMAGE
+    LTEXT           "Read Overlap",IDC_STATIC_CDROMSETTINGS_OVERLAP,7,42,83,
+                    14,SS_CENTERIMAGE
+    LTEXT           "CD-ROM Drive Type",IDC_STATIC_CDROMSETTINGS_CDROMTYPE,7,
+                    103,83,14,SS_CENTERIMAGE
+    LTEXT           "CD Speed",IDC_STATIC_CDROMSETTINGS_CDSPEED,153,60,97,14,
+                    SS_CENTERIMAGE
+    LTEXT           "Start Offset (sectors)",
+                    IDC_STATIC_CDROMSETTINGS_STARTOFFSET,7,60,83,14,
+                    SS_CENTERIMAGE
+    LTEXT           "End Offset (sectors)",
+                    IDC_STATIC_CDROMSETTINGS_ENDOFFSET,7,80,83,14,
+                    SS_CENTERIMAGE
+    LTEXT           "Spin up time (sec)",IDC_STATIC_CDROMSETTINGS_SPINUPTIME,
+                    153,80,97,14,SS_CENTERIMAGE
+    LTEXT           "Number of Retries",IDC_STATIC_CDROMSETTINGS_NUMRETRIES,
+                    153,24,97,14,SS_CENTERIMAGE
+    LTEXT           "Ripping Method",IDC_STATIC_CDROMSETTINGS_RIPPINGMETHOD,
+                    7,118,83,14,SS_CENTERIMAGE
+    CONTROL         "Lock CD during extraction",IDC_LOCKDURINGREAD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,187,140,133,10
+    COMBOBOX        IDC_RIPPINGMETHOD,93,119,116,67,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Use CD-Text (if available)",IDC_USECDTEXT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,185,174,10
+    LTEXT           "Sample offset",IDC_STATIC,153,45,82,8
+    EDITTEXT        IDC_EDIT1,260,43,40,14,ES_AUTOHSCROLL
+END
+
+IDD_CDDBSETTINGS DIALOG  0, 0, 337, 196
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Remote CDDB"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    COMBOBOX        IDC_SERVERLIST,74,10,251,103,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_LOCATION,74,30,251,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ADDRESS,74,50,125,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PATH,268,50,56,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_PROTOCOL,74,71,125,55,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_CDDBPORT,299,70,25,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EMAIL,74,93,125,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TIMEOUT,299,93,25,14,ES_AUTOHSCROLL
+    CONTROL         "Use Proxy",IDC_USEPROXY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,116,65,10
+    EDITTEXT        IDC_PROXYADDRESS,74,113,125,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROXYPORT,299,113,25,14,ES_AUTOHSCROLL
+    CONTROL         "Authentication",IDC_USEAUTHENTICATION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,134,65,10
+    EDITTEXT        IDC_PROXYUSER,74,132,125,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROXYPASSWORD,269,132,55,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    CONTROL         "Auto connect to remote CDDB",IDC_AUTOCONNECT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,155,310,10
+    PUSHBUTTON      "Add Site",IDC_ADDSITE,5,170,75,14
+    PUSHBUTTON      "Query Sites",IDC_QUERYSITES,87,170,75,14
+    PUSHBUTTON      "Reset All",IDC_RESETBUTTON,168,170,75,14
+    PUSHBUTTON      "Submit Options",IDC_SUBMITOPTS,249,170,75,14
+    LTEXT           "Remote Server",IDC_STATIC_CDDBREMOTE_SERVER,5,15,65,8
+    LTEXT           "Your E-mail address",IDC_STATIC_CDDBREMOTE_EMAILADDRESS,
+                    5,96,65,8
+    LTEXT           "Proxy Port",IDC_STATIC_CDDBREMOTE_PROXYPORT,205,116,90,
+                    8
+    LTEXT           "Password",IDC_STATIC_CDDBREMOTE_PASSWORD,205,135,58,8
+    LTEXT           "Timeout (seconds)",IDC_STATIC_CDDBREMOTE_TIMEOUT,205,95,
+                    90,8
+    LTEXT           "Address",IDC_STATIC_CDDBREMOTE_ADDRESS,5,55,65,8
+    LTEXT           "Path",IDC_STATIC_CDDBREMOTE_PATH,205,55,58,8
+    LTEXT           "Protocol",IDC_STATIC_CDDBREMOTE_PROTOCOL,5,73,65,8
+    LTEXT           "Location",IDC_STATIC_CDDBREMOTE_LOCATION,5,35,65,8
+    LTEXT           "Port",IDC_STATIC_CDDBREMOTE_PORT,205,73,90,8
+END
+
+IDD_MP3TORIFFWAV DIALOG  0, 0, 217, 102
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Convert MP3 to RIFF-WAV"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,78,75,60,14
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,7,
+                    46,198,14
+    LTEXT           "Processing",IDC_STATIC_MPEGTORIFFWAV_PROCESSING,7,7,203,
+                    8,SS_NOPREFIX
+    LTEXT           "FileName",IDC_PROCESSFILENAME,7,25,198,8,SS_NOPREFIX
+END
+
+IDD_CDDBDIALOG DIALOGEX 0, 0, 287, 210
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Accessing freedb"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,135,189,64,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,205,189,64,14
+    EDITTEXT        IDC_OUTPUT,7,42,273,110,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+    LTEXT           "Current Action",IDC_STATIC_CDDBDIALOG_CURRENT_ACTION,7,
+                    7,58,8
+    LTEXT           "status",IDC_CURACTION,70,7,200,8
+    LTEXT           "Message",IDC_STATIC_CDDBDIALOG_MESSAGE,7,21,268,8
+    COMBOBOX        IDC_CDDB_DLG_CAT,133,170,65,30,CBS_DROPDOWN | CBS_SORT | 
+                    NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Resubmit",IDC_CDDB_RESUBMIT,203,168,65,14,NOT 
+                    WS_VISIBLE
+    LTEXT           "freedb category",IDC_CDDB_CAT_SELECTION_TEXT,7,174,120,
+                    8,NOT WS_VISIBLE
+END
+
+IDD_CDDBMATCH DIALOG  0, 0, 266, 150
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Found Inexact Match"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,75,130,50,14
+    CONTROL         "List1",IDC_MATCHLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,5,10,252,110
+    PUSHBUTTON      "Cancel",IDCANCEL,140,130,50,14
+END
+
+IDD_ENCODERWINCODECMP3DLG DIALOG  0, 0, 264, 91
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    COMBOBOX        IDC_WINCODEC,105,7,152,63,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_WINCODECFORMAT,105,29,152,63,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "On the fly MP3 Encoding",IDC_RTENCODING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,53,250,10
+    LTEXT           "Windows MP3 Codec",IDC_STATIC_ENCWINOPTS_CODEC,7,9,93,8
+    LTEXT           "Codec Bitrate Selection",IDC_STATIC_ENCWINOPTS_CODECSEL,
+                    7,31,93,8
+    CONTROL         "High Quality",IDC_HIQUALITY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,70,250,10
+END
+
+IDD_ENCODERLAMEDLLDLG DIALOG  0, 0, 281, 116
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    COMBOBOX        IDC_MPEGVERSION,39,5,52,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_MINBITRATE,133,5,57,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_MAXBITRATE,220,5,60,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Stereo",IDC_CHANNELSELECTION,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,39,24,41,10
+    CONTROL         "J-stereo",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,90,25,
+                    53,10
+    CONTROL         "Forced Stereo",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,
+                    150,24,70,10
+    CONTROL         "Mono",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,225,24,54,
+                    10
+    CONTROL         "Private",IDC_PRIVATE,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,11,39,61,10
+    CONTROL         "Checksum",IDC_CRC,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,79,39,61,10
+    CONTROL         "Original",IDC_ORIGINAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,145,39,61,10
+    CONTROL         "Copyright",IDC_COPYRIGHT,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,212,39,61,10
+    COMBOBOX        IDC_QUALITY,61,54,94,62,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    CONTROL         "On-the-fly MP3 Encoding",IDC_RTENCODING,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,160,55,118,10
+    COMBOBOX        IDC_VBRMETHOD,61,73,65,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_VBR,61,91,66,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    EDITTEXT        IDC_ABR,246,70,25,14,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "Bitrate Min",IDC_STATIC_ENCLAMEOPS_BRMIN,95,7,34,8
+    LTEXT           "Mode",IDC_STATIC_ENCLAMEOPS_MODE,5,24,30,8
+    LTEXT           "Quality",IDC_STATIC_ENCLAMEOPS_QUALITY,5,56,55,8,
+                    WS_TABSTOP
+    LTEXT           "VBR Quality",IDC_STATIC_ENCLAMEOPS_VBRQUALITY,5,93,55,8,
+                    WS_TABSTOP
+    LTEXT           "Max",IDC_STATIC_ENCLAMEOPS_BRMAX,196,7,19,8
+    LTEXT           "ABR (kpbs)",IDC_STATIC_ENCLAMEOPS_ABRKBPS,185,73,58,8,
+                    WS_TABSTOP
+    LTEXT           "VBR Method",IDC_STATIC_ENCLAMEOPS_VBRMETHOD,5,75,55,8,
+                    WS_TABSTOP
+    LTEXT           "Version",IDC_STATIC_ENCLAMEOPS_VERSION,5,7,30,8
+    LTEXT           "Output Samplerate",IDC_STATIC_ENCLAMEOPS_OUTSR,132,93,
+                    70,8,WS_TABSTOP
+    COMBOBOX        IDC_OUTSAMPLERATE,208,91,66,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+END
+
+IDD_ENCODERDOSMPPDLG DIALOG  0, 0, 261, 101
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Parameter string",IDC_STATIC_ENCDOSMPP_PARAMSTRING,7,43,
+                    248,8
+    EDITTEXT        IDC_EXTENCOPTS,7,57,246,14,ES_AUTOHSCROLL
+    LTEXT           "Path to Musepack encoder",IDC_STATIC_ENCDOSMPP_ENCPATH,
+                    7,6,228,8
+    CONTROL         "Hide MSDOS window",IDC_HIDE_DOSBOX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,82,115,10
+    CONTROL         "On-the-fly encoding",IDC_ON_THE_FLY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,135,82,120,10
+    EDITTEXT        IDC_EXTENC,7,20,233,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_GENINFO DIALOG  0, 0, 317, 191
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "General Information"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,250,165,56,14
+    LTEXT           "Disc ID",IDC_DISCID,93,21,217,8,SS_NOPREFIX
+    LTEXT           "Vol ID",IDC_VOLID,93,7,217,8,SS_NOPREFIX
+    LTEXT           "Volume ID",IDC_STATIC_GENINFO_VOLDID,7,7,78,8
+    LTEXT           "CDDB Disc ID",IDC_STATIC_GENINFO_CDDBID,7,21,78,8
+    LTEXT           "OS Version",IDC_OSVERSION,93,49,217,8,SS_NOPREFIX
+    LTEXT           "AspiVersion",IDC_ASPIVERSION,93,34,217,8,SS_NOPREFIX
+    LTEXT           "ASPI Manager",IDC_STATIC_GENINFO_ASPIMANAGER,7,35,78,8
+    LTEXT           "OS Version",IDC_STATIC_GENINFO_OSVERSION,7,49,78,8
+    PUSHBUTTON      "Copy to Clipboard",IDC_COPYTOCLIP,9,165,120,14
+    LTEXT           "AspiVersion1",IDC_ASPIVERSION1,0,100,217,8,SS_NOPREFIX | 
+                    NOT WS_VISIBLE
+    EDITTEXT        IDC_DETAILEDDRIVEINFO,10,65,295,95,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | 
+                    WS_VSCROLL
+END
+
+IDD_DROPASK DIALOG  0, 0, 242, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select options for dropped files"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Output RIFF WAV file",IDC_RIFFWAV,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,5,230,10
+    CONTROL         "Delete WAV file after encoding",IDC_DELETEWAV,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,20,230,10
+    PUSHBUTTON      "Normalize",IDC_NORMALIZE,5,43,99,14
+    PUSHBUTTON      "Encode",IDC_ENCODE,135,43,99,14
+    PUSHBUTTON      "Normalize + Encode",IDC_NORMANDENC,5,64,99,14
+    PUSHBUTTON      "Cancel",IDCANCEL,135,64,99,14
+END
+
+IDD_ENCODERDOSVQFDLG DIALOG  0, 0, 260, 76
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Path to VQF encoder",IDC_STATIC_ENCDOSVQF_PATH,7,7,228,
+                    8
+    COMBOBOX        IDC_VQFMODE,155,49,92,62,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "VQF mode",IDC_STATIC_ENCDOSVQF_MODE,7,51,118,8
+    EDITTEXT        IDC_EXTENC,5,24,230,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_FILENAMEINFO DIALOG  0, 0, 312, 196
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Filename info options"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,125,177,50,14
+    LTEXT           "File name format string can contain the following identifiers",
+                    IDC_STATIC_FILENAMEINFO_INDENTIFIERS,10,10,280,8
+    LTEXT           "Examples:\n%1\\%2\\%4      creates the output file Artist\\Album\\TrackName.mp3 (or .wav)\n%1 - %2 - %3  creates the output file Artist - Album - TrackNumber.mp3 (or .wav)\n%l1 - %u2 create the output file artist - ALBUM.mp3 (or .wav)",
+                    IDC_STATIC_FILENAMEINFO_EXAMPLES,10,139,295,36
+    LTEXT           "INFO",IDC_STATIC_FILENAMEINFO_INFO,10,25,285,70
+    LTEXT           "The backslash charachter (\\) might also be used to indicate a directory separation\nThough. you should not use it as the first character !",
+                    IDC_STATIC_FILENAMEINFO_BACKSLASH,10,110,295,24
+END
+
+IDD_MP3TOWAV DIALOG  0, 0, 222, 101
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Convert MPEG to WAV"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    PUSHBUTTON      "Abort",IDCANCEL,75,75,50,14
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,5,
+                    53,205,14
+    LTEXT           "Processing",IDC_STATIC_MPEGTOWAV_PROCESSING,5,5,200,8,
+                    SS_NOPREFIX
+    LTEXT           "FileName",IDC_PROCESSFILENAME,5,20,205,8,SS_NOPREFIX
+    LTEXT           "TimeInfo",IDC_TIMEINFO,5,35,205,8
+END
+
+IDD_RIPSTATUS DIALOG  0, 0, 302, 166
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Detailed Ripping Status Information"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,120,145,50,14
+    EDITTEXT        IDC_RIPSTATUS,10,5,285,135,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL
+END
+
+IDD_ENCODERWMA8DLLDLG DIALOG  0, 0, 265, 82
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    COMBOBOX        IDC_BITRATE,55,9,67,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    CONTROL         "On the fly MP3 Encoding",IDC_RTENCODING,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,141,10,119,10
+    CONTROL         "Enable Digital Rights Management",IDC_USEDRM,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,10,30,245,10
+    CONTROL         "Mono",IDC_CHANNELS,"Button",BS_AUTORADIOBUTTON | NOT 
+                    WS_VISIBLE | WS_GROUP | WS_TABSTOP,65,50,45,10
+    CONTROL         "Stereo",IDC_CHANNELS1,"Button",BS_AUTORADIOBUTTON | NOT 
+                    WS_VISIBLE,115,50,55,10
+    LTEXT           "Bitrate",IDC_STATIC_ENCWMA8OPTS_BITRATE,10,11,40,8
+    LTEXT           "Channels",IDC_STATIC_ENCWMA8OPTS_CHANNELS,10,51,50,8,
+                    NOT WS_VISIBLE
+END
+
+IDD_FILECOMPARE DIALOG  0, 0, 257, 177
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Compare two WAV files"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "Compare",IDC_COMPARE,59,156,65,14
+    EDITTEXT        IDC_FILENAMEA,10,20,220,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "..",IDC_SELFILEA,235,20,20,14
+    EDITTEXT        IDC_FILENAMEB,10,50,220,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "..",IDC_SELFILEB,235,50,20,14
+    LTEXT           "",IDC_OFFSET,10,70,240,8
+    LTEXT           "",IDC_FILESIZE,10,85,240,8
+    LTEXT           "Static",IDC_CHARDIFFERENT,10,100,240,20
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,
+                    10,135,240,14
+    PUSHBUTTON      "Cancel",IDCANCEL,134,156,65,14
+    LTEXT           "First filename",IDC_STATIC_COMPARE_FIRSTNAME,10,8,220,8
+    LTEXT           "Second filename",IDC_STATIC_COMPARE_SECONDNAME,10,39,
+                    220,8
+    LTEXT           "Progress",IDC_STATIC_COMPARE_PROGRESS,10,125,240,8
+END
+
+IDD_ENCODERBLADEDLLDLG DIALOG  0, 0, 271, 86
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "On-the-fly MP3 Encoding",IDC_RTENCODING,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,143,7,125,10
+    LTEXT           "Bitrate",IDC_STATIC_ENCBLDTAB_BITRATE,5,8,50,8,
+                    WS_TABSTOP
+    COMBOBOX        IDC_BITRATE,65,6,67,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    LTEXT           "Channels",IDC_STATIC_ENCBLDTAB_CHANNELS,5,25,60,8,
+                    WS_TABSTOP
+    CONTROL         "Stereo",IDC_CHANNELSELECTION,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,5,40,55,10
+    CONTROL         "J-stereo",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,65,40,55,10
+    CONTROL         "Dual",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,130,40,55,10
+    CONTROL         "Mono",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,195,40,60,
+                    10
+    CONTROL         "Private",IDC_PRIVATE,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,5,66,55,10
+    CONTROL         "Checksum",IDC_CRC,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,65,66,59,10
+    CONTROL         "Original",IDC_ORIGINAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,130,66,60,10
+    CONTROL         "Copyright",IDC_COPYRIGHT,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,195,66,60,10
+END
+
+IDD_ENCODERDOSXINGDLG DIALOG  0, 0, 266, 106
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "CBR",IDC_CBRORVBR,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,5,39,35,10
+    CONTROL         "VBR",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,5,57,35,10
+    COMBOBOX        IDC_BITRATE,94,38,59,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    EDITTEXT        IDC_VBRSCALE,94,55,59,14,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "Original",IDC_ORIGINAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,165,39,98,10
+    CONTROL         "Copyright",IDC_COPYRIGHT,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,165,57,98,10
+    CONTROL         "Filter High Frequencies",IDC_FILTERHIGHFREQ,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,165,76,98,10
+    CONTROL         "Force Simple Stereo",IDC_SIMPLESTEREO,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,5,76,140,10
+    CONTROL         "Down mix to mono",IDC_DOWNMIX,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,165,92,98,10
+    CONTROL         "Let encoder choose sample rate",IDC_ENCSAMPLERATE,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,5,92,
+                    145,10
+    LTEXT           "Encoder path",IDC_STATIC_ENCDOSXING_PATH,5,6,228,8,
+                    WS_TABSTOP
+    LTEXT           "Bitrate",IDC_STATIC_ENCDOSXING_BITRATE,45,40,45,8,
+                    WS_TABSTOP
+    LTEXT           "VBR Scale",IDC_STATIC_ENCDOSXING_VBRSCALE,45,58,45,8,
+                    WS_TABSTOP
+    EDITTEXT        IDC_EXTENC,5,19,230,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_ENCODERWAVDLG DIALOG  0, 0, 226, 96
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Samplerate",IDC_STATIC_ENCWAVOPTS_SAMPLERATE,10,44,75,8
+    COMBOBOX        IDC_SAMPLERATE,97,42,123,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Channels",IDC_STATIC_ENCWAVOPTS_CHANNELS,10,61,75,8
+    CONTROL         "Stereo",IDC_CHANNELS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,97,60,55,10
+    CONTROL         "Mono",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,161,60,50,10
+    LTEXT           "Compression",IDC_STATIC_ENCWAVOPTS_COMPRESSION,10,28,75,
+                    8
+    COMBOBOX        IDC_COMPRESSION,97,26,123,80,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Format",IDC_STATIC_ENCWAVOPTS_FORMAT,10,12,75,8
+    COMBOBOX        IDC_FORMAT,97,10,123,80,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "On the fly Encoding",IDC_RTENCODING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,75,200,10
+END
+
+IDD_ENCODERFAACDLLDLG DIALOG  0, 0, 231, 106
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    COMBOBOX        IDC_MINBITRATE,85,13,75,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    CONTROL         "MPEG-2",IDC_MPEGVERSION,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,168,14,62,10
+    CONTROL         "MPEG-4",IDC_RADIO7,"Button",BS_AUTORADIOBUTTON,168,29,
+                    62,10
+    COMBOBOX        IDC_PROFILE,85,28,75,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_BANDWIDTH,85,46,75,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    CONTROL         "Use LFE",IDC_USELFE,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_GROUP | WS_TABSTOP,133,68,43,10
+    CONTROL         "Use MS Stereo",IDC_USEMS,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,7,68,93,10
+    LTEXT           "Bitrate / channel",IDC_STATIC_FAACENCOPTS_BITRATE,7,15,
+                    73,8,WS_TABSTOP
+    LTEXT           "Bandwidth (Hz)",IDC_STATIC_FAACENCOPTS_BANDWIDTH,7,50,
+                    73,8,WS_TABSTOP
+    LTEXT           "Profile",IDC_STATIC_FAACENCOPTS_PROFILE,7,30,73,8,
+                    WS_TABSTOP
+    CONTROL         "Allow Temporal Noise Shaping (TNS)",IDC_ALLOWTNS,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,7,84,193,10
+END
+
+IDD_RIFFWAVTOMP3 DIALOG  0, 0, 232, 94
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Strip RIFF-WAV header from MPEG file(s)"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    PUSHBUTTON      "Abort",IDABORT,90,74,65,14
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,7,
+                    46,208,14
+    LTEXT           "Processing",IDC_STATIC_RIFFWAVTOMP3_PROCESSING,7,7,208,
+                    8
+    LTEXT           "FileName",IDC_PROCESSFILENAME,7,25,208,8
+END
+
+IDD_FILENAMEPROPPAGE DIALOGEX 0, 0, 317, 186
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Filenames"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_FILEFORMAT,75,17,208,14,ES_AUTOHSCROLL,0,
+                    HIDC_FILEFORMAT
+    PUSHBUTTON      "?",IDC_FNAMEFORMATINFO,288,17,22,14
+    EDITTEXT        IDC_CNVOUTDIR,75,48,205,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_MP3OUDIR,75,68,205,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Char Subst",IDC_ILLEGAL_CHARS,6,86,59,14
+    CONTROL         "Split trackname to Artist, Track using split character:",
+                    IDC_SPLITTRACKNAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    75,89,215,10
+    EDITTEXT        IDC_SPLITCHAR,290,85,16,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PLAYLISTFORMAT,75,129,211,14,ES_AUTOHSCROLL,0,
+                    HIDC_PLAYLISTFORMAT
+    PUSHBUTTON      "?",IDC_PLAYLISTFMTINFO,290,129,22,14
+    CONTROL         "Add Files to M3U playlist",IDC_M3UPLAYLIST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,75,165,115,10
+    CONTROL         "Add Files to PLS playlist",IDC_PLSPLAYLIST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,200,165,110,10
+    LTEXT           "Static",IDC_PLAYLISTDEMO,75,151,202,8
+    LTEXT           "Filename",IDC_STATIC_FILEPROP_FILENAME,7,35,63,8
+    GROUPBOX        "Output filename format and directories",
+                    IDC_STATIC_FILEPROP_OUTPUTDIRS,0,4,315,110
+    LTEXT           "WAV -> MP3",IDC_STATIC_FILEPROP_WAVTOMPEG,5,51,63,8
+    LTEXT           "Recorded Tracks",IDC_STATIC_FILEPROP_RECORDEDTRACKS,5,
+                    71,63,8
+    LTEXT           "Static",IDC_FNAMEDEMO,75,36,202,8,0,WS_EX_TRANSPARENT
+    LTEXT           "Filename Format",IDC_STATIC_FILEPROP_FILEFORMAT,7,20,63,
+                    8
+    LTEXT           "File Name",IDC_STATIC_FILEPROP_PLSFILE,10,151,63,8
+    LTEXT           "File Name Format",IDC_STATIC_FILEPROP_PLSFORMAT,10,132,
+                    63,8
+    LTEXT           "Type",IDC_STATIC_FILEPROP_FILEFORMAT_PLSTYPE,10,166,63,
+                    8
+    GROUPBOX        "Playlist",IDC_STATIC_FILEPROP_FILEFORMATPLAYLIST,0,116,
+                    315,65
+END
+
+IDD_RECORDFILES DIALOG  0, 0, 317, 206
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Record from Analog Input"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    COMBOBOX        IDC_SAMPLERATE,89,5,50,80,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    CONTROL         "Free Length",IDC_FREELENGTH,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,9,29,76,10
+    CONTROL         "Record for just:",IDC_FREELENGTH1,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,89,29,80,10
+    EDITTEXT        IDC_RECORDINGTIME,174,27,30,14,ES_AUTOHSCROLL | WS_GROUP
+    COMBOBOX        IDC_RECORDINGDEVICE,89,45,216,70,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    EDITTEXT        IDC_RECFILENAME,89,91,216,14,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "Add sequential numbers to filename, starting with: ",
+                    IDC_ADDSEQUENCENUMBER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,113,265,10
+    EDITTEXT        IDC_SEQUENCESTART,289,110,15,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_ENCODERTYPE,89,134,216,70,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    LTEXT           "Recording Status",
+                    IDC_STATIC_RECORDFILES_RECORDINGSTATUS,9,158,75,8
+    LTEXT           "Static",IDC_RECORDSTATUS,89,158,210,8,SS_NOPREFIX
+    PUSHBUTTON      "Record",IDC_RECORD,9,178,65,15,WS_GROUP
+    PUSHBUTTON      "Pause",IDC_PAUSE,78,178,65,15,WS_GROUP
+    PUSHBUTTON      "Stop",IDC_STOP,147,178,65,15,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,242,178,65,14,WS_GROUP
+    CONTROL         "Mono",IDC_RECORD_CHANNELS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,199,10,45,10
+    CONTROL         "Stereo",IDC_RECORD_CHANNELS1,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,249,10,50,10
+    LTEXT           "Channels",IDC_BITRATE,144,10,45,8
+    LTEXT           "seconds",IDC_STATIC_RECORDFILES_SECONDS,209,30,40,8
+    LTEXT           "Input Device",IDC_STATIC_RECORDFILES_RECORDINGDEVICE,9,
+                    50,75,8
+    LTEXT           "Output Filename",IDC_STATIC_RECORDFILES_FILENAME,10,95,
+                    75,8
+    LTEXT           "Output File Type",IDC_STATIC_RECORDFILES_OUTPUTTYPE,9,
+                    137,75,8
+    LTEXT           "Sample Rate",IDC_STATIC_RECORDFILES_SAMPLERATE,9,10,76,
+                    8
+    EDITTEXT        IDC_RECORDINGOUTPUTDIR,89,69,206,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Output Directory",IDC_STATIC_RECORDFILES_FILEDIRECTORY,
+                    10,72,75,8
+END
+
+IDD_SUBMITOPTS DIALOG  0, 0, 237, 166
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "freedb Submission options"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Submit using:",IDC_STATIC_CDDB_SUBMITOPTS_SUBMITVIA,10,
+                    5,210,8,WS_TABSTOP
+    CONTROL         "E-mail",IDC_SUBMITVIA,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,10,20,90,10
+    CONTROL         "Via HTTP",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,111,21,
+                    109,8
+    EDITTEXT        IDC_EMAILADDRESS,10,50,210,14,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_SMTPSERVER,10,81,210,14,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "SMTP server address",
+                    IDC_STATIC_CDDB_SUBMITOPTS_SMTPSERVERADDR,10,68,210,8,
+                    WS_TABSTOP
+    LTEXT           "Submission HTTP address (excluding path)",
+                    IDC_STATIC_CDDB_SUBMITOPTS_SUBMISSIONPATH,10,103,210,8,
+                    WS_TABSTOP
+    EDITTEXT        IDC_HTMLADDRESS,10,115,210,14,ES_AUTOHSCROLL | WS_GROUP
+    DEFPUSHBUTTON   "OK",IDOK,61,145,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,126,145,50,14,WS_GROUP
+    LTEXT           "Submission e-mail address",
+                    IDC_STATIC_CDDB_SUBMITOPTS_EMAILADDRESS,10,38,210,8,
+                    WS_TABSTOP
+END
+
+IDD_ENCODERVORBISDLLDLG DIALOG  0, 0, 296, 121
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Stereo",IDC_CHANNELSELECTION,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,55,7,45,10
+    CONTROL         "Mono",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,107,7,43,
+                    10
+    CONTROL         "On the fly Encoding",IDC_RTENCODING,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,155,7,115,10
+    CONTROL         "Use Quality setting (recommended)",
+                    IDC_USEQUALITYSETTING,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,10,24,255,10
+    SCROLLBAR       IDC_QUALITYSETTINGSCROLL,10,40,200,8,WS_GROUP | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_MINBITRATE,119,66,55,56,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_BITRATE,119,82,55,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_MAXBITRATE,119,98,55,56,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    LTEXT           "Channels",IDC_STATIC_ENCOGGOPTS_CHANNELS,10,8,40,8,
+                    WS_TABSTOP
+    LTEXT           "QUALSETTING",IDC_QUALITYSETTING,215,40,75,8,WS_TABSTOP
+    LTEXT           "Minimal Bitrate",IDC_STATIC_ENCVORBIS_MINBR,18,68,97,8,
+                    WS_TABSTOP
+    LTEXT           "Nominal Bitrate",IDC_STATIC_ENCVORBIS_NOMBR,18,84,97,8,
+                    WS_TABSTOP
+    LTEXT           "Maximum Bitrate",IDC_STATIC_ENCVORBIS_MAXBR,18,100,97,8,
+                    WS_TABSTOP
+    GROUPBOX        "Use Bitrate manager",IDC_STATIC_ENCOGGOPTS_MGTBITRATE,
+                    10,56,255,59
+END
+
+IDD_OPEN_FILE DIALOG  0, 0, 342, 211
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Open File Dialog"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDC_EDIT_DIR,71,5,249,14,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "List1",IDC_LIST_REQUESTED_FILES,"SysListView32",
+                    LVS_REPORT | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,
+                    5,39,330,110
+    CONTROL         "Look in subfolders",IDC_RECURSIVE_DIR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,157,95,10
+    CONTROL         "Delete Original",IDC_DELETE_ORIGINAL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,174,95,10
+    CONTROL         "Normalize",IDC_NORMALIZE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,104,157,75,10
+    CONTROL         "RIFF-WAV",IDC_RIFF_WAV,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,104,174,78,10
+    CONTROL         "Keep Original Directory Layout",IDC_KEEPDIRLAYOUT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,185,157,145,10
+    PUSHBUTTON      "Settings",IDC_SETTINGS,5,190,70,14
+    PUSHBUTTON      "Select All",IDC_SELECT_ALL,91,190,70,14
+    PUSHBUTTON      "Open",IDC_FILE_OPEN,177,190,70,14
+    PUSHBUTTON      "Cancel",IDCANCEL,263,190,70,14
+    LTEXT           "Available Files:",IDC_STATIC_OPENFILES_AVIALABLEFILES,5,
+                    25,315,8
+    LTEXT           "Directory",IDC_STATIC_OPENFILES_DIRECTORY,5,10,60,8
+END
+
+IDD_RPLC_ILLEGAL DIALOG  0, 0, 237, 141
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Character Substitution"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDC_RPLC_1,30,20,15,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RPLC_2,70,20,15,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RPLC_3,110,20,15,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RPLC_4,150,20,15,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RPLC_5,190,20,15,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RPLC_6,30,40,15,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RPLC_7,70,40,15,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RPLC_8,110,40,15,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RPLC_9,150,40,15,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RPLC_10,76,90,15,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,56,120,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,131,120,50,14
+    LTEXT           "< :=",IDC_STATIC,10,26,13,8
+    LTEXT           "> :=",IDC_STATIC,50,26,13,8
+    LTEXT           ": :=",IDC_STATIC,90,26,11,8
+    LTEXT           """ :=",IDC_STATIC,130,26,12,8
+    LTEXT           "\\ :=",IDC_STATIC,170,26,16,8
+    LTEXT           "/ :=",IDC_STATIC,10,46,12,8
+    LTEXT           "| :=",IDC_STATIC,50,46,10,8
+    LTEXT           "* :=",IDC_STATIC,90,46,12,8
+    LTEXT           "? :=",IDC_STATIC,130,46,13,8
+    GROUPBOX        "Illegal Filename Characters",
+                    IDC_STATIC_RPLC_ILLEGALCHARS,5,5,225,65
+    GROUPBOX        "Other (substition is not mandatory)",
+                    IDC_STATIC_RPLC_OTHERS,5,75,225,35
+    LTEXT           "space :=",IDC_STATIC_RPLC_SPACE,20,95,45,8
+END
+
+IDD_ENCODERGOGODLLDLG DIALOG  0, 0, 261, 116
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "MPEG-1",IDC_VERSION,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,5,10,55,10
+    CONTROL         "MPEG-2",IDC_VERSION1,"Button",BS_AUTORADIOBUTTON,70,10,
+                    50,10
+    CONTROL         "On-the-fly MP3 Encoding",IDC_RTENCODING,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,130,10,125,10
+    COMBOBOX        IDC_MINBITRATE,45,30,67,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_VBR,205,30,48,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    CONTROL         "Mono",IDC_CHANNELSELECTION,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,45,50,44,10
+    CONTROL         "Stereo",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,92,50,48,
+                    10
+    CONTROL         "J-Stereo",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,140,50,
+                    53,10
+    CONTROL         "MS-Stereo",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,200,
+                    50,55,10
+    CONTROL         "Use MMX/3DNow",IDC_USE_SIMD,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,5,71,130,10
+    CONTROL         "Use Psycho-acoustics",IDC_USE_PSY,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,145,71,110,10
+    CONTROL         "Apply Low-Pass filter for low bitrates",IDC_USE_LPF,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,5,90,
+                    250,8
+    LTEXT           "Variable Bitrate",IDC_STATIC_GOGOENCOPTS_VARBITRATE,130,
+                    32,70,8,WS_TABSTOP
+    LTEXT           "Bitrate",IDC_STATIC_GOGOENCOPTS_BITRATE,5,32,35,8,
+                    WS_TABSTOP
+    LTEXT           "Mode",IDC_STATIC_GOGOENCOPTS_MODE,5,51,35,8,WS_TABSTOP
+END
+
+IDD_ENCODERMP2DLLDLG DIALOG  0, 0, 266, 126
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "MPEG-1",IDC_VERSION,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,9,10,60,10
+    CONTROL         "MPEG-2",IDC_VERSION1,"Button",BS_AUTORADIOBUTTON,80,10,
+                    60,10
+    LTEXT           "Bitrate",IDC_STATIC_ENCMP2OPTS_BITRATE,9,30,51,8,
+                    WS_TABSTOP
+    COMBOBOX        IDC_BITRATE,65,25,67,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    CONTROL         "On-the-fly MP2 Encoding",IDC_RTENCODING,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,140,10,125,10
+    LTEXT           "Channels",IDC_STATIC_ENCMP2OPTS_CHANNELS,9,46,51,8,
+                    WS_TABSTOP
+    CONTROL         "Stereo",IDC_CHANNELSELECTION,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,65,45,45,10
+    CONTROL         "J-stereo",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,115,45,
+                    55,10
+    CONTROL         "Dual",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,174,45,40,10
+    CONTROL         "Mono",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,215,45,45,
+                    10
+    CONTROL         "Private",IDC_PRIVATE,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,9,65,52,10
+    CONTROL         "Checksum",IDC_CRC,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,75,65,62,10
+    CONTROL         "Original",IDC_ORIGINAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,150,65,45,10
+    CONTROL         "Copyright",IDC_COPYRIGHT,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,200,65,60,10
+    CONTROL         "Write Ancillary Data (Antex)",IDC_WRITE_ANCIL,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,9,81,127,10
+    CONTROL         "Allow no padding",IDC_NO_PADDING,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,150,80,110,10
+    LTEXT           "VBR (experimental)",IDC_STATIC_ENCMP2OPTS_VBREXP,9,103,
+                    131,8,WS_TABSTOP
+    COMBOBOX        IDC_VBR,145,100,65,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+END
+
+IDD_LOCALCDDBPROPPAGE DIALOG  0, 0, 342, 146
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Local CDDB"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDC_CDDBPATH,15,29,290,14,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Windows-format CDDB Files",IDC_CDDBTYPE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,17,86,133,10
+    CONTROL         "Unix-format CDDB Files",IDC_UNIXCDDB,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,155,86,150,10
+    CONTROL         "Store in CDPlayer.ini File",IDC_STCDINI,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,17,102,133,10
+    CONTROL         "Store in local CDDB",IDC_STLOCALCDDB,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,155,102,150,10
+    CONTROL         "Use Long Directory Names",IDC_LONGDIRNAMES,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,17,118,133,10
+    CONTROL         "Write as MS-DOS text files ",IDC_DOSFILES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,155,118,150,10
+    LTEXT           "CDDB Path",IDC_STATIC_LOCALCDDB_CDDBPATH,15,16,290,8
+    GROUPBOX        "Local CDDB Settings",IDC_STATIC_LOCALCDDB_SETTINGS,5,0,
+                    325,140
+    EDITTEXT        IDC_WINAMPDBPATH,15,62,290,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Winamp in_cdda.cdb path (Winamp 2.78 format)",
+                    IDC_STATIC_LOCALCDDB_WINAMPDB,15,49,290,8
+END
+
+IDD_CDRDAO DIALOG  0, 0, 317, 206
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CD Recording Dialog"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,195,180,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,250,180,50,14
+    COMBOBOX        IDC_CDDRIVE,65,10,235,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "CD-Drive",IDC_STATIC,10,15,50,8
+    PUSHBUTTON      "Start Burning",IDC_RECORD,140,180,50,14
+    EDITTEXT        IDC_OUTPUT,5,115,295,50,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+IDD_MPEGTOWAVSETTINGS DIALOG  0, 0, 202, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MPEG To WAV Settings"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,65,75,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,125,75,50,14
+    COMBOBOX        IDC_OUTFREQ,80,10,115,60,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Output Frequency",IDC_STATIC,10,15,58,8
+END
+
+IDD_ENCODERDOSDLG DIALOG  0, 0, 261, 126
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Parameter string",IDC_STATIC_ENCDOSDLG_PARAMSTRING,7,38,
+                    243,8
+    EDITTEXT        IDC_EXTENCOPTS,7,51,246,14,ES_AUTOHSCROLL
+    LTEXT           "Encoder path",IDC_STATIC_ENCDOSDLG_ENCPATH,7,7,243,8
+    COMBOBOX        IDC_BITRATE,53,71,67,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Bitrate",IDC_STATIC_ENCDOSDLG_BITRATE,7,73,43,8
+    CONTROL         "On-the-fly Encoding",IDC_ON_THE_FLY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,111,115,10
+    CONTROL         "Hide DOS box window",IDC_HIDE_DOSBOX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,96,115,10
+    EDITTEXT        IDC_EXTENTION,214,70,40,14,ES_AUTOHSCROLL
+    LTEXT           "File Extension",IDC_STATIC_ENCDOSDLG_FILEEXT,145,73,60,
+                    8
+    CONTROL         "Send WAV header to stdin",IDC_SENDWAVTOSTDIN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,135,96,120,10
+    EDITTEXT        IDC_EXTENC,7,20,233,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_ENCODERNTTVQFDLLDLG DIALOG  0, 0, 246, 71
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "On the fly MP3 Encoding",IDC_RTENCODING,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,15,45,220,10
+    COMBOBOX        IDC_MINBITRATE,110,6,67,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    CONTROL         "Mono",IDC_CHANNELSELECTION,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,170,27,48,10
+    CONTROL         "Stereo",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,110,27,
+                    53,10
+    LTEXT           "Bitrate per channel",IDC_STATIC_ENCNTTVQFOPTS_BITRPC,15,
+                    8,90,8,WS_TABSTOP
+    LTEXT           "Channels",IDC_STATIC_ENCNTTVQFOPTS_CHANNELS,15,28,90,8,
+                    WS_TABSTOP
+END
+
+IDD_CONFIG_WINAMP_INPLUGIN DIALOG  0, 0, 292, 170
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Configure Winamp Input Plugins"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,15,5,260,135
+    PUSHBUTTON      "About",IDC_ABOUT,100,147,50,14
+    PUSHBUTTON      "Configure",IDC_CONFIGURE,162,147,50,14
+    DEFPUSHBUTTON   "Close",IDOK,224,147,50,14
+END
+
+IDD_EDIT_GENRES DIALOG  0, 0, 257, 186
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add / Edit Genres"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,5,5,245,125
+    EDITTEXT        IDC_EDIT_GENRE,5,138,90,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_EDIT_CDDBGENRE,110,139,65,90,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_ID3V1ID,190,138,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,230,138,
+                    11,14
+    PUSHBUTTON      "Insert New",IDC_INSERTNEW,5,165,75,14
+    DEFPUSHBUTTON   "OK",IDOK,89,165,75,14
+    PUSHBUTTON      "Cancel",IDCANCEL,173,165,75,14
+END
+
+IDD_FILEOVERWRITE DIALOG  0, 0, 317, 86
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "File Overwrite Warning"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    DEFPUSHBUTTON   "Yes",IDC_YES,15,60,60,14
+    PUSHBUTTON      "Yes to &All",IDC_TOALL,88,60,60,14
+    PUSHBUTTON      "No",IDC_MYNO,161,60,60,14
+    LTEXT           "The file",IDC_STATIC_FILEOVERWRITE_FOLLINE,15,5,295,8
+    LTEXT           "Static",IDC_FILENAME,15,20,295,8,SS_NOPREFIX
+    LTEXT           "already exists.  Replace the existing file?",
+                    IDC_STATIC_FILEOVERWRITE_DOESEXIST,15,39,295,8
+    PUSHBUTTON      "No to A&ll",IDC_NOTOALL,234,60,60,14
+END
+
+IDD_TITLEINFO DIALOG  0, 0, 411, 141
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDC_ARTIST,52,6,148,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TITLE,51,27,148,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_GENRE,241,7,75,114,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_YEAR,241,27,75,14,ES_AUTOHSCROLL
+    CONTROL         "List2",IDC_TRACKLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_EDITLABELS | WS_BORDER | 
+                    WS_TABSTOP,5,45,403,87
+    LTEXT           "Artist",IDC_TITLEINFO_ARTIST,7,9,38,8
+    LTEXT           "Album",IDC_TITLEINFO_TITLE,7,30,38,8
+    LTEXT           "Genre",IDC_TITLEINFO_GENRE,205,9,31,8
+    LTEXT           "Year",IDC_TITLEINFO_YEAR,205,30,31,8
+    LTEXT           "Track Offset",IDC_TITLEINFO_TRACKOFFSET,326,9,55,8
+    EDITTEXT        IDC_TRACKOFFSET,386,6,20,14,ES_AUTOHSCROLL
+END
+
+IDD_ABOUTBOX DIALOG  0, 0, 257, 186
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About the CDex audio CD extractor program"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "CDex Version ",IDC_CDEXVERSION,6,133,144,8,SS_NOPREFIX
+    DEFPUSHBUTTON   "Close",ID_CLOSE,190,163,55,14,WS_GROUP
+    LTEXT           "Copyright (C) 1998-2006 Albert L Faber",IDC_STATIC,6,
+                    146,235,8
+    RTEXT           "http://cdexos.sourceforge.net",IDC_CDEXHYPERLINK,150,
+                    133,96,8
+    CONTROL         "",IDC_CDEXLOGO,"Static",SS_BLACKFRAME,4,5,246,123
+    LTEXT           "",IDC_ABOUT_TRANSLATOR_URL,6,170,155,8
+    LTEXT           "",IDC_ABOUT_TRANSLATOR_INFO,6,159,167,8
+END
+
+IDD_AUTODETECT DIALOG  0, 0, 312, 199
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Auto-Detection Results"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,7,41,298,122
+    DEFPUSHBUTTON   "OK",IDOK,119,180,57,14
+    PUSHBUTTON      "Abort",IDC_ABORT,184,180,57,14
+    PUSHBUTTON      "Close",IDCANCEL,248,180,57,14
+    LTEXT           "Below is a list with the test modes; select one of the modes that has the status 'Pass', and press the OK button",
+                    IDC_STATIC_AUTODETECT_LISTDESCRIPTION,7,17,293,21
+    LTEXT           "MMC status",IDC_STATIC_AUTODETECT_MMCSTATUS,7,7,58,8,
+                    NOT WS_VISIBLE
+    LTEXT           "MMC Status",IDC_MMCSTATUS,70,7,230,8,NOT WS_VISIBLE
+END
+
+IDD_PLAYERVIEW DIALOGEX 0, 0, 285, 150
+STYLE DS_SETFONT | WS_CHILD | WS_BORDER
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Slider1",IDC_POSITION,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,5,10,145,15
+    CONTROL         "Slider2",IDC_VOLUME,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,157,5,15,34
+    PUSHBUTTON      "Details",IDC_DETAILS,210,10,50,14
+    CONTROL         "",IDC_PLAYER_VOLUME_ICON,"Static",SS_BLACKFRAME | NOT 
+                    WS_VISIBLE,181,20,15,13,WS_EX_TRANSPARENT
+    LTEXT           "Static",IDC_TIMEINFO,10,30,135,15
+    LTEXT           "Static",IDC_FILENAME,10,50,255,15,SS_NOPREFIX
+    LISTBOX         IDC_PLAYLIST,10,70,255,75,WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_SAVEPROFILE DIALOG  0, 0, 186, 60
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Enter profile name"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDC_PROFILENAME,7,7,172,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,28,39,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,107,39,50,14
+END
+
+IDD_ENCODERAPEDLLDLG DIALOG  0, 0, 226, 89
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Mono",IDC_CHANNELSELECTION,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,92,7,51,10
+    CONTROL         "Stereo",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,148,7,65,
+                    10
+    COMBOBOX        IDC_APETAGFORMAT,93,26,120,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_APECOMPRESSIONLEVEL,93,50,120,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    LTEXT           "Compression level",
+                    IDC_STATIC_ENCAPETAB_COMPRESSIONLEVEL,7,52,83,8,
+                    WS_TABSTOP
+    LTEXT           "Channels",IDC_STATIC_ENCAPETAB_CHANNELS,7,8,73,8,
+                    WS_TABSTOP
+    LTEXT           "Tag Format",IDC_STATIC_ENCAPETAB_TAGFORMAT,7,28,83,8,
+                    WS_TABSTOP
+END
+
+IDD_ENCODERFLACDLLDLG DIALOG  0, 0, 296, 121
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "Stereo",IDC_CHANNELSELECTION,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,55,7,45,10
+    CONTROL         "Mono",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,107,7,43,
+                    10
+    CONTROL         "On the fly Encoding",IDC_RTENCODING,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,155,7,115,10
+    LTEXT           "Channels",IDC_STATIC_ENCOGGOPTS_CHANNELS,10,8,40,8,
+                    WS_TABSTOP
+    LTEXT           "Compression level setting",IDC_COMPRESSIONLEVELSETTING,
+                    5,75,130,8,WS_TABSTOP
+    COMBOBOX        IDC_COMPRESSION_LEVEL,160,70,129,62,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+END
+
+IDD_CREATECUESHEET DIALOGEX 0, 0, 336, 205
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Close",IDCLOSE,279,184,50,14
+    EDITTEXT        IDC_EDIT1,7,7,322,148,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    PUSHBUTTON      "Save",IDC_BUTTON1,99,184,79,14
+    CONTROL         "Include PreGaps",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,164,135,10
+    CONTROL         "Include ISRC codes",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,155,164,156,10
+    PUSHBUTTON      "Copy to clipboard",IDC_COPYTOCLIPBOARD,7,184,79,14
+END
+
+IDD_GETREMOTECDINFO DIALOGEX 0, 0, 313, 258
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Accessing freedb"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,242,237,64,14
+    EDITTEXT        IDC_OUTPUT,7,18,299,40,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+    LTEXT           "Message",IDC_STATIC_CDDBDIALOG_MESSAGE,7,4,268,8
+    COMBOBOX        IDC_CODEPAGESELECTION,132,193,134,89,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Code page mapping",IDC_CDDB_CAT_SELECTION_TEXT2,9,196,
+                    120,8
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SINGLESEL | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,70,299,100
+    PUSHBUTTON      "Next",IDC_CDDB_READ,158,237,65,14
+    CONTROL         "Resubmit entry (recommended when code page is  not set to UTF-8)",
+                    IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,178,
+                    259,10
+END
+
+IDD_CDEXMSGBOX DIALOGEX 0, 0, 186, 61
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CTEXT           "",IDC_DETECTGAPS,7,7,172,47,SS_CENTERIMAGE
+END
+
+IDD_CONFIGDLG DIALOGEX 0, 0, 350, 207
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,228,186,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,293,186,50,14
+    CONTROL         "",IDC_TREE1,"SysTreeView32",TVS_NOSCROLL | WS_BORDER | 
+                    WS_TABSTOP,7,7,83,186
+    LTEXT           "Static",IDC_STATIC,91,7,252,177
+END
+
+IDD_TAGPROPPAGE DIALOGEX 0, 0, 335, 218
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Tag Options"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_TRACKNUMBERSETTING,100,60,65,60,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_ID3COMMENT,100,76,210,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ID3V2ENCODEDBY,100,93,210,14,ES_AUTOHSCROLL
+    LTEXT           "Tag comment field",IDC_STATIC_GENERAL_COMMENTFIELD,10,
+                    78,85,8
+    LTEXT           "ID3 Tag Version",IDC_STATIC_GENERAL_ID3VERSION,10,43,85,
+                    8
+    LTEXT           "Encoded-by field",IDC_STATIC_GENERAL_ENCODEDBYFIELD,10,
+                    97,85,8
+    LTEXT           "Track Nr Format",IDC_STATIC_GENERAL_TRACKNUMBER,10,63,
+                    55,8
+    CONTROL         "ID3_V1",IDC_ID3V1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    100,42,46,10
+    CONTROL         "ID3_V2.3",IDC_ID3V23,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,154,42,54,10
+    CONTROL         "ID3_V2.4",IDC_ID3V24,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,214,42,65,10
+    EDITTEXT        IDC_TAGOPTSPICTURE,100,150,200,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Picture Text",IDC_STATIC_TAGOPTIONS_PICTURETEXT,10,177,
+                    85,8
+    EDITTEXT        IDC_ID3V2ENCODEDBY3,100,173,200,14,ES_AUTOHSCROLL
+    LTEXT           "Picture",IDC_STATIC_TAGOPTIONS_Picture,10,153,85,8
+    GROUPBOX        "Picture options",IDC_TAGOPTSPICTUREGROUP,5,113,323,87
+    CONTROL         "Add picture",IDC_ADDPICTURE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,99,131,202,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PCOPYDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 305
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_ENCODERPROPPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 15
+        RIGHTMARGIN, 305
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_GENERICPROPPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 211
+    END
+
+    IDD_CDPROPPAGE, DIALOG
+    BEGIN
+        TOPMARGIN, 6
+    END
+
+    IDD_CDDBSETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 330
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_MP3TORIFFWAV, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_CDDBDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 280
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_CDDBMATCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 259
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_ENCODERWINCODECMP3DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 257
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_ENCODERLAMEDLLDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_ENCODERDOSMPPDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 94
+    END
+
+    IDD_DROPASK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 235
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 81
+    END
+
+    IDD_ENCODERDOSVQFDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 69
+    END
+
+    IDD_FILENAMEINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 305
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_MP3TOWAV, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 215
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 94
+    END
+
+    IDD_RIPSTATUS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_ENCODERWMA8DLLDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_FILECOMPARE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_ENCODERBLADEDLLDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 264
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_ENCODERDOSXINGDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 259
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+
+    IDD_ENCODERWAVDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 89
+    END
+
+    IDD_ENCODERFAACDLLDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_RIFFWAVTOMP3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 225
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_FILENAMEPROPPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 179
+    END
+
+    IDD_RECORDFILES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+    END
+
+    IDD_SUBMITOPTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_ENCODERVORBISDLLDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 278
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_OPEN_FILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 335
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 204
+    END
+
+    IDD_RPLC_ILLEGAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 134
+    END
+
+    IDD_ENCODERGOGODLLDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_ENCODERMP2DLLDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 259
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 119
+    END
+
+    IDD_LOCALCDDBPROPPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 335
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_CDRDAO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+    END
+
+    IDD_MPEGTOWAVSETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_ENCODERDOSDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 119
+    END
+
+    IDD_ENCODERNTTVQFDLLDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 239
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 64
+    END
+
+    IDD_CONFIG_WINAMP_INPLUGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_EDIT_GENRES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 179
+    END
+
+    IDD_FILEOVERWRITE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 179
+    END
+
+    IDD_PLAYERVIEW, DIALOG
+    BEGIN
+        RIGHTMARGIN, 282
+        BOTTOMMARGIN, 125
+    END
+
+    IDD_SAVEPROFILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+
+    IDD_ENCODERAPEDLLDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 82
+    END
+
+    IDD_ENCODERFLACDLLDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 278
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_CREATECUESHEET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 329
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 198
+    END
+
+    IDD_GETREMOTECDINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 306
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 251
+    END
+
+    IDD_CDEXMSGBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 54
+    END
+
+    IDD_CONFIGDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 343
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 200
+    END
+
+    IDD_TAGPROPPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 328
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 211
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_ENCODERPROPPAGE DLGINIT
+BEGIN
+    IDC_THREADPRIORITY, 0x403, 7, 0
+0x6f4c, 0x6577, 0x7473, "\000" 
+    IDC_THREADPRIORITY, 0x403, 13, 0
+0x6542, 0x6f6c, 0x2077, 0x6f4e, 0x6d72, 0x6c61, "\000" 
+    IDC_THREADPRIORITY, 0x403, 7, 0
+0x6f4e, 0x6d72, 0x6c61, "\000" 
+    IDC_THREADPRIORITY, 0x403, 13, 0
+0x6241, 0x766f, 0x2065, 0x6f4e, 0x6d72, 0x6c61, "\000" 
+    IDC_THREADPRIORITY, 0x403, 8, 0
+0x6948, 0x6867, 0x7365, 0x0074, 
+    0
+END
+
+IDD_CDPROPPAGE DLGINIT
+BEGIN
+    IDC_READMETHOD, 0x403, 8, 0
+0x6547, 0x656e, 0x6972, 0x0063, 
+    IDC_READMETHOD, 0x403, 8, 0
+0x6f54, 0x6873, 0x6269, 0x0061, 
+    IDC_READMETHOD, 0x403, 14, 0
+0x6f54, 0x6873, 0x6269, 0x2061, 0x6e28, 0x7765, 0x0029, 
+    IDC_READMETHOD, 0x403, 4, 0
+0x4249, 0x004d, 
+    IDC_READMETHOD, 0x403, 4, 0
+0x454e, 0x0043, 
+    IDC_READMETHOD, 0x403, 4, 0
+0x4544, 0x0043, 
+    IDC_READMETHOD, 0x403, 4, 0
+0x4d49, 0x0053, 
+    IDC_READMETHOD, 0x403, 6, 0
+0x6f4b, 0x6164, 0x006b, 
+    IDC_READMETHOD, 0x403, 6, 0
+0x6952, 0x6f63, 0x0068, 
+    IDC_READMETHOD, 0x403, 3, 0
+0x5048, "\000" 
+    IDC_READMETHOD, 0x403, 8, 0
+0x6850, 0x6c69, 0x7069, 0x0073, 
+    IDC_READMETHOD, 0x403, 8, 0
+0x6c50, 0x7361, 0x6f6d, 0x006e, 
+    IDC_READMETHOD, 0x403, 14, 0
+0x7247, 0x6e75, 0x6964, 0x2067, 0x4443, 0x522d, 0x002c, 
+    IDC_READMETHOD, 0x403, 13, 0
+0x694d, 0x7374, 0x6d75, 0x2069, 0x4443, 0x522d, "\000" 
+    IDC_READMETHOD, 0x403, 8, 0
+0x6c50, 0x7865, 0x6f74, 0x0072, 
+    IDC_READMETHOD, 0x403, 5, 0
+0x6f53, 0x796e, "\000" 
+    IDC_READMETHOD, 0x403, 7, 0
+0x6159, 0x616d, 0x6168, "\000" 
+    IDC_READMETHOD, 0x403, 4, 0
+0x524e, 0x0043, 
+    IDC_READMETHOD, 0x403, 10, 0
+0x4d49, 0x2053, 0x4443, 0x2d44, 0x0035, 
+    IDC_READMETHOD, 0x403, 7, 0
+0x7543, 0x7473, 0x6d6f, "\000" 
+    IDC_RIPPINGMETHOD, 0x403, 9, 0
+0x7453, 0x6e61, 0x6164, 0x6472, "\000" 
+    IDC_RIPPINGMETHOD, 0x403, 23, 0
+0x6150, 0x6172, 0x6f6e, 0x6169, 0x202c, 0x764f, 0x7265, 0x616c, 0x2070, 
+0x6e4f, 0x796c, "\000" 
+    IDC_RIPPINGMETHOD, 0x403, 20, 0
+0x6150, 0x6172, 0x6f6e, 0x6169, 0x202c, 0x6f4e, 0x5620, 0x7265, 0x6669, 
+0x0079, 
+    IDC_RIPPINGMETHOD, 0x403, 28, 0
+0x6150, 0x6172, 0x6f6e, 0x6169, 0x202c, 0x6f4e, 0x7320, 0x7263, 0x7461, 
+0x6863, 0x7220, 0x7065, 0x6961, 0x0072, 
+    IDC_RIPPINGMETHOD, 0x403, 15, 0
+0x6150, 0x6172, 0x6f6e, 0x6169, 0x202c, 0x7546, 0x6c6c, "\000" 
+    0
+END
+
+IDD_ENCODERLAMEDLLDLG DLGINIT
+BEGIN
+    IDC_MPEGVERSION, 0x403, 7, 0
+0x504d, 0x4745, 0x4920, "\000" 
+    IDC_MPEGVERSION, 0x403, 8, 0
+0x504d, 0x4745, 0x4920, 0x0049, 
+    IDC_MPEGVERSION, 0x403, 10, 0
+0x504d, 0x4745, 0x4920, 0x2e49, 0x0035, 
+    IDC_QUALITY, 0x403, 15, 0
+0x6f4e, 0x6d72, 0x6c61, 0x2820, 0x7120, 0x353d, 0x2920, "\000" 
+    IDC_QUALITY, 0x403, 12, 0
+0x6f4c, 0x2077, 0x2028, 0x3d71, 0x2039, 0x0029, 
+    IDC_QUALITY, 0x403, 13, 0
+0x6948, 0x6867, 0x2820, 0x7120, 0x323d, 0x2920, "\000" 
+    IDC_QUALITY, 0x403, 29, 0
+0x6f56, 0x6369, 0x2065, 0x6628, 0x726f, 0x7620, 0x696f, 0x6563, 0x7220, 
+0x6365, 0x726f, 0x6964, 0x676e, 0x2973, "\000" 
+    IDC_QUALITY, 0x403, 24, 0
+0x3352, 0x694d, 0x2078, 0x7250, 0x7365, 0x7465, 0x2820, 0x626f, 0x6f73, 
+0x656c, 0x6574, 0x0029, 
+    IDC_QUALITY, 0x403, 26, 0
+0x6556, 0x7972, 0x4820, 0x6769, 0x2068, 0x7551, 0x6c61, 0x7469, 0x2079, 
+0x2028, 0x3d71, 0x2030, 0x0029, 
+    IDC_QUALITY, 0x403, 16, 0
+0x7270, 0x7365, 0x7465, 0x7320, 0x6174, 0x646e, 0x7261, 0x0064, 
+    IDC_QUALITY, 0x403, 21, 0
+0x7270, 0x7365, 0x7465, 0x6620, 0x7361, 0x2074, 0x7473, 0x6e61, 0x6164, 
+0x6472, "\000" 
+    IDC_QUALITY, 0x403, 15, 0
+0x7270, 0x7365, 0x7465, 0x6520, 0x7478, 0x6572, 0x656d, "\000" 
+    IDC_QUALITY, 0x403, 20, 0
+0x7270, 0x7365, 0x7465, 0x6620, 0x7361, 0x2074, 0x7865, 0x7274, 0x6d65, 
+0x0065, 
+    IDC_QUALITY, 0x403, 14, 0
+0x7270, 0x7365, 0x7465, 0x6920, 0x736e, 0x6e61, 0x0065, 
+    IDC_QUALITY, 0x403, 11, 0
+0x7270, 0x7365, 0x7465, 0x4120, 0x5242, "\000" 
+    IDC_QUALITY, 0x403, 11, 0
+0x7270, 0x7365, 0x7465, 0x4320, 0x5242, "\000" 
+    IDC_QUALITY, 0x403, 14, 0
+0x7270, 0x7365, 0x7465, 0x6d20, 0x6465, 0x7569, 0x006d, 
+    IDC_QUALITY, 0x403, 19, 0
+0x7270, 0x7365, 0x7465, 0x6620, 0x7361, 0x2074, 0x656d, 0x6964, 0x6d75, 
+"\000" 
+    IDC_VBRMETHOD, 0x403, 9, 0
+0x6944, 0x6173, 0x6c62, 0x6465, "\000" 
+    IDC_VBRMETHOD, 0x403, 12, 0
+0x4256, 0x2052, 0x6544, 0x6166, 0x6c75, 0x0074, 
+    IDC_VBRMETHOD, 0x403, 8, 0
+0x4256, 0x2d52, 0x6c4f, 0x0064, 
+    IDC_VBRMETHOD, 0x403, 8, 0
+0x4256, 0x2d52, 0x654e, 0x0077, 
+    IDC_VBRMETHOD, 0x403, 9, 0
+0x4256, 0x2d52, 0x544d, 0x4852, "\000" 
+    IDC_VBRMETHOD, 0x403, 8, 0
+0x4256, 0x2d52, 0x4241, 0x0052, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0030, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0031, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0032, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0033, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0034, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0035, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0036, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0037, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0038, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0039, 
+    0
+END
+
+IDD_ENCODERDOSVQFDLG DLGINIT
+BEGIN
+    IDC_VQFMODE, 0x403, 13, 0
+0x3434, 0x484b, 0x2d7a, 0x3834, 0x624b, 0x7370, "\000" 
+    IDC_VQFMODE, 0x403, 13, 0
+0x3434, 0x484b, 0x2d7a, 0x3034, 0x624b, 0x7370, "\000" 
+    IDC_VQFMODE, 0x403, 13, 0
+0x3232, 0x484b, 0x2d7a, 0x3233, 0x624b, 0x7370, "\000" 
+    IDC_VQFMODE, 0x403, 13, 0
+0x3232, 0x484b, 0x2d7a, 0x3432, 0x624b, 0x7370, "\000" 
+    IDC_VQFMODE, 0x403, 13, 0
+0x3232, 0x484b, 0x2d7a, 0x3032, 0x624b, 0x7370, "\000" 
+    IDC_VQFMODE, 0x403, 13, 0
+0x3631, 0x484b, 0x2d7a, 0x3631, 0x624b, 0x7370, "\000" 
+    IDC_VQFMODE, 0x403, 13, 0
+0x3131, 0x484b, 0x2d7a, 0x3031, 0x624b, 0x7370, "\000" 
+    IDC_VQFMODE, 0x403, 12, 0
+0x3131, 0x484b, 0x2d7a, 0x4b38, 0x7062, 0x0073, 
+    IDC_VQFMODE, 0x403, 10, 0
+0x4b38, 0x7a48, 0x382d, 0x624b, 0x0070, 
+    0
+END
+
+IDD_ENCODERWMA8DLLDLG DLGINIT
+BEGIN
+    IDC_BITRATE, 0x403, 10, 0
+0x3232, 0x4b20, 0x6942, 0x2f74, 0x0073, 
+    IDC_BITRATE, 0x403, 10, 0
+0x3233, 0x4b20, 0x6942, 0x2f74, 0x0073, 
+    IDC_BITRATE, 0x403, 10, 0
+0x3633, 0x4b20, 0x6942, 0x2f74, 0x0073, 
+    IDC_BITRATE, 0x403, 10, 0
+0x3034, 0x4b20, 0x6942, 0x2f74, 0x0073, 
+    IDC_BITRATE, 0x403, 10, 0
+0x3834, 0x4b20, 0x6942, 0x2f74, 0x0073, 
+    IDC_BITRATE, 0x403, 10, 0
+0x3436, 0x4b20, 0x6942, 0x2f74, 0x0073, 
+    IDC_BITRATE, 0x403, 10, 0
+0x3038, 0x6b20, 0x6942, 0x2f74, 0x0073, 
+    IDC_BITRATE, 0x403, 10, 0
+0x3639, 0x6b20, 0x6942, 0x2f74, 0x0073, 
+    IDC_BITRATE, 0x403, 11, 0
+0x3231, 0x2038, 0x426b, 0x7469, 0x732f, "\000" 
+    IDC_BITRATE, 0x403, 11, 0
+0x3631, 0x2030, 0x426b, 0x7469, 0x732f, "\000" 
+    0
+END
+
+IDD_ENCODERWAVDLG DLGINIT
+BEGIN
+    IDC_FORMAT, 0x403, 4, 0
+0x4157, 0x0056, 
+    IDC_FORMAT, 0x403, 15, 0
+0x7041, 0x6c70, 0x2f65, 0x4753, 0x2049, 0x4941, 0x4646, "\000" 
+    IDC_FORMAT, 0x403, 25, 0
+0x7553, 0x2f6e, 0x654e, 0x7478, 0x6120, 0x2075, 0x6228, 0x6769, 0x6520, 
+0x646e, 0x6169, 0x296e, "\000" 
+    IDC_FORMAT, 0x403, 24, 0
+0x6544, 0x2063, 0x7561, 0x2820, 0x696c, 0x7474, 0x656c, 0x6520, 0x646e, 
+0x6169, 0x296e, 0x0029, 
+    IDC_FORMAT, 0x403, 21, 0
+0x6152, 0x2077, 0x4350, 0x204d, 0x6228, 0x6769, 0x6520, 0x646e, 0x6169, 
+0x296e, "\000" 
+    IDC_FORMAT, 0x403, 24, 0
+0x6152, 0x2077, 0x4350, 0x204d, 0x6c28, 0x7469, 0x6c74, 0x2065, 0x6e65, 
+0x6964, 0x6e61, 0x0029, 
+    0
+END
+
+IDD_ENCODERFAACDLLDLG DLGINIT
+BEGIN
+    IDC_PROFILE, 0x403, 5, 0
+0x614d, 0x6e69, "\000" 
+    IDC_PROFILE, 0x403, 15, 0
+0x6f4c, 0x2077, 0x6f63, 0x706d, 0x656c, 0x6978, 0x7974, "\000" 
+    IDC_PROFILE, 0x403, 4, 0
+0x5353, 0x0052, 
+    IDC_PROFILE, 0x403, 4, 0
+0x544c, 0x0044, 
+    IDC_BANDWIDTH, 0x403, 6, 0
+0x3631, 0x3030, 0x0030, 
+    IDC_BANDWIDTH, 0x403, 6, 0
+0x3831, 0x3030, 0x0030, 
+    IDC_BANDWIDTH, 0x403, 6, 0
+0x3931, 0x3035, 0x0030, 
+    0
+END
+
+IDD_ENCODERGOGODLLDLG DLGINIT
+BEGIN
+    IDC_VBR, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0030, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0031, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0032, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0033, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0034, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0035, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0036, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0037, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0038, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0039, 
+    0
+END
+
+IDD_ENCODERMP2DLLDLG DLGINIT
+BEGIN
+    IDC_VBR, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0030, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0031, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0032, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0033, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0034, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0035, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0036, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0037, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0038, 
+    IDC_VBR, 0x403, 6, 0
+0x4256, 0x2052, 0x0039, 
+    0
+END
+
+IDD_CDDBSETTINGS DLGINIT
+BEGIN
+    IDC_PROTOCOL, 0x403, 32, 0
+0x4443, 0x4244, 0x2820, 0x6564, 0x6166, 0x6c75, 0x2074, 0x6f70, 0x7472, 
+0x3820, 0x3838, 0x6f20, 0x2072, 0x3838, 0x3038, 0x0029, 
+    IDC_PROTOCOL, 0x403, 23, 0
+0x5448, 0x5054, 0x2820, 0x6564, 0x6166, 0x6c75, 0x2074, 0x6f70, 0x7472, 
+0x3820, 0x2930, "\000" 
+    0
+END
+
+IDD_MPEGTOWAVSETTINGS DLGINIT
+BEGIN
+    IDC_OUTFREQ, 0x403, 27, 0
+0x6153, 0x656d, 0x6120, 0x2073, 0x726f, 0x6769, 0x6e69, 0x6c61, 0x4d20, 
+0x4550, 0x2047, 0x6966, 0x656c, "\000" 
+    IDC_OUTFREQ, 0x403, 10, 0
+0x3434, 0x3031, 0x2030, 0x684b, 0x007a, 
+    IDC_OUTFREQ, 0x403, 10, 0
+0x3232, 0x3031, 0x2030, 0x684b, 0x007a, 
+    IDC_OUTFREQ, 0x403, 10, 0
+0x3131, 0x3530, 0x2030, 0x684b, 0x007a, 
+    0
+END
+
+IDD_ENCODERNTTVQFDLLDLG DLGINIT
+BEGIN
+    IDC_MINBITRATE, 0x403, 10, 0
+0x3233, 0x6b20, 0x6942, 0x2f74, 0x0073, 
+    IDC_MINBITRATE, 0x403, 10, 0
+0x3034, 0x6b20, 0x6942, 0x2f74, 0x0073, 
+    IDC_MINBITRATE, 0x403, 10, 0
+0x3834, 0x6b20, 0x6942, 0x2f74, 0x0073, 
+    IDC_MINBITRATE, 0x403, 10, 0
+0x3635, 0x6b20, 0x6942, 0x2f74, 0x0073, 
+    IDC_MINBITRATE, 0x403, 10, 0
+0x3436, 0x6b20, 0x6942, 0x2f74, 0x0073, 
+    IDC_MINBITRATE, 0x403, 10, 0
+0x3038, 0x6b20, 0x6942, 0x2f74, 0x0073, 
+    IDC_MINBITRATE, 0x403, 10, 0
+0x3639, 0x6b20, 0x6942, 0x2f74, 0x0073, 
+    IDC_MINBITRATE, 0x403, 11, 0
+0x3131, 0x2032, 0x426b, 0x7469, 0x732f, "\000" 
+    IDC_MINBITRATE, 0x403, 11, 0
+0x3231, 0x2038, 0x426b, 0x7469, 0x732f, "\000" 
+    IDC_MINBITRATE, 0x403, 11, 0
+0x3631, 0x2030, 0x426b, 0x7469, 0x732f, "\000" 
+    IDC_MINBITRATE, 0x403, 11, 0
+0x3931, 0x2032, 0x426b, 0x7469, 0x732f, "\000" 
+    IDC_MINBITRATE, 0x403, 11, 0
+0x3232, 0x2034, 0x426b, 0x7469, 0x732f, "\000" 
+    IDC_MINBITRATE, 0x403, 11, 0
+0x3532, 0x2036, 0x426b, 0x7469, 0x732f, "\000" 
+    IDC_MINBITRATE, 0x403, 11, 0
+0x3233, 0x2030, 0x426b, 0x7469, 0x732f, "\000" 
+    0
+END
+
+IDD_EDIT_GENRES DLGINIT
+BEGIN
+    IDC_EDIT_CDDBGENRE, 0x403, 6, 0
+0x6c62, 0x6575, 0x0073, 
+    IDC_EDIT_CDDBGENRE, 0x403, 10, 0
+0x6c63, 0x7361, 0x6973, 0x6163, 0x006c, 
+    IDC_EDIT_CDDBGENRE, 0x403, 8, 0
+0x6f63, 0x6e75, 0x7274, 0x0079, 
+    IDC_EDIT_CDDBGENRE, 0x403, 5, 0
+0x6164, 0x6174, "\000" 
+    IDC_EDIT_CDDBGENRE, 0x403, 5, 0
+0x6f66, 0x6b6c, "\000" 
+    IDC_EDIT_CDDBGENRE, 0x403, 5, 0
+0x616a, 0x7a7a, "\000" 
+    IDC_EDIT_CDDBGENRE, 0x403, 5, 0
+0x696d, 0x6373, "\000" 
+    IDC_EDIT_CDDBGENRE, 0x403, 7, 0
+0x656e, 0x6177, 0x6567, "\000" 
+    IDC_EDIT_CDDBGENRE, 0x403, 7, 0
+0x6572, 0x6767, 0x6561, "\000" 
+    IDC_EDIT_CDDBGENRE, 0x403, 5, 0
+0x6f72, 0x6b63, "\000" 
+    IDC_EDIT_CDDBGENRE, 0x403, 11, 0
+0x6f73, 0x6e75, 0x7464, 0x6172, 0x6b63, "\000" 
+    0
+END
+
+IDD_ENCODERAPEDLLDLG DLGINIT
+BEGIN
+    IDC_APETAGFORMAT, 0x403, 18, 0
+0x5041, 0x2045, 0x6154, 0x2067, 0x6428, 0x6665, 0x7561, 0x746c, 0x0029, 
+
+    IDC_APETAGFORMAT, 0x403, 10, 0
+0x4449, 0x5633, 0x2031, 0x6154, 0x0067, 
+    IDC_APECOMPRESSIONLEVEL, 0x403, 5, 0
+0x6146, 0x7473, "\000" 
+    IDC_APECOMPRESSIONLEVEL, 0x403, 7, 0
+0x6f4e, 0x6d72, 0x6c61, "\000" 
+    IDC_APECOMPRESSIONLEVEL, 0x403, 5, 0
+0x6948, 0x6867, "\000" 
+    IDC_APECOMPRESSIONLEVEL, 0x403, 11, 0
+0x7845, 0x7274, 0x2061, 0x6948, 0x6867, "\000" 
+    0
+END
+
+IDD_CDDBDIALOG DLGINIT
+BEGIN
+    IDC_CDDB_DLG_CAT, 0x403, 6, 0
+0x6c62, 0x6575, 0x0073, 
+    IDC_CDDB_DLG_CAT, 0x403, 10, 0
+0x6c63, 0x7361, 0x6973, 0x6163, 0x006c, 
+    IDC_CDDB_DLG_CAT, 0x403, 8, 0
+0x6f63, 0x6e75, 0x7274, 0x0079, 
+    IDC_CDDB_DLG_CAT, 0x403, 5, 0
+0x6164, 0x6174, "\000" 
+    IDC_CDDB_DLG_CAT, 0x403, 5, 0
+0x6f66, 0x6b6c, "\000" 
+    IDC_CDDB_DLG_CAT, 0x403, 5, 0
+0x616a, 0x7a7a, "\000" 
+    IDC_CDDB_DLG_CAT, 0x403, 5, 0
+0x696d, 0x6373, "\000" 
+    IDC_CDDB_DLG_CAT, 0x403, 7, 0
+0x656e, 0x6177, 0x6567, "\000" 
+    IDC_CDDB_DLG_CAT, 0x403, 7, 0
+0x6572, 0x6767, 0x6561, "\000" 
+    IDC_CDDB_DLG_CAT, 0x403, 5, 0
+0x6f72, 0x6b63, "\000" 
+    IDC_CDDB_DLG_CAT, 0x403, 11, 0
+0x6f73, 0x6e75, 0x7464, 0x6172, 0x6b63, "\000" 
+    0
+END
+
+IDD_ENCODERFLACDLLDLG DLGINIT
+BEGIN
+    IDC_COMPRESSION_LEVEL, 0x403, 20, 0
+0x6f63, 0x706d, 0x6572, 0x7373, 0x6f69, 0x2d6e, 0x656c, 0x6576, 0x206c, 
+0x0030, 
+    IDC_COMPRESSION_LEVEL, 0x403, 20, 0
+0x6f63, 0x706d, 0x6572, 0x7373, 0x6f69, 0x2d6e, 0x656c, 0x6576, 0x206c, 
+0x0031, 
+    IDC_COMPRESSION_LEVEL, 0x403, 20, 0
+0x6f63, 0x706d, 0x6572, 0x7373, 0x6f69, 0x2d6e, 0x656c, 0x6576, 0x206c, 
+0x0032, 
+    IDC_COMPRESSION_LEVEL, 0x403, 20, 0
+0x6f63, 0x706d, 0x6572, 0x7373, 0x6f69, 0x2d6e, 0x656c, 0x6576, 0x206c, 
+0x0033, 
+    IDC_COMPRESSION_LEVEL, 0x403, 20, 0
+0x6f63, 0x706d, 0x6572, 0x7373, 0x6f69, 0x2d6e, 0x656c, 0x6576, 0x206c, 
+0x0034, 
+    IDC_COMPRESSION_LEVEL, 0x403, 20, 0
+0x6f63, 0x706d, 0x6572, 0x7373, 0x6f69, 0x2d6e, 0x656c, 0x6576, 0x206c, 
+0x0035, 
+    IDC_COMPRESSION_LEVEL, 0x403, 20, 0
+0x6f63, 0x706d, 0x6572, 0x7373, 0x6f69, 0x2d6e, 0x656c, 0x6576, 0x206c, 
+0x0036, 
+    IDC_COMPRESSION_LEVEL, 0x403, 20, 0
+0x6f63, 0x706d, 0x6572, 0x7373, 0x6f69, 0x2d6e, 0x656c, 0x6576, 0x206c, 
+0x0037, 
+    IDC_COMPRESSION_LEVEL, 0x403, 20, 0
+0x6f63, 0x706d, 0x6572, 0x7373, 0x6f69, 0x2d6e, 0x656c, 0x6576, 0x206c, 
+0x0038, 
+    0
+END
+
+IDD_TAGPROPPAGE DLGINIT
+BEGIN
+    IDC_TRACKNUMBERSETTING, 0x403, 2, 0
+0x004e, 
+    IDC_TRACKNUMBERSETTING, 0x403, 7, 0
+0x204e, 0x202f, 0x4e54, "\000" 
+    IDC_TRACKNUMBERSETTING, 0x403, 4, 0
+0x2030, 0x004e, 
+    IDC_TRACKNUMBERSETTING, 0x403, 11, 0
+0x2030, 0x204e, 0x202f, 0x2030, 0x4e54, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&System Info",                ID_SYSTEMINFO
+        MENUITEM "&Compare Two Files",          ID_COMPAREFILES
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Select All\tCtrl+A",          ID_EDIT_SELECTALL
+        MENUITEM "&Copy album info to Clipboard", 
+                                                ID_EDIT_COPYTRACKSTOCLIPBOARD
+
+        MENUITEM "&Rename Track\tF2",           ID_EDIT_RENAMETRACK
+        POPUP "&Modify Track Name"
+        BEGIN
+            MENUITEM "&First character of every word in Caps", 
+                                                    ID_TRACKNAME_MOD_FCEW
+            MENUITEM "First character in &Caps",    ID_TRACKNAME_MOD_FCC
+            MENUITEM "All characters &lower case",  ID_TRACKNAME_MOD_AL
+            MENUITEM "All characters &upper case",  ID_TRACKNAME_MOD_AU
+            MENUITEM "&Swap Artist<->Track",        ID_EDIT_MODIFYTRACKNAME_EXCHANGEARTISTTRACK
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Re&fresh Track List\tF5",     ID_EDIT_REFRESH
+        MENUITEM SEPARATOR
+        MENUITEM "Add / Edit the list of &Genres", ID_EDIT_ADDEDITGENRES
+    END
+    POPUP "&Convert"
+    BEGIN
+        MENUITEM "Extract CD track(s) to WAV file\tF8", ID_TRACKS2WAV
+        MENUITEM "Extract CD track(s) to a Compressed Audio File\tF9", 
+                                                ID_TRACKS2MP3
+        MENUITEM "Extract a section of the CD\tF10", ID_PTRACKS2MP3
+        MENUITEM SEPARATOR
+        MENUITEM "Re-encode Compressed Audio File(s)", ID_MPEGTOMPEG
+        MENUITEM "Convert WAV file(s) to Compressed Audio file(s)\tF11", 
+                                                ID_WAV2MP3
+        MENUITEM "Convert Compressed Audio File(s) to WAV file(s)\tF12", 
+                                                ID_MP3TOWAV
+        MENUITEM SEPARATOR
+        MENUITEM "Add RIFF-WAV(s) header to MP2 or MP3 file(s)", 
+                                                ID_MP3TORIFFWAV
+        MENUITEM "Strip the RIFF-WAV header(s) from MP2 or MP3 file(s)", 
+                                                ID_RIFFWAVTOMP3
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "Media file &Player",          ID_PLAYFILES
+        MENUITEM "&Record from Analog Input",   ID_TOOLS_RECORDFILES, GRAYED
+        MENUITEM "Generate &CUE sheet",         ID_TOOLS_GENERATECUESHEET
+        MENUITEM "&Detect pre-gaps",            ID_TOOLS_DETECTPRE
+        MENUITEM "Read UPC/ISRC code",          ID_TOOLS_READUPC
+    END
+    POPUP "C&DDB"
+    BEGIN
+        MENUITEM "Read From &Local freedb",     ID_READLOCALCDDB
+        MENUITEM "Read &Remote freedb",         ID_REMOTECDDB
+        MENUITEM "&Read From &CD Player.ini",   ID_READCDPLAYERINI
+        MENUITEM "Read CD-&Text",               ID_CDDB_READCDTEXT
+        MENUITEM "Read from &WinampDB",         ID_CDDB_WINAMPDB
+        MENUITEM "Read from &MusicBrainz",      ID_CDDB_READFROMMUSICBRAINZ
+        MENUITEM SEPARATOR
+        MENUITEM "Save To CDPlayer.ini",        ID_CDDB_SAVETOCDPLAYERINI
+        MENUITEM "Save to Local CDDB",          ID_CDDB_SAVETOLOCALCDDB
+        MENUITEM SEPARATOR
+        MENUITEM "S&ubmit To Remote freedb",    ID_CDDB_SUBMITTOREMOTECDDB
+        MENUITEM SEPARATOR
+        MENUITEM "freedb B&atch Query",         ID_CDDB_BATCH_QUERY
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Settings\tF4",               ID_CONFIGURE
+        MENUITEM "Configure &Winamp Plugins",   ID_CONFIGURE_WIN_PLUGINS
+        MENUITEM "&Show the Play Toolbar",      ID_VIEWPLAYBAR, CHECKED
+        MENUITEM "Show the &Recording Toolbar", ID_VIEWRECORDBAR, CHECKED
+        MENUITEM "Show the &Profile Toolbar",   ID_VIEWUTILTOOLBAR, CHECKED
+        MENUITEM "Show the Ripping Status &Details\tF3", ID_VIEWRIPSTATUS
+        MENUITEM "&Clear Ripping Status",       ID_OPTION_CLEARSTATUS
+        POPUP "&Language"
+        BEGIN
+            MENUITEM "lang 0",                      ID_LANGUAGE_START
+            MENUITEM "lang 1",                      ID_LANGUAGE_1
+            MENUITEM "lang 2",                      ID_LANGUAGE_2
+            MENUITEM "lang 3",                      ID_LANGUAGE_3
+            MENUITEM "lang 4",                      ID_LANGUAGE_4
+            MENUITEM "lang 5",                      ID_LANGUAGE_5
+            MENUITEM "lang 6",                      ID_LANGUAGE_6
+            MENUITEM "lang 7",                      ID_LANGUAGE_7
+            MENUITEM "lang 8",                      ID_LANGUAGE_8
+            MENUITEM "lang 9",                      ID_LANGUAGE_9
+            MENUITEM "lang 10",                     ID_LANGUAGE_10
+            MENUITEM "lang 11",                     ID_LANGUAGE_11
+            MENUITEM "lang 12",                     ID_LANGUAGE_12
+            MENUITEM "lang 13",                     ID_LANGUAGE_13
+            MENUITEM "lang end",                    ID_LANGUAGE_END
+        END
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help on using CDex\tF1",     ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About CDex...",              ID_APP_ABOUT
+    END
+END
+
+IDR_RTRACK MENU 
+BEGIN
+    POPUP "RightButton"
+    BEGIN
+        MENUITEM "&Rename Track\tF2",           ID_EDIT_RENAMETRACK
+        MENUITEM "Select &All Tracks\tCtrl-A",  ID_EDIT_SELECTALL
+        MENUITEM "Extract CD track(s) to WAV file\tF8", ID_TRACKS2WAV
+        MENUITEM "Extract CD track(s) to MPEG file\tF9", ID_TRACKS2MP3
+        MENUITEM "Extract partial CD Track\tF10", ID_PTRACKS2MP3
+        MENUITEM SEPARATOR
+        MENUITEM "View Ripping Status Details\tF3", ID_VIEWRIPSTATUS
+    END
+END
+
+IDR_PLAYERFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&System Info",                ID_SYSTEMINFO
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "Configure &Winamp Plugins",   ID_CONFIGURE_WIN_PLUGINS
+        MENUITEM "&Show the Play Toolbar",      ID_VIEWPLAYBAR, CHECKED
+        MENUITEM "Play &Random",                ID_OPTIONS_PLAYRANDOM
+        POPUP "&Language"
+        BEGIN
+            MENUITEM "lang 0",                      ID_LANGUAGE_START
+            MENUITEM "lang 1",                      ID_LANGUAGE_1
+            MENUITEM "lang 2",                      ID_LANGUAGE_2
+            MENUITEM "lang 3",                      ID_LANGUAGE_3
+            MENUITEM "lang 4",                      ID_LANGUAGE_4
+            MENUITEM "lang 5",                      ID_LANGUAGE_5
+            MENUITEM "lang 6",                      ID_LANGUAGE_6
+            MENUITEM "lang 7",                      ID_LANGUAGE_7
+            MENUITEM "lang 8",                      ID_LANGUAGE_8
+            MENUITEM "lang 9",                      ID_LANGUAGE_9
+            MENUITEM "lang 10",                     ID_LANGUAGE_10
+            MENUITEM "lang 11",                     ID_LANGUAGE_11
+            MENUITEM "lang 12",                     ID_LANGUAGE_12
+            MENUITEM "lang 13",                     ID_LANGUAGE_13
+            MENUITEM "lang end",                    ID_LANGUAGE_END
+        END
+    END
+    POPUP "&Playlist"
+    BEGIN
+        MENUITEM "&Save",                       ID_PLAYLIST_SAVE
+        MENUITEM "&Clear",                      ID_PLAYLIST_CLEAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics\tF1",            ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About CDex...",              ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+IDR_HTML_CDEXCONFIGDLG  HTML                    "CDexConfigDlg.htm"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_BAD_SESSION         "Cannot open an Internet Session.  Please check your internet configuration."
+    IDS_APPNAME             "CDex"
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed"
+    IDS_FASTFORWARDBUTTON   "Fast Forward\nFast Forward"
+    IDS_FASTREWINDBUTTON    "Fast Rewind\nFast Rewind"
+    IDS_PAUSEBUTTON         "Pause\nPause"
+    IDS_NEXTTRACKBUTTON     "Skip To Next Track\nSkip To Next Track"
+    IDS_PREVTRACKBUTTON     "Skip To Previous Track\nSkip To Previous Track"
+    IDS_GETCDDBBUTTON       "Get album information from remote freedb\nGet album information from remote freedb"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "CDex Ripper\n\nCDex Ripper\n\n\nCDex.Document\nCDex Document"
+    IDS_CDEXVERSION         "CDex Version "
+    IDS_NOARTIST            "no artist"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_PLAYERFRAME         "CDex Player\n\nCDex Player\n\n\nCDex.Document\nCDex Document"
+    IDS_NOFILES_SELECTED    "No files selected"
+    IDS_AUTO                "Auto"
+    IDS_DEFAULT             "Default"
+    IDS_INPUTISOUTPUTFILENAME 
+                            "Conversion error: Input filename is same as the output filename.\nPlease select a different conversion output directory!\nInput filename  : %s\nOutput filename : %s"
+    IDS_NATIVEASPINOTSUPPORTED 
+                            "Native NT SCSI Library support is not supported by this operating system.\nYou have to install ASPI drivers in order to use CDex.  See the CDex Help File for more information.\n"
+    IDS_FAILEDTOLOADASPIDRIVERS 
+                            "Error: Failed to load the Windows ASPI drivers.\nYou have to install ASPI drivers in order to use CDex.  See the CDex Help File for more information.\n"
+    IDS_FAILEDTOGETASPISTATUS 
+                            "Error: Failed to get ASPI driver status.\nPlease check the ASPI driver installation.  See the CDex Help File for more information.\n"
+    IDS_LANGID              "English"
+    IDS_CDPROPPAGE          "Ripping::CD Drive settings"
+    IDS_ENCODERPROPPAGE     "Encoding::Encoders"
+    IDS_GENERICPROPPAGE     "General::Generic"
+    IDS_LOCALCDDBPROPPAGE   "CD Database::Local freedb"
+    IDS_REMOTECDDBPROPPAGE  "CD Database::Remote freedb"
+    IDS_FILENAMEPROPPAGE    "General::Directories & files"
+    IDS_DDX_GFLDR_EDIT_TEXT "..."
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "CDex"
+    AFX_IDS_IDLEMESSAGE     "Press F1 for help on the CDex audio CD extractor program"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            """Display CDex information, version number, and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application\nExit"
+    ID_HELP_INDEX           "Opens CDex Help\nOpens CDex Help"
+    ID_HELP_FINDER          "Bring up the CDex manual\nHelp on using CDex"
+    ID_HELP_USING           "Show instructions about how to use help\nHelp"
+    ID_CONTEXT_HELP         "Show help for clicked-on buttons, menus, and windows\nHelp"
+    ID_HELP                 "Show help for current task or command\nHelp"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Resize the window"
+    AFX_IDS_SCMOVE          "Move the window"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Quit the application"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About cdex..."
+    IDS_SAVE_FILE_AS        "Save as..."
+    IDS_OPEN_FILE           "Open"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_CONTROLS   "Indicator Contrl"
+    ID_INDICATOR_MISC       "Misc"
+    IDS_PLAYSINGLEBUTTON    "Play Track(s)"
+    IDS_STOPPLAYBUTTON      "Stop Playing"
+    IDS_EJECTBUTTON         "Eject CD"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DDX_GFLDR_TT_MODIFY "Select Directory"
+    IDS_EXTENCFILESELECTION "Encoders (*.exe;*.bat)|*.exe;*.bat|All Files (*.*)|*.*||"
+    IDS_DDX_GETFILE_SELECTFILE "Select encoder"
+    IDS_BIGENDIAN           "Big"
+    IDS_LITTLEENDIAN        "Little"
+    IDS_NONE                "none"
+    IDS_STANDARD            "standard"
+    IDS_READ                "Read"
+    IDS_ATAPI               "Atapi"
+    IDS_ENABLE              "Enable"
+    IDS_DENSITY             "Density"
+    IDS_ENDIAN              "Endian"
+    IDS_RESULT              "Result"
+    IDS_PASS                "Pass"
+    IDS_FAIL                "Fail"
+    IDS_ASPIFAILEDSUGGESTNATIVENTSCSI 
+                            "Failed to load the wnaspi32.dll driver!\nUse the ""Native NT SCSI library"" driver option instead?"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CONFIGURE            "Select to configure CDex\nConfigure"
+    ID_TRACKS2WAV           "Extract CD track(s) to WAV file(s)\nExtract CD track(s) to WAV file(s)"
+    ID_TRACKS2MP3           "Extract CD track(s) to Compressed Audio File(s)\nExtract CD track(s) to Compressed Audio File(s)"
+    ID_WAV2MP3              "Convert WAV file(s) to Compressed Audio File(s)\nConvert WAV file(s) to Compressed Audio File(s)"
+    ID_PTRACKS2MP3          "Extract a section of the CD to WAV or Compressed Audio file(s)\nExtract a section of the CD to WAV or Compressed Audio file(s)"
+    ID_SYSTEMINFO           "Select to get system information\nSelect to get system information"
+    ID_CONFIGCD             "Configure CD Settings\nConfigure CD Settings"
+    ID_EJECT                "Eject CD\nEject CD (Shift-F1)"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SKIPFORWARD          "Fast Forward\nFast Forward"
+    ID_SKIPREWIND           "Fast Rewind\nFast Rewind"
+    ID_NEXTTRACK            "Skip to next track\nSkip to next track (Shift-F3)"
+    ID_SKIPPREV             "Skip to previous track\nSkip to previous track"
+    ID_PLAYTRACK            "Play audio track(s)\nPlay audio track(s) (Shift-F4)"
+    ID_STOPBUTTON           "Stop Playing\nStop Playing (Shift-F5)"
+    ID_PAUSE                "Pause/resume playing\nPause/resume playing"
+    ID_READLOCALCDDB        "Get album information from local CDDB\nRead album information from local CDDB"
+    ID_READCDPLAYERINI      "Get album information from CDPlayer.ini file\nRead album information from CDPlayer.ini file"
+    ID_REMOTECDDB           "Get album information from remote CDDB\nGet album information from remote CDDB"
+    ID_VIEWPLAYBAR          "Show or hide the playing toolbar"
+    ID_VIEWRECORDBAR        "Show or hide the recording toolbar"
+    ID_PREVTRACK            "Skip to previous track\nSkip to previous track (Shift-F2)"
+    ID_SKIPBACK             "Fast Rewind\nFast Rewind"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_MP3TORIFFWAV         "Adds RIFF-WAV header(s) to MP2 or MP3 file(s)\nAdds RIFF-WAV header(s) to MP2 or MP3 file(s)"
+    ID_EDIT_COPYTRACKSTOCLIPBOARD "Copy album information to the clipboard"
+    ID_EDIT_RENAMETRACK     "Rename the selected track"
+    ID_EDIT_SELECTALL       "Select All Track(s)"
+    ID_CDDB_SAVETOCDPLAYERINI 
+                            "Save album information to the CDPlayer.ini file"
+    ID_CDDB_SAVETOLOCALCDDB "Save album information to the local CDDB file(s)"
+    ID_MP3TOWAV             "Convert Compressed Audio File(s) to WAV file(s)\nConvert Compressed Audio File(s) to WAV file(s)"
+    ID_EDIT_REFRESH         "Reload album information from disk"
+    ID_VIEWRIPPRESULT       "Shows the status"
+    ID_VIEWRIPSTATUS        "Show Ripping Status Information of the selected track(s)\nShow Ripping Status Information of the selected track(s)"
+    ID_COMPAREFILES         "Compare the content of two WAV files\nCompare the content of two WAV files"
+    ID_PLAYFILES            "Play Media Files\nPlay Media Files"
+    ID_OPTION_CLEARSTATUS   "Clear the ripping status of this CD"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_NOTITLE             "no title"
+    IDS_GENRE               "Genre"
+    IDS_ALBUM               "Album"
+    IDS_CDDBID              "freedb ID"
+    IDS_ARTIST              "Artist"
+    IDS_TRACKNUMBER         "Track Number"
+    IDS_VOLUMEID            "Volume ID"
+    IDS_TRACKNAME           "Track Name"
+    IDS_TRACKNUMBERLZ       "Track Number Leading 0"
+    IDS_NUMBEROFTRACKS      "Number of tracks"
+    IDS_NAME                "Name"
+    IDS_TRACK               "Track"
+    IDS_START_TIME          "Start Time"
+    IDS_PLAY_TIME           "Play Time"
+    IDS_SIZE                "Size"
+    IDS_STATUS              "Status"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CDEX_VERSION        "CDex Version "
+    IDS_WRONG_ARTIST_FIELD  "Artist field contains invalid characters\n Replace invalid characters with spaces"
+    IDS_WRONG_ALBUM_FIELD   "Album field contains invalid characters\n Replace invalid characters with spaces"
+    IDS_WRONG_TRACK_FIELD   "Trackname [%d] contains invalid characters\n Replace invalid characters with spaces"
+    IDS_NO_TRACKS_SELECTED  "You don't have any tracks selected.  Please select one or more audio tracks from the list."
+    IDS_UNABLE_COPYTO_CLIPBOARD "Unable to set Clipboard data"
+    IDS_SEEKING_TRACK       "Seeking track %d (%02d:%02d:%02d)\n"
+    IDS_RIP_TRACK_TO_MPEG   "Ripping track to a Compressed Audio file (%s) to file %s"
+    IDS_RIP_ENCODE_ABORT    "Ripping/encoding has been aborted at %s"
+    IDS_RIP_FINISHED_OK     "Ripping track to a Compressed Audio File has been finished properly, total duration: %s"
+    IDS_RIP_TRACK_TO_WAV    "Ripping track to WAV file (%s) to file %s"
+    IDS_RIP_ABORT           "Ripping has been aborted at %s"
+    IDS_RIP_WAV_FINISHED_OK "Ripping track to WAV file has been finished properly, total duration: %s"
+    IDS_CANNOT_CREATE_OUTDIR "Could not create output directory: "
+    IDS_ELAPSED_TIME        "Time elapsed: %s || Time left: %s || Estimated time: %s"
+    IDS_EXTRACT_TRACK_TITLE "Extracting track %d (%d%% completed, file %d/%d)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PEAK_VALUE          "Peak Value %4.2f dB = %3d %%"
+    IDS_NUM_JITTER_ERRORS   "Jitter (errors: %d)"
+    IDS_CONVERTING_TRACK_TITLE 
+                            "Converting track %d (%d %% completed, file %d/%d)"
+    IDS_NORMALIZING_TRACK_TITLE 
+                            "Normalizing track %d (%d %% completed, file %d/%d)"
+    IDS_DETERMINING_PEAK_VALUE_TITLE 
+                            "Determining Peak Value track %d (%d %% completed, file %d/%d)"
+    IDS_REPORT_PEAK_VALUE   "Peak Value %4.2f dB = %3d %%"
+    IDS_CONVERTING_TRACK_NAME "To file: %s"
+    IDS_EXTRACTING_TRACK_NUMBER "Extracting track %d  (file %d/%d)"
+    IDS_CONVERTING_TRACK_NUMBER 
+                            "Converting file to target format  (file %d/%d)"
+    IDS_NORMALIZING_TRACK_NUMBER 
+                            "Normalizing track with factor of %5.2f (file %d/%d)"
+    IDS_GETPEAKVALUE_TRACK_NUMBER "Getting peak value (file %d/%d)"
+    IDS_PROCESSING_TRACK_NUMBER "Processing (file %d/%d)"
+    IDS_EXTRACT_DIALOG      "Extracting CD Tracks"
+    IDS_FILE_CONVERSION     "File Conversion"
+    IDS_REPORT_NUM_JITTER_ERRORS "%5d errors at track %s\n\r\n"
+    IDS_JITTER_ERROR_MSG    "Jitter errors have occured.  Please see help file to solve jitter problems.\n\n"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_YEAR                "Year"
+    IDS_DATATRACK           "DataTrack"
+    IDS_AUDIOTRACK          "AudioTrack"
+    IDS_CDDBINFOINCOMPLETE  "Please fill out all Track, Artist, and Track information, and make\n sure that the Genre field is set properly \nbefore submitting an entry to the remote CD database."
+    IDS_ENTRYNOTINLOCALCDDB "Requested album information is not found in the local CDDB"
+    IDS_ENTRYNOTINCDPLAYERINI 
+                            "Requested album information is not found in the CDPlayer.ini file"
+    IDS_MP3TABHASCHANGED    "The MP3 tag has been changed. \nSave the modifications?"
+    IDS_CANTSAVEID3TAG      "An error occured while saving the ID3V2 tag.\nMake sure file is not marked as read only!"
+    IDS_CANTLOADID3TAG      "An error occured while reading the ID3v2 tag."
+    IDS_ERROR_OPENING_INPUT_FILE 
+                            "An error occurred while opening the input file."
+    IDS_FAILED_TO_SET_PRIVILEGE 
+                            "Failed to set the privilage to shut down the system"
+    IDS_NORMALIZATION_FACTOR "Normalizing factor is %7.4f x"
+    IDS_INVALID_EMAIL_ADDRESS 
+                            "Invalid e-mail address.  Please fill out\n\nyour e-mail address in the Remote CDDB options menu."
+    IDS_CDDB_REMOTE_TIMEOUT "The remote server didn't answer soon enough. \n Increase the Timeout value in the CDDB option screen, \n Or just try again."
+    IDS_CDDB_READWRITE_ALLOWED "read/write allowed\r\n"
+    IDS_CDDB_OK_READONLY    "OK, read only\r\n"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_RIFFWAVTOMP3         "Strip the RIFF-WAV header(s) from MP2 or MP3 file(s)\nStrip the RIFF-WAV header(s) from MP2 or MP3 file(s)"
+    ID_TOOLS_RECORDFILES    "Record a WAV or an MP3 from your computer's analog input\nRecord from analog input"
+    ID_CDDB_SUBMITTOREMOTECDDB 
+                            "Submit album information to the remote CDDB database"
+    ID_CDDB_READCDTEXT      "Get album information CD-Text (if supported/available)"
+    ID_OPEN                 "Select Files\nSelect Files"
+    ID_FILEOPEN             "Select Files\nSelect Files"
+    ID_PREV                 "Skip to Previous file\nSkip to Previous file"
+    ID_NEXT                 "Skip to Next file\nSkip to Next file"
+    ID_PLAY                 "Play File(s)\nPlay File(s)"
+    ID_STOP                 "Stop Playing Files\nStop Playing Files"
+    ID_CDDB_BATCH_QUERY     "CDDB Batch Query\nCDDB Batch Query"
+    ID_MPEGTOMPEG           "Re-encode (transcode) Compressed Audio File(s)\nRe-encode (transcode) Compressed Audio File(s)"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CDDB_NO_MATCH_FOUND "No match found\n"
+    IDS_CDDB_OK_RESPONSE    "OK Response\n"
+    IDS_CDDB_FOUND_MULTIPLE_EXACT_MATCHES 
+                            "Found several exact matches. The list follows.\n"
+    IDS_CDDB_FOUND_MULTIPLE_INEXACT_MATCHES 
+                            "Found several inexact matches. The list follows.\n"
+    IDS_CDDB_ENTRY_NOT_FOUND "Specified CDDB entry not found\r\n"
+    IDS_CDDB_ALREADY_SHOOK_HANDS "Already shook hands\r\n"
+    IDS_CDDB_DB_ENTRY_CORRUPT "Database entry is corrupt.\n"
+    IDS_CDDB_NO_HANDSHAKE   "No handshake\r\n"
+    IDS_CDDB_INVALID_HANDSHAKE 
+                            "Handshake not successful, closing connection\r\n"
+    IDS_NO_CONNECTION_ALLOWED "No connections allowed: permission denied\r\n"
+    IDS_NO_CONNECTION_LOAD_TOO_HIGH "No connections, load too high\r\n"
+    IDS_CDDB_SERVER_ERROR   "Server Error, please select another server\r\n"
+    IDS_CDDB_PROTOCOL_IS_CURRENT_LEVEL "Protocol level already cur_level\r\n"
+    IDS_CDDB_ILLEGAL_PROTO_LEVEL "Illegal Protocol Level\r\n"
+    IDS_CDDB_CONNECTION_FAILED_FOR_REASON "Connection Failed for reason"
+    IDS_CONVERT_BUTTON_TEXT "Convert"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CONFIGURE_WIN_PLUGINS 
+                            "Configures the Winamp Plugins\nConfigures the Winamp Plugins"
+    ID_EDIT_ADDEDITGENRES   "Edit the list of known genres\nEdit the Genre List"
+    ID_PLAYBARPAUSE         "Pause playing\nPause playing  (Shift-F6)"
+    ID_OPTIONS_PLAYRANDOM   "Play the tracks in a random order\nPlay the tracks in a random order"
+    ID_EDIT_MODIFYTRACKNAME_EXCHANGEARTISTTRACK 
+                            "Exchange Artist/Track filed (for multi artist CDs)\nExchange Artist/Track filed (for multi artist CDs)"
+    ID_CDSELBAR             "Select the active CD Drive\nSelect the active CD Drive"
+    ID_PROFILESELECTION     "Select profile\nSelect profile"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SAVEPROFILE          "Save current settings to profile\nSave current settings to profile"
+    ID_DELETEPROFILE        "Delete profile\nDelete selected profile"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MODULE_NAME         "Module Name"
+    IDS_MODULE_INFO         "Module Info"
+    IDS_GENRE_TABLE_NOT_FOUND 
+                            "The Genre Table (genres.txt)  has not been found in the CDex directory\r\n(tried location: %s)\r\nCheck your CDex installation!"
+    IDS_GENRE_NAME          "Genre"
+    IDS_GENRE_CDDB_NAME     "CDDB Genre"
+    IDS_GENRE_ID3V1ID       "ID3 V1 ID"
+    IDS_NEW_GENRE_NAME      "New Genre"
+    IDS_UNKNOWN             "Unknown"
+    IDS_CDDB_INVALIDSERVERRESPONSE "Invalid Server Response"
+    IDS_FILEFORMAT_TT       "Artist\t\t%5 = CD VolumeID\n%2 = Album\t\t%6 = freedb ID\n%3 = Track Number\t%7 = Track Number Leading Zero\n%4 = Track Name\t%8 = Total Number of Tracks\n%Y = Year\t\t%G = Genre\n%A = Artist Name (not affected by the split option)\nUse l or u prequalifier to force lower/upper case strings"
+    IDS_CDEX_PLAYER_VERSION "CDex Player, Version "
+    IDS_CDDB_ERROR_SEE_MSGXBOX 
+                            "freedb error has occured.  See message box for details\n"
+    IDS_ENCODER_ERROR_CANT_LAUNCH_EXENCODER 
+                            "ERROR: Cannot launch external encoder"
+    IDS_ENCODER_ERROR_CANT_SENDDATATO_EXENCODER 
+                            "ERROR: Cannot send data to external encoder"
+    IDS_ENCODER_ERROR_CANT_CREATEVQFSCRIPT "Could not create VQF script file"
+    IDS_LOADLIBRARY_FAILED  "Could not load the encoder %s\nMake sure that you start CDex.exe where the DLLs are located\nIf you have created a short-cut, make sure the working directory is set correctly"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ENCODER_ERROR_INVALIDINPUTSTREAM "Invalid Input Stream"
+    IDS_ENCODER_ERROR_COULDNOTOPENFILE "Could not open/create file: %s"
+    IDS_ENCODER_ERROR_CANTCREATEPIPE 
+                            "ERROR: Cannot create pipe to external encoder"
+    IDS_ENCODER_ERROR_GGODLLNEEDSFPU 
+                            "The GoGo DLL needs a Floating Point Unit"
+    IDS_FREEDISKSPACE       "%2d track (%5.2f MB) Free disk space %5d MB"
+    IDS_PLAYINGTRACKPOSITION "Playing track %d (%02d:%02d:%02d)\n"
+    IDS_PCOPY_RANGE         " (range)"
+    IDS_ERROR_CANNOTOPENCLIPBOARD "Cannot open the Clipboard"
+    IDS_ERROR_CANNOTEMPTYCLIPBOARD "Cannot empty the Clipboard"
+    IDS_CDDB_ACTION_OPENCONNECTION "Opening Connection"
+    IDS_CDDB_ACTION_SENDHELLOSTRING "Sending Hello String"
+    IDS_CDDB_ACTION_SENDSTATS "Sending Statistics command"
+    IDS_CDDB_ACTION_SENDPROTOLEVEL "Sending Proto Level"
+    IDS_CDDB_ACTION_SENDQUERY "Sending Query"
+    IDS_CDDB_ACTION_STARTREMOTEQUERY "Start Remote Query"
+    IDS_CDDB_ACTION_GETREMOTERESPONSE "Getting remote response"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CDDB_ERROR_UNKNOWNSMTPSERVER 
+                            "Unknown SMTP server address.  Please fill out the\nSMTP server address in the CDDB submit options screen."
+    IDS_CDDB_ERROR_FAILEDTOSENDSTRING "Failed to send string to remote server"
+    IDS_CDDB_ACTION_CONNECTINGTOSERVER "Connecting to Server"
+    IDS_CDDB_ACTION_SERVERNOTREADY "Server not ready"
+    IDS_CDDB_ACTION_SENDING "Sending"
+    IDS_CDDB_ACTION_SENDINGDATA "Sending data"
+    IDS_CDDB_ACTION_SENDINGBODYTEXT "Sending body-text"
+    IDS_CDDB_ERROR_NOSERVERRESPONSE "No server response"
+    IDS_ENCODER_AVILABLENOVERSION 
+                            " (Encoder Available, no version info available)"
+    IDS_ENCODER_VERSIONALPHA " Alpha %d"
+    IDS_ENCODER_VERSIONBETA " Beta %d"
+    IDS_ENCODER_ERROR_SAMPLERATEBITRATEMISMATCH 
+                            "Specified bitrate does not match the selected output frequency"
+    IDS_ENCODER_VERSIONNOTAVAILABLE " (not available)"
+    IDS_ENCODER_VERSIONSTRING "version"
+    IDS_ENCODER_ENGINESTRING "engine"
+    IDS_ERROR_COULDNOTOPENFILE "Could not open file %s"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR_FILES2SMALL2COMPARE "Filesize is too small for a comparison"
+    IDS_FILECOMP_SECFILEOFFSET "Second file has an offset of %d bytes"
+    IDS_FILECOMP_FIRSTFILEOFFSET "First file has an offset of %d bytes"
+    IDS_FILECOMP_NOMATCHINGBLOCK 
+                            "Files are different, could not find matching block"
+    IDS_FILECOMP_FILESAREDIFFERENT 
+                            "File are different, starting at location %d"
+    IDS_FILECOMP_FILESARETHESAME 
+                            "No differences have been found\r\nA total of %d bytes have been compared"
+    IDS_PROPSHEET_CDEXCONFIG "CDex configuration"
+    IDS_PLEASE_SELECTFOLDER "Please select a folder"
+    IDS_PLEASE_SELECTLISTEDITEM 
+                            "Please select on of the listed items, or press cancel to bail out"
+    IDS_ERROR_DATATAGNOTFOUND "data tag not found"
+    IDS_ERROR_NOTARIFFWAVFILE "File %s is not a MPEG RIFF-WAV file"
+    IDS_ERROR_COULDNOTFINDFORMATTAG "Could not find format tag in file %s"
+    IDS_AUTODEFECTWARNING   "Use Auto-Detection only if the Generic Setting does not work!\nFor Auto-detection, an Audio CD has to be loaded in the CD-ROM drive.\nDo you want to continue?"
+    IDS_TOTALRECORDING_TIME "Total recording time (MM:SS:FF) %02d:%02d:%02d equals to %d sectors"
+    IDS_OPEN_FILENAME       "Filename"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_OPEN_DATE           "Date"
+    IDS_OPEN_PATH           "Path"
+    IDS_OPEN_SIZEINMB       "Size (MB)"
+    IDS_OPEN_SAVEBUTTON     "Save"
+    IDS_FILESIZE_FIRSTANDSECOND "File sizes of first/second are %d/%d bytes"
+    IDS_STATUS_OK           "OK"
+    IDS_FILECOMP_FIRSTFILENAMENOTVALID "First filename is not valid"
+    IDS_FILECOMP_SECONDFILENAMENOTVALID "Second filename is not valid"
+    IDS_ENCODER_OGGINITFAILED 
+                            "Failed to initialize Ogg Encoding stream.  Maybe the specified bitrate does not match the selected output frequency.  Try using the Quality settings instead of the Bitrate settings."
+    IDS_ENCODE_ABORT        "Encoding has been aborted at %s"
+    IDS_ENCODE_FINISHED_OK  "Encoding track to a Compressed Audio File has been finished properly, total duration: %s"
+    IDS_OPEN_TYPE           "Type"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CDDB_WINAMPDB        "Read album data from Winamp CD database\nRead album data from Winamp CD database"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CHECKFORADDITIONAL_LANGUAGE_FILES 
+                            "Check for Additional/updates Language files"
+    IDS_FAILEDTOOPENFILE    "Failed to open file:\r\n"
+    IDS_TABPROPPAGE         "Encoding::Tags"
+    IDS_PROPPAGE_SELECT_CHILD_ITEM "Please select a child item of '%s'."
+    IDS_TAGPICTURECFILESELECTION 
+                            "Pictures (*.jpg;*.png)|*.jpg;*.png|All Files (*.*)|*.*||"
+    IDS_CUESHEETFILESELECTION "Cue sheets (*.cue)|*.cue|All Files (*.*)|*.*||"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CHECKSUM            "CRC"
+    IDS_ISRC                "ISRC"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PREGAP              "Gap"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CDDB_ERROR_FAILED_TO_CONNECT 
+                            "Failed to make connection, please check network/proxy settings"
+    IDS_CDDB_INEXACT_MATCH  "Found inexact match, please select a match and press the next button\r\nOr press the Cancel button  to abort"
+    IDS_CDDB_MULTIPLE_MATCHES 
+                            "Found multiple matches, please select a match and press the next button\r\nOr press the Cancel button to abort"
+    IDS_CDDBDLG_NEXT        "Next"
+    IDS_CDDBDLG_FINISH      "Finish"
+    IDS_CDDB_TEXT_IS_NOT_ASCII 
+                            "The cddb text contains non-ascii characters, please verify if the characters in the preview listbox are displayed properly, when necessary change the code page selection."
+    IDS_CDDB_CODEPAGE_RESUBMIT_GUIDANCE 
+                            "When selecting a code page other than UTF-8  is recommended to re-submit the CDDB entry."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CDDB_PREVIEW        "Preview"
+    IDS_DETECT_GAPS         "Detect Gaps"
+    IDS_READ_ISRC_CAPTION   "Read UPC/ISRC code"
+    IDS_READISRC_PLEASEWAIT "Read UPC/ISRC code\r\nPlease wait!"
+    IDS_DETECTGAPFORTRACK   "Detect gap for track %d"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#include "res\languages.rc"
+#include "res\version.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

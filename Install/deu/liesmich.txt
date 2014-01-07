@@ -1,0 +1,69 @@
+EINFÜHRUNG:
+===============================================================
+
+Cdex ist ein Werkzeug mit dem man Digital Audio (DA) Tracks  
+von Audio CDs in Dateien auf der Festplatte speichern kann.
+The erzeugten Audio Tracks können als WAV oder MP3 (MPEG-1 
+Audio Layer-3) Dateien gespeichert werden. CDex benutzt den
+Adaptec's ASPI Bibliothekenmanager um mit dem CD-ROM Laufwerk
+zu kommunizieren, stellen Sie also sicher, dass sie die
+korrekten ASPI Treiber installiert haben. (Auch in der 
+Hilfedatei im Bereich FAQ nachzulesen!)
+
+Die neueste Version von CDex kann hier heruntergeladen werden:
+
+http://cdexos.sourceforge.net
+
+
+SYSTEMANFORDERUNGEN:
+===============================================================
+
+1) Microsoft Windows 95/98/ME & Windows-NT4 SP3, Windows 2000
+2) Adaptec ASPI for Win32 Manager
+3) Digital Audio extraktionsfähiges CD Laufwerk
+4) Intel Pentium oder kompatibler Prozessor
+
+
+
+BEKANNTE PROBLEME:
+===============================================================
+None
+
+
+Bugs, Kommentare & Vorschläge:
+===============================================================
+Bugs, unvorhersehbares Verhalten und Kommentare können an den 
+Autor gesendet werden (Albert Faber).
+Wenn Sie eine Frage haben, dann sehen Sie zunächst bei der
+FAQ Seite auf der CDex Homepage nach. Wenn Sie immer noch keine
+Antwort gefunden haben, senden Sie eine E-Mail an
+afaber@users.sourceforge.net
+
+
+GARANTIE UND LIZENZ:
+===============================================================
+
+Bitte Hilfedatei für GNU Lizenz lesen
+
+
+Diese Distribution von CDex (ZIP Datei) sollte
+folgende Dateien beinhalten:
+===============================================================
+
+CDex.exe (The CDex Hauptdatei)
+lame_enc.dll (MPEG-I Layer 3 Kodierer)
+Mp2Enc.dll (MPEG-I Layer 2 Kodierer)
+LibSnd.dll (Sound Bibliothek)
+Readme.txt (Diese Datei)
+CDex.hlp (CDex Hilfedatei)
+CDex.cnt (CDex Hilfenindex)
+CDRip.dll (Bibliothek mit den CD-Ripper Routinen)
+Vorbis.dll (Bibliothek mit dem Vorbis Kodierer)
+Changes.txt (Log mit den Release Informationen)
+genres.txt (Liste mit den Genres)
+Plugins\in_mp3.dll
+Plugins\in_vorbis.dll
+Plugins\in_vorbis.txt	
+
+
+                    ======= ### ======

@@ -1,0 +1,21 @@
+; This file is maintained by HCW. Do not modify this file directly.
+
+[OPTIONS]
+COMPRESS=60 Hall Zeck
+LCID=0x409 0x0 0x0 ; English (United States)
+REPORT=Yes
+CONTENTS=Contents
+TITLE=CDex Manual
+BMROOT=.
+BMROOT=Assume that bitmaps are where the source is
+HLP=.\CDEX.hlp
+
+[FILES]
+CDex.rtf
+
+[MAP]
+#include .\CDex.hm
+
+[CONFIG]
+CreateButton("Up", "&Up", "JumpId(`CDex.hlp', `Contents')")
+BrowseButtons()

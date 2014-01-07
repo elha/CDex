@@ -1,0 +1,7 @@
+What CDex ? -- 
+CDex is a utility of extraction (ripping) and audio files from an audio CD. The files can be ripped in either the plain WAV format or to a compressed file format (CDex supports many encoders).  In addition, it has many additional options to convert between several audio file formats. For more details about the capabilities of CDex, please read the Help file. CDex is released under the GPL terms ( see help file for full license details).
+
+Installation options:
+-- " CDex Full(recommended) " Full Install, including creating a Start Menu and Desktop Shortcut
+-- " No Shortcuts " Same as the CDex Full Install, except no short-cuts are created. 
+

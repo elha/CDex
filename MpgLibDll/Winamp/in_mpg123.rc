@@ -1,0 +1,906 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About in_mpg123"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,35,65,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,110,65,50,14
+END
+
+IDD_MESSAGE DIALOGEX 0, 0, 179, 9
+STYLE DS_MODALFRAME | WS_POPUP
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",NOT 
+                    WS_VISIBLE,0,0,179,9
+    LTEXT           "Place your text here.",IDC_TEXT,0,0,179,9
+END
+
+IDD_CONFIGDLG DIALOG DISCARDABLE  0, 0, 207, 334
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CDex in_mpg123 configuration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_ED_TITLE,18,24,174,14,ES_AUTOHSCROLL
+    CONTROL         "Enable",IDC_CH_ENABLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,18,122,81,10
+    CONTROL         "Suppress zero samples at the beginning",IDC_CH_SUPZERO,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,134,159,10
+    CONTROL         "Force decoding when error is detected",IDC_CH_FORCE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,146,161,10
+    CONTROL         "Display average bitrate",IDC_CH_DISPAVG,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,158,119,10
+    CONTROL         "Reverse L/R",ID_CH_REV,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,18,170,95,10
+    CONTROL         "Invert polarity",IDC_CH_INVERT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,18,182,112,10
+    CONTROL         "Alternate volume setting method",IDC_CH_VOLUME,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,194,150,10
+    CONTROL         "24bit per sample output",IDC_CH_24BIT,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,18,206,131,
+                    10
+    EDITTEXT        IDC_ED_PROXY,16,254,178,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ED_STRBUF,69,288,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,94,313,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,150,313,50,14
+    LTEXT           "%% = %",IDC_STATIC,136,75,24,8
+    LTEXT           "%1 = ID3 Artist",IDC_STATIC,19,44,51,8
+    LTEXT           "%2 = ID3 Title",IDC_STATIC,19,54,46,8
+    LTEXT           "%3 = ID3 Album",IDC_STATIC,19,64,52,8
+    LTEXT           "%4 = ID3 Year",IDC_STATIC,72,44,48,8
+    LTEXT           "%5 = ID3 Comment",IDC_STATIC,72,54,62,8
+    LTEXT           "%6 = ID3 Genre",IDC_STATIC,72,64,51,8
+    LTEXT           "%7 = File Name",IDC_STATIC,136,45,50,8
+    LTEXT           "%8 = File Path",IDC_STATIC,136,55,47,8
+    LTEXT           "%9 = File Extension",IDC_STATIC,136,65,64,8
+    LTEXT           "Default: ""%1 - %2"" (Artist - Title)",IDC_STATIC,19,75,
+                    112,8
+    LTEXT           "To disable ID3 usage, use ""%7""",IDC_STATIC,19,85,103,
+                    8
+    GROUPBOX        "ID3 v1 Title Formatting",IDC_STATIC,10,8,190,95
+    GROUPBOX        "Decoding options",IDC_STATIC,10,109,190,115
+    GROUPBOX        "Streaming options",IDC_STATIC,10,230,190,78
+    LTEXT           "HTTP proxy server",IDC_STATIC,16,242,83,8
+    LTEXT           "Buffer Length",IDC_STATIC,17,291,51,8
+    LTEXT           "KB",IDC_STATIC,113,290,10,8
+    LTEXT           "e.g. your.proxy.server:1234",IDC_STATIC,17,273,117,8
+END
+
+IDD_INFODLG DIALOG DISCARDABLE  0, 0, 387, 241
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MPEG File Info Box & ID3 tag editor"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_ED_FILENAME,3,3,382,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    RTEXT           "Title",IDC_STATIC,18,45,20,8
+    EDITTEXT        IDC_ED_TITLE,42,42,120,13,ES_AUTOHSCROLL
+    RTEXT           "Artist",IDC_STATIC,17,60,21,8
+    EDITTEXT        IDC_ED_ARTIST,42,56,120,13,ES_AUTOHSCROLL
+    RTEXT           "Album",IDC_STATIC,16,75,22,8
+    EDITTEXT        IDC_ED_ALBUM,42,72,120,13,ES_AUTOHSCROLL
+    RTEXT           "Year",IDC_STATIC,20,90,18,8
+    EDITTEXT        IDC_ED_YEAR,42,87,21,13,ES_AUTOHSCROLL
+    RTEXT           "Genre",IDC_STATIC,67,90,21,8
+    COMBOBOX        IDC_CB_GENRE,93,87,69,135,CBS_DROPDOWNLIST | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Comment",IDC_STATIC,7,105,31,8
+    EDITTEXT        IDC_ED_COMMENT,42,102,120,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Update",IDOK,6,224,50,14
+    DEFPUSHBUTTON   "Cancel",IDCANCEL,59,224,50,14
+    PUSHBUTTON      "Undo Changes",IDC_BUT_REMOVE,116,224,54,14
+    GROUPBOX        "MPEG Info",IDC_STATIC,5,125,165,95
+    GROUPBOX        "ID3 V1",IDC_STATIC,5,19,165,101
+    CONTROL         "ID3 &V1 Tag",IDC_TAGV1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,42,28,53,10
+    LTEXT           "Track #",IDC_STATIC,100,29,26,8
+    EDITTEXT        IDC_TRACKNUM,135,26,25,12,ES_AUTOHSCROLL
+    GROUPBOX        "ID3V2",IDC_STATIC,170,19,210,221
+    CONTROL         "ID3 &V2 Tag",IDC_TAGV2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,215,30,53,10
+    RTEXT           "Title",IDC_STATIC,191,45,20,8
+    EDITTEXT        IDC_ED_TITLE2,215,42,160,13,ES_AUTOHSCROLL
+    RTEXT           "Artist",IDC_STATIC,190,60,21,8
+    EDITTEXT        IDC_ED_ARTIST2,215,56,160,13,ES_AUTOHSCROLL
+    RTEXT           "Album",IDC_STATIC,189,75,22,8
+    EDITTEXT        IDC_ED_ALBUM2,215,71,160,13,ES_AUTOHSCROLL
+    RTEXT           "Year",IDC_STATIC,193,90,18,8
+    EDITTEXT        IDC_ED_YEAR2,215,87,21,13,ES_AUTOHSCROLL
+    RTEXT           "Genre",IDC_STATIC,240,90,21,8
+    COMBOBOX        IDC_CB_GENRE2,266,87,109,135,CBS_DROPDOWNLIST | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Comment",IDC_STATIC,180,105,31,8
+    EDITTEXT        IDC_ED_COMMENT2,215,102,160,40,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | WS_VSCROLL
+    PUSHBUTTON      "Copy &to ID3V1",IDC_COPYTOV1,190,224,70,14
+    PUSHBUTTON      "Copy &from ID3V1",IDC_COPYFROMV1,270,224,65,14
+    LTEXT           "Track #",IDC_STATIC,314,30,26,8
+    EDITTEXT        IDC_TRACKNUM2,349,27,25,12,ES_AUTOHSCROLL
+    LTEXT           "Composer",IDC_STATIC,181,150,32,8
+    LTEXT           "Copyright",IDC_STATIC,183,180,30,8
+    LTEXT           "Encoded By",IDC_STATIC,173,210,40,8
+    LTEXT           "URL",IDC_STATIC,197,195,16,8
+    LTEXT           "Orig Artist",IDC_STATIC,182,165,31,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_MESSAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 153
+    END
+
+    IDD_CONFIGDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 200
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 327
+    END
+
+    IDD_INFODLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 384
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 238
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_INFODLG DLGINIT
+BEGIN
+    IDC_CB_GENRE, 0x403, 8, 0
+0x6e55, 0x6e6b, 0x776f, 0x006e, 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x6c42, 0x6575, 0x0073, 
+    IDC_CB_GENRE, 0x403, 13, 0
+0x6c43, 0x7361, 0x6973, 0x2063, 0x6f52, 0x6b63, "\000" 
+    IDC_CB_GENRE, 0x403, 8, 0
+0x6f43, 0x6e75, 0x7274, 0x0079, 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x6144, 0x636e, 0x0065, 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x6944, 0x6373, 0x006f, 
+    IDC_CB_GENRE, 0x403, 5, 0
+0x7546, 0x6b6e, "\000" 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x7247, 0x6e75, 0x6567, "\000" 
+    IDC_CB_GENRE, 0x403, 8, 0
+0x6948, 0x2d70, 0x6f48, 0x0070, 
+    IDC_CB_GENRE, 0x403, 5, 0
+0x614a, 0x7a7a, "\000" 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x654d, 0x6174, 0x006c, 
+    IDC_CB_GENRE, 0x403, 8, 0
+0x654e, 0x2077, 0x6741, 0x0065, 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x6c4f, 0x6964, 0x7365, "\000" 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x744f, 0x6568, 0x0072, 
+    IDC_CB_GENRE, 0x403, 4, 0
+0x6f50, 0x0070, 
+    IDC_CB_GENRE, 0x403, 4, 0
+0x2652, 0x0042, 
+    IDC_CB_GENRE, 0x403, 4, 0
+0x6152, 0x0070, 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x6552, 0x6767, 0x6561, "\000" 
+    IDC_CB_GENRE, 0x403, 5, 0
+0x6f52, 0x6b63, "\000" 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x6554, 0x6863, 0x6f6e, "\000" 
+    IDC_CB_GENRE, 0x403, 11, 0
+0x6e49, 0x7564, 0x7473, 0x6972, 0x6c61, "\000" 
+    IDC_CB_GENRE, 0x403, 12, 0
+0x6c41, 0x6574, 0x6e72, 0x7461, 0x7669, 0x0065, 
+    IDC_CB_GENRE, 0x403, 4, 0
+0x6b53, 0x0061, 
+    IDC_CB_GENRE, 0x403, 12, 0
+0x6544, 0x7461, 0x2068, 0x654d, 0x6174, 0x006c, 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x7250, 0x6e61, 0x736b, "\000" 
+    IDC_CB_GENRE, 0x403, 11, 0
+0x6f53, 0x6e75, 0x7464, 0x6172, 0x6b63, "\000" 
+    IDC_CB_GENRE, 0x403, 12, 0
+0x7545, 0x6f72, 0x542d, 0x6365, 0x6e68, 0x006f, 
+    IDC_CB_GENRE, 0x403, 8, 0
+0x6d41, 0x6962, 0x6e65, 0x0074, 
+    IDC_CB_GENRE, 0x403, 9, 0
+0x7254, 0x7069, 0x482d, 0x706f, "\000" 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x6f56, 0x6163, 0x006c, 
+    IDC_CB_GENRE, 0x403, 10, 0
+0x614a, 0x7a7a, 0x462b, 0x6e75, 0x006b, 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x7546, 0x6973, 0x6e6f, "\000" 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x7254, 0x6e61, 0x6563, "\000" 
+    IDC_CB_GENRE, 0x403, 10, 0
+0x6c43, 0x7361, 0x6973, 0x6163, 0x006c, 
+    IDC_CB_GENRE, 0x403, 13, 0
+0x6e49, 0x7473, 0x7572, 0x656d, 0x746e, 0x6c61, "\000" 
+    IDC_CB_GENRE, 0x403, 5, 0
+0x6341, 0x6469, "\000" 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x6f48, 0x7375, 0x0065, 
+    IDC_CB_GENRE, 0x403, 5, 0
+0x6147, 0x656d, "\000" 
+    IDC_CB_GENRE, 0x403, 11, 0
+0x6f53, 0x6e75, 0x2064, 0x6c43, 0x7069, "\000" 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x6f47, 0x7073, 0x6c65, "\000" 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x6f4e, 0x7369, 0x0065, 
+    IDC_CB_GENRE, 0x403, 17, 0
+0x6c41, 0x6574, 0x6e72, 0x7461, 0x7669, 0x2065, 0x6f52, 0x6b63, "\000" 
+    IDC_CB_GENRE, 0x403, 5, 0
+0x6142, 0x7373, "\000" 
+    IDC_CB_GENRE, 0x403, 5, 0
+0x6f53, 0x6c75, "\000" 
+    IDC_CB_GENRE, 0x403, 5, 0
+0x7550, 0x6b6e, "\000" 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x7053, 0x6361, 0x0065, 
+    IDC_CB_GENRE, 0x403, 11, 0
+0x654d, 0x6964, 0x6174, 0x6974, 0x6576, "\000" 
+    IDC_CB_GENRE, 0x403, 17, 0
+0x6e49, 0x7473, 0x7572, 0x656d, 0x746e, 0x6c61, 0x5020, 0x706f, "\000" 
+    IDC_CB_GENRE, 0x403, 18, 0
+0x6e49, 0x7473, 0x7572, 0x656d, 0x746e, 0x6c61, 0x5220, 0x636f, 0x006b, 
+
+    IDC_CB_GENRE, 0x403, 7, 0
+0x7445, 0x6e68, 0x6369, "\000" 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x6f47, 0x6874, 0x6369, "\000" 
+    IDC_CB_GENRE, 0x403, 9, 0
+0x6144, 0x6b72, 0x6177, 0x6576, "\000" 
+    IDC_CB_GENRE, 0x403, 18, 0
+0x6554, 0x6863, 0x6f6e, 0x492d, 0x646e, 0x7375, 0x7274, 0x6169, 0x006c, 
+
+    IDC_CB_GENRE, 0x403, 11, 0
+0x6c45, 0x6365, 0x7274, 0x6e6f, 0x6369, "\000" 
+    IDC_CB_GENRE, 0x403, 9, 0
+0x6f50, 0x2d70, 0x6f46, 0x6b6c, "\000" 
+    IDC_CB_GENRE, 0x403, 10, 0
+0x7545, 0x6f72, 0x6164, 0x636e, 0x0065, 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x7244, 0x6165, 0x006d, 
+    IDC_CB_GENRE, 0x403, 14, 0
+0x6f53, 0x7475, 0x6568, 0x6e72, 0x5220, 0x636f, 0x006b, 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x6f43, 0x656d, 0x7964, "\000" 
+    IDC_CB_GENRE, 0x403, 5, 0
+0x7543, 0x746c, "\000" 
+    IDC_CB_GENRE, 0x403, 8, 0
+0x6147, 0x676e, 0x7473, 0x0061, 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x6f54, 0x2070, 0x3034, "\000" 
+    IDC_CB_GENRE, 0x403, 14, 0
+0x6843, 0x6972, 0x7473, 0x6169, 0x206e, 0x6152, 0x0070, 
+    IDC_CB_GENRE, 0x403, 9, 0
+0x6f50, 0x2f70, 0x7546, 0x6b6e, "\000" 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x754a, 0x676e, 0x656c, "\000" 
+    IDC_CB_GENRE, 0x403, 10, 0
+0x614e, 0x6974, 0x6576, 0x5520, 0x0053, 
+    IDC_CB_GENRE, 0x403, 8, 0
+0x6143, 0x6162, 0x6572, 0x0074, 
+    IDC_CB_GENRE, 0x403, 9, 0
+0x654e, 0x2077, 0x6157, 0x6576, "\000" 
+    IDC_CB_GENRE, 0x403, 12, 0
+0x7350, 0x6379, 0x6168, 0x6564, 0x696c, 0x0063, 
+    IDC_CB_GENRE, 0x403, 5, 0
+0x6152, 0x6576, "\000" 
+    IDC_CB_GENRE, 0x403, 10, 0
+0x6853, 0x776f, 0x7574, 0x656e, 0x0073, 
+    IDC_CB_GENRE, 0x403, 8, 0
+0x7254, 0x6961, 0x656c, 0x0072, 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x6f4c, 0x462d, 0x0069, 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x7254, 0x6269, 0x6c61, "\000" 
+    IDC_CB_GENRE, 0x403, 10, 0
+0x6341, 0x6469, 0x5020, 0x6e75, 0x006b, 
+    IDC_CB_GENRE, 0x403, 10, 0
+0x6341, 0x6469, 0x4a20, 0x7a61, 0x007a, 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x6f50, 0x6b6c, 0x0061, 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x6552, 0x7274, 0x006f, 
+    IDC_CB_GENRE, 0x403, 8, 0
+0x754d, 0x6973, 0x6163, 0x006c, 
+    IDC_CB_GENRE, 0x403, 12, 0
+0x6f52, 0x6b63, 0x2620, 0x5220, 0x6c6f, 0x006c, 
+    IDC_CB_GENRE, 0x403, 10, 0
+0x6148, 0x6472, 0x5220, 0x636f, 0x006b, 
+    IDC_CB_GENRE, 0x403, 5, 0
+0x6f46, 0x6b6c, "\000" 
+    IDC_CB_GENRE, 0x403, 10, 0
+0x6f46, 0x6b6c, 0x522d, 0x636f, 0x006b, 
+    IDC_CB_GENRE, 0x403, 14, 0
+0x614e, 0x6974, 0x6e6f, 0x6c61, 0x4620, 0x6c6f, 0x006b, 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x7753, 0x6e69, 0x0067, 
+    IDC_CB_GENRE, 0x403, 12, 0
+0x6146, 0x7473, 0x4620, 0x7375, 0x6f69, 0x006e, 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x6542, 0x6f62, 0x0062, 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x614c, 0x6974, 0x006e, 
+    IDC_CB_GENRE, 0x403, 8, 0
+0x6552, 0x6976, 0x6176, 0x006c, 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x6543, 0x746c, 0x6369, "\000" 
+    IDC_CB_GENRE, 0x403, 10, 0
+0x6c42, 0x6575, 0x7267, 0x7361, 0x0073, 
+    IDC_CB_GENRE, 0x403, 11, 0
+0x7641, 0x6e61, 0x6774, 0x7261, 0x6564, "\000" 
+    IDC_CB_GENRE, 0x403, 12, 0
+0x6f47, 0x6874, 0x6369, 0x5220, 0x636f, 0x006b, 
+    IDC_CB_GENRE, 0x403, 17, 0
+0x7250, 0x676f, 0x6572, 0x7373, 0x7669, 0x2065, 0x6f52, 0x6b63, "\000" 
+    IDC_CB_GENRE, 0x403, 17, 0
+0x7350, 0x6379, 0x6568, 0x6564, 0x696c, 0x2063, 0x6f52, 0x6b63, "\000" 
+    IDC_CB_GENRE, 0x403, 15, 0
+0x7953, 0x706d, 0x6f68, 0x696e, 0x2063, 0x6f52, 0x6b63, "\000" 
+    IDC_CB_GENRE, 0x403, 10, 0
+0x6c53, 0x776f, 0x5220, 0x636f, 0x006b, 
+    IDC_CB_GENRE, 0x403, 9, 0
+0x6942, 0x2067, 0x6142, 0x646e, "\000" 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x6843, 0x726f, 0x7375, "\000" 
+    IDC_CB_GENRE, 0x403, 15, 0
+0x6145, 0x7973, 0x4c20, 0x7369, 0x6574, 0x696e, 0x676e, "\000" 
+    IDC_CB_GENRE, 0x403, 9, 0
+0x6341, 0x756f, 0x7473, 0x6369, "\000" 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x7548, 0x6f6d, 0x7275, "\000" 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x7053, 0x6565, 0x6863, "\000" 
+    IDC_CB_GENRE, 0x403, 8, 0
+0x6843, 0x6e61, 0x6f73, 0x006e, 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x704f, 0x7265, 0x0061, 
+    IDC_CB_GENRE, 0x403, 14, 0
+0x6843, 0x6d61, 0x6562, 0x2072, 0x754d, 0x6973, 0x0063, 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x6f53, 0x616e, 0x6174, "\000" 
+    IDC_CB_GENRE, 0x403, 9, 0
+0x7953, 0x706d, 0x6f68, 0x796e, "\000" 
+    IDC_CB_GENRE, 0x403, 11, 0
+0x6f42, 0x746f, 0x2079, 0x6142, 0x7373, "\000" 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x7250, 0x6d69, 0x7375, "\000" 
+    IDC_CB_GENRE, 0x403, 12, 0
+0x6f50, 0x6e72, 0x4720, 0x6f72, 0x766f, 0x0065, 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x6153, 0x6974, 0x6572, "\000" 
+    IDC_CB_GENRE, 0x403, 9, 0
+0x6c53, 0x776f, 0x4a20, 0x6d61, "\000" 
+    IDC_CB_GENRE, 0x403, 5, 0
+0x6c43, 0x6275, "\000" 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x6154, 0x676e, 0x006f, 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x6153, 0x626d, 0x0061, 
+    IDC_CB_GENRE, 0x403, 9, 0
+0x6f46, 0x6b6c, 0x6f6c, 0x6572, "\000" 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x6142, 0x6c6c, 0x6461, "\000" 
+    IDC_CB_GENRE, 0x403, 13, 0
+0x6f50, 0x6577, 0x2072, 0x6142, 0x6c6c, 0x6461, "\000" 
+    IDC_CB_GENRE, 0x403, 13, 0
+0x6852, 0x7479, 0x696d, 0x2063, 0x6f53, 0x6c75, "\000" 
+    IDC_CB_GENRE, 0x403, 10, 0
+0x7246, 0x6565, 0x7473, 0x6c79, 0x0065, 
+    IDC_CB_GENRE, 0x403, 5, 0
+0x7544, 0x7465, "\000" 
+    IDC_CB_GENRE, 0x403, 10, 0
+0x7550, 0x6b6e, 0x5220, 0x636f, 0x006b, 
+    IDC_CB_GENRE, 0x403, 10, 0
+0x7244, 0x6d75, 0x5320, 0x6c6f, 0x006f, 
+    IDC_CB_GENRE, 0x403, 9, 0
+0x6341, 0x7061, 0x6c65, 0x616c, "\000" 
+    IDC_CB_GENRE, 0x403, 11, 0
+0x7545, 0x6f72, 0x482d, 0x756f, 0x6573, "\000" 
+    IDC_CB_GENRE, 0x403, 11, 0
+0x6144, 0x636e, 0x2065, 0x6148, 0x6c6c, "\000" 
+    IDC_CB_GENRE, 0x403, 4, 0
+0x6f47, 0x0061, 
+    IDC_CB_GENRE, 0x403, 12, 0
+0x7244, 0x6d75, 0x2620, 0x4220, 0x7361, 0x0073, 
+    IDC_CB_GENRE, 0x403, 11, 0
+0x6c43, 0x6275, 0x482d, 0x756f, 0x6573, "\000" 
+    IDC_CB_GENRE, 0x403, 9, 0
+0x6148, 0x6472, 0x6f63, 0x6572, "\000" 
+    IDC_CB_GENRE, 0x403, 7, 0
+0x6554, 0x7272, 0x726f, "\000" 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x6e49, 0x6964, 0x0065, 
+    IDC_CB_GENRE, 0x403, 8, 0
+0x7242, 0x7469, 0x6f50, 0x0070, 
+    IDC_CB_GENRE, 0x403, 10, 0
+0x654e, 0x6567, 0x7072, 0x6e75, 0x006b, 
+    IDC_CB_GENRE, 0x403, 11, 0
+0x6f50, 0x736c, 0x206b, 0x7550, 0x6b6e, "\000" 
+    IDC_CB_GENRE, 0x403, 5, 0
+0x6542, 0x7461, "\000" 
+    IDC_CB_GENRE, 0x403, 18, 0
+0x6843, 0x6972, 0x7473, 0x6169, 0x206e, 0x6147, 0x676e, 0x7473, 0x0061, 
+
+    IDC_CB_GENRE, 0x403, 12, 0
+0x6548, 0x7661, 0x2079, 0x654d, 0x6174, 0x006c, 
+    IDC_CB_GENRE, 0x403, 12, 0
+0x6c42, 0x6361, 0x206b, 0x654d, 0x6174, 0x006c, 
+    IDC_CB_GENRE, 0x403, 10, 0
+0x7243, 0x736f, 0x6f73, 0x6576, 0x0072, 
+    IDC_CB_GENRE, 0x403, 15, 0
+0x6f43, 0x746e, 0x6d65, 0x6f70, 0x6172, 0x7972, 0x4320, "\000" 
+    IDC_CB_GENRE, 0x403, 15, 0
+0x6843, 0x6972, 0x7473, 0x6169, 0x206e, 0x6f52, 0x6b63, "\000" 
+    IDC_CB_GENRE, 0x403, 9, 0
+0x654d, 0x6572, 0x676e, 0x6575, "\000" 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x6153, 0x736c, 0x0061, 
+    IDC_CB_GENRE, 0x403, 13, 0
+0x6854, 0x6172, 0x6873, 0x4d20, 0x7465, 0x6c61, "\000" 
+    IDC_CB_GENRE, 0x403, 6, 0
+0x6e41, 0x6d69, 0x0065, 
+    IDC_CB_GENRE, 0x403, 5, 0
+0x504a, 0x706f, "\000" 
+    IDC_CB_GENRE, 0x403, 9, 0
+0x7953, 0x746e, 0x5068, 0x706f, "\000" 
+    IDC_CB_GENRE2, 0x403, 8, 0
+0x6e55, 0x6e6b, 0x776f, 0x006e, 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x6c42, 0x6575, 0x0073, 
+    IDC_CB_GENRE2, 0x403, 13, 0
+0x6c43, 0x7361, 0x6973, 0x2063, 0x6f52, 0x6b63, "\000" 
+    IDC_CB_GENRE2, 0x403, 8, 0
+0x6f43, 0x6e75, 0x7274, 0x0079, 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x6144, 0x636e, 0x0065, 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x6944, 0x6373, 0x006f, 
+    IDC_CB_GENRE2, 0x403, 5, 0
+0x7546, 0x6b6e, "\000" 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x7247, 0x6e75, 0x6567, "\000" 
+    IDC_CB_GENRE2, 0x403, 8, 0
+0x6948, 0x2d70, 0x6f48, 0x0070, 
+    IDC_CB_GENRE2, 0x403, 5, 0
+0x614a, 0x7a7a, "\000" 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x654d, 0x6174, 0x006c, 
+    IDC_CB_GENRE2, 0x403, 8, 0
+0x654e, 0x2077, 0x6741, 0x0065, 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x6c4f, 0x6964, 0x7365, "\000" 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x744f, 0x6568, 0x0072, 
+    IDC_CB_GENRE2, 0x403, 4, 0
+0x6f50, 0x0070, 
+    IDC_CB_GENRE2, 0x403, 4, 0
+0x2652, 0x0042, 
+    IDC_CB_GENRE2, 0x403, 4, 0
+0x6152, 0x0070, 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x6552, 0x6767, 0x6561, "\000" 
+    IDC_CB_GENRE2, 0x403, 5, 0
+0x6f52, 0x6b63, "\000" 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x6554, 0x6863, 0x6f6e, "\000" 
+    IDC_CB_GENRE2, 0x403, 11, 0
+0x6e49, 0x7564, 0x7473, 0x6972, 0x6c61, "\000" 
+    IDC_CB_GENRE2, 0x403, 12, 0
+0x6c41, 0x6574, 0x6e72, 0x7461, 0x7669, 0x0065, 
+    IDC_CB_GENRE2, 0x403, 4, 0
+0x6b53, 0x0061, 
+    IDC_CB_GENRE2, 0x403, 12, 0
+0x6544, 0x7461, 0x2068, 0x654d, 0x6174, 0x006c, 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x7250, 0x6e61, 0x736b, "\000" 
+    IDC_CB_GENRE2, 0x403, 11, 0
+0x6f53, 0x6e75, 0x7464, 0x6172, 0x6b63, "\000" 
+    IDC_CB_GENRE2, 0x403, 12, 0
+0x7545, 0x6f72, 0x542d, 0x6365, 0x6e68, 0x006f, 
+    IDC_CB_GENRE2, 0x403, 8, 0
+0x6d41, 0x6962, 0x6e65, 0x0074, 
+    IDC_CB_GENRE2, 0x403, 9, 0
+0x7254, 0x7069, 0x482d, 0x706f, "\000" 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x6f56, 0x6163, 0x006c, 
+    IDC_CB_GENRE2, 0x403, 10, 0
+0x614a, 0x7a7a, 0x462b, 0x6e75, 0x006b, 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x7546, 0x6973, 0x6e6f, "\000" 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x7254, 0x6e61, 0x6563, "\000" 
+    IDC_CB_GENRE2, 0x403, 10, 0
+0x6c43, 0x7361, 0x6973, 0x6163, 0x006c, 
+    IDC_CB_GENRE2, 0x403, 13, 0
+0x6e49, 0x7473, 0x7572, 0x656d, 0x746e, 0x6c61, "\000" 
+    IDC_CB_GENRE2, 0x403, 5, 0
+0x6341, 0x6469, "\000" 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x6f48, 0x7375, 0x0065, 
+    IDC_CB_GENRE2, 0x403, 5, 0
+0x6147, 0x656d, "\000" 
+    IDC_CB_GENRE2, 0x403, 11, 0
+0x6f53, 0x6e75, 0x2064, 0x6c43, 0x7069, "\000" 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x6f47, 0x7073, 0x6c65, "\000" 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x6f4e, 0x7369, 0x0065, 
+    IDC_CB_GENRE2, 0x403, 17, 0
+0x6c41, 0x6574, 0x6e72, 0x7461, 0x7669, 0x2065, 0x6f52, 0x6b63, "\000" 
+    IDC_CB_GENRE2, 0x403, 5, 0
+0x6142, 0x7373, "\000" 
+    IDC_CB_GENRE2, 0x403, 5, 0
+0x6f53, 0x6c75, "\000" 
+    IDC_CB_GENRE2, 0x403, 5, 0
+0x7550, 0x6b6e, "\000" 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x7053, 0x6361, 0x0065, 
+    IDC_CB_GENRE2, 0x403, 11, 0
+0x654d, 0x6964, 0x6174, 0x6974, 0x6576, "\000" 
+    IDC_CB_GENRE2, 0x403, 17, 0
+0x6e49, 0x7473, 0x7572, 0x656d, 0x746e, 0x6c61, 0x5020, 0x706f, "\000" 
+    IDC_CB_GENRE2, 0x403, 18, 0
+0x6e49, 0x7473, 0x7572, 0x656d, 0x746e, 0x6c61, 0x5220, 0x636f, 0x006b, 
+
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x7445, 0x6e68, 0x6369, "\000" 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x6f47, 0x6874, 0x6369, "\000" 
+    IDC_CB_GENRE2, 0x403, 9, 0
+0x6144, 0x6b72, 0x6177, 0x6576, "\000" 
+    IDC_CB_GENRE2, 0x403, 18, 0
+0x6554, 0x6863, 0x6f6e, 0x492d, 0x646e, 0x7375, 0x7274, 0x6169, 0x006c, 
+
+    IDC_CB_GENRE2, 0x403, 11, 0
+0x6c45, 0x6365, 0x7274, 0x6e6f, 0x6369, "\000" 
+    IDC_CB_GENRE2, 0x403, 9, 0
+0x6f50, 0x2d70, 0x6f46, 0x6b6c, "\000" 
+    IDC_CB_GENRE2, 0x403, 10, 0
+0x7545, 0x6f72, 0x6164, 0x636e, 0x0065, 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x7244, 0x6165, 0x006d, 
+    IDC_CB_GENRE2, 0x403, 14, 0
+0x6f53, 0x7475, 0x6568, 0x6e72, 0x5220, 0x636f, 0x006b, 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x6f43, 0x656d, 0x7964, "\000" 
+    IDC_CB_GENRE2, 0x403, 5, 0
+0x7543, 0x746c, "\000" 
+    IDC_CB_GENRE2, 0x403, 8, 0
+0x6147, 0x676e, 0x7473, 0x0061, 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x6f54, 0x2070, 0x3034, "\000" 
+    IDC_CB_GENRE2, 0x403, 14, 0
+0x6843, 0x6972, 0x7473, 0x6169, 0x206e, 0x6152, 0x0070, 
+    IDC_CB_GENRE2, 0x403, 9, 0
+0x6f50, 0x2f70, 0x7546, 0x6b6e, "\000" 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x754a, 0x676e, 0x656c, "\000" 
+    IDC_CB_GENRE2, 0x403, 10, 0
+0x614e, 0x6974, 0x6576, 0x5520, 0x0053, 
+    IDC_CB_GENRE2, 0x403, 8, 0
+0x6143, 0x6162, 0x6572, 0x0074, 
+    IDC_CB_GENRE2, 0x403, 9, 0
+0x654e, 0x2077, 0x6157, 0x6576, "\000" 
+    IDC_CB_GENRE2, 0x403, 12, 0
+0x7350, 0x6379, 0x6168, 0x6564, 0x696c, 0x0063, 
+    IDC_CB_GENRE2, 0x403, 5, 0
+0x6152, 0x6576, "\000" 
+    IDC_CB_GENRE2, 0x403, 10, 0
+0x6853, 0x776f, 0x7574, 0x656e, 0x0073, 
+    IDC_CB_GENRE2, 0x403, 8, 0
+0x7254, 0x6961, 0x656c, 0x0072, 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x6f4c, 0x462d, 0x0069, 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x7254, 0x6269, 0x6c61, "\000" 
+    IDC_CB_GENRE2, 0x403, 10, 0
+0x6341, 0x6469, 0x5020, 0x6e75, 0x006b, 
+    IDC_CB_GENRE2, 0x403, 10, 0
+0x6341, 0x6469, 0x4a20, 0x7a61, 0x007a, 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x6f50, 0x6b6c, 0x0061, 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x6552, 0x7274, 0x006f, 
+    IDC_CB_GENRE2, 0x403, 8, 0
+0x754d, 0x6973, 0x6163, 0x006c, 
+    IDC_CB_GENRE2, 0x403, 12, 0
+0x6f52, 0x6b63, 0x2620, 0x5220, 0x6c6f, 0x006c, 
+    IDC_CB_GENRE2, 0x403, 10, 0
+0x6148, 0x6472, 0x5220, 0x636f, 0x006b, 
+    IDC_CB_GENRE2, 0x403, 5, 0
+0x6f46, 0x6b6c, "\000" 
+    IDC_CB_GENRE2, 0x403, 10, 0
+0x6f46, 0x6b6c, 0x522d, 0x636f, 0x006b, 
+    IDC_CB_GENRE2, 0x403, 14, 0
+0x614e, 0x6974, 0x6e6f, 0x6c61, 0x4620, 0x6c6f, 0x006b, 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x7753, 0x6e69, 0x0067, 
+    IDC_CB_GENRE2, 0x403, 12, 0
+0x6146, 0x7473, 0x4620, 0x7375, 0x6f69, 0x006e, 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x6542, 0x6f62, 0x0062, 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x614c, 0x6974, 0x006e, 
+    IDC_CB_GENRE2, 0x403, 8, 0
+0x6552, 0x6976, 0x6176, 0x006c, 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x6543, 0x746c, 0x6369, "\000" 
+    IDC_CB_GENRE2, 0x403, 10, 0
+0x6c42, 0x6575, 0x7267, 0x7361, 0x0073, 
+    IDC_CB_GENRE2, 0x403, 11, 0
+0x7641, 0x6e61, 0x6774, 0x7261, 0x6564, "\000" 
+    IDC_CB_GENRE2, 0x403, 12, 0
+0x6f47, 0x6874, 0x6369, 0x5220, 0x636f, 0x006b, 
+    IDC_CB_GENRE2, 0x403, 17, 0
+0x7250, 0x676f, 0x6572, 0x7373, 0x7669, 0x2065, 0x6f52, 0x6b63, "\000" 
+    IDC_CB_GENRE2, 0x403, 17, 0
+0x7350, 0x6379, 0x6568, 0x6564, 0x696c, 0x2063, 0x6f52, 0x6b63, "\000" 
+    IDC_CB_GENRE2, 0x403, 15, 0
+0x7953, 0x706d, 0x6f68, 0x696e, 0x2063, 0x6f52, 0x6b63, "\000" 
+    IDC_CB_GENRE2, 0x403, 10, 0
+0x6c53, 0x776f, 0x5220, 0x636f, 0x006b, 
+    IDC_CB_GENRE2, 0x403, 9, 0
+0x6942, 0x2067, 0x6142, 0x646e, "\000" 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x6843, 0x726f, 0x7375, "\000" 
+    IDC_CB_GENRE2, 0x403, 15, 0
+0x6145, 0x7973, 0x4c20, 0x7369, 0x6574, 0x696e, 0x676e, "\000" 
+    IDC_CB_GENRE2, 0x403, 9, 0
+0x6341, 0x756f, 0x7473, 0x6369, "\000" 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x7548, 0x6f6d, 0x7275, "\000" 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x7053, 0x6565, 0x6863, "\000" 
+    IDC_CB_GENRE2, 0x403, 8, 0
+0x6843, 0x6e61, 0x6f73, 0x006e, 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x704f, 0x7265, 0x0061, 
+    IDC_CB_GENRE2, 0x403, 14, 0
+0x6843, 0x6d61, 0x6562, 0x2072, 0x754d, 0x6973, 0x0063, 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x6f53, 0x616e, 0x6174, "\000" 
+    IDC_CB_GENRE2, 0x403, 9, 0
+0x7953, 0x706d, 0x6f68, 0x796e, "\000" 
+    IDC_CB_GENRE2, 0x403, 11, 0
+0x6f42, 0x746f, 0x2079, 0x6142, 0x7373, "\000" 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x7250, 0x6d69, 0x7375, "\000" 
+    IDC_CB_GENRE2, 0x403, 12, 0
+0x6f50, 0x6e72, 0x4720, 0x6f72, 0x766f, 0x0065, 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x6153, 0x6974, 0x6572, "\000" 
+    IDC_CB_GENRE2, 0x403, 9, 0
+0x6c53, 0x776f, 0x4a20, 0x6d61, "\000" 
+    IDC_CB_GENRE2, 0x403, 5, 0
+0x6c43, 0x6275, "\000" 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x6154, 0x676e, 0x006f, 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x6153, 0x626d, 0x0061, 
+    IDC_CB_GENRE2, 0x403, 9, 0
+0x6f46, 0x6b6c, 0x6f6c, 0x6572, "\000" 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x6142, 0x6c6c, 0x6461, "\000" 
+    IDC_CB_GENRE2, 0x403, 13, 0
+0x6f50, 0x6577, 0x2072, 0x6142, 0x6c6c, 0x6461, "\000" 
+    IDC_CB_GENRE2, 0x403, 13, 0
+0x6852, 0x7479, 0x696d, 0x2063, 0x6f53, 0x6c75, "\000" 
+    IDC_CB_GENRE2, 0x403, 10, 0
+0x7246, 0x6565, 0x7473, 0x6c79, 0x0065, 
+    IDC_CB_GENRE2, 0x403, 5, 0
+0x7544, 0x7465, "\000" 
+    IDC_CB_GENRE2, 0x403, 10, 0
+0x7550, 0x6b6e, 0x5220, 0x636f, 0x006b, 
+    IDC_CB_GENRE2, 0x403, 10, 0
+0x7244, 0x6d75, 0x5320, 0x6c6f, 0x006f, 
+    IDC_CB_GENRE2, 0x403, 9, 0
+0x6341, 0x7061, 0x6c65, 0x616c, "\000" 
+    IDC_CB_GENRE2, 0x403, 11, 0
+0x7545, 0x6f72, 0x482d, 0x756f, 0x6573, "\000" 
+    IDC_CB_GENRE2, 0x403, 11, 0
+0x6144, 0x636e, 0x2065, 0x6148, 0x6c6c, "\000" 
+    IDC_CB_GENRE2, 0x403, 4, 0
+0x6f47, 0x0061, 
+    IDC_CB_GENRE2, 0x403, 12, 0
+0x7244, 0x6d75, 0x2620, 0x4220, 0x7361, 0x0073, 
+    IDC_CB_GENRE2, 0x403, 11, 0
+0x6c43, 0x6275, 0x482d, 0x756f, 0x6573, "\000" 
+    IDC_CB_GENRE2, 0x403, 9, 0
+0x6148, 0x6472, 0x6f63, 0x6572, "\000" 
+    IDC_CB_GENRE2, 0x403, 7, 0
+0x6554, 0x7272, 0x726f, "\000" 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x6e49, 0x6964, 0x0065, 
+    IDC_CB_GENRE2, 0x403, 8, 0
+0x7242, 0x7469, 0x6f50, 0x0070, 
+    IDC_CB_GENRE2, 0x403, 10, 0
+0x654e, 0x6567, 0x7072, 0x6e75, 0x006b, 
+    IDC_CB_GENRE2, 0x403, 11, 0
+0x6f50, 0x736c, 0x206b, 0x7550, 0x6b6e, "\000" 
+    IDC_CB_GENRE2, 0x403, 5, 0
+0x6542, 0x7461, "\000" 
+    IDC_CB_GENRE2, 0x403, 18, 0
+0x6843, 0x6972, 0x7473, 0x6169, 0x206e, 0x6147, 0x676e, 0x7473, 0x0061, 
+
+    IDC_CB_GENRE2, 0x403, 12, 0
+0x6548, 0x7661, 0x2079, 0x654d, 0x6174, 0x006c, 
+    IDC_CB_GENRE2, 0x403, 12, 0
+0x6c42, 0x6361, 0x206b, 0x654d, 0x6174, 0x006c, 
+    IDC_CB_GENRE2, 0x403, 10, 0
+0x7243, 0x736f, 0x6f73, 0x6576, 0x0072, 
+    IDC_CB_GENRE2, 0x403, 15, 0
+0x6f43, 0x746e, 0x6d65, 0x6f70, 0x6172, 0x7972, 0x4320, "\000" 
+    IDC_CB_GENRE2, 0x403, 15, 0
+0x6843, 0x6972, 0x7473, 0x6169, 0x206e, 0x6f52, 0x6b63, "\000" 
+    IDC_CB_GENRE2, 0x403, 9, 0
+0x654d, 0x6572, 0x676e, 0x6575, "\000" 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x6153, 0x736c, 0x0061, 
+    IDC_CB_GENRE2, 0x403, 13, 0
+0x6854, 0x6172, 0x6873, 0x4d20, 0x7465, 0x6c61, "\000" 
+    IDC_CB_GENRE2, 0x403, 6, 0
+0x6e41, 0x6d69, 0x0065, 
+    IDC_CB_GENRE2, 0x403, 5, 0
+0x504a, 0x706f, "\000" 
+    IDC_CB_GENRE2, 0x403, 9, 0
+0x7953, 0x746e, 0x5068, 0x706f, "\000" 
+    0
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,1,3,0
+ PRODUCTVERSION 0,1,3,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x29L
+#else
+ FILEFLAGS 0x28L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "0c0904b0"
+        BEGIN
+            VALUE "Comments", " \0"
+            VALUE "CompanyName", "Albert L Faber\0"
+            VALUE "FileDescription", "CDex IN_MPG123 plugin\0"
+            VALUE "FileVersion", "0, 1, 3, 0\0"
+            VALUE "InternalName", "VCE\0"
+            VALUE "LegalCopyright", "General Public License (GPL)\0"
+            VALUE "LegalTrademarks", " \0"
+            VALUE "OriginalFilename", "in_mpg123\0"
+            VALUE "PrivateBuild", " \0"
+            VALUE "ProductName", "CDex MPG123 Winamp Plugin\0"
+            VALUE "ProductVersion", "0.1.3\0"
+            VALUE "SpecialBuild", " \0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0xc09, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // English (Australia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

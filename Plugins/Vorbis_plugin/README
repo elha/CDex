@@ -1,0 +1,22 @@
+Winamp plugin
+________________________________
+Jack Moffitt and Michael Smith (jack@icecast.org, msmith@labyrinth.net.au)
+
+
+WARNING: This plugin is deprecated in favour of the nullsoft-written one
+ available on www.winamp.com. 
+
+You'll need the winamp plugin headers to compile this - available from the 
+Nullsoft developer site. 
+libvorbis and libvorbisfile both compile on win32 now, so you'll need to build 
+them, then build this linked to those.
+
+For most people, a binary is far more useful - once the bitstream format has 
+finalised (soon) someone will get a dll up for Joe Average User to download.
+
+For the rest of you - either figure out how to compile it, or bug either of us
+for some win32 makefiles/project files. 
+
+Definately works under MSVC 5, other compilers should be fine too.
+
+

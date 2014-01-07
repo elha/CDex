@@ -1,0 +1,26 @@
+//
+// CDEX.RC2 - resources Microsoft Visual C++ does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Add manually edited resources here...
+
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+  #ifdef _WIN32
+    LANGUAGE 7, 1
+    #pragma code_page(1252)
+  #endif
+
+  #include "l.deu\\Afxres.rc"         // Standard components
+  #include "l.deu\\Afxprint.rc"       // printing/print preview resources
+#endif

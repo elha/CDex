@@ -1,0 +1,960 @@
+//
+// CDex - Open Source Digital Audio CD Extractor
+//
+// Copyright (C) 2006, 2007, 2008 Georgy Berdyshev
+// Copyright (C) 2002 Sean M Burke
+// Copyright (C) 2002 Albert L. Faber
+//
+// http://cdexos.sourceforge.net/
+// http://sourceforge.net/projects/cdexos 
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
+
+
+//////////////////////////////////////////////////////////////////////////////
+// CDex - International Support File                                        //
+//////////////////////////////////////////////////////////////////////////////
+//
+//
+// Welcome to CDex language definition file
+// 
+// This file will be read by CDex if it is put inside \Lang folder
+// of CDex root directory. It also must have the cdex..lang extension
+// yielding something like my_language.cdex.lang
+//
+// 
+// To define a string follow this format:
+//
+// number "my_string"
+//
+// number is the identification of the following string. Each number is related
+// with a string that will appear inside CDex. Padding spaces are not important.
+//  Inside menu definitions use & to give access to the keyboard menu shortcut.
+// You can use returns inside string. They will be preserved in the program.
+//
+// CDex loads the strings on startup. It won't perceive any changes in this file
+//  if you don't reload the program.
+//
+// PLEASE, CHECK THAT STRINGS WON'T BE CLIPPED IN THE PROGRAM. The reserved space 
+// for every string is limited and must be suitable for all languages. If some 
+// of your strings are clipped try shortening the phrase while keeping its 
+// significance
+//  
+//////////////////////////////////////////////////////////////////////////////
+
+// language file revision level
+REVISION=/*$Id: albanian.cdex.lang 551 2006-11-03 12:40:21Z bbleta $*/
+
+// set language characteristics
+LANGUAGE=9
+SUBLANG=1
+
+// use CODEPAGE 65001 if this file is UTF-8 encoded text file
+// otherwhise fill out the proper ANSI codepage
+CODEPAGE=1250
+
+// 99 (063 hex) => LANGUAGE ID, use english description
+// since this value is used to set the LOCALE settings
+#0063# "Albanian"
+
+#0001# "OK"
+#0002# "Anulo"
+#0003# "Ndërprit"
+#0004# "Riprovo"
+#0005# "Shpërfill"
+#0006# "Po"
+#0007# "Jo"
+
+// Ripper Main menu entries
+#M0BD4# "#&Kartelë#&Përpuno#&Shndërro#&Mjete#C&DDB#&Mundësi#&Ndihmë#"
+
+
+
+// Ripper File Menu
+#M800D# "&Info Sistemi"
+#M802D# "&Krahaso Dy Kartelat"
+#ME141# "&Dil"
+
+#M8026# "Përzgjidh Tërë\tCtrl+T"
+#M8023# "&Kopjo info albumi në të Papastër"
+#M8024# "&Riemërto Pjesë\tF2"
+#M0BD40000# "&Ndrysho Emër Pjese"
+#M8042# "&Gërma e Parë e Çdo Fjale me të Madhe"
+#M8043# "Gërma e parë me të &madhe"
+#M8044# "tërë gërmat me të &wogla"
+#M8045# "TËRË GËRMAT ME TË &MËDHAJA"
+#M804D# "&Shkëmbe Artist<->Pjesë"
+#M802A# "&Fresko Listë Pjesësh\tF5"
+#M8047# "Shto / Përpuno listë &Llojesh"
+
+// Ripper Convert menu
+#M8004# "Përfto pjesë CD si kartelë WAV\tF8"
+#M8005# "Përfto pjesë CD si kartelë Audio të Ngjeshur\tF9"
+#M8007# "Përfto një pjesë të CDsë\tF10"
+#M803E# "Rikodo Kartelë(a) Audio të Ngjeshur(a)"
+#M8006# "Shndërro kartelë(a) WAV në kartelë(a) Audio të Ngjeshur\tF11"
+#M8029# "Shndërro Kartelë(a) Audio të Ngjeshur në kartelë(a) WAV\tF12"
+#M8022# "Shto një titull RIFF-WAV tek kartela MP2 ose MP3"
+#M8030# "Hiq titullin RIFF-WAV prej kartelash MP2 ose MP3"
+
+
+// Ripper Tools menu
+
+#M802E# "&Luajtës kartelash media "
+#M8031# "&Regjistro prej Burimi Analog"
+
+// Ripper freedb Menu
+#M8018# "Lexo Prej freedb &Vendore"
+#M801B# "Lexo freedb të &Largët"
+#M801A# "&Lexo Prej &CD Player.ini"
+#M8033# "Lexo CD-&Tekst"
+#M80E8# "Lexo prej &WinampDB"
+#M8027# "Ruaj Te CDPlayer.ini"
+#M8028# "Ruaj te freedb Vendore"
+#M8032# "P&arashtroje te freedb e Largët"
+#M803B# "&Kërkim në freedb"
+
+// Ripper Options Menu
+#M8003# "&Rregullime\tF4"
+#M8046# "Formëso Shtojca &Winamp"
+#M801C# "&Shfaq Panelin e Lojës"
+#M801D# "Shfaq Panelin e &Regjistrimeve"
+#M802C# "Shfaq Hollësi rreth Nxjerrjes\tF3"
+#M802F# "&Pastro Gjendjen e Nxerrjes"
+#M0BD40001# "Përzgjidh &Gjuhë"
+
+// Ripper Help Menu
+#ME143# "&Ndihmë rreth përdorimit të CDex\tF1"
+#ME140# "&Rreth CDex-it..."
+
+// Player Menu
+#M0C80# "#&Kartelë#&Mundësi#&Luajlistë#&Ndihmë#"
+
+// NOTE: File, help menu and Configure &Winamp Plugins entries 
+// are already defined in the main menu
+
+// Ripper Options Menu
+#M804B# "&Luaj Kuturu"
+#M0C800000# "&Gjuhë"
+
+// Ripper Playlist Menu
+#M8049# "&Ruaj"
+#M804A# "&Pastro"
+
+// About Dialog
+#D00640000# "Rreth programit për përftim audio CDsh, CDex"
+#D00640412# "Version CDex-i "
+#D006404BC# "Mbyll"
+// Translator URL
+#D006404BB# "www.programeshqip.org"
+// Translator information
+#D006404BA# "Përkthimi në Shqip nga Besnik Bleta"
+
+// CD Auto Detection dialog box
+#D0BE20000# "Përfundime Vetëzbulimi"
+#D0BE203FB# "Ndërprit"
+#D0BE204BE# "Vijon një listë me mënyra test; përzgjidhni njërën prej mënyrave që ka gjendjen 'Pass', dhe shtypni butonin OK"
+#D0BE204BD# "Gjendje MMC"
+
+// freedb Accessing dialog box
+#D00870000# "Po futem në freedb"
+#D008704BF# "Veprimi i Çastit"
+#D008704C0# "Mesazh"
+#D008704C1# "Kredite: freedb.freedb.org)"
+
+// freedb Settings dialog box
+#0C8D# "Freedb e Largët"
+#D06030000# "Freedb e Largët"
+#D06030484# "freedb (parazgjedhje porta 888 ose 8880)\nHTTP (parazgjedhje porta 80)"
+#D0603043D# "Vetëlidhu me freedb të largët"
+#D06030426# "Shto Site"
+#D06030425# "Shqyrto Site-e"
+#D06030483# "Rikthe Tërë"
+#D06030475# "Parashtro Mundësi"
+#D0603041E# "Përdor Ndërmjetës"
+#D06030421# "Mirëfilltësim"
+#D060304C7# "Shërbyes i Largët"
+#D060304CB# "Vendndodhja Juaj E-mail"
+#D060304CF# "Portë Ndërmjetësi"
+#D060304D0# "Fjalëkalim"
+#D060304CE# "Mbarim kohe (sekonda)"
+#D060304C9# "Vendndodhje"
+#D060304CC# "Shteg"
+#D060304CA# "Protokoll"
+#D060304C8# "Vendndodhje"
+#D060304CD# "Portë"
+
+// freedb Found inexact match dialog box
+#D00880000# "U gjet Përputhje e Pasaktë"
+
+// CD-ROM Settings dialog box
+#0C89# "CD Drive"
+#D0BDB0000# "CD Drive"
+#D0BDB0430# "Generic\nToshiba\nToshiba (new)\nIBM\nNEC\nDEC\nIMS\nKodak\nRicoh\nHP\nPhilips\nPlasmon\nGrundig CD-R,\nMitsumi CD-R\nPlextor\nSony\nYamaha\nNRC\nIMS CDD-5\nCustom"
+#D0BDB0444# "Vetëzbulo"
+#D0BDB0436# "Këmbe Kanale të Majtë dhe të Djathtë"
+#D0BDB047E# "Nxirr CD pasi të ketë përfunduar nxjerrja"
+#D0BDB043D# "Mundëso Jitter Correction"
+#D0BDB047F# "Përzgjidh Tërë Pjesët e CD-së (si parazgjedhje)"
+#D0BDB043E# "Përdor librari Native NT SCSI"
+#D0BDB04D1# "CD Drive"
+#D0BDB04D2# "Sektorë Leximi"
+#D0BDB04D3# "Anashrrjedhje Leximi"
+#D0BDB04D9# "Krahaso Bllok"
+#D0BDB04D6# "Tip CD-ROM Drive"
+#D0BDB04DA# "Shpejtësi e CD"
+#D0BDB04D4# "Fillim Offset (sektorë)"
+#D0BDB04D5# "Fund Offset (sektorë)"
+#D0BDB04DB# "Kohë rrotullimi (sekonda)"
+#D0BDB04D8# "Numër Riprovash"
+#D0BDB04D7# "Metodë Nxjerrjeje"
+#D0BDB0480# "Blloko CD-në gjatë përftimit"
+#D0BDB0481# "Përdor CD-Tekst (në mundet)"
+#D0BDB0431# "Standard\nParanojë, Vetëm Anashrrjedhje\nParanojë, Pa Vërtetim\nParanojë, Pa ndreqje gërvishtjesh\nParanojë, e Plotë"
+
+// freedb Submit Options dialog box
+#D00A00000# "Mundësi Parashtrimi freedb"
+#D00A004E2# "Parashtro duke përdorur:"
+#D00A00414# "E-mail"
+#D00A00401# "Përmes HTTP"
+#D00A004E4# "Vendndodhje shërbyesi SMTP"
+#D00A004E5# "Vendndodhje HTTP Parashtrimi (duke përjashtuar shtegun)"
+#D00A004E3# "Vendndodhje e-mail Parashtrimi"
+
+// Config Winamp Plugin Dialog box
+#D00AA0000# "Formëso Shtojca Futjeje Winamp"
+#D00AA0499# "Rreth"
+#D00AA049A# "Formëso"
+
+// CD Ripping dialog box
+#D0BDC0000# "Regjistro Pjesë"
+#D0BDC042C# "nominal"
+#D0BDC042E# "maks"
+#D0BDC042D# "min"
+
+// Drop Files dialog box
+#D00900000# "Përzgjidh mundësi për kartela të prura"
+#D00900452# "Përfundimi kartelë RIFF WAV"
+#D0090044C# "Fshij kartelë WAV pas kodimit"
+#D0090042F# "Normalizo"
+#D00900430# "Kodo"
+#D00900431# "Normalizo + Kodo"
+
+// Edit Genres dialog box
+#D00AC0000# "Shto / Përpuno Lloje"
+#D00AC049C# "Fut të Ri"
+
+// Enter profile Name dialog box
+#D00AF0000# "Jep emër profili"
+
+
+// Encoder dialog box
+#0C8A# "Kodues"
+#D06020000# "Kodues"
+#D06020537# "Kodues"
+#D06020452# "Shndërro në kartela Riff WAV"
+#D06020423# "më e Vogla\nNën Normalen\nNormale\nMbi Normalen\nmë e Madhja"
+#D06020536# "Përparësi Rrjedhe"
+#D06020535# "Mundësi Koduesi"
+#D06020453# "Pas shndërrimit, mos fshij kartela WAV të përftuara"
+
+
+// Encoder DOS APE dialog box
+#D0BFD0400# "Mono"
+#D0BFD0401# "Stereo"
+#D0BFD04DE# "Nivel ngjeshjeje"
+#D0BFD04DD# "Kanale"
+#D0BFD04DF# "Format Etiketash"
+#D0BFD04B4# "Etiketë APE (parazgjedhje)\nEtiketë ID3V1"
+#D0BFD0459# "Shpejt\nNormal\ni Lartë\nTejet i Lartë"
+
+// Encoder Blade Dialog box
+#D0BE80409# "Kodim MP3 fluturimthi"
+#D0BE804E0# "Bitrate"
+#D0BE804E1# "Kanale"
+#D0BE80400# "Stereo"
+#D0BE80401# "J-stereo"
+#D0BE80402# "Dyor"
+#D0BE80403# "Mono"
+#D0BE80427# "Vetjak"
+#D0BE80428# "Checksum"
+#D0BE80429# "Origjinali"
+#D0BE8042A# "Të drejta Kopjimi"
+
+// Encoder Lame dialog box
+#D008B0548# "Bitrate Min"
+#D008B054A# "Mënyrë"
+#D008B054B# "Cilësi"
+#D008B054E# "Cilësi VBR"
+#D008B0549# "Maks."
+#D008B054D# "ABR (kpbs)"
+#D008B054C# "Metodë VBR"
+#D008B0547# "Version"
+#D008B054F# "Kodcilësi në Dalje"
+#D008B0463# "MPEG I\nMPEG II\nMPEG II.5"
+#D008B0400# "Stereo"
+#D008B0401# "J-stereo"
+#D008B0402# "Stereo i Detyruar"
+#D008B0403# "Mono"
+#D008B0427# "Vetjake"
+#D008B0428# "Checksum"
+#D008B0429# "Origjinali"
+#D008B042A# "Të Drejta Kopjimi"
+#D008B0409# "Kodim MP3 fluturimthi"
+#D008B0459# "Çaktivizuar\nVBR Parazgjedhje\nVBR-e Vjetër\nVBR-e Re\nVBR-MTRH\nVBR-ABR"
+#D008B0458# "VBR 0\nVBR 1\nVBR 2\nVBR 3\nVBR 4\nVBR 5\nVBR 6\nVBR 7\nVBR 8\nVBR 9"
+#D008B0414# "Normale ( q=5 )\ne Ulët ( q=9 )\ne Lartë ( q=2 )\nZë (për regjistrim zëri)\nR3Mix i Paracaktuar\nCilësi Shumë e Lartë ( q=0 )\npreset standard\npreset fast standard\npreset extreme\npreset fast extreme\npreset insane\nreset ABR\npreset CBR\npreset medium\npreset fast medium"
+
+// Encoder External settings box
+#D008D0000# ""
+#D008D052D# "Varg Parametri"
+#D008D052C# "Shteg Koduesi"
+#D008D052E# "Bitrate"
+#D008D0463# "Kodim fluturimthi"
+#D008D0464# "Fshih dritare DOS"
+#D008D052F# "Zgjatim Kartele"
+#D008D0465# "Dërgo titull WAV te stdin"
+
+// Encoder Wincodec settings box
+
+#D008A0000# ""
+#D008A0409# "Kodim MP3 fluturimthi"
+#D008A053A# "Windows MP3 Codec"
+#D008A053B# "Përzgjedhje e Codec Bitrate"
+#D008A043E# "Cilësi e Lartë"
+
+// Encoder MP2 encoder settings box
+
+#D0BF9040F# "MPEG-1"
+#D0BF90410# "MPEG-2"
+#D0BF90546# "Bitrate"
+#D0BF90409# "Kodim MP2 fluturimthi"
+#D0BF90545# "Kanale"
+#D0BF90400# "Stereo"
+#D0BF90401# "J-stereo"
+#D0BF90402# "Dyor"
+#D0BF90403# "Mono"
+#D0BF90427# "Vetjak"
+#D0BF90428# "Checksum"
+#D0BF90429# "Origjinali"
+#D0BF9042A# "Të Drejta Kopjimi"
+#D0BF9047F# "Shkruaj Të Dhëna 'Ancillary' (Antex)"
+#D0BF90480# "Lejo 'no padding'"
+#D0BF90544# "VBR (eksperimental)"
+#D0BF90458# "Asnjë\nVBR 0\nVBR 1\nVBR 2\nVBR 3\nVBR 4\nVBR 5\nVBR 6\nVBR 7\nVBR 8\nVBR 9"
+
+// Encoder external VQF settings box
+#D0BEA0000# ""
+#D0BEA041B# "44KHz-48Kbps\n44KHz-40Kbps\n22KHz-32Kbps\n22KHz-24Kbps\n22KHz-20Kbps\n16KHz-16Kbps\n11KHz-10Kbps\n11KHz-8Kbps\n8KHz-8Kbp"
+#D0BEA0549# "Shteg për te koduesi VQF"
+#D0BEA0547# "Mënyrë VQF"
+
+// Encoder WMA8 settings box
+#D0BEC03F5# "22 Kbit/s\n32 Kbit/s\n36 Kbit/s\n40 Kbit/s\n48 Kbit/s\n64 Kbit/s\n80 Kbit/s\n96 Kbit/s\n128 Kbit/s\n160 Kbit/s"
+#D0BEC0409# "Kodim MP3 fluturimthi"
+#D0BEC0441# "'Digital Rights Management' Vepruese"
+#D0BEC0414# "Mono"
+#D0BEC04B6# "Stereo"
+#D0BEC0538# "Bitrate"
+#D0BEC0539# "Kanale"
+
+// Encoder external Xing settings box
+#D0BF00000# ""
+#D0BF00414# "CBR"
+#D0BF00401# "VBR"
+#D0BF00429# "Origjinali"
+#D0BF0042A# "Të Drejta Kopjimi"
+#D0BF0045C# "Filtro Frekuenca të Larta"
+#D0BF0045D# "Stereo i Thjeshtë i Detyruar"
+#D0BF0045E# "Zbrit miks në mono"
+#D0BF0045F# "Lër koduesin të zgjedhë kodcilësinë"
+#D0BF00532# "Shteg Koduesi"
+#D0BF00533# "Bitrate"
+#D0BF00534# "Shkallë VBR"
+
+
+// Encoder WAV settings box
+
+#D0BF10000# ""
+#D0BF1053E# "Kodcilësi"
+#D0BF1053F# "Kanale"
+#D0BF10414# "Stereo"
+#D0BF10401# "Mono"
+#D0BF1053D# "Ngjeshje"
+#D0BF1053C# "Format"
+#D0BF10439# "WAV\nApple/SGI AIFF\nSun/Next au (big endian)\nDec au (little endian))\nRaw PCM (big endian)\nRaw PCM (little endian)"
+#D0BF10409# "Kodim fluturimthi"
+
+// Encoder FAAC settings box
+#D0BF20000# ""
+#D0BF20463# "MPEG-2"
+#D0BF20415# "MPEG-4"
+#D0BF20466# "Kryesori\nNdërlikim i ulët\nSSR\nLTD"
+#D0BF204AF# "16000\n18000\n19500"
+#D0BF204B1# "Përdor LFE"
+#D0BF20468# "Përdor MS Stereo"
+#D0BF20526# "Bitrate / kanal"
+#D0BF20528# "Frekuencë (Hz)"
+#D0BF20527# "Profil"
+#D0BF204B0# "Lejo 'Temporal Noise Shaping' (TNS)"
+
+// Encoder Vorbis settings box
+
+#D0BF60000# ""
+#D0BF60400# "Stereo"
+#D0BF60401# "Mono"
+#D0BF60409# "Kodim fluturimthi"
+#D0BF604B3# "Përdor rregullime Cilësie (këshillohet)"
+#D0BF60540# "Kanale"
+#D0BF60541# "Përdor 'Bitrate manager'"
+#D0BF60550# "Bitrate Minimal"
+#D0BF60551# "Bitrate Nominal"
+#D0BF60552# "Bitrate Maksimal"
+
+// Encoder Gogo settings box
+
+#D0BF80000# ""
+#D0BF8040F# "MPEG-1"
+#D0BF80410# "MPEG-2"
+#D0BF80409# "Kodim MP3 fluturimthi"
+#D0BF80458# "Asnjë\nVBR 0\nVBR 1\nVBR 2\nVBR 3\nVBR 4\nVBR 5\nVBR 6\nVBR 7\nVBR 8\nVBR 9"
+#D0BF80400# "Mono"
+#D0BF80401# "Stereo"
+#D0BF80402# "J-Stereo"
+#D0BF80403# "MS-Stereo"
+#D0BF8047B# "Përdor MMX/3DNow"
+#D0BF8047C# "Përdor Psycho-acoustics"
+#D0BF8047D# "Zbato filtër Low-Pass për shpeshti të ulta"
+#D0BF80529# "Bitrate i Ndryshueshëm"
+#D0BF8052A# "Bitrate"
+#D0BF8052B# "Mënyrë"
+
+// Encoder External Musepack settings box
+#D00A90000# ""
+#D00A90531# "Varg Parametri"
+#D00A90530# "Shteg për tek koduesi Musepack"
+#D00A90464# "Fshih dritare MSDOS"
+#D00A90463# "Kodim fluturimthi"
+
+
+// Encoder NTTVQF settings box
+
+#D0BFB0000# ""
+#D0BFB0409# "Kodim VQF fluturimthi"
+#D0BFB0462# "32 Kbit/s\n40 Kbit/s\n48 Kbit/s\n56 Kbit/s\n64 Kbit/s\n80 Kbit/s\n96 Kbit/s\n112 Kbit/s\n128 Kbit/s\n160 Kbit/s\n192 Kbit/s\n224 Kbit/s\n256 Kbit/s\n320 Kbit/s"
+#D0BFB0400# "Mono"
+#D0BFB0401# "Stereo"
+#D0BFB0542# "Bitrate për kanal"
+#D0BFB0543# "Kanale"
+
+// File compare two files dialog box
+
+#D00970000# "Krahaso dy kartelat WAV"
+#D00970446# "Krahaso"
+#D00970522# "Emri i kartelës së parë"
+#D00970523# "Ermi i kartelës së dytë"
+#D00970524# "Përparim"
+
+// File name string info dialog box
+
+#D00930000# "Mundësi të dhënash për emra kartelash"
+#D00930516# "Shembuj:\n%1\%2\%4      krijon kartelën përfundim Artist\Album\EmërGjurme.mp3 (ose .wav)\n%1 - %2 - %3  krijon kartelën përfundim Artist - Album - EmërGjurme.mp3 (ose .wav)\n%l1 - %u2 krijon kartelën përfundim Artist - Album (ose .wav)"
+#D00930517# "Vargu për formatin e emrit të kartelës mund të përmbajë identifikuesi vijues"
+#D00930518# "Shenja pjerrkë (\) mundet gjithashtu të përdoret për ndarje drejtorish\nPor, nuk duhet ta përdorni si shenjën e parë !"
+
+// File name property page
+
+#0C8E# "Emra kartelash"
+#D0BF40000# "Emra kartelash"
+#D0BF40479# "Ndërro Shenja"
+#D0BF4047D# "Ndaj emër pjese në Artist, Pjesë duke përdorur shenjën ndarëse:"
+#D0BF40443# "Shto Kartela në luajlistë M3U"
+#D0BF40444# "Shto Kartela në luajlistë PLS"
+#D0BF4051B# "Emër kartele"
+#D0BF40519# "Format emri kartelash përfundim dhe drejtorish"
+#D0BF4051C# "WAV -> MP3"
+#D0BF4051D# "Të Regjistruarat"
+#D0BF4051A# "Format Emri kartele"
+#D0BF40520# "Emër kartele"
+#D0BF4051E# "Format Emri kartele"
+#D0BF40521# "Tip"
+#D0BF4051F# "Luajlistë"
+
+// File overwrite dialog box
+
+#D00AE0000# "Sinjalizim Mbishkrimi Kartele"
+#D00AE0512# "Po"
+#D00AE04A1# "Po të &Tërave"
+#D00AE0511# "Jo"
+#D00AE04A2# "Jo të T&ërave"
+#D00AE0513# "Ka një kartelë."
+#D00AE0514# "Të zëvendësoj kartelën ekzistuese?"
+
+
+// Generic Property Page
+
+#0C8B# "Të Përgjithshme"
+#D06040000# "Të Përgjithshme"
+#D06040414# "Asnjë\nID3-V1\nID3-V2\nID3-V1 &  ID3-V2"
+#D06040411# "Normalizo"
+#D060404AB# "Fikje automatike pas nxjerrjes / kodimit"
+#D0604050F# "Nëse sinjali është <"
+#D0604050C# "Normalizo Volumin"
+#D0604050D# "Në"
+#D06040510# "Nëse sinjali është >"
+#D06040507# "Mundësi Etikete kartelash"
+#D0604050A# "Zonë komenti Etikete"
+#D0604050E# "Në"
+#D06040508# "Version Etikete ID3"
+#D0604050B# "Zonë 'Koduar nga'"
+#D06040506# "Drejtori e përkohshme"
+#D06040509# "Format Nr Pjese"
+#D060404AC# "Digital CD Playback"
+
+// General Info Dialog Box
+
+#D0BDF0000# "Të Dhëna të Përgjithshme"
+#D0BDF0502# "ID Volumi CD"
+#D0BDF0500# "ID freedb i Diskut"
+#D0BDF0501# "Përgjegjës ASPI"
+#D0BDF0503# "Version OS-i"
+#D0BDF0504# "Të dhëna SCSI"
+#D0BDF0505# "Tip(e) Drive"
+#D0BDF0442# "Kopjo në të Papastërt"
+
+// Local freedb Settings TAB
+#0C8C# "Freedb vendore"
+#D0BFA0000# "Freedb vendore"
+#D0BFA044B# "Kartela freedb në format Windows"
+#D0BFA044C# "Kartela freedb në format Unix"
+#D0BFA0459# "Ruaj në Kartelën CDPlayer.ini"
+#D0BFA045A# "Ruaj në freedb Vendore"
+#D0BFA045B# "Përdor Emra Drejtorish të Gjatë"
+#D0BFA04B5# "Shkruaj si kartela tekst MS-DOS"
+#D0BFA04FE# "Shteg për te freedb"
+#D0BFA04FF# "Shteg Winamp in_cdda.cdb (format Winamp 2.78)"
+#D0BFA04FD# "Rregullime freedb-je Vendore"
+
+// Main Window (Title View)
+#D0BD80000# " "
+#D0BD804C2# "Artist"
+#D0BD804C3# "Album"
+#D0BD804C4# "Lloj"
+#D0BD804C5# "Vit"
+#D0BD804C6# "'Offset' Pjese"
+
+// Mpeg to RIFF-WAV conversion dialog box
+#D00860000# "Shndërro MP2/MP3 në RIFF-WAV"
+#D008604FC# "Përmbushje"
+
+// Mpeg to WAV conversion dialog box
+#D0BEB0000# "Shndërro një kartelë të ngjeshur në kartelë WAV"
+#D0BEB04FB# "Përmbushje"
+
+// Open file dialog box
+
+#D02630000# "Dialogu Hap Kartelë"
+#D026303EE# "Shih në nëndosje"
+#D026303F1# "Fshij Origjinalin"
+#D0263042F# "Normalizo"
+#D02630430# "RIFF-WAV"
+#D026303EF# "Përzgjidh Tërë"
+#D026303F0# "Hap"
+#D02630495# "Rregullime"
+#D026304AC# "Mbaj Skemë Drejtorie Fillestaren"
+#D026304FA# "Kartela të Mundshme:"
+#D026304F9# "Drejtori"
+
+// Partial track copy dialog box
+
+#D06010000# "Regjistro vetëm disa pjesë"
+#D0601041D# "Kartelë WAV"
+#D06010412# "Kartelë Audio e Ngjeshur (Koduar)"
+#D060104F5# "Pjesë"
+#D060104F6# "Min"
+#D060104F7# "Sek"
+#D060104F8# "Fragment"
+#D060104F0# "Veti kartele"
+#D060104F2# "Interval (një kartelë nga vend fillimi te vend ndalimi)"
+#D060104F3# "Vend fillimi"
+#D060104F4# "Vend ndalimi"
+#D060104F1# "Tip Përfundimi"
+
+// Player view window
+#D0C800489# "Hollësi"
+
+// Record from Analog In dialog box
+#D0BF50000# "Regjistro prej Burimi Analog"
+#D0BF50640# "Gjatësi e Lirë"
+#D0BF50641# "Regjistro vetëm:"
+#D0BF5046E# "Shfleto"
+#D0BF504B7# "Shto tek emër kartele numra pasues, nisur nga: "
+#D0BF504EE# "Gjendje Regjistrimi"
+#D0BF5046B# "Regjistro"
+#D0BF50445# "Ndërprit"
+#D0BF50450# "Ndal"
+#D0BF50642# "Mono"
+#D0BF50643# "Stereo"
+#D0BF503F5# "Kanale"
+#D0BF504EB# "Pajisje Regjistrimi"
+#D0BF504EC# "Emër kartele Përfundimi"
+#D0BF504ED# "Tip kartele Përfundimi"
+#D0BF504EA# "Cilësi Kodimi"
+#D0BF504EF# "sekonda"
+#D0BF504F0# "Drejtori Përfundimesh"
+
+// RIFF-WAV to MPEG dialog box
+#D02630064# "Ndërprit"
+#D0BF30000# "Hiq titull RIFF-WAV prej kartelash MPEG"
+#D0BF304E9# "Përmbushje"
+
+// Substitute Characters dialog box
+#D0BF70000# "Zëvendësim Shenjash"
+#D0BF704E6# "Shenja të Paligjshëm në Emër kartele"
+#D0BF704E7# "Tjetër (zëvendësimi nuk është i detyruar)"
+#D0BF704E8# "hapësirë :="
+
+// Ripper Status dialog box
+#D00960000# "Hollësi Gjendjeje Nxjerrjeje"
+
+// String Table
+#0065#	"&Rreth CDex-it..."
+#0066#	"Ruaj si..."
+#0067#	"Hap"
+#0BBA#	"Kontrl Treguesi"
+#0BBB#	"Të ndryshme"
+#0BBC#	"Luaj Pjesë"
+#0BBE#	"Ndal Luajtjen"
+#0BBF#	"Nxirr CD"
+#0BC0#	"S'hap dot Sesion Interneti. Ju lutem shihni formësimin tuaj për internetin."
+#0BC1#	"CDex"
+#0BC2#	"Dështoi gatitja e 'Windows sockets'"
+#0BC3#	"Përpara Shpejt\nPërpara Shpejt"
+#0BC4#	"Prapa Shpejt\nPrapa Shpejt"
+#0BC5#	"Ndërprerje\nNdërprerje"
+#0BC6#	"Kalo Te Pjesa Pasuese\nKalo Te Pjesa Pasuese"
+#0BC7#	"Kalo te Pjesa e Mëparshme\nKalo Te Pjesa e Mëparshme"
+#0BC8#	"Merr të dhëna albumi prej freedb-je të largët"
+#0BD4#	"CDex Ripper\n\nCDex Ripper\n\n\nDokument.CDex\nDokument.CDex"
+#0BDE#	"Version CDex-i "
+#0BDF#	"asnjë artist"
+#0BE0#	"pa titull"
+#0BE1#	"Lloj"
+#0BE2#	"Titull"
+#0BE3#	"ID freedb-je"
+#0BE4#	"Artist"
+#0BE5#	"Numër Pjese"
+#0BE6#	"ID Volumi"
+#0BE7#	"Emër Pjese"
+#0BE8#	"Numër Pjese me 0 Para"
+#0BE9#	"Numër pjesësh"
+#0BEA#	"Emër"
+#0BEB#	"Pjesë"
+#0BEC#	"Kohë Nisjeje"
+#0BED#	"Kohë Loje"
+#0BEE#	"Madhësi"
+#0BEF#	"Gjendje"
+#0BF0#	"Version CDex-i "
+#0BF1#	"Zona Artist përmban shenja të pavlefshme\n Zëvendësojini me hapësira"
+#0BF2#	"Zona Album përmban shenja të pavlefshme\n Zëvendësojini me hapësira"
+#0BF3#	"Emri i pjesës [%d] përmban shenja të pavlefshme\n Zëvendësojini me hapësira"
+#0BF4#	"Nuk keni përzgjedhur ndonjë pjesë.  Ju lutem përzgjidhni prej listës një ose më tepër pjesë audio."
+#0BF5#	"I pazoti të vendos të dhëna në të Papastërt"
+#0BF6#	"Kqyrje pjese %d (%02d:%02d:%02d)\n"
+#0BF7#	"Po hedh pjesën në një kartelë të Ngjeshur Audio (%s) te kartela %s"
+#0BF8#	"Nxjerrja/kodimi u ndërpre në %s"
+#0BF9#	"Hedhja e pjesës në një Kartelë Audio të Ngjeshur përfundoi si duhet, kohëzgjatje: %s"
+#0BFA#	"Po hedh pjesën në një kartelë WAV (%s) te kartela %s"
+#0BFB#	"Nxjerrja u ndërpre në %s"
+#0BFC#	"Hedhja e pjesës në një kartelë WAV përfundoi si duhet, kohëzgjatje: %s"
+#0BFD#	"S'krijova dot drejtori përfundimesh: "
+#0BFE#	"Kohë e rrjedhur: %s   ||   Kohë e mbetur: %s   ||   Shpejtësi: %s x"
+#0BFF#	"Përftim i pjesës %d (përmbushur %d%%, kartela %d/%d)"
+#0C00#	"Vlerë Kulm %4.2f dB = %3d %%"
+#0C01#	"'Jitter' (gabime: %d)"
+#0C02#	"Po shndërroj pjesën %d (përmbushur %d %%, kartelë %d/%d)"
+#0C03#	"Po normalizoj pjesën %d (përmbushur %d %% , kartelë %d/%d)"
+#0C04#	"Po përcaktoj Vlerën Kulm të pjesës %d (përmbushur %d %%, kartelë %d/%d)"
+#0C05#	"Vlerë Kulm %4.2f dB = %3d %%"
+#0C06#	"Te kartelë: %s"
+#0C07#	"Po përftoj pjesën %d (kartela %d/%d)"
+#0C08#	"Po shndërroj kartelë në formatin e kërkuar (kartela %d/%d)"
+#0C09#	"Po normalizoj pjesë me koeficientin %5.2f (kartelë %d/%d)"
+#0C0A#	"Po gjej vlerën kulm (kartelë %d/%d)"
+#0C0B#	"Po kryej (kartela %d/%d)"
+#0C0C#	"Po përftoj Pjesë CD"
+#0C0D#	"Shndërrim Kartele"
+#0C0E#	"%5d gabime te pjesa %s\n\n"
+#0C0F#	"Pati gabime 'jitter'.  Ju lutem shihni kartelën ndihmë për zgjidhje problemesh 'jitter'.\n\n"
+#0C10#	"Vit"
+#0C11#	"Pjesë të Dhëna"
+#0C12#	"Pjesë Audio"
+#0C13#	"Ju lutemi plotësoni tërë Pjesë, Artist, dhe të dhëna Pjese, dhe sigurohuni\nqë zona Lloj është rregulluar si duhet para se të parashtroni një zë\ntek bazë të dhënash CD-ish e largët."
+#0C14#	"Në freedb vendore nuk u gjetën të dhëna të kërkuara rreth albumit"
+#0C15#	"Në kartelën CDPlayer.ini nuk u gjetën të dhëna të kërkuara rreth albumit"
+#0C16#	"Etiketa MP3 u ndryshua. \nTë ruaj ndryshimet?"
+#0C17#	"Pati një gabim gjatë ruajtjes së etiketës ID3V2.\nSigurohuni që kartela nuk është përzgjedhur si vetëm për lexim!"
+// is, or isn't?
+#0C18#	"Pati një gabim gjatë leximit të etiketës ID3v2."
+#0C19#	"Pati një gabim gjatë hapjes së kartelës burim."
+#0C1A#	"Dështova në pasjen e privilegjit të fikjes së sistemit"
+#0C1B#	"Koeficienti i normalizimit është %7.4f x"
+#0C1C#	"E-mail i pavlefshëm.  Ju lutem plotësoni\n\nvendndodhjen tuaj e-mail tek menuja mundësi freedb-je të Largët."
+#0C1D#	"Shërbyesi i largët nuk u përgjigj herët sa duhej. \n Rrisni vlerën Skadim te seksioni mundësi freedb, \n Ose thjesht riprovoni."
+#0C1E#	"lexim/shkrim të lejuar\n"
+#0C1F#	"OK, vetëm lexim\n"
+#0C20#	"S'u gjetën raste\n"
+#0C21#	"Përgjigje OK\n"
+#0C22#	"U gjetën disa përputhje të sakta. Vijon lista.\n"
+#0C23#	"U gjetën disa përputhje të përafërta. Vijon lista.\n"
+#0C24#	"Nuk u gjet zë freedb-je të treguar\n"
+#0C25#	"Duarshtrëngim tashmë i kryer\n"
+#0C26#	"Zë i dëmtuar baze të dhënash.\n"
+#0C27#	"Pa duarshtrëngim\n"
+#0C28#	"Duarshtrëngim i pasuksesshëm, po mbyll lidhjen\n"
+#0C29#	"Asnjë lidhje e lejuar: leje e mohuar\n"
+#0C2A#	"Asnjë lidhje, ngarkesë tepër e lartë\n"
+#0C2B#	"Gabim Shërbyesi, ju lutem përgjidhni një tjetër shërbyesi\n"
+#0C2C#	"Nivel protokolli tashmë cur_level\n"
+#0C2D#	"Nivel Protokolli i Jashtëligjshëm\n"
+#0C2E#	"Lidhja Dështoi ngaqë"
+#0C2F#	"Shndërro"
+#0C30#	"Emër Moduli"
+#0C31#	"Të dhëna Moduli"
+#0C32#	"Tabela e Llojeve (genres.txt) nuk u gjet në drejtorinë CDex\n(vendndodhja e provuar: %s)\nKontrolloni instalimin e CDex-it!"
+#0C33#	"Lloj"
+#0C34#	"Lloj freedb"
+#0C35#	"ID3 V1 ID"
+#0C36#	"Lloj i Ri"
+#0C37#	"I panjohur"
+#0C38#	"Përgjigje e Pavlefshme Shërbyesi"
+#0C39#	"%1 = Artist\t\t%5 = ID Volumi CD-je\n%2 = Album\t\t%6 = ID freedb-je\n%3 = Numër Pjese\t%7 = Numër Pjese me Zero Para\n%4 = Emër Pjese\t%8 = Numër Pjesësh Gjithsej\n%Y = Vit\t\t%G = Lloj\n%A = Emër Artisti (i paprekur nga mundësia mbi ndarjen)\nPërdor cilësorin l ose u për gërma tëvogla/të mëdhaja të detyruara"
+#0C3A#	"Luajtës CDex, Version "
+#0C3B#	"Pati një gabim freedb.  Shih kuti mesazhesh për hollësi\n"
+#0C3C#	"GABIM: S'nis dot kodues të jashtëm"
+#0C3D#	"GABIM: S'dërgoj dot të dhëna te kodues i jashtëm"
+#0C3E#	"S'krijova dot kartelë programthi VQF"
+#0C3F#	"S'ngarkova dot koduesin %s\nSigurohuni që nisni CDex.exe atje ku ndodhen DLL-të \nNëse keni krijuar një shkrutprerje, sigurohuni që drejtoria punuese është ajo që duhet"
+#0C40#	"Rrjedhë Futjeje e Pavlefshme"
+#0C41#	"S'munda të hap/krijoj kartelë: %s"
+#0C42#	"GABIM: S'krijoj dot kanal për koduesin e jashtëm"
+#0C43#	"DLL GoGo ka nevojë për një Floating Point Unit"
+#0C44#	"%2d pjesë (%5.2f MB) Vend bosh në disk %5d MB"
+#0C45#	"Po luaj pjesën e %d (%02d:%02d:%02d)\n"
+#0C46#	" (interval)"
+#0C47#	"S'hap dot të Papastër"
+#0C48#	"S'zbras dot të Papastër"
+#0C49#	"Po hap Lidhje"
+#0C4A#	"Po dërgoj vargun Hello"
+#0C4B#	"Po dërgoj urdhrin Statistics"
+#0C4C#	"Po dërgoj Nivel Proto"
+#0C4D#	"Po dërgoj Kërkesë"
+#0C4E#	"Nis Kërkesë të Largët"
+#0C4F#	"Po marr përgjigje të largët"
+#0C50#	"Vendndodhje shërbyesi SMTP e panjohur.  Ju lutem plotësoni vendndodhjen\n e shërbyesit SMTP tek seksioni mundësi parashtrimi freedb."
+#0C51#	"Dështova në dërgim vargu tek shërbyesi i largët"
+#0C52#	"Po lidhem me Shërbyesin"
+#0C53#	"Shërbyes jo gati"
+#0C54#	"Po dërgoj"
+#0C55#	"Po dërgoj të dhëna"
+#0C56#	"Po dërgoj përmbajtjen"
+#0C57#	"Shërbyesi nuk përgjigjet"
+#0C58#	" (Kodues i Mundshëm, të dhëna versioni të pamundura)"
+#0C59#	" Alfa %d"
+#0C5A#	" Beta %d"
+#0C5B#	"Bitrate i treguar nuk përputhet me frekuencën e përfundimit"
+#0C5C#	" (i pamundur)"
+#0C5D#	"version"
+#0C5E#	"motor"
+#0C5F#	"S'hapa dot kartelën %s"
+#0C60#	"Madhësia e kartelës është tepër e vogël për krahasim"
+#0C61#	"Kartela e dytë ka një 'offset' prej %d bytes"
+#0C62#	"Kartela e parë ka një 'offset' prej %d bytes"
+#0C63#	"Kartelat janë të ndryshme, nuk gjeta dot përputhje"
+#0C64#	"Kartelat janë të ndryshme, duke filluar prej %d"
+#0C65#	"Nuk u gjetën ndryshime\nNë tërësi janë krahasuar %d bytes"
+#0C66#	"Formësim CDex-i"
+#0C67#	"Ju lutemi përzgjidhni një dosje"
+#0C68#	"Ju lutem përzgjidhni një nga lista, ose shtypni anulo për të dalë prej këtej"
+#0C6A#	"nuk u gjet etiketë të dhënash"
+#0C6B#	"Kartela %s s'është kartelë MPEG RIFF-WAV"
+#0C6C#	"S'gjeta dot etiketë format në kartelën %s"
+#0C6D#	"Përdor Vetëzbulimo vetëm nëse zgjedhja i Përgjithshëm nuk bën punë!\nPër Vetëzbulim, duhet të ngarkohet një CD Audio në CD-ROM drive.\nDoni të vazhdohet?"
+#0C6E#	"Kohë e plotë regjistrimi (MM:SS:FF) %02d:%02d:%02d baraz me %d sektorë"
+#0C6F#	"Emër kartele"
+#0C70#	"Datë"
+#0C71#	"Shteg"
+#0C72#	"Madhësi (MB)"
+#0C73#	"Ruaj"
+#0C74#	"Madhësitë e kartelës për të parin/të dytin janë %d/%d bytes"
+#0C75#	"OK"
+#0C76#	"I pari emër kartele nuk është i vlefshëm"
+#0C77#	"I dyti emër kartele nuk është i vlefshëm"
+#0C78#	"Dështova në fillimin e rrjedhës Kodim Ogg.  Mbase bitrate i treguar nuk përputhet me frekuencën e përfundimeve.  Provoni të përdorni rregullimet Cilësi në vend të rregullimeve Bitrate."
+#0C79#  "Kodimi u ndërpre në %s"
+#0C7A#  "Kodimi i pjesës në një Kartelë Audio të Ngjeshur përfundoi si duhet, kohëzgjatje: %s"
+#0C7B#	"Tip"
+#0C80#	"Luajtës CDex\n\nLuajtës CDex\n\n\nCDex.Dokument\nDokument CDex"
+#0C81#	"Nuk është përzgjedhur kartelë"
+#0C82#	"Auto"
+#0C83#	"Parazgjedhje"
+#0C84#	"Gabim shndërrimi: Emri i kartelës burim është i njëjtë me atë përfundim.\nJu lutemi përzgjidhni një tjetër drejtori përfundimesh!\nEmër kartele burim  : %s\nEmër kartele përfundim : %s"
+#0C85#	"Ky sistem operativ nuk mbulon 'Native NT SCSI Library'.\nDuhet të instaloni 'ASPI drivers' që të mundni të përdorni CDex-in.  Shih Ndihmë të CDex-it për më tepër të dhëna.\n"
+#0C86#	"Gabim: Dështova në ngarkimin e 'Windows ASPI drivers'.\nDuhet të instaloni 'ASPI drivers' që të mundni të përdorni CDex-in.  Shih Ndihmë të CDex-it për më tepër të dhëna.\n"
+#0C87#	"Gabim: Dështova në pasjen e 'ASPI driver status'.\nJu lutemi kontrolloni instalimin e 'ASPI driver'.  Shih Ndihmë të CDex-it për më tepër të dhëna.\n"
+#0C88#	"Anglisht"
+#0C8F#  "..."
+#0C90#  "Përzgjidh Drejtori"
+#0C91#  "Kodues (*.exe;*.bat)|*.exe;*.bat|Tërë Kartelat (*.*)|*.*||"
+#0C92#  "Përzgjidh kodues"
+#0C93#  "Big"
+#0C94#  "Little"
+#0C95#  "asnjë"
+#0C96#  "standard"
+#0C97#  "Lexo"
+#0C98#  "Atapi"
+#0C99#  "Mundëso"
+#0C9A#  "Dendësi"
+#0C9B#  "Endian"
+#0C9C#  "Përfundim"
+#0C9D#  "Kalim"
+#0C9E#  "Dështim"
+#0C9F#  "Dështova në ngarkimin e 'wnaspi32.dll driver'!\nTë përdor më mirë mundësinë "Native NT SCSI library" driver?"
+#0CA0#  "Shih për kartela Gjuhe Shtesë/përditësime"
+#8003#	"Për formësim të CDex-it kliko këtu\nFormësim"
+#8004#	"Përfto pjesë CD si kartelë WAV\nPërfto pjesë CD si kartelë WAV"
+#8005#	"Përfto pjesë CD si kartelë Audio të Ngjeshur\nPërfto pjesë CD si kartelë Audio të Ngjeshur"
+#8006#	"Shndërro kartelë(a) WAV në Kartelë(a) Audio të Ngjeshur\nShndërro kartelë(a) WAV në kartelë(a) Audio të Ngjeshur"
+#8007#	"Përfto një pjesë të CD-së si kartelë WAV ose Audio të Ngjeshur\nPërfto një pjesë të CDsë si kartelë WAV ose Audio të Ngjeshur"
+#800D#	"Përzgjidheni për të patur të dhëna sistemi\nPërzgjidheni për të patur të dhëna sistemi"
+#800E#	"Formëso Rregullime CD-je\nFormëso Rregullime CD-je"
+#800F#	"Nxirr CD\nNxirr CD (Shift-F1)"
+#8010#	"Shpejt Para\nShpejt Para"
+#8011#	"Shpejt Prapa\nShpejt Prapa"
+#8012#	"Kalo te pjesa pasuese\nKalo te pjesa pasuese (Shift-F3)"
+#8013#	"Kalo te pjesa e mëparshme\nKalo te pjesa e mëparshme"
+#8015#	"Luaj pjesë audio\nLuaj pjesë audio (Shift-F4)"
+#8016#	"Ndalo Luajtjen\nNdalo Luajtjen (Shift-F5)"
+#8017#	"Ndërprije/riktheju luajtjes\nNdërprije/riktheju luajtjes"
+#8018#	"Merr të dhëna albumi nga freedb vendore\nLexo të dhëna albumi nga freedb vendore"
+#801A#	"Merr të dhëna albumi nga kartela CDPlayer.ini\nLexo të dhëna albumi prej kartelës CDPlayer.ini"
+#801B#	"Merr të dhëna albumi prej freedb-je të largët\nLexo të dhëna albumi prej freedb-je të largët"
+#801C#	"Shfaq ose fshih panelin e luajtjes"
+#801D#	"Shfaq ose fshih panelin e regjistrimit"
+#801E#	"Kalo tek pjesa e mëparshme\nKalo tek pjesa e mëparshme  (Shift-F2)"
+#801F#	"Shpej Prapa\nShpejt Prapa"
+#8022#	"Shndërro kartela MP3 në kartela Riff Wav"
+#8023#	"Kopjo të dhëna albumi në të papastërt"
+#8024#	"Riemërto pjesën e përzgjedhur"
+#8026#	"Përzgjidh Tërë Pjesët"
+#8027#	"Ruaj të dhëna albumi tek kartela CDPlayer.ini"
+#8028#	"Ruaj të dhëna albumi në kartela freedb vendore"
+#8029#	"Shndërro Kartelë(a) Audio të Ngjeshur në kartelë WAV\nShndërro Kartelë(a) Audio të Ngjeshur në kartelë WAV"
+#802A#	"Rimerr të dhëna albumi prej diskut"
+#802B#	"Shfaq gjendjen"
+#802C#	"Shfaq të Dhëna Gjendjeje të Nxjerrjes së pjesëve të përzgjedhura\nShfaq të Dhëna Gjendjeje të Nxjerrjes së pjesëve të përzgjedhura"
+#802D#	"Krahaso përmbajtjen e dy kartelave WAV\nKrahaso përmbajtjen e dy kartelave WAV"
+#802E#	"Luaj Kartelë(a) Media\nLuaj Kartela Media"
+#802F#	"Pastro gjendjen e nxjerrjes për këtë CD"
+#8030#  "Hiq titull(j) RIFF-WAV prej kartele(ash) MP2 ose MP3\nHiq titull(j) RIFF-WAV prej kartele(ash) MP2 ose MP3"
+#8031#	"Regjistro një WAV ose një MP3 prej burimit analog të kopjuterit tuaj\nRegjistro prej burimi analog"
+#8032#	"Parashtro të dhëna albumi te freedb-ja e largët"
+#8033#	"Merr të dhëna albumi CD-Text (nëse e mbuluar/e mundshme)"
+#8035#	"Përzgjidh Kartela\nPërzgjidh Kartela"
+#8036#	"Përzgjidh Kartela\nPërzgjidh Kartela"
+#8037#	"Kalo te kartela e Mëparshme\nKalo te kartela e Mëparshme"
+#8038#	"Kalo te kartela Pasuese\nKalo te kartela Pasuese"
+#8039#	"Luaj Kartelë(a)\nLuaj Kartelë(a)"
+#803A#	"Ndal së Luajturi Kartela\nNdal së Luajturi Kartela"
+#803B#	"Kërkim në freedb\nKërkim në freedb"
+#803E#	"Rikodo (transkodo) Kartelë(a) Audio të Ngjeshur\nRikodo (transkodo) Kartelë(a) Audio të Ngjeshur"
+#8046#	"Formëso Shtojca Winamp\nFormëso Shtojca Winamp"
+#8047#	"Përpuno listën e llojeve të njohur\nPërpuno Listën e Llojeve"
+#8048#	"Ndalo luajtjen\nNdalo luajtjen (Shift-F6)"
+#804B#	"Luaj pjesët kuturu\nLuaj pjesët kuturu"
+#804D#	"Shkëmbe Artist/Pjesë të skeduar (për CD me shumë artistë)\nShkëmbe Artist/Pjesë të skeduar (për CD me shumë artistë)"
+#804E#	"Përzgjidh CD Drive veprues\nPërzgjidh CD Drive veprues"
+#804F#	"Përzgjidh profil\nPërzgjidh profil"
+#8050#	"Ruaj rregullimet e çastit në profil\nRuaj rregullimet e çastit në profil"
+#8052#	"Fshij profil\nFshij profilin e përzgjedhur"
+#80E8#  "Lexo të dhëna albumi prej baze të dhënash Winamp\nLexo të dhëna albumi prej baze të dhënash Winamp"
+#E000#	"CDex"
+#E001#	"Shtyp F1 për ndihmë rreth programit për përftim audio nga CD CDex"
+#E100#	"Krijo një dokument të ri\ni Ri"
+#E101#	"Hap një dokument ekzistues\nHap"
+#E102#	"Mbyll dokumentin aktiv\nMbyll"
+#E103#	"Ruaj dokumentint aktiv\nRuaj"
+#E104#	"Ruaj dokumentin aktiv nën një emër tjetër\nRuaj Si"
+#E105#	"Ndysho mundësi shtypjeje\nRregullime Faqeje"
+#E106#	"Ndrysho mundësi shtypësi  dhe shtypjeje\nRregullime Shtypsi"
+#E107#	"Shtyp dokumentin aktiv\nShtyp"
+#E109#	"Shfaq faqe të plota\nParaparje e Shtypjes"
+#E110#	"Hap këtë dokument"
+#E111#	"Hap këtë dokument"
+#E112#	"Hap këtë dokument"
+#E113#	"Hap këtë dokument"
+#E114#	"Hap këtë dokument"
+#E115#	"Hap këtë dokument"
+#E116#	"Hap këtë dokument"
+#E117#	"Hap këtë dokument"
+#E118#	"Hap këtë dokument"
+#E119#	"Hap këtë dokument"
+#E11A#	"Hap këtë dokument"
+#E11B#	"Hap këtë dokument"
+#E11C#	"Hap këtë dokument"
+#E11D#	"Hap këtë dokument"
+#E11E#	"Hap këtë dokument"
+#E11F#	"Hap këtë dokument"
+#E120#	"Fshi përzgjedhjen\nFshi"
+#E121#	"Fshi gjithçka\nFshi Tërë"
+#E123#	"Prije përzgjedhjen dhe hidhe në të Papastër\nPrije"
+#E124#	"Gjej teksin e dhënë\nGjej"
+#E125#	"Fut përmbajtjen e të Papastrës\nNgjit"
+#E128#	"Përsërit veprimin e fundit\nPërsërit"
+#E129#	"Zëvendëso tekst të dhënë me tjetër tekst\nZëvendëso"
+#E12A#	"Përzgjidh tërë dokumentin\nPërzgjidh Tërë"
+#E12B#	"Zhbëj veprimin e fundit\nZhbëj"
+#E12C#	"Ribëj veprimin e zhbërë më parë\nRibëj"
+#E135#	"Ndaj dritaren aktive në kuti\nNdaj"
+#E140#	"Shfaq të dhëna rreth CDex-it, numër versioni, dhe të drejta kopjimi\nRreth"
+#E141#	"Lëre programit\nDil"
+#E142#	"Hap Ndihmë për CDex-in\nHap Ndihmë për CDex-in"
+#E143#	"Sjell udhëzuesin e CDex-it\nNdihmë për përdorimin e CDex"
+#E144#	"Shfaq udhëzime se si të përdoret ndihma\nNdihmë"
+#E145#	"Shfaq ndihmë për butonat, menunt apo dritaret mbi të cilat klikohet\nNdihmë"
+#E146#	"Shfaq ndihmë për veprimin apo urdhrin e çastit\nNdihmë"
+#E150#	"Kalo te kuti pasuese\nKuti Pasuese"
+#E151#	"Shko prapa te kutia e mëparshme\nKutia e Mëparshme"
+#E700#	"EXT"
+#E701#	"CAP"
+#E702#	"NUM"
+#E703#	"SCRL"
+#E704#	"OVR"
+#E705#	"REC"
+#E800#	"Shfaq ose fshih panelin\nKëmbe Panelin"
+#E801#	"Shfaq ose fshih shtyllë gjendjeje\nKëmbe Shtyllë Gjendjeje"
+#EF00#	"Ripërmaso dritaren"
+#EF01#	"Lëvize dritaren"
+#EF02#	"Tkurre dritaren sa një ikonë"
+#EF03#	"Zgjero dritaren në masën e plotë"
+#EF04#	"Kalo te dritarja e dokumentit pasues"
+#EF05#	"Kalo te dritarja e dokumentit të mëparshëm"
+#EF06#	"Dil nga programi"
+#EF12#	"Rikthe dritaren në madhësinë normale"
+#EF13#	"Listë Veprimesh Aktive"
+#F003#	"Pa titull"
+#F005#  "Mbyll mënyrën paraparje e shtypjes\nAnulo Paraparje"
+
+ 	  	 

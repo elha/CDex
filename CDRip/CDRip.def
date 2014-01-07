@@ -1,0 +1,50 @@
+LIBRARY  CDRIP.DLL
+
+EXPORTS
+	CR_GetCDRipVersion				@  1
+	CR_GetPeakValue					@  2
+	CR_SetActiveCDROM				@  4
+	CR_GetActiveCDROM				@  5
+	CR_SelectCDROMType				@  6
+	CR_GetCDROMParameters			@  7
+	CR_SetCDROMParameters			@  8
+	CR_OpenRipper					@  9
+	CR_CloseRipper					@ 10
+	CR_GetPercentCompleted			@ 11
+	CR_GetNumberOfJitterErrors		@ 12
+	CR_Init							@ 13
+	CR_GetNumCDROM					@ 14
+	CR_RipChunk						@ 15
+	CR_NormalizeChunk				@ 16
+	CR_GetCDROMType					@ 17
+	CR_GetJitterPosition			@ 18
+	CR_GetLastJitterErrorPosition	@ 19
+	CR_LockCD						@ 20
+	CR_GetSubChannelTrackInfo		@ 21
+	CR_ScanForC2Errors				@ 22
+	CR_DeInit						@ 23
+	CR_GetCurrentRipSector			@ 24
+	CR_IsMediaLoaded				@ 25
+    CR_ReadBlockDirect              @ 26
+    CR_ReadAndGetISRC               @ 27
+    CR_ReadSubChannel               @ 28
+
+	CR_GetNumTocEntries				@100
+	CR_ReadToc						@101
+	CR_GetTocEntry					@102
+	CR_ReadCDText					@103
+
+	CR_IsUnitReady					@200
+	CR_EjectCD						@201
+	CR_IsAudioPlaying				@202
+    CR_ReadSubchannelData           @203
+
+	CR_StopPlayTrack				@300
+	CR_PauseCD						@301
+	CR_GetCDStatusInfo				@302
+	CR_GetPlayPosition				@303
+	CR_SetPlayPosition				@304
+	CR_PlayTrack					@305
+	CR_PlaySection					@306
+
+	CR_GetDetailedDriveInfo			@502

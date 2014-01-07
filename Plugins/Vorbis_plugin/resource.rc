@@ -1,0 +1,233 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MESSAGE DIALOG DISCARDABLE  0, 0, 179, 12
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",NOT 
+                    WS_VISIBLE,2,2,175,8
+    LTEXT           "Place Message Here!",IDC_TEXT,2,2,175,8
+END
+
+IDD_INFO_BASIC DIALOGEX 0, 0, 367, 211
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Close",ID_CLOSE,307,190,50,14
+    DEFPUSHBUTTON   "Update",ID_UPDATE,307,170,50,14
+    GROUPBOX        "Standard Tags",IDC_STATIC,5,20,235,110
+    LTEXT           "Title",IDC_STATIC,25,35,14,8
+    LTEXT           "Artist",IDC_STATIC,23,53,16,8
+    EDITTEXT        IDC_TITLE,50,30,175,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ARTIST,50,48,175,14,ES_AUTOHSCROLL
+    GROUPBOX        "File / Stream info",IDC_STATIC,250,20,110,110
+    LTEXT           "Length",IDC_STATIC,255,35,23,8
+    LTEXT           "value",IDC_FILE_LENGTH,328,35,27,8,0,WS_EX_RIGHT
+    LTEXT           "Average bitrate (kpbs)",IDC_STATIC,255,45,70,8
+    LTEXT           "value",IDC_FILE_AVGBITRATE,328,45,27,8,0,WS_EX_RIGHT
+    LTEXT           "Nominal bitrate (kpbs)",IDC_STATIC,255,55,69,8
+    LTEXT           "value",IDC_FILE_NOMBITRATE,328,55,27,8,0,WS_EX_RIGHT
+    LTEXT           "Album",IDC_STATIC,19,71,20,8
+    EDITTEXT        IDC_ALBUM,50,66,110,14,ES_AUTOHSCROLL
+    LTEXT           "Channels",IDC_STATIC,255,65,30,8
+    LTEXT           "value",IDC_FILE_CHANNELS,328,65,27,8,0,WS_EX_RIGHT
+    LTEXT           "File Size (bytes)",IDC_STATIC,255,75,50,8
+    LTEXT           "value",IDC_FILE_FILESIZE,328,75,27,8,0,WS_EX_RIGHT
+    LTEXT           "Sampling rate",IDC_STATIC,255,95,44,8
+    LTEXT           "value",IDC_FILE_SAMPLERATE,327,95,27,8,0,WS_EX_RIGHT
+    LTEXT           "Version",IDC_STATIC,255,105,24,8
+    LTEXT           "value",IDC_FILE_VERSION,327,105,27,8,0,WS_EX_RIGHT
+    LTEXT           "Vendor",IDC_STATIC,255,115,24,8
+    LTEXT           "value",IDC_FILE_VENDOR,295,115,59,20,0,WS_EX_RIGHT
+    LTEXT           "Serial number",IDC_STATIC,255,85,44,8
+    LTEXT           "value",IDC_FILE_SERIALNUMBER,327,85,27,8,0,WS_EX_RIGHT
+    LTEXT           "Date",IDC_STATIC,23,90,16,8
+    EDITTEXT        IDC_INFO_DATE,50,85,40,14,ES_AUTOHSCROLL
+    GROUPBOX        "Other tags ( double click to edit )",IDC_STATIC,5,135,
+                    295,70
+    PUSHBUTTON      "Add",IDC_INFO_ADD,241,150,50,14
+    PUSHBUTTON      "Delete",IDC_INFO_DELETE,241,182,50,14
+    PUSHBUTTON      "Delete All",IDC_INFO_DELETE_ALL,241,166,50,14
+    LISTBOX         IDC_INFO_TAGS,15,145,215,55,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Comment",IDC_STATIC,9,105,30,8
+    LTEXT           "Genre",IDC_STATIC,105,90,20,8
+    COMBOBOX        IDC_INFO_GENRE,135,85,90,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_INFO_COMMENT,50,105,180,20,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    LTEXT           "track",IDC_STATIC,165,70,17,8
+    EDITTEXT        IDC_INFO_TRACKNUMBER,205,65,20,14,ES_AUTOHSCROLL
+END
+
+IDD_CONFIG_OUTPUT DIALOG DISCARDABLE  0, 0, 224, 171
+STYLE DS_CONTROL | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        " ReplayGain  ",IDC_STATIC,2,2,220,57
+    CONTROL         "&Enable ReplayGain",IDC_ENABLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,15,77,10
+    CONTROL         "&Album mode",1001,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    8,27,55,10
+    CONTROL         "6dB &hard limiter",IDC_LIMITER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,27,64,10
+    LTEXT           "&Preamp",IDC_STATIC,8,44,25,8
+    CONTROL         "Slider1",IDC_PREAMP,"msctls_trackbar32",TBS_NOTICKS | 
+                    WS_TABSTOP,36,43,154,12
+    RTEXT           "",IDC_PA,194,44,21,8
+    GROUPBOX        " Resolution  ",IDC_STATIC,1,62,220,95
+    GROUPBOX        " Without ReplayGain ",IDC_STATIC,7,71,209,30
+    CONTROL         "&Dither 24bps to 16bps",IDC_DITHER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,84,85,10
+    GROUPBOX        " With ReplayGain ",IDC_STATIC,7,104,209,47
+    CONTROL         "E&nable dithering",IDC_DITHERRG,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,134,67,10
+    LTEXT           "&Output bit depth",IDC_STATIC,16,119,52,8
+    COMBOBOX        IDC_TO,71,116,39,43,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Noise &shaping",IDC_STATIC,113,135,46,8
+    COMBOBOX        IDC_SHAPE,164,132,46,48,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Note: changes take effect after restarting playback",
+                    IDC_STATIC,2,160,161,8
+END
+
+IDD_CONFIG_GENERAL DIALOG DISCARDABLE  0, 0, 226, 171
+STYLE DS_CONTROL | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        " Title Formatting  ",IDC_STATIC,2,2,218,63
+    LTEXT           "&Title:",IDC_STATIC,8,17,16,8
+    EDITTEXT        1010,27,15,188,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "help",IDC_TAGZ_HELP,180,35,35,15
+END
+
+IDD_CONFIG DIALOG DISCARDABLE  0, 0, 237, 212
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Ogg Vorbis Pluging Configuration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,75,195,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,195,50,14
+    PUSHBUTTON      "Reset",IDC_RESET,183,195,50,14
+    CONTROL         "Tab1",IDC_TABS,"SysTabControl32",WS_TABSTOP,3,3,230,187
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MESSAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 177
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 10
+    END
+
+    IDD_INFO_BASIC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 360
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 204
+    END
+
+    IDD_CONFIG_OUTPUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 164
+    END
+
+    IDD_CONFIG_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 164
+    END
+
+    IDD_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 205
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

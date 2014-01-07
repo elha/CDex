@@ -1,0 +1,5 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by CDex.rc
+//
+#define HIDC_FILEFORMAT                 0x8bf40434    // IDD_FILENAMESETTINGS
+#define HIDC_PLAYLISTFORMAT             0x8bf40438    // IDD_FILENAMESETTINGS

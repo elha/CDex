@@ -1,0 +1,7 @@
+LIBRARY  MP2ENC.DLL
+EXPORTS
+beInitStream		@1
+beEncodeChunkFloatS16NI		@2
+beDeinitStream		@3
+beCloseStream		@4
+beVersion			@5

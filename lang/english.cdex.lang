@@ -1,0 +1,999 @@
+//
+// CDex - Open Source Digital Audio CD Extractor
+//
+// Copyright (C) 2006, 2007, 2008 Georgy Berdyshev
+// Copyright (C) 2002 Sean M Burke
+// Copyright (C) 2002 Albert L. Faber
+//
+// http://cdexos.sourceforge.net/
+// http://sourceforge.net/projects/cdexos 
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
+
+
+//////////////////////////////////////////////////////////////////////////////
+// CDex - International Support File                                        //
+//////////////////////////////////////////////////////////////////////////////
+//
+//
+// Welcome to CDex language definition file
+// 
+// This file will be read by CDex if it is put inside \Lang folder
+// of CDex root directory. It also must have the cdex..lang extension
+// yielding something like my_language.cdex.lang
+//
+// 
+// To define a string follow this format:
+//
+// number "my_string"
+//
+// number is the identification of the following string. Each number is related
+// with a string that will appear inside CDex. Padding spaces are not important.
+//  Inside menu definitions use & to give access to the keyboard menu shortcut.
+// You can use returns inside string. They will be preserved in the program.
+//
+// CDex loads the strings on startup. It won't perceive any changes in this file
+//  if you don't reload the program.
+//
+// PLEASE, CHECK THAT STRINGS WON'T BE CLIPPED IN THE PROGRAM. The reserved space 
+// for every string is limited and must be suitable for all languages. If some 
+// of your strings are clipped try shortening the phrase while keeping its 
+// significance
+//  
+//////////////////////////////////////////////////////////////////////////////
+
+// language file revision level
+REVISION=/*$Id: english.cdex.lang 669 2008-01-18 08:09:12Z codingmaster $*/
+
+// set language characteristics
+LANGUAGE=9
+SUBLANG=1
+
+// use CODEPAGE 65001 if this file is UTF-8 encoded text file
+// otherwhise fill out the proper ANSI codepage
+CODEPAGE=1252
+
+// 99 (063 hex) => LANGUAGE ID, use english description
+// since this value is used to set the LOCALE settings
+#0063# "English"
+
+#0001# "OK"
+#0002# "Cancel"
+#0003# "Abort"
+#0004# "Retry"
+#0005# "Ignore"
+#0006# "Yes"
+#0007# "No"
+
+// Ripper Main menu entries
+#M0BD4# "#&File#&Edit#&Convert#&Tools#C&DDB#&Options#&Help#"
+
+// Ripper File Menu
+#M800D# "&System Info"
+#M802D# "&Compare Two Files"
+#ME141# "E&xit"
+
+// Ripper Edit menu
+#M8026# "Select All\tCtrl+A"
+#M8023# "&Copy album info to Clipboard"
+#M8024# "&Rename Track\tF2"
+#M0BD40000# "&Modify Track Name"
+#M8042# "&First Character Of Every Word In Caps"
+#M8043# "First character in &caps"
+#M8044# "all characters &lower case"
+#M8045# "ALL CHARACTERS &UPPER CASE"
+#M804D# "&Swap Artist<->Track"
+#M802A# "Re&fresh Track List\tF5"
+#M8047# "Add / Edit the list of &Genres"
+
+// Ripper Convert menu
+#M8004# "Extract CD track(s) to WAV file\tF8"
+#M8005# "Extract CD track(s) to a Compressed Audio File\tF9"
+#M8007# "Extract a section of the CD\tF10"
+#M803E# "Re-encode Compressed Audio File(s)"
+#M8006# "Convert WAV file(s) to Compressed Audio file(s)\tF11"
+#M8029# "Convert Compressed Audio File(s) to WAV file(s)\tF12"
+#M8022# "Add a RIFF-WAV header(s) to MP2 or MP3 file(s)"
+#M8030# "Strip the RIFF-WAV header(s) from MP2 or MP3 file(s)"
+
+// Ripper Tools menu
+#M802E# "Media file &Player"
+#M8031# "&Record from Analog Input"
+#M8066# "Generate &CUE sheet"
+#M8067# "&Detect pre-gaps"
+#M8068# "Read UPC/ISRC code"
+#M8065# "Read from &MusicBrainz"
+
+// Ripper freedb Menu
+#M8018# "Read From &Local freedb"
+#M801B# "Read &Remote freedb"
+#M801A# "&Read From &CD Player.ini"
+#M8033# "Read CD-&Text"
+#M80E8# "Read from &WinampDB"
+#M8027# "Save To CDPlayer.ini"
+#M8028# "Save to Local freedb"
+#M8032# "S&ubmit To Remote freedb"
+#M803B# "freedb B&atch Query"
+
+// Ripper Options Menu
+#M8003# "&Settings\tF4"
+#M8046# "Configure &Winamp Plugins"
+#M801C# "&Show the Play Toolbar"
+#M801D# "Show the &Recording Toolbar"
+#M80E9# "Show the &Profile Toolbar"
+#M802C# "Show the Ripping Status &Details\tF3"
+#M802F# "&Clear Ripping Status"
+#M0BD40001# "Select &Language"
+
+// Ripper Help Menu
+#ME143# "&Help on using CDex\tF1"
+#ME140# "&About CDex..."
+
+// Player Menu
+#M0C80# "#&File#&Options#&Playlist#&Help#"
+
+// NOTE: File, help menu and Configure &Winamp Plugins entries 
+// are already defined in the main menu
+
+// Ripper Options Menu
+#M804B# "&Play Random"
+#M0C800000# "&Language"
+
+// Ripper Playlist Menu
+#M8049# "&Save"
+#M804A# "&Clear"
+
+// About Dialog
+#D00640000# "About the CDex audio CD extractor program"
+#D00640412# "CDex Version "
+#D006404BC# "Close"
+// Translator URL
+#D006404BB# ""
+// Translator information
+#D006404BA# ""
+
+// CD Auto Detection dialog box
+#D0BE20000# "Auto-Detection Results"
+#D0BE203FB# "Abort"
+#D0BE204BE# "Below is a list with the test modes; select one of the modes that has the status 'Pass', and press the OK button"
+#D0BE204BD# "MMC status"
+
+// freedb Accessing dialog box
+#D00870000# "Accessing freedb"
+#D008704BF# "Current Action"
+#D008704C0# "Message"
+#D008704C1# "Credits: freedb.freedb.org)"
+
+
+// freedb Settings dialog box
+#0C8D# "CD Database::Remote freedb"
+#D06030000# "Remote freedb"
+#D06030484# "freedb (default port 888 or 8880)\nHTTP (default port 80)"
+#D0603043D# "Auto connect to remote freedb"
+#D06030426# "Add Site"
+#D06030425# "Query Sites"
+#D06030483# "Reset All"
+#D06030475# "Submit Options"
+#D0603041E# "Use Proxy"
+#D06030421# "Authentication"
+#D060304C7# "Remote Server"
+#D060304CB# "Your E-mail address"
+#D060304CF# "Proxy Port"
+#D060304D0# "Password"
+#D060304CE# "Timeout (seconds)"
+#D060304C9# "Address"
+#D060304CC# "Path"
+#D060304CA# "Protocol"
+#D060304C8# "Location"
+#D060304CD# "Port"
+
+// freedb Found inexact match dialog box
+#D00880000# "Found Inexact Match"
+
+#D0BFF04C0# "Message"
+#D0BFF0559# "Code page mapping"
+#D0BFF04A5# "Next"
+#D0BFF055C# "Resubmit entry (recommended when code page is  not set to UTF-8)"
+#D0BFF0000# "Accessing freedb"
+
+// Generate CUE sheet dialog
+#D00B70008# "Close"
+#D00B704A4# "Save"
+#D00B7055C# "Include PreGaps"
+#D00B7055D# "Include ISRC codes"
+#D00B704A5# "Copy to clipboard"
+#0CA5# "Cue sheets (*.cue)|*.cue|All Files (*.*)|*.*||"
+
+
+// CD-ROM Settings dialog box
+#0C89# "Ripping::CD Drive settings"
+#D0BDB0000# "CD Drive"
+#D0BDB0430# "Generic\nToshiba\nToshiba (new)\nIBM\nNEC\nDEC\nIMS\nKodak\nRicoh\nHP\nPhilips\nPlasmon\nGrundig CD-R,\nMitsumi CD-R\nPlextor\nSony\nYamaha\nNRC\nIMS CDD-5\nCustom"
+#D0BDB0444# "Auto-Detect"
+#D0BDB0436# "Swap Left and Right Channels"
+#D0BDB047E# "Eject CD when ripping has been completed"
+#D0BDB043D# "Enable Jitter Correction"
+#D0BDB047F# "Select All CD Tracks (by default)"
+#D0BDB043E# "Use Native NT SCSI library"
+#D0BDB04D1# "CD Drive"
+#D0BDB04D2# "Read Sectors"
+#D0BDB04D3# "Read Overlap"
+#D0BDB04D9# "Block Compare"
+#D0BDB04D6# "CD-ROM Drive Type"
+#D0BDB04DA# "CD Speed"
+#D0BDB04D4# "Start Offset (sectors)"
+#D0BDB04D5# "End Offset (sectors)"
+#D0BDB04DB# "Spin-up time (sec)"
+#D0BDB04D8# "Number of Retries"
+#D0BDB04D7# "Ripping Method"
+#D0BDB0480# "Lock CD during extraction"
+#D0BDB0481# "Use CD-Text (if available)"
+#D0BDB0431# "Standard\nParanoia, Overlap Only\nParanoia, No Verify\nParanoia, No scratch repair\nParanoia, Full"
+
+// freedb Submit Options dialog box
+#D00A00000# "freedb Submission options"
+#D00A004E2# "Submit using:"
+#D00A00414# "E-mail"
+#D00A00401# "Via HTTP"
+#D00A004E4# "SMTP server address"
+#D00A004E5# "Submission HTTP address (excluding path)"
+#D00A004E3# "Submission e-mail address"
+
+// Config Winamp Plugin Dialog box
+#D00AA0000# "Configure Winamp Input Plugins"
+#D00AA0499# "About"
+#D00AA049A# "Configure"
+
+// CD Ripping dialog box
+#D0BDC0000# "Record Tracks"
+#D0BDC042C# "nominal"
+#D0BDC042E# "max"
+#D0BDC042D# "min"
+
+// Drop Files dialog box
+#D00900000# "Select options for dropped files"
+#D00900452# "Output RIFF WAV file"
+#D0090044C# "Delete WAV file after encoding"
+#D0090042F# "Normalize"
+#D00900430# "Encode"
+#D00900431# "Normalize + Encode"
+
+// Edit Genres dialog box
+#D00AC0000# "Add / Edit Genres"
+#D00AC049C# "Insert New"
+
+// Enter profile Name dialog box
+#D00AF0000# "Enter profile name"
+
+// Encoder dialog box
+#0C8A# "Encoding::Encoders"
+#D06020000# "Encoder"
+#D06020537# "Encoder"
+#D06020452# "Convert to Riff WAV files"
+#D06020423# "Lowest\nBelow Normal\nNormal\nAbove Normal\nHighest"
+#D06020536# "Thread Priority"
+#D06020535# "Encoder Options"
+#D06020453# "Don't delete ripped WAV file after conversion"
+
+
+// Encoder DOS APE dialog box
+#D0BFD0400# "Mono"
+#D0BFD0401# "Stereo"
+#D0BFD04DE# "Compression level"
+#D0BFD04DD# "Channels"
+#D0BFD04DF# "Tag Format"
+#D0BFD04B4# "APE Tag (default)\nID3V1 Tag"
+#D0BFD0459# "Fast\nNormal\nHigh\nExtra High"
+
+// Encoder Blade Dialog box
+#D0BE80409# "On-the-fly MP3 Encoding"
+#D0BE804E0# "Bitrate"
+#D0BE804E1# "Channels"
+#D0BE80400# "Stereo"
+#D0BE80401# "J-stereo"
+#D0BE80402# "Dual"
+#D0BE80403# "Mono"
+#D0BE80427# "Private"
+#D0BE80428# "Checksum"
+#D0BE80429# "Original"
+#D0BE8042A# "Copyright"
+
+// Encoder Lame dialog box
+#D008B0548# "Bitrate Min"
+#D008B054A# "Mode"
+#D008B054B# "Quality"
+#D008B054E# "VBR Quality"
+#D008B0549# "Max"
+#D008B054D# "ABR (kpbs)"
+#D008B054C# "VBR Method"
+#D008B0547# "Version"
+#D008B054F# "Output Samplerate"
+#D008B0463# "MPEG I\nMPEG II\nMPEG II.5"
+#D008B0400# "Stereo"
+#D008B0401# "J-stereo"
+#D008B0402# "Forced Stereo"
+#D008B0403# "Mono"
+#D008B0427# "Private"
+#D008B0428# "Checksum"
+#D008B0429# "Original"
+#D008B042A# "Copyright"
+#D008B0409# "On-the-fly MP3 Encoding"
+#D008B0459# "Disabled\nVBR Default\nVBR-Old\nVBR-New\nVBR-MTRH\nVBR-ABR"
+#D008B0458# "VBR 0\nVBR 1\nVBR 2\nVBR 3\nVBR 4\nVBR 5\nVBR 6\nVBR 7\nVBR 8\nVBR 9"
+#D008B0414# "Normal ( q=5 )\nLow ( q=9 )\nHigh ( q=2 )\nVoice (for voice recordings)\nR3Mix Preset (obsolete)\nVery High Quality ( q=0 )\npreset standard\npreset fast standard\npreset extreme\npreset fast extreme\npreset insane\nreset ABR\npreset CBR\npreset medium\npreset fast medium"
+
+// Encoder External settings box
+#D008D0000# ""
+#D008D052D# "Parameter string"
+#D008D052C# "Encoder path"
+#D008D052E# "Bitrate"
+#D008D0463# "On the fly encoding"
+#D008D0464# "Hide DOS box window"
+#D008D052F# "File Extension"
+#D008D0465# "Send WAV header to stdin"
+
+// Encoder Wincodec settings box
+#D008A0000# ""
+#D008A0409# "On-the-fly MP3 Encoding"
+#D008A053A# "Windows MP3 Codec"
+#D008A053B# "Codec Bitrate Selection"
+#D008A043E# "High Quality"
+
+// Encoder MP2 encoder settings box
+#D0BF9040F# "MPEG-1"
+#D0BF90410# "MPEG-2"
+#D0BF90546# "Bitrate"
+#D0BF90409# "On-the-fly MP2 Encoding"
+#D0BF90545# "Channels"
+#D0BF90400# "Stereo"
+#D0BF90401# "J-stereo"
+#D0BF90402# "Dual"
+#D0BF90403# "Mono"
+#D0BF90427# "Private"
+#D0BF90428# "Checksum"
+#D0BF90429# "Original"
+#D0BF9042A# "Copyright"
+#D0BF9047F# "Write Ancillary Data (Antex)"
+#D0BF90480# "Allow no padding"
+#D0BF90544# "VBR (experimental)"
+#D0BF90458# "None\nVBR 0\nVBR 1\nVBR 2\nVBR 3\nVBR 4\nVBR 5\nVBR 6\nVBR 7\nVBR 8\nVBR 9"
+
+// Encoder external VQF settings box
+#D0BEA0000# ""
+#D0BEA041B# "44KHz-48Kbps\n44KHz-40Kbps\n22KHz-32Kbps\n22KHz-24Kbps\n22KHz-20Kbps\n16KHz-16Kbps\n11KHz-10Kbps\n11KHz-8Kbps\n8KHz-8Kbp"
+#D0BEA0549# "Path to VQF encoder"
+#D0BEA0547# "VQF mode"
+
+// Encoder WMA8 settings box
+#D0BEC03F5# "22 Kbit/s\n32 Kbit/s\n36 Kbit/s\n40 Kbit/s\n48 Kbit/s\n64 Kbit/s\n80 Kbit/s\n96 Kbit/s\n128 Kbit/s\n160 Kbit/s"
+#D0BEC0409# "On-the-fly MP3 Encoding"
+#D0BEC0441# "Enable Digital Rights Management"
+#D0BEC0414# "Mono"
+#D0BEC04B6# "Stereo"
+#D0BEC0538# "Bitrate"
+#D0BEC0539# "Channels"
+
+// Encoder external Xing settings box
+#D0BF00000# ""
+#D0BF00414# "CBR"
+#D0BF00401# "VBR"
+#D0BF00429# "Original"
+#D0BF0042A# "Copyright"
+#D0BF0045C# "Filter High Frequencies"
+#D0BF0045D# "Force Simple Stereo"
+#D0BF0045E# "Down mix to mono"
+#D0BF0045F# "Let encoder choose sample rate"
+#D0BF00532# "Encoder path"
+#D0BF00533# "Bitrate"
+#D0BF00534# "VBR Scale"
+
+
+// Encoder FLAC
+#D0BFE0400# "Stereo"
+#D0BFE0401# "Mono"
+#D0BFE0409# "On the fly Encoding"
+#D0BFE0540# "Channels"
+#D0BFE055A# "Compression level setting"
+#D0BFE0559# "compression-level 0"
+
+// Encoder WAV settings box
+#D0BF10000# ""
+#D0BF1053E# "Samplerate"
+#D0BF1053F# "Channels"
+#D0BF10414# "Stereo"
+#D0BF10401# "Mono"
+#D0BF1053D# "Compression"
+#D0BF1053C# "Format"
+#D0BF10439# "WAV\nApple/SGI AIFF\nSun/Next au (big endian)\nDec au (little endian))\nRaw PCM (big endian)\nRaw PCM (little endian)"
+#D0BF10409# "On-the-fly Encoding"
+
+// Encoder FAAC settings box
+#D0BF20000# ""
+#D0BF20463# "MPEG-2"
+#D0BF20415# "MPEG-4"
+#D0BF20466# "Main\nLow complexity\nSSR\nLTD"
+#D0BF204AF# "16000\n18000\n19500"
+#D0BF204B1# "Use LFE"
+#D0BF20468# "Use MS Stereo"
+#D0BF20526# "Bitrate / channel"
+#D0BF20528# "Bandwidth (Hz)"
+#D0BF20527# "Profile"
+#D0BF204B0# "Allow Temporal Noise Shaping (TNS)"
+
+// Encoder Vorbis settings box
+#D0BF60000# ""
+#D0BF60400# "Stereo"
+#D0BF60401# "Mono"
+#D0BF60409# "On-the-fly Encoding"
+#D0BF604B3# "Use Quality setting (recommended)"
+#D0BF60540# "Channels"
+#D0BF60541# "Use Bitrate manager"
+#D0BF60550# "Minimal Bitrate"
+#D0BF60551# "Nominal Bitrate"
+#D0BF60552# "Maximum Bitrate"
+
+// Encoder Gogo settings box
+#D0BF80000# ""
+#D0BF8040F# "MPEG-1"
+#D0BF80410# "MPEG-2"
+#D0BF80409# "On-the-fly MP3 Encoding"
+#D0BF80458# "None\nVBR 0\nVBR 1\nVBR 2\nVBR 3\nVBR 4\nVBR 5\nVBR 6\nVBR 7\nVBR 8\nVBR 9"
+#D0BF80400# "Mono"
+#D0BF80401# "Stereo"
+#D0BF80402# "J-Stereo"
+#D0BF80403# "MS-Stereo"
+#D0BF8047B# "Use MMX/3DNow"
+#D0BF8047C# "Use Psycho-acoustics"
+#D0BF8047D# "Apply Low-Pass filter for low bitrates"
+#D0BF80529# "Variable Bitrate"
+#D0BF8052A# "Bitrate"
+#D0BF8052B# "Mode"
+
+// Encoder External Musepack settings box
+#D00A90000# ""
+#D00A90531# "Parameter string"
+#D00A90530# "Path to Musepack encoder"
+#D00A90464# "Hide MSDOS window"
+#D00A90463# "On-the-fly encoding"
+
+// Encoder NTTVQF settings box
+#D0BFB0000# ""
+#D0BFB0409# "On-the-fly VQF Encoding"
+#D0BFB0462# "32 Kbit/s\n40 Kbit/s\n48 Kbit/s\n56 Kbit/s\n64 Kbit/s\n80 Kbit/s\n96 Kbit/s\n112 Kbit/s\n128 Kbit/s\n160 Kbit/s\n192 Kbit/s\n224 Kbit/s\n256 Kbit/s\n320 Kbit/s"
+#D0BFB0400# "Mono"
+#D0BFB0401# "Stereo"
+#D0BFB0542# "Bitrate per channel"
+#D0BFB0543# "Channels"
+ 
+// File compare two files dialog box
+#D00970000# "Compare two WAV files"
+#D00970446# "Compare"
+#D00970522# "First filename"
+#D00970523# "Second filename"
+#D00970524# "Progress"
+
+// File name string info dialog box
+#D00930000# "Filename info options"
+#D00930516# "Examples:\n%1\%2\%4      creates the output file Artist\Album\TrackName.mp3 (or .wav)\n%1 - %2 - %3  creates the output file Artist - Album - TrackNumber.mp3 (or .wav)\n%l1 - %u2 create the output file artist - ALBUM.mp3 (or .wav)"
+#D00930517# "File name format string can contain the following identifiers"
+#D00930518# "The backslash charachter (\) might also be used to indicate a directory separation\nThough. you should not use it as the first character !"
+
+// File name property page
+#0C8E# "General::Directories & files"
+#D0BF40000# "Filenames"
+#D0BF40479# "Char Subst"
+#D0BF4047D# "Split trackname to Artist, Track using split character:"
+#D0BF40443# "Add Files to M3U playlist"
+#D0BF40444# "Add Files to PLS playlist"
+#D0BF4051B# "Filename"
+#D0BF40519# "Output filename format and directories"
+#D0BF4051C# "WAV -> MP3"
+#D0BF4051D# "Recorded Tracks"
+#D0BF4051A# "Filename Format"
+#D0BF40520# "Filename"
+#D0BF4051E# "Filename Format"
+#D0BF40521# "Type"
+#D0BF4051F# "Playlist"
+
+// File overwrite dialog box
+#D00AE0000# "File Overwrite Warning"
+#D00AE0512# "Yes"
+#D00AE04A1# "Yes to &All"
+#D00AE0511# "No"
+#D00AE04A2# "No to A&ll"
+#D00AE0513# "The file"
+#D00AE0514# "already exists.  Replace the existing file?"
+
+// Generic Property Page
+#0C8B# "General::Generic"
+#D06040000# "General"
+#D06040414# "None\nID3-V1\nID3-V2\nID3-V1 &  ID3-V2"
+#D06040411# "Normalize"
+#D060404AB# "Automatic shutdown after ripping / encoding"
+#D0604050F# "If signal is <"
+#D0604050C# "Normalize Volume"
+#D0604050D# "To"
+#D06040510# "If signal is >"
+#D06040507# "File Tag options"
+#D0604050A# "Tag comment field"
+#D0604050E# "To"
+#D06040508# "ID3 Tag Version"
+#D0604050B# "Encoded-by field"
+#D06040506# "Temp directory"
+#D06040509# "Track Nr Format"
+#D060404AC# "Digital CD Playback"
+
+
+// Tag Property Page
+#0CA2# "Encoding::Tags"
+#D0C01050A# "Tag comment field"
+#D0C010508# "ID3 Tag Version"
+#D0C01050B# "Encoded-by field"
+#D0C010509# "Track Nr Format"
+#D0C01048F# "ID3_V1"
+#D0C010560# "ID3_V2.3"
+#D0C01055E# "ID3_V2.4"
+#D0C010000# "Tag Options"
+#D0C0104AD# "N"
+#D0C01050C# "Picture Text"
+#D0C01050D# "Picture"
+#D0C010565# "Picture options"
+#D0C010566# "Add picture"
+
+// General Info Dialog Box
+#D0BDF0000# "General Information"
+#D0BDF0502# "CD Volume ID"
+#D0BDF0500# "freedb Disc ID"
+#D0BDF0501# "ASPI Manager"
+#D0BDF0503# "OS Version"
+#D0BDF0504# "SCSI Info"
+#D0BDF0505# "Drive Type(s)"
+#D0BDF0442# "Copy to Clipboard"
+
+// Local freedb Settings TAB
+#0C8C# "CD Database::Local freedb"
+#D0BFA0000# "Local freedb"
+#D0BFA044B# "Windows-format freedb Files"
+#D0BFA044C# "Unix-format freedb Files"
+#D0BFA0459# "Store in CDPlayer.ini File"
+#D0BFA045A# "Store in local freedb"
+#D0BFA045B# "Use Long Directory Names"
+#D0BFA04B5# "Write as MS-DOS text files "
+#D0BFA04FE# "freedb Path"
+#D0BFA04FF# "Winamp in_cdda.cdb path (Winamp 2.78 format)"
+#D0BFA04FD# "Local freedb Settings"
+
+// Main Window (Title View)
+#D0BD80000# " "
+#D0BD804C2# "Artist"
+#D0BD804C3# "Album"
+#D0BD804C4# "Genre"
+#D0BD804C5# "Year"
+#D0BD804C6# "Track Offset"
+
+// Mpeg to RIFF-WAV conversion dialog box
+#D00860000# "Convert MP2/MP3 to RIFF-WAV"
+#D008604FC# "Processing"
+
+// Mpeg to WAV conversion dialog box
+#D0BEB0000# "Convert a compressed file to WAV file"
+#D0BEB04FB# "Processing"
+
+// Open file dialog box
+#D02630000# "Open File Dialog"
+#D026303EE# "Look in subfolders"
+#D026303F1# "Delete Original"
+#D0263042F# "Normalize"
+#D02630430# "RIFF-WAV"
+#D026303EF# "Select All"
+#D026303F0# "Open"
+#D02630495# "Settings"
+#D026304AC# "Keep Original Directory Layout"
+#D026304FA# "Available Files:"
+#D026304F9# "Directory"
+
+// Partial track copy dialog box
+#D06010000# "Record partial tracks"
+#D0601041D# "WAV file"
+#D06010412# "Compressed Audio File (Encoded)"
+#D060104F5# "Track"
+#D060104F6# "Min"
+#D060104F7# "Sec"
+#D060104F8# "Frame"
+#D060104F0# "File properties"
+#D060104F2# "Range (one file from start position to stop position)"
+#D060104F3# "Start Position"
+#D060104F4# "Stop Position"
+#D060104F1# "Output Type"
+
+// Player view window
+#D0C800489# "Details"
+
+// Record from Analog In dialog box
+#D0BF50000# "Record from Analog Input"
+#D0BF50640# "Free Length"
+#D0BF50641# "Record for just:"
+#D0BF5046E# "Browse"
+#D0BF504B7# "Add sequential numbers to filename, starting with: "
+#D0BF504EE# "Recording Status"
+#D0BF5046B# "Record"
+#D0BF50445# "Pause"
+#D0BF50450# "Stop"
+#D0BF50642# "Mono"
+#D0BF50643# "Stereo"
+#D0BF503F5# "Channels"
+#D0BF504EB# "Input Device"
+#D0BF504EC# "Output Filename"
+#D0BF504ED# "Output File Type"
+#D0BF504EA# "Sample Rate"
+#D0BF504EF# "seconds"
+#D0BF504F0# "Output Directory"
+
+// RIFF-WAV to MPEG dialog box
+#D02630064# "Abort"
+#D0BF30000# "Strip RIFF-WAV header from MPEG file(s)"
+#D0BF304E9# "Processing"
+
+// Substitute Characters dialog box
+#D0BF70000# "Character Substitution"
+#D0BF704E6# "Illegal Filename Characters"
+#D0BF704E7# "Other (substition is not mandatory)"
+#D0BF704E8# "space :="
+
+// Ripper Status dialog box
+#D00960000# "Detailed Ripping Status Information"
+
+// String Table
+#0065#	"&About CDex..."
+#0066#	"Save as..."
+#0067#	"Open"
+#0BBA#	"Indicator Contrl"
+#0BBB#	"Misc"
+#0BBC#	"Play Track"
+#0BBE#	"Stop Playing"
+#0BBF#	"Eject CD"
+#0BC0#	"Cannot open an Internet Session. Please check your internet configuration."
+#0BC1#	"CDex"
+#0BC2#	"Windows sockets initialization failed"
+#0BC3#	"Fast Forward\nFast Forward"
+#0BC4#	"Fast Rewind\nFast Rewind"
+#0BC5#	"Pause\nPause"
+#0BC6#	"Skip To Next Track\nSkip To Next Track"
+#0BC7#	"Skip To Previous Track\nSkip To Previous Track"
+#0BC8#	"Get album info from remote freedb"
+#0BD4#	"CDex Ripper\n\nCDex Ripper\n\n\nCDex.Document\nCDex Document"
+#0BDE#	"CDex Version "
+#0BDF#	"no artist"
+#0BE0#	"no title"
+#0BE1#	"Genre"
+#0BE2#	"Album"
+#0BE3#	"freedb ID"
+#0BE4#	"Artist"
+#0BE5#	"Track Number"
+#0BE6#	"Volume ID"
+#0BE7#	"Track Name"
+#0BE8#	"Track Number Leading 0"
+#0BE9#	"Number of tracks"
+#0BEA#	"Name"
+#0BEB#	"Track"
+#0BEC#	"Start Time"
+#0BED#	"Play Time"
+#0BEE#	"Size"
+#0BEF#	"Status"
+#0BF0#	"CDex Version "
+#0BF1#	"Artist field contains invalid characters\n Replace invalid characters with spaces"
+#0BF2#	"Album field contains invalid characters\n Replace invalid characters with spaces"
+#0BF3#	"Trackname [%d] contains invalid characters\n Replace invalid characters with spaces"
+#0BF4#	"You don't have any tracks selected.  Please select one or more audio tracks from the list."
+#0BF5#	"Unable to set Clipboard data"
+#0BF6#	"Seeking track %d (%02d:%02d:%02d)\n"
+#0BF7#	"Ripping track to a Compressed Audio file (%s) to file %s"
+#0BF8#	"Ripping/encoding has been aborted at %s"
+#0BF9#	"Ripping track to a Compressed Audio File has been finished properly, total duration: %s"
+#0BFA#	"Ripping track to WAV file (%s) to file %s"
+#0BFB#	"Ripping has been aborted at %s"
+#0BFC#	"Ripping track to WAV file has been finished properly, total duration: %s"
+#0BFD#	"Could not create output directory: "
+#0BFE#	"Time elapsed: %s || Time left: %s || Estimated time: %s"
+#0BFF#	"Extracting track %d (%d%% completed, file %d/%d)"
+#0C00#	"Peak Value %4.2f dB = %3d %%"
+#0C01#	"Jitter (errors: %d)"
+#0C02#	"Converting track %d (%d %% completed, file %d/%d)"
+#0C03#	"Normalizing track %d (%d %% completed, file %d/%d)"
+#0C04#	"Determining Peak Value track %d (%d %% completed, file %d/%d)"
+#0C05#	"Peak Value %4.2f dB = %3d %%"
+#0C06#	"To file: %s"
+#0C07#	"Extracting track %d (file %d/%d)"
+#0C08#	"Converting file to target format (file %d/%d)"
+#0C09#	"Normalizing track with factor of %5.2f (file %d/%d)"
+#0C0A#	"Getting peak value (file %d/%d)"
+#0C0B#	"Processing (file %d/%d)"
+#0C0C#	"Extracting CD Tracks"
+#0C0D#	"File Conversion"
+#0C0E#	"%5d errors at track %s\n\n"
+#0C0F#	"Jitter errors have occured.  Please see help file to solve jitter problems.\n\n"
+#0C10#	"Year"
+#0C11#	"DataTrack"
+#0C12#	"AudioTrack"
+#0C13#	"Please fill out all Track, Artist, and Track information, and make\n sure that the Genre field is set properly \nbefore submitting an entry to the remote CD database."
+#0C14#	"Requested album information is not found in the local freedb"
+#0C15#	"Requested album information is not found in the CDPlayer.ini file"
+#0C16#	"The MP3 tag has been changed. \nSave the modifications?"
+#0C17#	"An error occured while saving the ID3V2 tag.\nMake sure file is not marked as read only!"
+// is, or isn't?
+#0C18#	"An error occured while reading the ID3v2 tag."
+#0C19#	"An error occurred while opening the input file."
+#0C1A#	"Failed to set the privilage to shut down the system"
+#0C1B#	"Normalizing factor is %7.4f x"
+#0C1C#	"Invalid e-mail address.  Please fill out\n\nyour e-mail address in the Remote freedb options menu."
+#0C1D#	"The remote server didn't answer soon enough. \n Increase the Timeout value in the freedb option screen, \n Or just try again."
+#0C1E#	"read/write allowed\n"
+#0C1F#	"OK, read only\n"
+#0C20#	"No match found\n"
+#0C21#	"OK Response\n"
+#0C22#	"Found several exact matches. The list follows.\n"
+#0C23#	"Found several inexact matches. The list follows.\n"
+#0C24#	"Specified freedb entry not found\n"
+#0C25#	"Already shook hands\n"
+#0C26#	"Database entry is corrupt.\n"
+#0C27#	"No handshake\n"
+#0C28#	"Handshake not successful, closing connection\n"
+#0C29#	"No connections allowed: permission denied\n"
+#0C2A#	"No connections, load too high\n"
+#0C2B#	"Server Error, please select another server\n"
+#0C2C#	"Protocol level already cur_level\n"
+#0C2D#	"Illegal Protocol Level\n"
+#0C2E#	"Connection Failed for reason"
+#0C2F#	"Convert"
+#0C30#	"Module Name"
+#0C31#	"Module Info"
+#0C32#	"The Genre Table (genres.txt) has not been found in the CDex directory\n(tried location: %s)\nCheck your CDex installation!"
+#0C33#	"Genre"
+#0C34#	"freedb Genre"
+#0C35#	"ID3 V1 ID"
+#0C36#	"New Genre"
+#0C37#	"Unknown"
+#0C38#	"Invalid Server Response"
+#0C39#	"%1 = Artist\t\t%5 = CD VolumeID\n%2 = Album\t\t%6 = freedb ID\n%3 = Track Number\t%7 = Track Number Leading Zero\n%4 = Track Name\t%8 = Total Number of Tracks\n%Y = Year\t\t%G = Genre\n%A = Artist Name (not affected by the split option)\nUse l or u prequalifier to force lower/upper case strings"
+#0C3A# "CDex Player, Version "
+#0C3B#	"freedb error has occured.  See message box for details\n"
+#0C3C#	"ERROR: Cannot launch external encoder"
+#0C3D#	"ERROR: Cannot send data to external encoder"
+#0C3E#	"Could not create VQF script file"
+#0C3F#	"Could not load the encoder %s\nMake sure that you start CDex.exe where the DLLs are located\nIf you have created a short-cut, make sure the working directory is set correctly"
+#0C40#	"Invalid Input Stream"
+#0C41#	"Could not open/create file: %s"
+#0C42#	"ERROR: Cannot create pipe to external encoder"
+#0C43#	"The GoGo DLL needs a Floating Point Unit"
+#0C44#	"%2d track (%5.2f MB) Free disk space %5d MB"
+#0C45#	"Playing track %d (%02d:%02d:%02d)\n"
+#0C46#	" (range)"
+#0C47#	"Cannot open the Clipboard"
+#0C48#	"Cannot empty the Clipboard"
+#0C49#	"Opening Connection"
+#0C4A#	"Sending Hello String"
+#0C4B#	"Sending Statistics command"
+#0C4C#	"Sending Proto Level"
+#0C4D#	"Sending Query"
+#0C4E#	"Start Remote Query"
+#0C4F#	"Getting remote response"
+#0C50#	"Unknown SMTP server address.  Please fill out the\nSMTP server address in the freedb submit options screen."
+#0C51#	"Failed to send string to remote server"
+#0C52#	"Connecting to Server"
+#0C53#	"Server not ready"
+#0C54#	"Sending"
+#0C55#	"Sending data"
+#0C56#	"Sending body-text"
+#0C57#	"No server response"
+#0C58#	" (Encoder Available, no version info available)"
+#0C59#	" Alpha %d"
+#0C5A#	" Beta %d"
+#0C5B#	"Specified bitrate does not match the selected output frequency"
+#0C5C#	" (not available)"
+#0C5D#	"version"
+#0C5E#	"engine"
+#0C5F#	"Could not open file %s"
+#0C60#	"Filesize is too small for a comparison"
+#0C61#	"Second file has an offset of %d bytes"
+#0C62#	"First file has an offset of %d bytes"
+#0C63#	"Files are different, could not find matching block"
+#0C64#	"File are different, starting at location %d"
+#0C65#	"No differences have been found\nA total of %d bytes have been compared"
+#0C66#	"CDex configuration"
+#0C67#	"Please select a folder"
+#0C68#	"Please select on of the listed items, or press cancel to bail out"
+#0C6A#	"data tag not found"
+#0C6B#	"File %s is not a MPEG RIFF-WAV file"
+#0C6C#	"Could not find format tag in file %s"
+#0C6D#	"Use Auto-Detection only if the Generic Setting does not work!\nFor Auto-detection, an Audio CD has to be loaded in the CD-ROM drive.\nDo you want to continue?"
+#0C6E#	"Total recording time (MM:SS:FF) %02d:%02d:%02d equals to %d sectors"
+#0C6F#	"Filename"
+#0C70#	"Date"
+#0C71#	"Path"
+#0C72#	"Size (MB)"
+#0C73#	"Save"
+#0C74#	"File sizes of first/second are %d/%d bytes"
+#0C75#	"OK"
+#0C76#	"First filename is not valid"
+#0C77#	"Second filename is not valid"
+#0C78#	"Failed to initialize Ogg Encoding stream.  Maybe the specified bitrate does not match the selected output frequency.  Try using the Quality settings instead of the Bitrate settings."
+#0C79#  "Encoding has been aborted at %s"
+#0C7A#  "Encoding track to a Compressed Audio File has been finished properly, total duration: %s"
+#0C7B#	"Type"
+#0C80#	"CDex Player\n\nCDex Player\n\n\nCDex.Document\nCDex Document"
+#0C81#	"No files selected"
+#0C82#	"Auto"
+#0C83#	"Default"
+#0C84#	"Conversion error: Input filename is same as the output filename.\nPlease select a different conversion output directory!\nInput filename  : %s\nOutput filename : %s"
+#0C85#	"Native NT SCSI Library support is not supported by this operating system.\nYou have to install ASPI drivers in order to use CDex.  See the CDex Help File for more information.\n"
+#0C86#	"Error: Failed to load the Windows ASPI drivers.\nYou have to install ASPI drivers in order to use CDex.  See the CDex Help File for more information.\n"
+#0C87#	"Error: Failed to get ASPI driver status.\nPlease check the ASPI driver installation.  See the CDex Help File for more information.\n"
+#0C88#	"English"
+#0C8F#  "..."
+#0C90#  "Select Directory"
+#0C91#  "Encoders (*.exe;*.bat)|*.exe;*.bat|All Files (*.*)|*.*||"
+#0C92#  "Select encoder"
+#0C93#  "Big"
+#0C94#  "Little"
+#0C95#  "none"
+#0C96#  "standard"
+#0C97#  "Read"
+#0C98#  "Atapi"
+#0C99#  "Enable"
+#0C9A#  "Density"
+#0C9B#  "Endian"
+#0C9C#  "Result"
+#0C9D#  "Pass"
+#0C9E#  "Fail"
+#0C9F#  "Failed to load the wnaspi32.dll driver!\nUse the "Native NT SCSI library" driver option instead?"
+#0CA0#  "Check for Additional/updates Language files"
+#0CA3# "Please select a child item of '%s'."
+#0CA4# "Pictures (*.jpg;*.png)|*.jpg;*.png|All Files (*.*)|*.*||"
+#0D48# "CRC"
+#0DAC# "Gap"
+#0D49# "ISRC"
+#138C# "Next"
+#1389# "Failed to make connection, please check network/proxy settings"
+#138A# "Found inexact match, please select a match and press the next button\r\nOr press the Cancel button  to abort"
+#1390# "Preview"
+#1391# "Detect Gaps"
+#139C# "Detect gap for track %d"
+#1392# "Read UPC/ISRC code"
+#1393# "Read UPC/ISRC code\r\nPlease wait!"
+
+#8003#	"Select to configure CDex\nConfigure"
+#8004#	"Extract CD track(s) to WAV file(s)\nExtract CD track(s) to WAV file(s)"
+#8005#	"Extract CD track(s) to Compressed Audio File(s)\nExtract CD track(s) to Compressed Audio File(s)"
+#8006#	"Convert WAV file(s) to Compressed Audio File(s)\nConvert WAV file(s) to Compressed Audio File(s)"
+#8007#	"Extract a section of the CD to WAV or Compressed Audio file(s)\nExtract a section of the CD to WAV or Compressed Audio file(s)"
+#800D#	"Select to get system information\nSelect to get system information"
+#800E#	"Configure CD Settings\nConfigure CD Settings"
+#800F#	"Eject CD\nEject CD (Shift-F1)"
+#8010#	"Fast Forward\nFast Forward"
+#8011#	"Fast Rewind\nFast Rewind"
+#8012#	"Skip to next track\nSkip to next track (Shift-F3)"
+#8013#	"Skip to previous track\nSkip to previous track"
+#8015#	"Play audio track(s)\nPlay audio track(s) (Shift-F4)"
+#8016#	"Stop Playing\nStop Playing (Shift-F5)"
+#8017#	"Pause/resume playing\nPause/resume playing"
+#8018#	"Get album information from local freedb\nRead album information from local freedb"
+#801A#	"Get album information from CDPlayer.ini file\nRead album information from CDPlayer.ini file"
+#801B#	"Get album information from remote freedb\nGet album information from remote freedb"
+#801C#	"Show or hide the playing toolbar"
+#801D#	"Show or hide the recording toolbar"
+#801E#	"Skip to previous track\nSkip to previous track  (Shift-F2)"
+#801F#	"Fast Rewind\nFast Rewind"
+#8022#	"Convert MP3 file(s) to Riff Wav files"
+#8023#	"Copy album information to the clipboard"
+#8024#	"Rename the selected track"
+#8026#	"Select All Track(s)"
+#8027#	"Save album information to the CDPlayer.ini file"
+#8028#	"Save album information to the local freedb file(s)"
+#8029#	"Convert Compressed Audio File(s) to WAV file(s)\nConvert Compressed Audio File(s) to WAV file(s)"
+#802A#	"Reload album information from disk"
+#802B#	"Shows the status"
+#802C#	"Show Ripping Status Information of the selected track(s)\nShow Ripping Status Information of the selected track(s)"
+#802D#	"Compare the content of two WAV files\nCompare the content of two WAV files"
+#802E#	"Play Media Files\nPlay Media Files"
+#802F#	"Clear the ripping status of this CD"
+#8030#  "Strip the RIFF-WAV header(s) from MP2 or MP3 file(s)\nStrip the RIFF-WAV header(s) from MP2 or MP3 file(s)"
+#8031#	"Record a WAV or an MP3 from your computer's analog input\nRecord from analog input"
+#8032#	"Submit album information to the remote freedb database"
+#8033#	"Get album information CD-Text (if supported/available)"
+#8035#	"Select Files\nSelect Files"
+#8036#	"Select Files\nSelect Files"
+#8037#	"Skip to Previous file\nSkip to Previous file"
+#8038#	"Skip to Next file\nSkip to Next file"
+#8039#	"Play File(s)\nPlay File(s)"
+#803A#	"Stop Playing Files\nStop Playing Files"
+#803B#	"freedb Batch Query\nfreedb Batch Query"
+#803E#	"Re-encode (transcode) Compressed Audio File(s)\nRe-encode (transcode) Compressed Audio File(s)"
+
+#8046#	"Configures the Winamp Plugins\nConfigures the Winamp Plugins"
+#8047#	"Edit the list of known genres\nEdit the Genre List"
+#8048#	"Pause playing\nPause playing (Shift-F6)"
+#804B#	"Play the tracks in a random order\nPlay the tracks in a random order"
+#804D#	"Exchange Artist/Track filed (for multi artist CDs)\nExchange Artist/Track filed (for multi artist CDs)"
+#804E#	"Select the active CD Drive\nSelect the active CD Drive"
+#804F#	"Select profile\nSelect profile"
+#8050#	"Save current settings to profile\nSave current settings to profile"
+#8052#	"Delete profile\nDelete selected profile"
+#80E8#  "Read album data from Winamp CD database\nRead album data from Winamp CD database"
+#E000#	"CDex"
+#E001#	"Press F1 for help on the CDex audio CD extractor program"
+#E100#	"Create a new document\nNew"
+#E101#	"Open an existing document\nOpen"
+#E102#	"Close the active document\nClose"
+#E103#	"Save the active document\nSave"
+#E104#	"Save the active document with a new name\nSave As"
+#E105#	"Change the printing options\nPage Setup"
+#E106#	"Change the printer and printing options\nPrint Setup"
+#E107#	"Print the active document\nPrint"
+#E109#	"Display full pages\nPrint Preview"
+#E110#	"Open this document"
+#E111#	"Open this document"
+#E112#	"Open this document"
+#E113#	"Open this document"
+#E114#	"Open this document"
+#E115#	"Open this document"
+#E116#	"Open this document"
+#E117#	"Open this document"
+#E118#	"Open this document"
+#E119#	"Open this document"
+#E11A#	"Open this document"
+#E11B#	"Open this document"
+#E11C#	"Open this document"
+#E11D#	"Open this document"
+#E11E#	"Open this document"
+#E11F#	"Open this document"
+#E120#	"Erase the selection\nErase"
+#E121#	"Erase everything\nErase All"
+#E123#	"Cut the selection and put it on the Clipboard\nCut"
+#E124#	"Find the specified text\nFind"
+#E125#	"Insert Clipboard contents\nPaste"
+#E128#	"Repeat the last action\nRepeat"
+#E129#	"Replace specific text with different text\nReplace"
+#E12A#	"Select the entire document\nSelect All"
+#E12B#	"Undo the last action\nUndo"
+#E12C#	"Redo the previously undone action\nRedo"
+#E135#	"Split the active window into panes\nSplit"
+#E140#	"Display CDex information, version number, and copyright\nAbout"
+#E141#	"Quit the application\nExit"
+#E142#	"Opens CDex Help\nOpens CDex Help"
+#E143#	"Bring up the CDex manual\nHelp on using CDex"
+#E144#	"Show instructions about how to use help\nHelp"
+#E145#	"Show help for clicked-on buttons, menus, and windows\nHelp"
+#E146#	"Show help for current task or command\nHelp"
+#E150#	"Switch to the next window pane\nNext Pane"
+#E151#	"Switch back to the previous window pane\nPrevious Pane"
+#E700#	"EXT"
+#E701#	"CAP"
+#E702#	"NUM"
+#E703#	"SCRL"
+#E704#	"OVR"
+#E705#	"REC"
+#E800#	"Show or hide the toolbar\nToggle ToolBar"
+#E801#	"Show or hide the status bar\nToggle StatusBar"
+#EF00#	"Resize the window"
+#EF01#	"Move the window"
+#EF02#	"Reduce the window to an icon"
+#EF03#	"Enlarge the window to full size"
+#EF04#	"Switch to the next document window"
+#EF05#	"Switch to the previous document window"
+#EF06#	"Quit the application"
+#EF12#	"Restore the window to normal size"
+#EF13#	"Activate Task List"
+#F003#	"Untitled"
+#F005#  "Close print preview mode\nCancel Preview"

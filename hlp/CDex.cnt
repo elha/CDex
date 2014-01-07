@@ -1,0 +1,197 @@
+:Base CDex.hlp
+1 CDex Software Copyright notice
+2 CDex Software Copyright notice=topic0
+1 Introduction
+2 Introduction=topic1
+2 System Requirements=topic2
+2 Status of CDex=topic3
+2 Acknowledgements=topic4
+2 Change log=topic5
+1 Installing CDex
+2 Installing CDex=topic6
+2 How to uninstall CDex=topic7
+1 A Quick Tour
+2 A Quick Tour=topic8
+2 How to get started
+3 How to get started=topic9
+3 Profiles=topic10
+1 Digital Audio Technology
+2 Digital Audio Technology=topic11
+2 What is CDDA or DAE:=topic12
+2 The purpose of audio compression:=topic13
+2 Which bitrate should I use to get CD-Quality:=topic14
+2 Bitrate Options:=topic15
+2 Creating an Audio CD from MP3 files:=topic16
+1 Configure CDex
+2 Configure CDex=configurecdex
+2 General Settings
+3 General Settings=topic17
+3 ID3 tag version=topic18
+3 ID3 tag track number (not applicable for ID3 V1 tags)=topic19
+3 Tag comment field:=topic20
+3 Encoded-by field (not applicable for ID3 V1 tags)=topic21
+3 Normalize track volume:=topic22
+3 Automatic shutdown after ripping / encoding (default: off)=topic23
+3 Digital CD Playback (default: off)=topic24
+2 Filename Settings
+3 Filename Settings=topic25
+3 Filename builder:=topic26
+3 WAV->MP3 Output Directory:=topic27
+3 Recorded Tracks Output Directory:=topic28
+3 Character Replacement button:=topic29
+3 Split Track name to Artist/Track using X character:=topic30
+3 Playlist filename builder.=topic31
+3 Add Files to M3U Play-list.=topic32
+3 Add Files to PLS Play-list.=topic33
+2 CD-ROM Settings
+3 CD-ROM Settings=topic34
+3 CD-ROM drop down list:=topic35
+3 Read Sector (default value 26)=topic36
+3 Read Overlap (default value 7):=topic37
+3 Block Compare (default value 1):=topic38
+3 Number of Retries (default value 0):=topic39
+3 CD Speed (default value 0):=topic40
+3 CD-Read Type (default value Generic):=topic41
+3 Auto Detect Button:=topic42
+3 Swap Left Right Channel (default value off):=topic43
+3 Enable Jitter correction (default value on):=topic44
+3 Start and end Offset (default values 0):=topic45
+3 Spin up time (default value 0):=topic46
+3 Eject CD when ripping has been completed=topic47
+3 Select All CD Tracks (by default)=topic48
+3 Use Native NT library (default value off):=topic49
+3 Ripping Method (default value: Standard):=topic50
+2 Encoder Options
+3 Encoder Options=topic51
+3 Bitrate values and how to interpret them:=topic52
+3 Thread Priority:=topic53
+3 Output to Riff-WAV file:=riffwavlabel
+3 Encoder:=topic54
+3 Settings for Lame MP3/Blade DLL/Internal MP3 encoder:=topic55
+3 On-the-fly MP3 encoding (default value: on):=otfencoding
+3 External Encoder:=topic56
+3 AAC Astrid/Quartex encoder:=topic57
+3 Yamaha VQF encoder options;=topic58
+3 Windows Codec options:=topic59
+3 Microsoft WMA encoder options:=topic60
+3 Psytel AAC encoder:=topic61
+3 External Xing Encoder:=topic62
+3 External MusePack (MPC) Encoder:=topic63
+3 WAV output Encoder=topic64
+3 FAAC DLL Encoder=topic65
+3 Vorbis DLL Encoder=topic66
+2 Local CDDB Options
+3 Local CDDB Options=localcddbsettings
+3 Local CDDB path:=topic67
+3 CDDB type:=topic68
+3 Store in CDPlayer.ini file:=topic69
+3 Store in local CDDB:=topic70
+2 CDDB Options
+3 CDDB Options=cddbsettings
+3 What is the CDDB anyway?:=whatiscddb
+3 Remote server:=topic71
+3 The Query Sites button:=topic72
+3 E-mail address:=topic73
+3 Time Out value: (default 20)=topic74
+3 Firewall settings: (default disabled)=topic75
+3 Auto-connect to remote CDDB: (default disabled)=topic76
+3 Submit Options:=topic77
+3 Manually Edit Server properties:=topic78
+3 Reset Button:=topic79
+1 Menu Options
+2 Menu Options=topic80
+2 File Menu Options
+3 File Menu Options=topic81
+3 System Info:=topic82
+3 Compare two files:=topic83
+3 Exit:=topic84
+2 Edit Menu Options
+3 Edit Menu Options=topic85
+3 Select All:=topic86
+3 Copy to clipboard:=topic87
+3 Rename Track:=topic88
+3 Refresh track list:=topic89
+2 Convert Menu Options
+3 Convert Menu Options=topic90
+3 Extract CD Track(s) to WAV files:=topic91
+3 Extract CD Track(s) to MPEG files:=topic92
+3 Extract Partial CD Track:=topic93
+3 Re-encode Compressed Audio Files:=topic94
+3 Convert WAV files to Compressed Audio Files:=topic95
+3 Convert Compressed Audio Files to WAV files:=topic96
+3 Add RIFF-WAV header to MP2/MP3 files:=topic97
+3 Strip RIFF-WAV header from MP2/MP3 files:=topic98
+2 Play Menu
+3 Play Menu=topic99
+3 Play Files:=topic100
+2 CDDB Menu
+3 CDDB Menu=topic101
+3 Read from local CDDB:=topic102
+3 Read From Remote CDDB:=topic103
+3 Read From CDPlayer.ini:=topic104
+3 Read CD-Text:=topic105
+3 Save To Local CDDB:=topic106
+3 Save To CDPlayer.ini:=topic107
+3 Submit to Remote CDDB:=topic108
+3 CDDB Batch Query:=topic109
+2 Options Menu
+3 Options Menu=topic110
+3 Settings:=topic111
+3 View Play:=topic112
+3 View Record:=topic113
+3 View Ripping Status Details:=topic114
+3 Clear Ripping Status:=topic115
+2 Help Menu
+3 Help Menu=topic116
+3 Help Topics:=topic117
+3 About CDex:=topic118
+1 CDex Player
+2 CDex Player=cdexplayer
+1 Record Files
+2 Record Files=recordfiles
+1 Troubleshooting
+2 Troubleshooting=topic119
+2 System Information Dialog=systeminfo
+2 Frequently Asked Question:
+3 Frequently Asked Question:=topic120
+3 Q: Winamp doesn't display the proper track duration. When I rip some 
+ music from a CD onto an MP3, the MP3 does not have any information on the music 
+ length. For example, when the file is opened in Winamp, there is no length of 
+ time shown. When openi=topic121
+3 Q: When I extract MP3 files from a CD, I would like CDex to create 
+ 'Napster Style' filenames (i.e. [artist]-[title].mp3) instead storing tracks 
+ into separate directories based on artist/album/trackname information, 
+ how can I do that?=topic122
+3 Q: At home, I can access the CDDB database, but when I use CDex 
+ at my work place it won't work. Why not?=topic123
+3 Q: When I try to access the CDDB database, I get an Invalid 
+ E-mail Address message=topic124
+3 Q: I like to create filenames that have track number 
+ with a leading zero (so 01 02 03 etc instead of 1 2 3) =topic125
+3 Q: When I try to start CDex, it complains that it can't 
+ find the CDRip.dll file or Lame_enc.dll.=topic126
+3 Q: Is it possible, using CDex, to save several CD tracks all into a single
+ WAV or MP3 file?=topic127
+3 Q: I get an message that there is too much jitter, what do I have 
+ to do to solve this problem?=topic128
+3 Q: Can I convert MP3 files back to WAV files?=topic129
+3 Q: When I extract files, there are is no music information, just dead
+ silence=topic130
+3 Q: When I convert/rip MP3 files, CDex is slow as molasses; what's wrong
+ with my system?=topic131
+3 Q: The ripping status window says that I have jitter problems; what does that mean?=topic132
+1 Keyboard Shortcuts
+2 Keyboard Shortcuts=shortcuts
+1 Bug reports and suggestions
+2 Bug reports and suggestions=bugs
+1 Glossary
+2 Glossary=topic133
+2 codec=codec
+2 ID3=id3
+2 Mouse Click=mouseclick
+2 MP3=mp3
+2 MPEG=mpeg
+2 Fraunhofer=Fraunhofer
+2 Ogg=ogg
+2 RIFF=riff
+2 WAV=wav

@@ -1,0 +1,53 @@
+#ifndef APSTUDIO_INVOKED
+
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL)
+
+#if defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\\CDex.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif // AFX_TARG_ENU
+
+#if defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE 7, 1
+#pragma code_page(1252)
+#endif
+#include "res\\CDex.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.deu\\afxres.rc"         // Standard components
+#include "l.deu\\afxprint.rc"       // printing/print preview resources
+#endif // AFX_TARG_DEU
+
+#if defined(AFX_TARG_ESP)
+#ifdef _WIN32
+LANGUAGE 7, 1
+#pragma code_page(1252)
+#endif
+#include "res\\CDex.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.esp\\afxres.rc"         // Standard components
+#include "l.esp\\afxprint.rc"       // printing/print preview resources
+#endif // AFX_TARG_ESP
+
+
+#if defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE 7, 1
+#pragma code_page(1252)
+#endif
+#include "res\\CDex.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.ita\\afxres.rc"         // Standard components
+#include "l.ita\\afxprint.rc"       // printing/print preview resources
+#endif // AFX_TARG_ITA
+
+#endif // !AFX_RESOURCE_DLL
+
+#endif // APSTUDIO_INVOKED

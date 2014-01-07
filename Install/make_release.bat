@@ -1,0 +1,1 @@
+"c:\Program Files\Microsoft Visual Studio .NET 2003\Common7\IDE\devenv" /out ..\Log\currentbuild.txt /rebuild Release "..\CDex.sln"

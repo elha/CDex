@@ -1,0 +1,940 @@
+//
+// CDex - Open Source Digital Audio CD Extractor
+//
+// Copyright (C) 2006, 2007, 2008 Georgy Berdyshev
+// Copyright (C) 2005 Jouni Kähkönen <kajouni osoitteessa mbnet.fi>
+// Copyright (C) 2002 Kari Silvennoinen
+// Copyright (C) 2002 Albert L. Faber
+//
+// http://cdexos.sourceforge.net/
+// http://sourceforge.net/projects/cdexos 
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
+
+
+//////////////////////////////////////////////////////////////////////////////
+// CDex - International Support File                                        //
+//////////////////////////////////////////////////////////////////////////////
+
+
+//
+// Welcome to CDex language definition file
+// 
+// This file will be read by CDex if it is put inside \Lang folder
+// of CDex root directory. It also must have the cdex..lang extension
+// yielding something like my_language.cdex.lang
+//
+// 
+// To define a string follow this format:
+//
+// number "my_string"
+//
+// number is the identification of the following string. Each number is related
+// with a string that will appear inside CDex. Padding spaces are not important.
+//  Inside menu definitions use & to give access to the keyboard menu shortcut.
+// You can use returns inside string. They will be preserved in the program.
+//
+// CDex loads the strings on startup. It won't perceive any changes in this file
+//  if you don't reload the program.
+//
+// PLEASE, CHECK THAT STRINGS WON'T BE CLIPPED IN THE PROGRAM. The reserved space 
+// for every string is limited and must be suitable for all languages. If some 
+// of your strings are clipped try shortening the phrase while keeping its 
+// significance
+//  
+//////////////////////////////////////////////////////////////////////////////
+
+// language file revision level
+REVISION=/*$Id: finnish.cdex.lang 669 2008-01-18 08:09:12Z codingmaster $*/
+
+// set language characteristics
+LANGUAGE=11
+SUBLANG=1
+
+// use CODEPAGE 65001 if this file is UTF-8 encoded text file
+// otherwhise fill out the proper ANSI codepage
+CODEPAGE=1252
+
+// 99 (063 hex) => LANGUAGE ID, use english description
+// since this value is used to set the LOCALE settings
+#0063# "Finnish"
+
+#0001# "OK"
+#0002# "Peruuta"
+#0003# "Keskeytä"
+#0004# "Uudelleen"
+#0005# "Hylkää"
+#0006# "Kyllä"
+#0007# "Ei"
+
+// Ripper Main menu entries
+#M0BD4# "#&Tiedosto#&Muokkaa#M&uunna#Työka&lut#C&DDB#&Valinnat#&Ohje#"
+
+// Ripper File Menu
+#M800D# "&Järjestelmätiedot"
+#M802D# "&Vertaa tiedostoja"
+#ME141# "&Lopeta"
+
+// Ripper Edit menu
+#M8026# "Valitse kaikki\tCtrl+A"
+#M8023# "&Kopioi kappaletiedot leikepöydälle"
+#M8024# "&Nimeä kappale uudelleen\tF2"
+#M0BD40000# "&Muokkaa kappaleen nimeä"
+#M8042# "&Sanojen ensimmäiset kirjaimet isolla"
+#M8043# "&Ensimmäinen merkki isolla"
+#M8044# "Kaikki merkit &pienellä"
+#M8045# "Kaikki merkit &isolla"
+#M804D# "&Vaihda Esittäjä<->Kappale"
+#M802A# "&Päivitä kappalelista\tF5"
+#M8047# "Lisää / muokkaa &genreä"
+
+// Ripper Convert menu
+#M8004# "Kopioi CD-raidat WAV-tiedostoiksi\tF8"
+#M8005# "Kopioi CD-raidat pakattuun muotoon\tF9"
+#M8007# "Kopioi osa levyn sisällöstä\tF10"
+#M803E# "Pakkaa MP3 uudestaan (MPEG-> MPEG)"
+#M8006# "Muunna WAV -> MPEG\tF11"
+#M8029# "Muunna MPEG -> WAV\tF12"
+#M8022# "Lisää RIFF-WAV-otsaketiedot MP2- tai MP3-tiedostoihin"
+#M8030# "Poista RIFF-WAV-otsaketiedot MP2- tai MP3-tiedostoista"
+
+// Ripper Tools menu
+#M802E# "&Soita tiedostot"
+#M8031# "&Nauhoita analogisesta lähteestä"
+
+// Ripper CDDB Menu
+#M8018# "Lue &paikallisesta CDDB-tietokannasta"
+#M801B# "Lue &etä-CDDB-tietokannasta"
+#M801A# "&Lue &CDPlayer.ini"
+#M8033# "Lue CD-&Text"
+#M80E8# "Lue &WinampDB-tietokannasta"
+#M8027# "Tallenna CDPlayer.ini-tiedostoon"
+#M8028# "Tallenna paikallinen CDDB-kantaan"
+#M8032# "L&ähetä CDDB-tietokantaan"
+#M803B# "CDDB-r&yhmähaku"
+
+// Ripper Options Menu
+#M8003# "&Asetukset\tF4"
+#M8046# "Määritä &Winamp-laajennukset"
+#M801C# "&Näytä soittotyökalut"
+#M801D# "N&äytä nauhoitustyökalut"
+#M80E9# "Näytä &profiilityökalut"
+#M802C# "Näytä tietoja kopioinnin &tilasta\tF3"
+#M802F# "T&yhjennä kopioinnin tilatiedot"
+#M0BD40001# "&Valitse kieli"
+
+// Ripper Help Menu
+#ME143# "&Ohjeen aiheet\tF1"
+#ME140# "&Tietoja CDex:stä..."
+
+// Player Menu
+#M0C80# "#&Tiedosto#&Asetukset#&Soittolista#&Ohje#"
+
+// NOTE: File, help menu and Configure &Winamp Plugins entries
+// are already defined in the main menu
+
+// Ripper Options Menu
+#M804B# "&Soita satunnaisessa järjestyksessä"
+#M0C800000# "&Kieli"
+
+// Ripper Playlist Menu
+#M8049# "&Tallenna"
+#M804A# "T&yhjennä"
+
+// About Dialog
+#D00640000# "Tietoja CDex:stä"
+#D00640412# "CDex versio "
+#D006404BC# "Sulje"
+// Translator URL
+#D006404BB# ""
+// Translator information
+#D006404BA# "Kari Silvennoinen  Käännös: megari&&Jouni Kähkönen"
+
+// CD Auto Detection dialog box
+#D0BE20000# "Automaattisen haun tulokset"
+#D0BE203FB# "Keskeytä"
+#D0BE204BE# "Alla on lista testituloksineen, valitse niistä yksi kohde, jonka tila on Läpi ja paina OK."
+#D0BE204BD# "MMC:n tila"
+
+// CDDB Accessing dialog box
+#D00870000# "Haetaan CDDB:stä (tm)"
+#D008704BF# "Nykyinen toiminta"
+#D008704C0# "Viesti"
+#D008704C1# "Credits: Copyright (c) CDDB, Inc (Steve Scherf && Ti Kan)"
+
+// CDDB Settings dialog box
+#0C8D# "Etä-CDDB"
+#D06030000# "Etä-CDDB"
+#D06030484# "CDDB (oletusportti 888 tai 8880)\nHTTP (oletusportti 80)"
+#D0603043D# "Ota yhteys CDDB-tietokantaan automaattisesti"
+#D06030426# "Lisää palvelin"
+#D06030425# "Hae palvelin"
+#D06030483# "Palauta kaikki"
+#D06030475# "Lähetä asetukset"
+#D0603041E# "Välipalvelin"
+#D06030421# "Tunnistus"
+#D060304C7# "Palvelin"
+#D060304CB# "Sähköpostiosoite"
+#D060304CF# "Välipalvelimen portti"
+#D060304D0# "Salasana"
+#D060304CE# "Aikakatkaisu (sekunteja)"
+#D060304C9# "Osoite"
+#D060304CC# "Polku"
+#D060304CA# "Protokolla"
+#D060304C8# "Sijainti"
+#D060304CD# "Portti"
+
+// CDDB Found inexact match dialog box
+#D00880000# "Löytyi epätarkka löydös"
+
+// CD-ROM Settings dialog box
+#0C89# "CD-asema"
+#D0BDB0000# "CD-asema"
+#D0BDB0430# "Yleinen\nToshiba\nToshiba (new)\nIBM\nNEC\nDEC\nIMS\nKodak\nRicoh\nHP\nPhilips\nPlasmon\nGrundig CD-R,\nMitsumi CD-R\nPlextor\nSony\nYamaha\nNRC\nIMS CDD-5\nItse määritelty"
+#D0BDB0444# "Automaattinen haku"
+#D0BDB0436# "Vaihda vasen ja oikea kanava päikseen"
+#D0BDB047E# "Poista levy asemasta kopioinnin valmistauduttua"
+#D0BDB043D# "Käytä tärinänkorjausta (Jitter)"
+#D0BDB047F# "Valitse kaikki CD-raidat (oletus)"
+#D0BDB043E# "Käytä NT:n omaa SCSI-kirjastoa"
+#D0BDB04D1# "CD-asema"
+#D0BDB04D2# "Lue sektoreita"
+#D0BDB04D3# "Lue päällekkäisyyttä"
+#D0BDB04D9# "Lohkojen vertailu"
+#D0BDB04D6# "CD-ROM-aseman tyyppi"
+#D0BDB04DA# "CD-nopeus"
+#D0BDB04D4# "Aloituskohta (sektoreina)"
+#D0BDB04D5# "Lopetuskohta (sektoreina)"
+#D0BDB04DB# "Spin up-aika (s)"
+#D0BDB04D8# "Uudelleenyrityksiä"
+#D0BDB04D7# "Kopiointimenetelmä"
+#D0BDB0480# "Lukitse CD-asema kopioinnin ajaksi"
+#D0BDB0481# "Käytä CD-Textiä (jos mahdollista)"
+#D0BDB0431# "Standardi\nParanoia, vain päällekkäisyys\nParanoia, ei tarkisusta\nParanoia, ei naarmukorjausta\nParanoia, täysi"
+
+// CDDB Submit Options dialog box
+#D00A00000# "CDDB-lähetysasetukset"
+#D00A004E2# "Lähetä (HTTP ei sallittu Gracenoten CDDB:ssä)"
+#D00A00414# "Sähköpostitse"
+#D00A00401# "HTTP-teitse"
+#D00A004E4# "SMTP-palvelimen osoite"
+#D00A004E5# "HTTP-lähetyksen osoite (ilman polkua)"
+#D00A004E3# "Sähköpostilähetyksen osoite"
+
+// Config Winamp Plugin Dialog box
+#D00AA0000# "Määritä Winampin input-laajennukset"
+#D00AA0499# "Tietoja"
+#D00AA049A# "Määritä"
+
+// CD Ripping dialog box
+#D0BDC0000# "Nauhoita raidat"
+#D0BDC042C# "nimellinen"
+#D0BDC042E# "max"
+#D0BDC042D# "min"
+
+// Drop Files dialog box
+#D00900000# "Valitse asetukset ohjelmaan raahattuja tiedostoja varten"
+#D00900452# "Tee RIFF-WAV-tiedosto"
+#D0090044C# "Poista WAV-tiedosto pakkauksen jälkeen"
+#D0090042F# "Normalisoi"
+#D00900430# "Pakkaa"
+#D00900431# "Normalisoi + Pakkaa"
+
+// Edit Genres dialog box
+#D00AC0000# "Lisää / muokkaa genretietoja"
+#D00AC049C# "Lisää uusi"
+
+// Enter profile Name dialog box
+#D00AF0000# "Anna profiilin nimi"
+
+// Encoder dialog box
+#0C8A# "Pakkaaja"
+#D06020000# "Pakkaaja"
+#D06020537# "Pakkaaja"
+#D06020452# "Muunna RIFF-WAV-tiedostoiksi"
+#D06020423# "Matala\nPienempi kuin norm.\nNormaali\nSuurempi kuin norm.\nKorkea"
+#D06020536# "Säikeen prioriteetti"
+#D06020535# "Pakkaajan asetukset"
+#D06020453# "Älä poista kopioituja WAV-tiedostoja pakkauksen valmistuttua"
+
+
+// Encoder DOS APE dialog box
+#D0BFD0400# "Mono"
+#D0BFD0401# "Stereo"
+#D0BFD04DE# "Pakkaustaso"
+#D0BFD04DD# "Kanavat"
+#D0BFD04DF# "Tag-formaatti"
+#D0BFD04B4# "APE-tagi (standardi)\nID3V1-tagi"
+#D0BFD0459# "Nopea\nNormaali\nKorkea\nErittäin korkea"
+
+// Encoder Blade Dialog box
+#D0BE80409# "Pakkaa suoraan MP3-muotoon"
+#D0BE804E0# "Bittinopeus"
+#D0BE804E1# "Kanavat"
+#D0BE80400# "Stereo"
+#D0BE80401# "J-stereo"
+#D0BE80402# "Dual"
+#D0BE80403# "Mono"
+#D0BE80427# "Yksityinen"
+#D0BE80428# "CRC-summa"
+#D0BE80429# "Alkuperäinen"
+#D0BE8042A# "Tekijänoikeus"
+
+// Encoder Lame dialog box
+#D008B0548# "Min bittinopeus"
+#D008B054A# "Muoto"
+#D008B054B# "Laatu"
+#D008B054E# "VBR-laatu"
+#D008B0549# "Max"
+#D008B054D# "ABR (kpbs)"
+#D008B054C# "VBR-menetelmä"
+#D008B0547# "Versio"
+#D008B054F# "Näytteenottotaajuus"
+#D008B0463# "MPEG I\nMPEG II\nMPEG II.5"
+#D008B0400# "Stereo"
+#D008B0401# "J-stereo"
+#D008B0402# "Pakotettu Stereo"
+#D008B0403# "Mono"
+#D008B0427# "Yksityinen"
+#D008B0428# "CRC-summa"
+#D008B0429# "Alkuperäinen"
+#D008B042A# "Tekijänoikeus"
+#D008B0409# "Pakkaa suoraan MP3-muotoon"
+#D008B0459# "Pois päältä\nVBR-oletus\nVBR-vanha\nVBR-uusi\nVBR-MTRH\nVBR-ABR"
+#D008B0458# "VBR 0\nVBR 1\nVBR 2\nVBR 3\nVBR 4\nVBR 5\nVBR 6\nVBR 7\nVBR 8\nVBR 9"
+#D008B0414# "Normaali ( q=5 )\nAlhainen ( q=9 )\nKorkea ( q=2 )\nPuheen nauhoitus\nR3Mix-esiasetus\nErittäin korkea laatu ( q=0 )\n--alt-preset standard\n--alt-preset fast standard\n--alt-preset extreme\n--alt-preset fast extreme\n--alt-preset insane\n--alt-preset ABR\n--alt-preset CBR"
+
+// Encoder External settings box
+#D008D0000# ""
+#D008D052D# "Parametri"
+#D008D052C# "Pakkaajan polku"
+#D008D052E# "Bittinopeus"
+#D008D0463# "Pakkaa samalla"
+#D008D0464# "Piilota DOS-ikkuna"
+#D008D052F# "Tiedostopääte"
+#D008D0465# "Lähetä WAV-otsakkeet stdin-virtaan"
+
+// Encoder Wincodec settings box
+#D008A0000# ""
+#D008A0409# "Pakkaa suoraan MP3-muotoon"
+#D008A053A# "Windows MP3 Codec"
+#D008A053B# "Koodekin bittinopeuden valinta"
+#D008A043E# "Korkea laatu"
+
+// Encoder MP2 encoder settings box
+#D0BF9040F# "MPEG-1"
+#D0BF90410# "MPEG-2"
+#D0BF90546# "Bittinopeus"
+#D0BF90409# "Pakkaa suoraan MP2-muotoon"
+#D0BF90545# "Kanavat"
+#D0BF90400# "Stereo"
+#D0BF90401# "J-stereo"
+#D0BF90402# "Dual"
+#D0BF90403# "Mono"
+#D0BF90427# "Yksityinen"
+#D0BF90428# "CRC-summa"
+#D0BF90429# "Alkuperäinen"
+#D0BF9042A# "Tekijänoikeus"
+#D0BF9047F# "Kirjoita lisädata (Antex)"
+#D0BF90480# "Älä salli täyttöä"
+#D0BF90544# "VBR (kokeellinen)"
+#D0BF90458# "Ei mitään\nVBR 0\nVBR 1\nVBR 2\nVBR 3\nVBR 4\nVBR 5\nVBR 6\nVBR 7\nVBR 8\nVBR 9"
+
+// Encoder external VQF settings box
+#D0BEA0000# ""
+#D0BEA041B# "44KHz-48Kbps\n44KHz-40Kbps\n22KHz-32Kbps\n22KHz-24Kbps\n22KHz-20Kbps\n16KHz-16Kbps\n11KHz-10Kbps\n11KHz-8Kbps\n8KHz-8Kbp"
+#D0BEA0549# "VQF-pakkaajan polku"
+#D0BEA0547# "VQF:n tila"
+
+// Encoder WMA8 settings box
+#D0BEC03F5# "22 kbit/s\n32 kbit/s\n36 kbit/s\n40 kbit/s\n48 kbit/s\n64 kbit/s\n80 kbit/s\n96 kbit/s\n128 kbit/s\n160 kbit/s"
+#D0BEC0409# "Pakkaa suoraan MP3-muotoon"
+#D0BEC0441# "Käytä Digital Right Management -järjestelmää"
+#D0BEC0414# "Mono"
+#D0BEC04B6# "Stereo"
+#D0BEC0538# "Bittinopeus"
+#D0BEC0539# "Kanavat"
+
+// Encoder external Xing settings box
+#D0BF00000# ""
+#D0BF00414# "CBR"
+#D0BF00401# "VBR"
+#D0BF00429# "Alkuperäinen"
+#D0BF0042A# "Tekijänoikeus"
+#D0BF0045C# "Suodata korkeat taajuudet"
+#D0BF0045D# "Pakota yksinkertainen stereo"
+#D0BF0045E# "Yhdistä kanavat monoksi"
+#D0BF0045F# "Anna pakkaajan valita näytteenottotaajuus"
+#D0BF00532# "Pakkaajan polku"
+#D0BF00533# "Bittinopeus"
+#D0BF00534# "VBR-aste"
+
+// Encoder WAV settings box
+#D0BF10000# ""
+#D0BF1053E# "Näytteenottotaajuus"
+#D0BF1053F# "Kanavat"
+#D0BF10414# "Stereo"
+#D0BF10401# "Mono"
+#D0BF1053D# "Pakkaus"
+#D0BF1053C# "Muoto"
+#D0BF10439# "WAV\nApple/SGI AIFF\nSun/Next au (big endian)\nDec au (little endian))\nRaw PCM (big endian)\nRaw PCM (little endian)"
+#D0BF10409# "Pakkaa suoraan"
+
+// Encoder FAAC settings box
+#D0BF20000# ""
+#D0BF20463# "MPEG-2"
+#D0BF20415# "MPEG-4"
+#D0BF20466# "Standardi\nPieni kompleksisuus\nSSR\nLTD"
+#D0BF204AF# "16000\n18000\n19500"
+#D0BF204B1# "Käytä LFE:tä"
+#D0BF20468# "Käytä MS Stereo:ta"
+#D0BF20526# "Bittinopeus / kanava"
+#D0BF20528# "Kaistanlev. (Hz)"
+#D0BF20527# "Profiili"
+#D0BF204B0# "Käytä Temporal Noise Shaping-järjestelmää (TNS)"
+
+// Encoder Vorbis settings box
+#D0BF60000# ""
+#D0BF60400# "Stereo"
+#D0BF60401# "Mono"
+#D0BF60409# "Samanaikainen pakkaus"
+#D0BF604B3# "Käytä Laatu-asetusta (suositus)"
+#D0BF60540# "Kanavat"
+#D0BF60541# "Käytä bittinopeuden hallintaa"
+#D0BF60550# "Pienin bittinopeus"
+#D0BF60551# "Nimellinen bittinopeus"
+#D0BF60552# "Suurin bittinopeus"
+
+// Encoder Gogo settings box
+#D0BF80000# ""
+#D0BF8040F# "MPEG-1"
+#D0BF80410# "MPEG-2"
+#D0BF80409# "Pakkaa suoraan MP3-muotoon"
+#D0BF80458# "Ei\nVBR 0\nVBR 1\nVBR 2\nVBR 3\nVBR 4\nVBR 5\nVBR 6\nVBR 7\nVBR 8\nVBR 9"
+#D0BF80400# "Mono"
+#D0BF80401# "Stereo"
+#D0BF80402# "J-Stereo"
+#D0BF80403# "MS-Stereo"
+#D0BF8047B# "Käytä MMX/3DNow:ta"
+#D0BF8047C# "Käytä psykoakustiikkaa"
+#D0BF8047D# "Käytä Low Pass -filtteriä pienille bittinopeuksille"
+#D0BF80529# "Muuttuva bittinopeus"
+#D0BF8052A# "Bittinopeus"
+#D0BF8052B# "Muoto"
+
+// Encoder External Musepack settings box
+#D00A90000# ""
+#D00A90531# "Parametrit"
+#D00A90530# "Polku Muspack-pakkaajaan"
+#D00A90464# "Piilota DOS-ikkuna"
+#D00A90463# "Pakkaa suoraan"
+
+// Encoder NTTVQF settings box
+#D0BFB0000# ""
+#D0BFB0409# "Pakkaa suoraan VQF-muotoon"
+#D0BFB0462# "32 kbit/s\n40 kbit/s\n48 kbit/s\n56 kbit/s\n64 kbit/s\n80 kbit/s\n96 kbit/s\n112 kbit/s\n128 kbit/s\n160 kbit/s\n192 kbit/s\n224 kbit/s\n256 kbit/s\n320 kbit/s"
+#D0BFB0400# "Mono"
+#D0BFB0401# "Stereo"
+#D0BFB0542# "Bittinopeus kanavaa kohti"
+#D0BFB0543# "Kanavat"
+
+// File compare two files dialog box
+#D00970000# "Vertaile kahta WAV-tiedostoa"
+#D00970446# "Vertaile"
+#D00970522# "Ensimmäinen tiedosto"
+#D00970523# "Toinen tiedosto"
+#D00970524# "Edistyminen"
+
+// File name string info dialog box
+#D00930000# "Tiedostonimen asetukset"
+#D00930516# "Malli:\n%1\%2\%4      Luo tiedoston Esittäjä\Albumi\KappaleenNimi.mp3 (tai .wav)\n%1 - %2 - %3  luo tiedoston Esittäjä - Albumi - KappaleenNimi.mp3 (tai .wav)"
+#D00930517# "Tiedostonimen muodossa saa olla seuraavia muuttujia"
+#D00930518# "Kenoviivaa (\) voi myös käyttää osoittamaan hakemistoerotusta.\nÄlä kuitenkaa käytä sitä ensimmäisen merkkinä!"
+
+// File name property page
+#0C8E# "Tiedostonimet"
+#D0BF40000# "Tiedostonimet"
+#D0BF40479# "Merkin korvaus"
+#D0BF4047D# "Jaa raidannimi esittäjään ja raidannumeroon erotinmerkillä:"
+#D0BF40443# "Lisää tiedostot M3U-soittolistaan"
+#D0BF40444# "Lisää tiedostot PLS-soittolistaan"
+#D0BF4051B# "Tiedostonimi"
+#D0BF40519# "Tiedoston muoto ja hakemistot"
+#D0BF4051C# "WAV -> MP3"
+#D0BF4051D# "Nauhoitetut raidat"
+#D0BF4051A# "Nimen muoto"
+#D0BF40520# "Tiedostonimi"
+#D0BF4051E# "Nimen muoto"
+#D0BF40521# "Tyyppi"
+#D0BF4051F# "Soittolista"
+
+// File overwrite dialog box
+#D00AE0000# "Tiedoston ylikirjoituksen varoitus"
+#D00AE0512# "Kyllä"
+#D00AE04A1# "Kyllä k&aikkiin"
+#D00AE0511# "Ei"
+#D00AE04A2# "Ei ka&ikkiin"
+#D00AE0513# "Tiedosto"
+#D00AE0514# "on jo olemassa. Korvataanko tiedosto?"
+
+// Generic Property Page
+#0C8B# "Yleinen"
+#D06040000# "Yleinen"
+#D06040414# "Ei mitään\nID3-V1\nID3-V2\nID3-V1 &  ID3-V2"
+#D06040411# "Normalisoi"
+#D060404AB# "Sammuta kone kopioinnin/pakkaamisen jälkeen"
+#D0604050F# "Jos signaali on <"
+#D0604050C# "Normalisoi äänenvoimakkuus"
+#D0604050D# "Tasolle"
+#D06040510# "Jos signaali on >"
+#D06040507# "Tiedoston tagiasetukset"
+#D0604050A# "Tagin kommenttikenttä"
+#D0604050E# "Tasolle"
+#D06040508# "ID3-tagin versio"
+#D0604050B# "Pakattu käyttäen"
+#D06040506# "Tilapäishakemisto"
+#D06040509# "Raitanum. muoto"
+#D060404AC# "Digitaalinen CD:n toisto"
+
+// General Info Dialog Box
+#D0BDF0000# "Yleistä tietoa"
+#D0BDF0502# "CD:n asematunnus"
+#D0BDF0500# "CDDB:n levytunnus"
+#D0BDF0501# "ASPI-hallintaohjelma"
+#D0BDF0503# "Käyttöjärjestelmäversio"
+#D0BDF0504# "SCSI-info"
+#D0BDF0505# "Asematyypit"
+#D0BDF0442# "Kopioi leikepöydälle"
+
+// Local CDDB Settings TAB
+#0C8C# "Paikallinen CDDB"
+#D0BFA0000# "Paikallinen CDDB"
+#D0BFA044B# "Windows-muotoiset CDDB-tiedostot"
+#D0BFA044C# "Unix-muotoiset CDDB-tiedostot"
+#D0BFA0459# "Tallenna CDPlayer.ini-tiedostoon"
+#D0BFA045A# "Tallenna paikalliseen CDDB-tietokantaan"
+#D0BFA045B# "Käytä pitkiä hakemistonimiä"
+#D0BFA04B5# "Kirjoita MS-DOS-tekstitiedostoina "
+#D0BFA04FE# "CDDB-polku"
+#D0BFA04FF# "Winamp in_cdda.cdb:n polku (Winamp 2.78 -muoto)"
+#D0BFA04FD# "Paikallisen CDDB:n asetukset"
+
+// Main Window (Title View)
+#D0BD80000# " "
+#D0BD804C2# "Esittäjä"
+#D0BD804C3# "Albumi"
+#D0BD804C4# "Genre"
+#D0BD804C5# "Vuosi"
+#D0BD804C6# "Raidan kohta"
+
+// Mpeg to RIFF-WAV conversion dialog box
+#D00860000# "Muunna MP2/MP3-tiedosto RIFF-WAV-muotoon"
+#D008604FC# "Käsitellään"
+
+// Mpeg to WAV conversion dialog box
+#D0BEB0000# "Muunna MP3-tiedosto WAV-muotoon"
+#D0BEB04FB# "Käsitellään"
+
+// Open file dialog box
+#D02630000# "Avaa tiedosto"
+#D026303EE# "Etsi alihakemistoista"
+#D026303F1# "Poista alkuperäinen"
+#D0263042F# "Normalisoi"
+#D02630430# "RIFF-WAV"
+#D026303EF# "Valitse kaikki"
+#D026303F0# "Avaa"
+#D02630495# "Asetukset"
+#D026304AC# "Säilytä alkuperäinen hakemistorakenne"
+#D026304FA# "Saatavilla olevat tiedostot:"
+#D026304F9# "Hakemisto"
+
+// Partial track copy dialog box
+#D06010000# "Nauhoita osittainen raita"
+#D0601041D# "WAV-tiedosto"
+#D06010412# "Pakattu äänitiedosto (MP3)"
+#D060104F5# "Raita"
+#D060104F6# "Minuutit"
+#D060104F7# "Sekunnit"
+#D060104F8# "Kehykset"
+#D060104F0# "Tiedoston ominaisuudet"
+#D060104F2# "Alue (yksi tiedosto alkukohdasta loppukohtaan)"
+#D060104F3# "Alku"
+#D060104F4# "Loppu"
+#D060104F1# "Kohdetyyppi"
+
+// Player view window
+#D0C800489# "Lisätiedot"
+
+// Record from Analog In dialog box
+#D0BF50000# "Nauhoita analogisesta sisääntulosta"
+#D0BF50640# "Vapaa pituus"
+#D0BF50641# "Aikarajoitus"
+#D0BF5046E# "Selaa"
+#D0BF504B7# "Lisää järjestysnumero tiedostonimeen, alkaen numerosta: "
+#D0BF504EE# "Nauhoituksen tila"
+#D0BF5046B# "Nauhoita"
+#D0BF50445# "Tauko"
+#D0BF50450# "Pysäytä"
+#D0BF50642# "Mono"
+#D0BF50643# "Stereo"
+#D0BF503F5# "Kanavat"
+#D0BF504EB# "Nauhoittava laite"
+#D0BF504EC# "Luotavan tiedoston nimi"
+#D0BF504ED# "Tallennusmuoto"
+#D0BF504EA# "Näytteenottotaajuus"
+#D0BF504EF# "sekuntia"
+#D0BF504F0# "Tallenna hakemistoon"
+
+// RIFF-WAV to MPEG dialog box
+#D02630064# "Keskeytä"
+#D0BF30000# "Poista RIFF-WAV-tunniste MPEG-tiedosto(i)sta"
+#D0BF304E9# "Käsitellään"
+
+// Substitute Characters dialog box
+#D0BF70000# "Merkin korvaus"
+#D0BF704E6# "Laittomat tiedostonimen merkit"
+#D0BF704E7# "Muut (korvaus ei pakollinen)"
+#D0BF704E8# "väli :="
+
+// Ripper Status dialog box
+#D00960000# "Tiedot kopioinnin tilasta"
+
+// String Table
+#0065#	"&Tietoja CDex:stä..."
+#0066#	"Tallenna nimellä..."
+#0067#	"Avaa"
+#0BBA#	"Tilan hallinta"
+#0BBB#	"Muu"
+#0BBC#	"Soita raita"
+#0BBE#	"Lopeta soitto"
+#0BBF#	"Poista levy asemasta"
+#0BC0#	"Internet-yhteyttä ei voida avata. Tarkista internet-asetukset."
+#0BC1#	"CDex"
+#0BC2#	"Windowsin socketien alustus epäonnistui."
+#0BC3#	"Kelaa eteenpäin\nKelaa eteenpäin"
+#0BC4#	"Kelaa taaksepäin\nKelaa taaksepäin"
+#0BC5#	"Tauko\nTauko"
+#0BC6#	"Seuraava raita\nSeuraava raita"
+#0BC7#	"Edellinen raita\nEdellinen raitak"
+#0BC8#	"Lue raidan tiedot etä-CDDB-kanasta"
+#0BD4#	"CDex Ripper\n\nCDex Ripper\n\n\nCDex.Document\nCDex Document"
+#0BDE#	"CDex, versio "
+#0BDF#	"ei esittäjää"
+#0BE0#	"ei nimeä"
+#0BE1#	"Genre"
+#0BE2#	"Albumi"
+#0BE3#	"CDDB-tunniste"
+#0BE4#	"Esittäjä"
+#0BE5#	"Raidan numero"
+#0BE6#	"Asematunnus"
+#0BE7#	"Kappale"
+#0BE8#	"Raidan numero 0-alkuisena"
+#0BE9#	"Raitojen määrä"
+#0BEA#	"Albumi"
+#0BEB#	"Raita"
+#0BEC#	"Aloituskohta"
+#0BED#	"Soiton kesto"
+#0BEE#	"Koko"
+#0BEF#	"Tila"
+#0BF0#	"CDex versio "
+#0BF1#	"Esittäjä-kenttä sisältää virheellisiä merkkejä\n Korvaa virheelliset merkit väleillä"
+#0BF2#	"Albumi-kenttä sisältää virheellisiä merkkejä\n Korvaa virheelliset merkit väleillä"
+#0BF3#	"Raidan numero [%d] sisältää virheellisiä merkkejä\n Korvaa virheelliset merkit väleillä"
+#0BF4#	"Ei raitoja valittuna, valitse listalta ainakin yksi ääniraita."
+#0BF5#	"Leikepöydälle ei voitu sijoittaa dataa"
+#0BF6#	"Hakee raitaa %d (%02d:%02d:%02d)\n"
+#0BF7#	"Kopioin raitaa (%s) MPEG-tiedostoon %s"
+#0BF8#	"Kopiointi/pakkaus keskeytettiin kohdassa %s"
+#0BF9#	"Raidan kopiointi MPEG:iksi onnistui, kokonaiskesto: %s"
+#0BFA#	"Kopioin raitaa (%s) wav-tiedostoon %s"
+#0BFB#	"Kopiointi keskeytettiin kohdassa %s"
+#0BFC#	"Raidan kopiointi WAV-tiedostoon onnistui, kokonaiskesto: %s"
+#0BFD#	"Hakemistoa ei voitu luoda: "
+#0BFE#	"Kulunut aika %s ; Jäljellä oleva aika %s ; Arvioitu aika %s"
+#0BFF#	"Kopioin raitaa %d ( %d %% valmis, tiedosto %d/%d)"
+#0C00#	"Huippuarvo %4.2f dB = %3d %%"
+#0C01#	"Jitter (virheitä: %d)"
+#0C02#	"Muunnetaan raitaa %d ( %d %% valmis, tiedosto %d/%d)"
+#0C03#	"Normalisoidaan raitaa %d ( %d %% valmis, tiedosto %d/%d)"
+#0C04#	"Haetaan huippuarvoa raidalle %d ( %d %% valmiina, tiedosto %d/%d)"
+#0C05#	"Huippuarvo %4.2f dB = %3d %%"
+#0C06#	"Tiedostoon %s"
+#0C07#	"Puretaan raitaa %d (tiedosto %d/%d)"
+#0C08#	"Muunnetaan tiedostoa haluttuun muotoon (tiedosto %d/%d)"
+#0C09#	"Normalisoidaan raitaa kertoimella %5.2f (tiedosto %d/%d)"
+#0C0A#	"Etsitään huippuarvoa (tiedosto %d/%d)"
+#0C0B#	"Käsittellään (tiedosto %d/%d)"
+#0C0C#	"Puretaan CD:n raitoja"
+#0C0D#	"Tiedoston muunto"
+#0C0E#	"%5d virhettä raidalla %s\n\n"
+#0C0F#	"Tärinävirheitä ilmeni. Lue ohje tärinävirheiden välttämiseksi\n\n"
+#0C10#	"Vuosi"
+#0C11#	"Dataraita"
+#0C12#	"Ääniraita"
+#0C13#	"Täytä kaikki esittäjä- ja raitainformaatio ja varmista,\n että genre-kenttä on asetettu oikein ennen\ntietojen lähettämistä etä-CD-tietokantaan"
+#0C14#	"Pyydettyä albumitietoa ei löytynyt paikallisesta CDDB-tietokannasta"
+#0C15#	"Pyydettyä albumitietoa ei löytynyt CDPlayer.ini-tiedostosta"
+#0C16#	"MP3-tagia on muutettu. \nTallenna muutokset?"
+#0C17#	"Virhe tallennettaessa ID3V2-tagia\nVarmista ettei tiedostoa ole asetettu Vain luku -muotoon!"
+#0C18#	"Virhe luettaessa ID3V2-tagia"
+#0C19#	"Virhe avattaessa lähdetiedostoa"
+#0C1A#	"Järjestelmän sammutusoikeuden asettaminen epäonnistui"
+#0C1B#	"Normalisointikerroin on %7.4f x"
+#0C1C#	"Virheellinen sähköpostiosoite, täytä\nsähköpostiosoitteesi etä-CDDB:n asetusikkunaan"
+#0C1D#	"Palvelin ei vastannut tarpeeksi nopeasti. \nLisää aikarajan arvoa CDDB-asetusikkunassa, \n tai yritä uudelleen"
+#0C1E#	"luku/kirjoitus sallittu\n"
+#0C1F#	"OK, vain luku\n"
+#0C20#	"Vastaavaa kohdetta ei löydy "
+#0C21#	"Onnistunut vastaus\n"
+#0C22#	"Löytyi seuraavat tarkat löydökset\n"
+#0C23#	"Löytyi seuraavat epätarkat löydökset\n"
+#0C24#	"Määritettyä CDDB-tietuetta ei löytynyt\n"
+#0C25#	"Kättely tapahtui jo\n"
+#0C26#	"Tietue tietokannassa on korruptoitunut\n"
+#0C27#	"Ei kättelyä\n"
+#0C28#	"Kättely epäonnistui, yhteys suljetaan\n"
+#0C29#	"Yhteyksiä ei sallita: pääsy kielletty\n"
+#0C2A#	"Ei yhteyksiä, liian suuri kuormitus\n"
+#0C2B#	"Palvelinvirhe, valitse toinen palvelin\n"
+#0C2C#	"Protokollataso jo cur_level\n"
+#0C2D#	"Virheellinen protokollan taso\n"
+#0C2E#	"Yhteys epäonnistui, koska:"
+#0C2F#	"Muunna"
+#0C30#	"Moduulin nimi"
+#0C31#	"Moduulin tieto"
+#0C32#	"Genre-taulua (genres.txt) ei löytynyt CDex:n hakemistosta\n(sijainnista: %s)\nTarkista CDex-asennuksesi!"
+#0C33#	"Genre"
+#0C34#	"CDDB-genre"
+#0C35#	"ID3 V1 ID"
+#0C36#	"Uusi genre"
+#0C37#	"Tuntematon"
+#0C38#	"Virheellinen vastaus palvelimelta"
+#0C39#	"%1 = Esittäjä\t\t%5 = CD Volume ID\n%2 = Albumi\t\t%6 = CDDB ID\n%3 = Raidan numero\t%7 = Raidan numero nolla-alkuisena\n%4 = Raidan nimi\t%8 = Raitojen määrä\n%Y = Vuosi\t\t%G = Genre\n%A = Esittäjän nimi (jakoasetus ei vaikuta)"
+#0C3A#	"CDex Player, versio "
+#0C3B#	"Tapahtui CDDB-virhe, lue lisätiedot viesti-ikkunasta\n"
+#0C3C#	"VIRHE: Ei voida käynnistää ulkoista pakkaajaa"
+#0C3D#	"VIRHE: Ei voida lähettää dataa ulkoiselle pakkajalle"
+#0C3E#	"VQF-skriptitiedostoa ei voitu luoda"
+#0C3F#	"Ei voitu ladata pakkaajaa %s\nVarmista että käynnistät CDex.exe:n hakemistosta, jossa DLL:t ovat\nJos olet luonut pikakuvakkeen, tarkista että työhakemisto on oikea"
+#0C40#	"Virheellinen syöttövirta"
+#0C41#	"Ei voitu avata/luoda tiedostoa: %s"
+#0C42#	"Virhe: Ulkoiseen pakkaajaan ei voitu luoda putkea"
+#0C43#	"GoGo DLL vaatii liukulukuyksikön (FPU)"
+#0C44#	"%2d raita(a) (%5.2f Mt) Vapaata levytilaa %5d Mt"
+#0C45#	"Soittaa raitaa %d (%02d:%02d:%02d)\n"
+#0C46#	" (väli)"
+#0C47#	"Leikepöytää ei voida avata"
+#0C48#	"Leikepöydää ei voida tyhjentää"
+#0C49#	"Avataan yhteys"
+#0C4A#	"Lähetetään Hello-viesti"
+#0C4B#	"Lähetetään Statistics-käsky"
+#0C4C#	"Lähetetään Proto-taso"
+#0C4D#	"Lähetetään kysely"
+#0C4E#	"Aloitetaan haku"
+#0C4F#	"Vastaanotetaan etävastausta"
+#0C50#	"Tuntematon SMTP-palvelimen osoite. Täytä SMTP-palvelimen\nosoite CDDB-lähetysasetus-ikkunassa"
+#0C51#	"Viestin lähetys palvelimelle epäonnistui"
+#0C52#	"Otetaan yhteyttä palvelimeen"
+#0C53#	"Palvelin ei ole valmis"
+#0C54#	"Lähetetään"
+#0C55#	"Lähetetään dataa"
+#0C56#	"Lähetetään sisältöteksti"
+#0C57#	"Ei vastausta palvelimelta"
+#0C58#	" (Pakkaaja saatavilla, ei versiotietoa)"
+#0C59#	" Alpha %d"
+#0C5A#	" Beta %d"
+#0C5B#	"Määritelty bittinopeus ei sovi valitun näytetaajuden kanssa"
+#0C5C#	" (ei saatavilla)"
+#0C5D#	"versio"
+#0C5E#	"moottori"
+#0C5F#	"Ei voitu avata tiedostoa %s"
+#0C60#	"Tiedostokoko liian pieni vertailua varten"
+#0C61#	"Toisen tiedoston aloituskohta on %d tavua"
+#0C62#	"Ensimmäisen tiedoston aloituskohta on %d tavua"
+#0C63#	"Tiedostot ovat erilaiset, yhtäläistä pätkää ei löytynyt"
+#0C64#	"Tiedostot erilaisia, aloitetaan kohdasta %d"
+#0C65#	"Eroavaisuuksia ei löytynyt\nYhteensä %d tavua verrattiin"
+#0C66#	"CDex:n asetukset"
+#0C67#	"Valitse kansio"
+#0C68#	"Valitse listan kohteista yksi tai paina peruuta lopettaaksesi"
+#0C6A#	"datatagia ei löytynyt"
+#0C6B#	"Tiedosto %s ei ole MPEG RIFF-WAV tiedosto"
+#0C6C#	"Muototagia ei löytynyt tiedostosta %s"
+#0C6D#	"Käytä automaattista tunnistusta vain jos Yleinen asetus ei toimi.\nAutomaattista tunnistusta varten CD-ROM-asemassa tulee olla CD\nHaluatko jatkaa?"
+#0C6E#	"Kokonaisnauhoitusaika (MM:SS:FF) %02d:%02d:%02d yhtä kuin %d sektoria"
+#0C6F#	"Tiedostonimi"
+#0C70#	"Päiväys"
+#0C71#	"Polku"
+#0C72#	"Koko (Mt)"
+#0C73#	"Tallenna"
+#0C74#	"Ensimmäisen/toisen tiedoston tiedostokoot ovat d/%d tavua"
+#0C75#	"OK"
+#0C76#	"Ensimmäinen tiedostonimi ei kelpaa"
+#0C77#	"Toinen tiedostonimi ei kelpaa"
+#0C78#	"Ogg-pakkausvirran alustus epäonnistui. Tämä voi johtua siitä että bittinopeus ei sovi valitun taajuden kanssa. Yritä käyttää laatuasetusta bittinopeusasetuksen sijaan."
+#0C7A#  "Encoding track to a Compressed Audio File has been finished properly, total duration: %s"
+#0C7B#	"Type"
+#0C80#	"CDex Player\n\nCDex Player\n\n\nCDex.Document\nCDex Document"
+#0C81#	"Tiedostoja ei valittu"
+#0C82#	"Auto"
+#0C83#	"Oletus"
+#0C84#	"Muuntovirhe: Lähdetiedosto on sama kuin kohdetiedosto,\nole hyvä ja valitse toinen muunnon kohdehakemisto!\nLähdetiedosto  : %s\nKohdetiedosto : %s"
+#0C85#	"Tämä käyttöjärjestelmä ei tue NT:n omaa SCSI-kirjastoa\nSinun on asennettava ASPI-ajurit käyttääksesi CDexiä, katso CDex Ohje lisätietoja varten\n"
+#0C86#	"Virhe: Windows ASPI-ajurien lataus epäonnistui.\nSinun on asennettava ASPI-ajurit käyttääksesi CDexiä, katso CDex Ohje lisätietoja varten\n"
+#0C87#	"Virhe: ASPI-ajurien tilan määritys epäonnistui\nOle hyvä ja tarkista ASPI-ajruien asennus, katso CDex Ohje lisätietoja varten\n"
+#0C88#	"English"
+#0C8F#  "..."
+#0C90#  "Valitse hakemisto"
+#0C91#  "Pakkaajat (*.exe;*.bat)|*.exe;*.bat|Kaikki tiedostot (*.*)|*.*||"
+#0C92#  "Valitse pakkaaja"
+#0C93#  "Iso"
+#0C94#  "Pieni"
+#0C95#  "ei mikään"
+#0C96#  "standardi"
+#0C97#  "Lue"
+#0C98#  "Atapi"
+#0C99#  "Käytä"
+#0C9A#  "Tiheys"
+#0C9B#  "Endian"
+#0C9C#  "Tulos"
+#0C9D#  "Läpi"
+#0C9E#  "Virhe"
+#0C9F#  "Ajurin wnaspi32.dll lataaminen epäonnistui!\nKäytetäänkö "NT:n oman SCSI-kirjaston" ajuria sen sijaan?"
+#0CA0#  "Hae uusimmat/päivitetyt kielitiedostot"
+
+#8003#	"Valitse määrittääksesi CDex\nMääritä"
+#8004#	"Muunna CD:n raitoja WAV-äänitiedostoiksi\nRaitoja->WAV"
+#8005#	"Muunna CD:n raitoja MPEG-äänitiedostoiksi\nRaitoja->MPEG"
+#8006#	"Muunna WAV-tiedostoja MPEG-tiedostoiksi\nWAV->MPEG"
+#8007#	"Muunna osia CD:stä WAV- tai MP3-tiedostoksi\nMuunna osittainen raita"
+#800D#	"Valitse nähdäksesi järjestelmätietoja\nValitse nähdäksesi järjestelmätietoja"
+#800E#	"Määritä CD-asetukset\nMääritä CD-asetukset"
+#800F#	"Poista CD asemasta\nPoista CD asemasta (Vaihto-F1)"
+#8010#	"Kelaa eteenpäin\nKelaa eteenpäin"
+#8011#	"Kelaa taaksepäin\nKelaa taaksepäin"
+#8012#	"Seuraava raita\nSeuraava raita (Vaihto-F3)"
+#8013#	"Edellinen raita\nEdellinen raita"
+#8015#	"Soita audioraitoja\nSoita audioraitoja (Vaihto-F4)"
+#8016#	"Lopeta toisto\nLopeta toisto (Vaihto-F5)"
+#8017#	"Keskeytä/jatka toistoa\nKeskeytä/jatka toistoa"
+#8018#	"Hae albumitietoja paikallisesta CDDB:stä\nLue albumitietoja paikallisesta CDDB:stä"
+#801A#	"Hae albumitietoja CDPlayer.ini-tiedostosta\nLue albumitietoja CDPlayer.ini-tiedostosta"
+#801B#	"Hae albumitietoja etä-CDDB:stä\nHae albumitietoja etä-CDDB:stä"
+#801C#	"Näytä tai piilota soittotyökalut"
+#801D#	"Näytä tai piilota nauhoitustyökalut"
+#801E#	"Edellinen raita\nEdellinen raita (Vaihto-F2)"
+#801F#	"Kelaa taaksepäin\nKelaa taaksepäin"
+#8022#	"Muunna MP3 tiedostoja Riff Wav-tiedostoiksi"
+#8023#	"Kopioi raitainformaatio leikepöydälle"
+#8024#	"Nimeä valittu raita uudelleen"
+#8026#	"Valitse kaikki raidat"
+#8027#	"Talleta albumitiedot CDPlayer.ini-tiedostoon"
+#8028#	"Talleta albumitiedot paikalliseen CDDB-tiedostoon"
+#8029#	"Muunna MPEG-tiedostoja takaisin WAV-tiedostoiksi\nMuunna MPEG-tiedostoja takaisin WAV-tiedostoiksi"
+#802A#	"Päivitä raitainformaatio levyltä"
+#802B#	"Näyttää tilan"
+#802C#	"Näytä kopioinnin tilatiedot valituista raidoista\nNäytä kopioinnin tilatiedot valituista raidoista"
+#802D#	"Vertaa kahden WAV-tiedoston sisältöä\nVertaa kahden WAV-tiedoston sisältöä"
+#802E#	"Soita mediatiedostot\nSoita mediatiedostot"
+#802F#	"Pyyhi tämän levyn kopioinnin tila"
+#8030#  "Poista RIFF-WAV-otsakkeet MP2- tai MP3-tiedostoista\nPoista RIFF-WAV-ostakkeet MP2/MP3-tiedostoista"
+#8031#	"Nauhoita analogilähteestä\nNauhoita analogilähteestä"
+#8032#	"Lähetä albumitiedot etä-CDDB-tietokantaan"
+#8033#	"Hae albumitiedot CD-Text:istä (jos mahdollista)"
+#8035#	"Valitse tiedostot\nValitse tiedostot"
+#8036#	"Valitse tiedostot\nValitse tiedostot"
+#8037#	"Edellinen tiedosto\nEdellinen tiedosto"
+#8038#	"Seuraava tiedosto\nSeuraava tiedosto"
+#8039#	"Toista tiedosto(t)\nSoita tiedosto(t)"
+#803A#	"Lopeta tiedosto(je)n toisto\nLopeta tiedosto(je)n toisto\n"
+#803B#	"CDDB-ryhmähaku\nCDDB-ryhmähaku"
+#803E#	"Pakkaa uudelleen (transkoodaa) pakatut äänitiedostot\nPakkaa uudelleen (transkoodaa) pakatut äänitiedostot"
+
+#8046#	"Määrittää Winamp-laajennukset\nMäärittää Winamp-laajennukset"
+#8047#	"Lisää tai muuta Genre-listaa\nLisää tai muuta Genre-listaa"
+#8048#	"Keskeytä soitto\nKeskeytä soitto (Vaihto-F6)"
+#804B#	"Soita tiedostot satunnaisessa järjestyksessä\nSoita tiedostot satunnaisessa järjestyksessä"
+#804D#	"Vaihda Esittäjä/Kappale tiedot (kokoelmalevyillä)\nVaihda Esittäjä/Kappale tiedot (kokoelmalevyillä)"
+#804E#	"CD-ROM:in valinta\nValitse aktiivinen CD-ROM-asema"
+#804F#	"Valitse profiili\nValitse profiili"
+#8050#	"Tallenna nykyiset asetukset profiiliin\nTallenna nykyiset asetukset profiiliin"
+#8052#	"Poista profiili\nPoista profiili"
+#80E8#  "Lue CD:n tiedot Winampin CD-tietokannasta\nLue CD:n tiedot Winampin CD-tietokannasta"
+#E000#	"CDex"
+#E001#	"Paina F1 selataksesi Ohjetta"
+#E100#	"Luo uusi dokumentti\nUusi"
+#E101#	"Avaa dokumentti\nAvaa"
+#E102#	"Sulje aktiivinen dokumentti\nSulje"
+#E103#	"Tallenna aktiivinen dokumentti\nTallenna"
+#E104#	"Tallenna aktiivinen dokumentti uudella nimellä\nTallenna nimellä"
+#E105#	"Vaihda tulostuasetuksia\nSivun asetukset"
+#E106#	"Vaihda tulostimen asetuksia\nTulostimen asetukset"
+#E107#	"Tulosta dokumentti\nTulosta"
+#E109#	"Näytä tulostuksen esikatselu\nEsikatselu"
+#E110#	"Avaa tämä dokumentti"
+#E111#	"Avaa tämä dokumentti"
+#E112#	"Avaa tämä dokumentti"
+#E113#	"Avaa tämä dokumentti"
+#E114#	"Avaa tämä dokumentti"
+#E115#	"Avaa tämä dokumentti"
+#E116#	"Avaa tämä dokumentti"
+#E117#	"Avaa tämä dokumentti"
+#E118#	"Avaa tämä dokumentti"
+#E119#	"Avaa tämä dokumentti"
+#E11A#	"Avaa tämä dokumentti"
+#E11B#	"Avaa tämä dokumentti"
+#E11C#	"Avaa tämä dokumentti"
+#E11D#	"Avaa tämä dokumentti"
+#E11E#	"Avaa tämä dokumentti"
+#E11F#	"Avaa tämä dokumentti"
+#E120#	"Tyhjennä valinta\nTyhjennä"
+#E121#	"Tyhjennä kaikki\nTyhjennä kaikki"
+#E123#	"Leikkaa valinta leikepöydälle\nLeikkaa"
+#E124#	"Etsi määriteltyä tekstiä\nEtsi"
+#E125#	"Liitä leikepöydän sisältö\nLiitä"
+#E128#	"Toista edellinen toiminto\nToista"
+#E129#	"Korvaa valittu teksti\nKorvaa"
+#E12A#	"Valitse koko dokumentti\nValitse kaikki"
+#E12B#	"Kumoaa edellisen toiminnon\nKumoa"
+#E12C#	"Tee uudelleen kumottu toiminto\nTee uudelleen"
+#E135#	"Jaa valittu ikkuna\nJaa"
+#E140#	"Näytä ohjelmatiedot, versionumeron ja tekijänoikeustiedot\nTietoja"
+#E141#	"Lopeta ohjelma\nLopeta"
+#E142#	"Avaa ohjeen\nOhjeen aiheet"
+#E143#	"Näytä CDex:n manuaali\nOhje CDex:n käyttöön"
+#E144#	"Näytä kuinka ohjetta käytetään\nOhje"
+#E145#	"Näyttää ohjeen painikkeille, valikoille ja ikkunoille\nOhje"
+#E146#	"Näyttää ohjeen nykyiselle tehtävälle tai käskylle\nOhje"
+#E150#	"Vaihda seuraavaan ikkunaan\nSeuraava"
+#E151#	"Palaa takaisin edelliseen ikkunaan\nEdellinen"
+#E700#	"EXT"
+#E701#	"CAPS"
+#E702#	"NUM"
+#E703#	"SCRL"
+#E704#	"OVR"
+#E705#	"REC"
+#E800#	"Näytä tai piilota työkalurivi\nNäytä työkalurivi"
+#E801#	"Näytä tai piilota tilarivi\nNäytä tilarivi"
+#EF00#	"Muuta ikkunan kokoa"
+#EF01#	"Muuta ikkunan sijaintia"
+#EF02#	"Pienennä ikkuna ikoniksi"
+#EF03#	"Suurenna ikkuna koko näytön kokoiseksi"
+#EF04#	"Vaihda seuraavaan dokumentti-ikkunaan"
+#EF05#	"Palaa takaisin edelliseen dokumentti-ikkunaan"
+#EF06#	"Sulje aktiivinen ikkuna (kysyy dokumentin tallennuksesta)"
+#EF12#	"Palauta ikkuna normaalikokoon"
+#EF13#	"Valitse tehtävälista"
+#F003#	"Nimetön"
+#F005#	"Sulje esikatselutila\nPeru esikatselu"

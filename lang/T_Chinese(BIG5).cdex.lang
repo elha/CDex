@@ -1,0 +1,939 @@
+//
+// CDex - Open Source Digital Audio CD Extractor
+//
+// Copyright (C) 2006, 2007, 2008 Georgy Berdyshev
+// Copyright (C) 2002 Sean M Burke
+// Copyright (C) 2002 Albert L. Faber
+//
+// http://cdexos.sourceforge.net/
+// http://sourceforge.net/projects/cdexos 
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
+
+
+//////////////////////////////////////////////////////////////////////////////
+// CDex - International Support File                                        //
+//////////////////////////////////////////////////////////////////////////////
+//
+//
+// Welcome to CDex language definition file
+// 
+// This file will be read by CDex if it is put inside \Lang folder
+// of CDex root directory. It also must have the cdex..lang extension
+// yielding something like my_language.cdex.lang
+//
+// 
+// To define a string follow this format:
+//
+// number "my_string"
+//
+// number is the identification of the following string. Each number is related
+// with a string that will appear inside CDex. Padding spaces are not important.
+//  Inside menu definitions use & to give access to the keyboard menu shortcut.
+// You can use returns inside string. They will be preserved in the program.
+//
+// CDex loads the strings on startup. It won't perceive any changes in this file
+//  if you don't reload the program.
+//
+// PLEASE, CHECK THAT STRINGS WON'T BE CLIPPED IN THE PROGRAM. The reserved space 
+// for every string is limited and must be suitable for all languages. If some 
+// of your strings are clipped try shortening the phrase while keeping its 
+// significance
+//  
+//////////////////////////////////////////////////////////////////////////////
+
+// language file revision level
+REVISION=/*$Id: T_Chinese(BIG5).cdex.lang 669 2008-01-18 08:09:12Z codingmaster $*/
+
+// set language characteristics
+LANGUAGE=9
+SUBLANG=1
+
+// use CODEPAGE 65001 if this file is UTF-8 encoded text file
+// otherwhise fill out the proper ANSI codepage
+CODEPAGE=1252
+
+// 99 (063 hex) => LANGUAGE ID, use english description
+// since this value is used to set the LOCALE settings
+#0063# "Traditional Chinese(BIG5)"
+
+#0001# "確定"
+#0002# "取消"
+#0003# "放棄"
+#0004# "再試"
+#0005# "忽略"
+#0006# "是"
+#0007# "不"
+
+// Ripper Main menu entries
+#M0BD4# "#檔案(&F)#編輯(&E)#轉換(&C)#工具(&T)#CDDB(&D)#選項(&O)#說明(&H)#"
+
+// Ripper File Menu
+#M800D# "系統訊息(&S)"
+#M802D# "比較二個檔案(&C)"
+#ME141# "結束(&X)"
+
+// Ripper Edit menu
+#M8026# "全選\tCtrl+A"
+#M8023# "複製專輯訊息到剪貼簿(&C)"
+#M8024# "重新命名音軌(&R)\tF2"
+#M0BD40000# "修改曲名(&M)"
+#M8042# "在曲目裡的每個字的第一個字元(&F)"
+#M8043# "在曲目裡的第一個字元(&C)"
+#M8044# "所有字元小寫(&L)"
+#M8045# "所有字元大寫(&U)"
+#M804D# "交換歌星<->音軌(&S)"
+#M802A# "重新整理音軌清單(&F)\tF5"
+#M8047# "加入 / 編輯種類清單(&G)"
+
+// Ripper Convert menu
+#M8004# "擷取 CD 音軌成 WAV 檔\tF8"
+#M8005# "擷取 CD 音軌成被壓縮的聲音檔\tF9"
+#M8007# "擷取 CD 內被選的音軌\tF10"
+#M803E# "重新編碼被壓縮的聲音檔"
+#M8006# "將 WAV 檔轉換成被壓縮的聲音檔\tF11"
+#M8029# "將被壓縮的聲音檔轉換成 WAV 檔\tF12"
+#M8022# "將 RIFF-WAV 曲目加入 MP2 或 MP3 檔案"
+#M8030# "從 MP2 或 MP3 檔案移除 RIFF-WAV 曲目"
+
+// Ripper Tools menu
+#M802E# "媒體檔案播放器(&P)"
+#M8031# "從類比輸入錄音(&R)"
+
+// Ripper CDDB Menu
+#M8018# "從本地 CDDB 檔讀取(&L)"
+#M801B# "讀取遠端 CDDB(&R)"
+#M801A# "從 CD Player.ini 檔讀取(&C)"
+#M8033# "讀取 CD-Text(&T)"
+#M8062# "從 WinampDB 讀取(&W)"
+#M8027# "儲存到 CDPlayer.ini 檔"
+#M8028# "儲存到本地 CDDB"
+#M8032# "提交到遠端 CDDB(&U)"
+#M803B# "查詢 CDDB 封包(&A)"
+
+// Ripper Options Menu
+#M8003# "設定(&S)\tF4"
+#M8046# "組態 Winamp 外掛模組(&W)"
+#M801C# "顯示播放工具列(&S)"
+#M801D# "顯示轉換工具列(&R)"
+#M80E9# "顯示設定檔工具列(&P)"
+#M802C# "檢視讀取狀態詳細資料(&D)\tF3"
+#M802F# "清除讀取狀態(&C)"
+#M0BD40001# "選擇語系(&L)"
+
+// Ripper Help Menu
+#ME143# "如何使用 CDex 說明(&H)\tF1"
+#ME140# "關於 CDex(&A)..."
+
+// Player Menu
+#M0C80# "#檔案(&F)#選項(&O)#播放清單(&P)#說明(&H)#"
+
+// NOTE: File, help menu and Configure &Winamp Plugins entries 
+// are already defined in the main menu
+
+// Ripper Options Menu
+#M804B# "隨機播放(&P)"
+#M0C800000# "語系(&L)"
+
+// Ripper Playlist Menu
+#M8049# "儲存(&S)"
+#M804A# "清除(&C)"
+
+// About Dialog
+#D00640000# "關於 CDex 音樂 CD 擷取程式(中文化 yangnan)"
+#D00640412# "CDex 版本 "
+#D006404BC# "關閉"
+// Translator URL
+#D006404BB# ""
+// Translator information
+#D006404BA# ""
+
+// CD Auto Detection dialog box
+#D0BE20000# "自動偵測結果"
+#D0BE203FB# "放棄"
+#D0BE204BE# "在下方列出的測試模式, 選擇一個有【通過】狀態模式然後按【確定】鈕"
+#D0BE204BD# "MMC 狀態"
+
+// CDDB Accessing dialog box
+#D00870000# "存取 CDDB"
+#D008704BF# "目前的動作"
+#D008704C0# "訊息"
+#D008704C1# "感謝: 版權所有 (c) CDDB, 公司 (Steve Scherf && Ti Kan)"
+
+// CDDB Settings dialog box
+#0C8D# "遠端 CDDB"
+#D06030000# "遠端 CDDB"
+#D06030484# "CDDB (預設埠是 888 或 8880)\nHTTP (預設埠是 80)"
+#D0603043D# "自動連線到遠端的 CDDB"
+#D06030426# "加入位址"
+#D06030425# "查詢位置"
+#D06030483# "復置所有"
+#D06030475# "查詢選項"
+#D0603041E# "使用代理伺服器"
+#D06030421# "認證"
+#D060304C7# "遠端伺服器"
+#D060304CB# "您的電子郵件位址"
+#D060304CF# "代理埠"
+#D060304D0# "密碼"
+#D060304CE# "逾時 (秒)"
+#D060304C9# "位址"
+#D060304CC# "路徑"
+#D060304CA# "通訊協定"
+#D060304C8# "位置"
+#D060304CD# "埠"
+
+// CDDB Found inexact match dialog box
+#D00880000# "發現不完全符合的"
+
+// CD-ROM Settings dialog box
+#0C89# "光碟機"
+#D0BDB0000# "光碟機"
+#D0BDB0430# "標準\nToshiba\nToshiba (new)\nIBM\nNEC\nDEC\nIMS\nKodak\nRicoh\nHP\nPhilips\nPlasmon\nGrundig CD-R,\nMitsumi CD-R\nPlextor\nSony\nYamaha\nNRC\nIMS CDD-5\n自訂"
+#D0BDB0444# "自動偵測"
+#D0BDB0436# "交換左右聲道"
+#D0BDB047E# "當讀取完成的時候, 退出光碟片"
+#D0BDB043D# "啟用定位校正"
+#D0BDB047F# "選擇所有 CD 音軌 (依預設值)"
+#D0BDB043E# "使用 Native NT SCSI 程式庫"
+#D0BDB04D1# "光碟機"
+#D0BDB04D2# "讀取磁區"
+#D0BDB04D3# "重複讀取"
+#D0BDB04D9# "比較區塊"
+#D0BDB04D6# "唯讀光碟機類型"
+#D0BDB04DA# "CD 速度"
+#D0BDB04D4# "開始位移量(磁區)"
+#D0BDB04D5# "結束位移量(磁區)"
+#D0BDB04DB# "加速時間 (秒)"
+#D0BDB04D8# "重試數目"
+#D0BDB04D7# "讀取方法"
+#D0BDB0480# "在擷取期間鎖定 CD"
+#D0BDB0481# "使用 CD Text (如果可用)"
+#D0BDB0431# "標準\nParanoia, 只重複\nParanoia, 不查證\nParanoia, 不修護暫存\nParanoia, 全部"
+
+// CDDB Submit Options dialog box
+#D00A00000# "CDDB 查詢選項"
+#D00A004E2# "查詢經由 ( CDDB.COM 不能使用 HTTP)"
+#D00A00414# "電子郵件"
+#D00A00401# "經由 HTTP"
+#D00A004E4# "SMTP 伺服器位址"
+#D00A004E5# "查詢 HTTP 位址 (不包含路徑)"
+#D00A004E3# "查詢電子郵件位址"
+
+// Config Winamp Plugin Dialog box
+#D00AA0000# "組態 Winamp 匯入外掛模組"
+#D00AA0499# "關於"
+#D00AA049A# "組態"
+
+// CD Ripping dialog box
+#D0BDC0000# "錄製音軌"
+#D0BDC042C# "中"
+#D0BDC042E# "大"
+#D0BDC042D# "小"
+
+// Drop Files dialog box
+#D00900000# "選擇來源檔選項"
+#D00900452# "匯出 RIFF WAV 檔"
+#D0090044C# "在編碼之後刪除 WAV 檔"
+#D0090042F# "音量標準化"
+#D00900430# "編碼"
+#D00900431# "音量標準化 + 編碼"
+
+// Edit Genres dialog box
+#D00AC0000# "加入 / 編輯種類"
+#D00AC049C# "插入新的"
+
+// Enter profile Name dialog box
+#D00AF0000# "輸入設定檔名稱"
+
+// Encoder dialog box
+#0C8A# "編碼"
+#D06020000# "編碼"
+#D06020537# "編碼"
+#D06020452# "轉換成 Riff WAV 檔"
+#D06020423# "最低\n低\n標準\n高\n最高"
+#D06020536# "整理優先權"
+#D06020535# "編碼選項"
+#D06020453# "在轉換後不刪除被讀取的 WAV 檔"
+
+
+// Encoder DOS APE dialog box
+#D0BFD0400# "單聲"
+#D0BFD0401# "立體聲"
+#D0BFD04DE# "壓縮標準"
+#D0BFD04DD# "聲道"
+#D0BFD04DF# "標籤格式"
+#D0BFD04B4# "APE 標籤 (預設)\nID3V1 標籤"
+#D0BFD0459# "快\n標準\n高\n最高"
+
+// Encoder Blade Dialog box
+#D0BE80409# "即時編碼成 MP3 檔"
+#D0BE804E0# "位元率"
+#D0BE804E1# "聲道"
+#D0BE80400# "立體聲"
+#D0BE80401# "J 立體聲"
+#D0BE80402# "雙聲"
+#D0BE80403# "單聲"
+#D0BE80427# "私有"
+#D0BE80428# "核對值"
+#D0BE80429# "原始"
+#D0BE8042A# "版權"
+
+// Encoder Lame dialog box
+#D008B0548# "最小位元率"
+#D008B054A# "模式"
+#D008B054B# "品質"
+#D008B054E# "VBR 品質"
+#D008B0549# "最大位元率"
+#D008B054D# "ABR (kpbs)"
+#D008B054C# "VBR 方法"
+#D008B0547# "版本"
+#D008B054F# "輸出取樣率"
+#D008B0463# "MPEG I\nMPEG II\nMPEG II.5"
+#D008B0400# "立體聲"
+#D008B0401# "J 立體聲"
+#D008B0402# "強制立體聲"
+#D008B0403# "單聲"
+#D008B0427# "私有"
+#D008B0428# "核對值"
+#D008B0429# "原始"
+#D008B042A# "版權"
+#D008B0409# "即時編碼成 MP3 檔"
+#D008B0459# "停用\nVBR 預設\n舊 VBR\n新 VBR\nVBR-MTRH\nVBR-ABR"
+#D008B0458# "VBR 0\nVBR 1\nVBR 2\nVBR 3\nVBR 4\nVBR 5\nVBR 6\nVBR 7\nVBR 8\nVBR 9"
+#D008B0414# "標準 ( q=5 )\n低 ( q=9 )\n高 ( q=2 )\n聲音 (錄音)\nR3Mix 預置\n最高品質 ( q=0 )\n--alt-preset standard\n--alt-preset fast standard\n--alt-preset extreme\n--alt-preset fast extreme\n--alt-preset insane\n--alt-preset ABR\n--alt-preset CBR"
+
+// Encoder External settings box
+#D008D0000# ""
+#D008D052D# "參數字串"
+#D008D052C# "編碼路徑"
+#D008D052E# "位元率"
+#D008D0463# "即時編碼"
+#D008D0464# "隱藏 DOS 視窗"
+#D008D052F# "檔案副檔名"
+#D008D0465# "將 WAV 曲目傳到 stdin"
+
+// Encoder Wincodec settings box
+#D008A0000# ""
+#D008A0409# "即時編碼成 MP3 檔"
+#D008A053A# "Windows MP3 編/解碼器"
+#D008A053B# "選擇編/解碼器位元率"
+#D008A043E# "高品質"
+
+// Encoder MP2 encoder settings box
+#D0BF9040F# "MPEG-1"
+#D0BF90410# "MPEG-2"
+#D0BF90546# "位元率"
+#D0BF90409# "即時編碼 MP2"
+#D0BF90545# "聲道"
+#D0BF90400# "立體聲"
+#D0BF90401# "J 立體聲"
+#D0BF90402# "雙聲"
+#D0BF90403# "單聲"
+#D0BF90427# "私有"
+#D0BF90428# "核對值"
+#D0BF90429# "原始"
+#D0BF9042A# "版權"
+#D0BF9047F# "寫入補助的資料 (Antex)"
+#D0BF90480# "不允許整墊"
+#D0BF90544# "VBR (實驗)"
+#D0BF90458# "無\nVBR 0\nVBR 1\nVBR 2\nVBR 3\nVBR 4\nVBR 5\nVBR 6\nVBR 7\nVBR 8\nVBR 9"
+
+// Encoder external VQF settings box
+#D0BEA0000# ""
+#D0BEA041B# "44KHz-48Kbps\n44KHz-40Kbps\n22KHz-32Kbps\n22KHz-24Kbps\n22KHz-20Kbps\n16KHz-16Kbps\n11KHz-10Kbps\n11KHz-8Kbps\n8KHz-8Kbp"
+#D0BEA0549# "到 VQF 編碼的路徑"
+#D0BEA0547# "VQF 模式"
+
+// Encoder WMA8 settings box
+#D0BEC03F5# "22 千位元/秒\n32 千位元/秒\n36 千位元/秒\n40 千位元/秒\n48 千位元/秒\n64 千位元/秒\n80 千位元/秒\n96 千位元/秒\n128 千位元/秒\n160 千位元/秒"
+#D0BEC0409# "即時編碼成 MP3 檔"
+#D0BEC0441# "啟動數位權限管理"
+#D0BEC0414# "單聲"
+#D0BEC04B6# "立體聲"
+#D0BEC0538# "位元率"
+#D0BEC0539# "聲道"
+
+// Encoder external Xing settings box
+#D0BF00000# ""
+#D0BF00414# "CBR"
+#D0BF00401# "VBR"
+#D0BF00429# "原始"
+#D0BF0042A# "版權"
+#D0BF0045C# "過濾高頻率"
+#D0BF0045D# "強制普通立體聲"
+#D0BF0045E# "關閉混合成單聲"
+#D0BF0045F# "讓編碼選擇取樣率"
+#D0BF00532# "編碼路徑"
+#D0BF00533# "位元率"
+#D0BF00534# "VBR 音階"
+
+// Encoder WAV settings box
+#D0BF10000# ""
+#D0BF1053E# "取樣率"
+#D0BF1053F# "聲道"
+#D0BF10414# "立體聲"
+#D0BF10401# "單聲"
+#D0BF1053D# "壓縮"
+#D0BF1053C# "格式"
+#D0BF10439# "WAV\nApple/SGI AIFF\nSun/Next au (big endian)\nDec au (little endian))\nRaw PCM (big endian)\nRaw PCM (little endian)"
+#D0BF10409# "即時編碼"
+
+// Encoder FAAC settings box
+#D0BF20000# ""
+#D0BF20463# "MPEG-2"
+#D0BF20415# "MPEG-4"
+#D0BF20466# "主要\n低複雜\nSSR\nLTD"
+#D0BF204AF# "16000\n18000\n19500"
+#D0BF204B1# "使用 LFE"
+#D0BF20468# "使用 MS 立體聲"
+#D0BF20526# "位元率 / 聲道"
+#D0BF20528# "頻寬 (Hz)"
+#D0BF20527# "設定檔"
+#D0BF204B0# "允許暫時雜訊(TNS)"
+
+// Encoder Vorbis settings box
+#D0BF60000# ""
+#D0BF60400# "立體聲"
+#D0BF60401# "單聲"
+#D0BF60409# "即時編碼"
+#D0BF604B3# "使用品質設定 (推薦)"
+#D0BF60540# "聲道"
+#D0BF60541# "使用位元率管理員"
+#D0BF60550# "最小位元率"
+#D0BF60551# "標準位元率"
+#D0BF60552# "最大位元率"
+
+// Encoder Gogo settings box
+#D0BF80000# ""
+#D0BF8040F# "MPEG-1"
+#D0BF80410# "MPEG-2"
+#D0BF80409# "即時編碼成 MP3 檔"
+#D0BF80458# "無\nVBR 0\nVBR 1\nVBR 2\nVBR 3\nVBR 4\nVBR 5\nVBR 6\nVBR 7\nVBR 8\nVBR 9"
+#D0BF80400# "單聲"
+#D0BF80401# "立體聲"
+#D0BF80402# "J 立體聲"
+#D0BF80403# "MS 立體聲"
+#D0BF8047B# "使用 MMX/3DNow"
+#D0BF8047C# "使用 Psycho 音效"
+#D0BF8047D# "套用低位元率在慢速過濾器"
+#D0BF80529# "變數位元率"
+#D0BF8052A# "位元率"
+#D0BF8052B# "模式"
+
+// Encoder External Musepack settings box
+#D00A90000# ""
+#D00A90531# "參數字串"
+#D00A90530# "到 Muspack 編碼的路徑"
+#D00A90464# "隱藏 MSDOS 視窗"
+#D00A90463# "即時編碼"
+
+// Encoder NTTVQF settings box
+#D0BFB0000# ""
+#D0BFB0409# "即時編碼成 VQF 檔"
+#D0BFB0462# "32 千位元/秒\n40 千位元/秒\n48 千位元/秒\n56 千位元/秒\n64 千位元/秒\n80 千位元/秒\n96 千位元/秒\n112 千位元/秒\n128 千位元/秒\n160 千位元/秒\n192 千位元/秒\n224 千位元/秒\n256 千位元/秒\n320 千位元/秒"
+#D0BFB0400# "單聲"
+#D0BFB0401# "立體聲"
+#D0BFB0542# "每一聲道位元率"
+#D0BFB0543# "聲道"
+ 
+// File compare two files dialog box
+#D00970000# "比較二個 WAV 檔案"
+#D00970446# "比較"
+#D00970522# "第一個檔案名稱"
+#D00970523# "第二個檔案名稱"
+#D00970524# "進度欄"
+
+// File name string info dialog box
+#D00930000# "檔案名稱訊息選項"
+#D00930516# "範例:\n【%1\%2\%4】      建立匯出檔案【歌星\專輯\音軌號碼.mp3 (或 .wav)】\n【%1 - %2 - %3】  建立匯出檔案【歌星 - 專輯 - 音軌號碼.mp3 (或 .wav)】\n%l1 - %u2 建立匯出檔案【歌手 - ALBUM.mp3 (或 .wav)】"
+#D00930518# "反斜線字元 (\) 也能用來指示分離目錄\n但是您不能將它使用在第一個字元 !"
+
+// File name property page
+#0C8E# "檔案名稱"
+#D0BF40000# "檔案名稱"
+#D0BF40479# "取代字元"
+#D0BF4047D# "分隔曲名, 如: 歌星,音軌, 使用:"
+#D0BF40443# "將檔案加到 M3U 播放清單"
+#D0BF40444# "將檔案加到 PLS 播放清單"
+#D0BF4051B# "曲名"
+#D0BF40519# "匯出檔案名稱格式和目錄"
+#D0BF4051C# "WAV轉MP3並存入"
+#D0BF4051D# "將轉換音軌存入"
+#D0BF4051A# "檔案名稱格式"
+#D0BF40520# "曲名"
+#D0BF4051E# "檔案名稱格式"
+#D0BF40521# "類型"
+#D0BF4051F# "播放清單"
+
+// File overwrite dialog box
+#D00AE0000# "檔案覆寫則警告"
+#D00AE0512# "是"
+#D00AE04A1# "全部皆是(&A)"
+#D00AE0511# "不"
+#D00AE04A2# "全部皆否(&L)"
+#D00AE0513# "下列的檔案"
+#D00AE0514# "已經存在, 取代已存在的檔案嗎?"
+
+// Generic Property Page
+#0C8B# "一般"
+#D06040000# "一般"
+#D06040414# "無\nID3-V1\nID3-V2\nID3-V1 &  ID3-V2"
+#D06040411# "啟用"
+#D060404AB# "在讀取 / 編碼之後自動關機"
+#D0604050F# "如果訊號 <"
+#D0604050C# "音量標準化"
+#D0604050D# "到"
+#D06040510# "如果訊號 >"
+#D06040507# "檔案標籤選項"
+#D0604050A# "標籤註解欄"
+#D0604050E# "到"
+#D06040508# "ID3 標籤版本"
+#D0604050B# "依欄位編碼"
+#D06040506# "暫時目錄"
+#D06040509# "曲目格式"
+#D060404AC# "數位 CD 播放"
+
+// General Info Dialog Box
+#D0BDF0000# "一般訊息"
+#D0BDF0502# "CD 標籤 ID"
+#D0BDF0500# "CDDB 光碟 ID"
+#D0BDF0501# "ASPI 管理程式"
+#D0BDF0503# "作業系統版本"
+#D0BDF0504# "SCSI 訊息"
+#D0BDF0505# "光碟機類型"
+#D0BDF0442# "複製到剪貼簿"
+
+// Local CDDB Settings TAB
+#0C8C# "本地 CDDB"
+#D0BFA0000# "本地 CDDB"
+#D0BFA044B# "Windows 格式的 CDDB 檔案"
+#D0BFA044C# "Unix 格式的 CDDB 檔案"
+#D0BFA0459# "儲存在 CDPlayer.ini 檔"
+#D0BFA045A# "儲存在本地 CDDB"
+#D0BFA045B# "使用長檔名目錄"
+#D0BFA04B5# "寫入成 MS-DOS 文字檔 "
+#D0BFA04FE# "CDDB 路徑"
+#D0BFA04FF# "Winamp in_cdda.cdb 路徑 (Winamp 2.78 格式)"
+#D0BFA04FD# "本地 CDDB 設定"
+
+// Main Window (Title View)
+#D0BD80000# " "
+#D0BD804C2# "歌星"
+#D0BD804C3# "專輯"
+#D0BD804C4# "種類"
+#D0BD804C5# "年份"
+#D0BD804C6# "音軌位移量"
+
+// Mpeg to RIFF-WAV conversion dialog box
+#D00860000# "將 MP2/MP3 轉換成 Riff-WAV"
+#D008604FC# "處理中"
+
+// Mpeg to WAV conversion dialog box
+#D0BEB0000# "將被壓縮的聲音檔轉換成 WAV 檔"
+#D0BEB04FB# "處理中"
+
+// Open file dialog box
+#D02630000# "開啟檔案對話框"
+#D026303EE# "包含子目錄"
+#D026303F1# "刪除原始檔"
+#D0263042F# "音量標準化"
+#D02630430# "RIFF-WAV"
+#D026303EF# "全選"
+#D026303F0# "開始轉換"
+#D02630495# "設定"
+#D026304AC# "保存原始目錄規劃"
+#D026304FA# "可用檔:"
+#D026304F9# "目錄"
+
+// Partial track copy dialog box
+#D06010000# "轉換部份音軌"
+#D0601041D# "WAV 檔"
+#D06010412# "被壓縮的聲音檔案 (編碼)"
+#D060104F5# "音軌"
+#D060104F6# "分"
+#D060104F7# "秒"
+#D060104F8# "毫秒"
+#D060104F0# "檔案內容"
+#D060104F2# "擷取音軌範圍 (一首音軌從開始擷取位置到停止擷取位置)"
+#D060104F3# "開始位置"
+#D060104F4# "停止位置"
+#D060104F1# "匯出類型"
+
+// Player view window
+#D0C800489# "詳細資料"
+
+// Record from Analog In dialog box
+#D0BF50000# "從類比輸入錄音"
+#D0BF50640# "不限制長度"
+#D0BF50641# "錄音時間"
+#D0BF5046E# "瀏覽"
+#D0BF504B7# "把順序數目加入檔案名稱 , 開始順序數目 :"
+#D0BF504EE# "錄音狀態"
+#D0BF5046B# "錄音"
+#D0BF50445# "暫停"
+#D0BF50450# "停止"
+#D0BF50642# "單聲"
+#D0BF50643# "立體聲"
+#D0BF503F5# "聲道"
+#D0BF504EB# "輸入裝置"
+#D0BF504EC# "輸出曲名"
+#D0BF504ED# "輸出類型"
+#D0BF504EA# "取樣率"
+#D0BF504EF# "秒"
+#D0BF504F0# "輸出目錄"
+
+// RIFF-WAV to MPEG dialog box
+#D02630064# "放棄"
+#D0BF30000# "從 MPEG 檔移除 Riff-WAV 曲目"
+#D0BF304E9# "處理中"
+
+// Substitute Characters dialog box
+#D0BF70000# "取代字元"
+#D0BF704E6# "違法檔案名稱字元"
+#D0BF704E7# "其他 ( 不必要取代 )"
+#D0BF704E8# "分隔 :="
+
+// Ripper Status dialog box
+#D00960000# "詳細的讀取狀態訊息"
+
+// String Table
+#0065#	"關於 CDex(&A)..."
+#0066#	"另存新檔..."
+#0067#	"開啟"
+#0BBA#	"指示器控制"
+#0BBB#	"雜項"
+#0BBC#	"播放音軌"
+#0BBE#	"停止播放"
+#0BBF#	"退出光碟片"
+#0BC0#	"不能夠開啟網際網路使用.  請檢查您的網際網路組態.."
+#0BC1#	"CDex"
+#0BC2#	"設定 Windows sockets 初值失敗."
+#0BC3#	"快轉\n快轉"
+#0BC4#	"倒轉\n倒轉"
+#0BC5#	"暫停\n暫停"
+#0BC6#	"跳到下一首音軌\n跳到下一首音軌"
+#0BC7#	"跳到上一首音軌\n跳到上一首音軌"
+#0BC8#	"從遠端 CDDB 取回音軌訊息"
+#0BD4#	"CDex Ripper\n\nCDex Ripper\n\n\nCDex.Document\nCDex Document"
+#0BDE#	"CDex 版本 "
+#0BDF#	"沒有歌星"
+#0BE0#	"沒有曲目"
+#0BE1#	"種類"
+#0BE2#	"曲目"
+#0BE3#	"CDDB ID"
+#0BE4#	"歌星"
+#0BE5#	"曲目"
+#0BE6#	"標籤 ID"
+#0BE7#	"曲名"
+#0BE8#	"由零起始的曲目"
+#0BE9#	"音軌的數目"
+#0BEA#	"曲名"
+#0BEB#	"音軌"
+#0BEC#	"開始時間"
+#0BED#	"播放時間"
+#0BEE#	"大小"
+#0BEF#	"狀態"
+#0BF0#	"CDex 版本 "
+#0BF1#	"歌星欄位包含無效的字元\n 用空白取代無效的字元"
+#0BF2#	"專輯欄位包含無效的字元\n 用空白取代無效的字元"
+#0BF3#	"[%d] 曲名包含無效的字元\n 用空白取代無效的字元"
+#0BF4#	"沒有選擇音軌, 請從清單中選擇一首或更多的音軌"
+#0BF5#	"不能設定剪貼簿資料"
+#0BF6#	"搜尋音軌 %d (%02d:%02d:%02d)\n"
+#0BF7#	"讀取音軌到被壓縮的聲音檔(%s)到 %s 檔案"
+#0BF8#	"讀取/編碼已經被放棄在 %s"
+#0BF9#	"讀取音軌到被壓縮的聲音檔已正確地完成，所有作業時間是 : %s"
+#0BFA#	"讀取音軌到 wav (%s)到 %s 檔案"
+#0BFB#	"讀取過程已經被放棄在 %s"
+#0BFC#	"讀取音軌到 wav 已正確地完成，所有作業時間是 : %s"
+#0BFD#	"不能夠建立匯出目錄: "
+#0BFE#	"已用時間 %s   ||   剩餘時間 %s   ||   估計完成時間 %s"
+#0BFF#	"擷取第 %d 音軌( %d%% 已完成,第 %d 首共 %d 首音軌)"
+#0C00#	"尖峰值 %4.2f dB = %3d %%"
+#0C01#	"定位 (錯誤: %d)"
+#0C02#	"轉換第 %d 音軌( %d %% 已完成,第 %d 首共 %d 首音軌)"
+#0C03#	"使 %d 音軌標準化(%d %% 已完成,第 %d 首共 %d 首音軌)"
+#0C04#	"決定 %d 音軌尖峰值( %d %% 已完成, 第 %d 首共 %d 首音軌)"
+#0C05#	"尖峰值 %4.2f dB = %3d %%"
+#0C06#	"到檔案 : %s"
+#0C07#	"擷取第 %d 音軌(第%d首共%d首音軌)"
+#0C08#	"轉換音軌成目標格式(第%d首共%d首音軌)"
+#0C09#	"用%5.2f係數標準化音軌 (第%d首共%d首音軌)"
+#0C0A#	"取得尖峰值(第%d首共%d首音軌)"
+#0C0B#	"處理(第%d首共%d首音軌)"
+#0C0C#	"擷取 CD 音軌"
+#0C0D#	"轉換音軌"
+#0C0E#	"%5d 錯誤於 %s 音軌\n\n"
+#0C0F#	"有發生定位錯誤, 請看說明檔如何解決定位問題\n\n"
+#0C10#	"年份"
+#0C11#	"資料軌"
+#0C12#	"音軌"
+#0C13#	"在提交項目到遠端光碟資料庫之前, \n請填寫所有的音軌, 歌星\n和音軌訊息並確定種類欄位的設定"
+#0C14#	"在本地的 CDDB 中找不到請求的專輯訊息"
+#0C15#	"在 CDPlayer.ini 檔案中找不到請求的專輯訊息"
+#0C16#	"MP3 標籤已更改. \n儲存修改嗎?"
+#0C17#	"當儲存 ID3V2 標籤的時候發生錯誤,\n確定檔案是否唯讀!"
+// is, or isn't?
+#0C18#	"當讀取 ID3V2 標籤的時候發生錯誤"
+#0C19#	"當開啟匯入的檔案時候發生錯誤"
+#0C1A#	"沒有權限可關閉系統"
+#0C1B#	"音量標準化係數是 %7.4f x"
+#0C1C#	"電子郵件位址不正確, 請在\n\n遠端 CDDB 選項對話框內填寫您的電子郵件位址"
+#0C1D#	"遠端伺服器逾時 \n請在 CDDB 選項對話框裡增加逾時數值, \n 或再嘗試一次"
+#0C1E#	"允許讀取 / 寫入\n"
+#0C1F#	"確定, 唯讀\n"
+#0C20#	"沒發現符合的 \n"
+#0C21#	"確定回應\n"
+#0C22#	"發現數個完全符合的, 列出於下列\n"
+#0C23#	"發現數個不完全符合的, 列出於下列\n"
+#0C24#	"找不到指定 CDDB 項目\n"
+#0C25#	"已經連結\n"
+#0C26#	"資料庫項目已損壞\n"
+#0C27#	"沒有連結\n"
+#0C28#	"連結無法成功, 關閉連線中\n"
+#0C29#	"不允許連線: 許可被拒絕\n"
+#0C2A#	"沒有連線, 負荷太重\n"
+#0C2B#	"伺服器錯誤, 請選擇另外的一個伺服器\n"
+#0C2C#	"通訊協定標準已經 cur_level\n"
+#0C2D#	"違法的通訊協定標準\n"
+#0C2E#	"連線失敗的理由是"
+#0C2F#	"轉換"
+#0C30#	"模組名稱"
+#0C31#	"模組訊息"
+#0C32#	"在 CDex 目錄中找不到種類表(genres.txt)\n(嘗試位置: %s)\n檢查或重新安裝您的 CDex!"
+#0C33#	"種類"
+#0C34#	"CDDB 種類"
+#0C35#	"ID3 V1 ID"
+#0C36#	"新的種類"
+#0C37#	"未知的"
+#0C38#	"無效的伺服器回應"
+#0C39#	"%1 = 歌星\t\t%5 = CD 標籤 ID\n%2 = 專輯\t\t%6 = CDDB ID\n%3 = 曲目\t%7 = 由零起始的曲目\n%4 = 曲名\t%8 = 音軌的總數數目\n%Y = 年份\t\t%G = 種類\n%A = 歌星名稱 (不影響選項分離)\n使用預先的 l 或 u 來強制小寫/大寫字串"
+#0C3A#	"CDex 播放器, 版本 "
+#0C3B#	"CDDB 已發生錯誤, 閱讀訊息對話框的詳細資料\n"
+#0C3C#	"錯誤: 不能夠執行外部的編碼器"
+#0C3D#	"錯誤: 不能夠傳送資料給外部的編碼器"
+#0C3E#	"不能夠建立 VQF 巨集檔案"
+#0C3F#	"不能夠載入編碼器: %s\n確定您啟動的 CDex.exe \n如果您有建立一個捷徑,  確定修正捷徑的工作目錄設定"
+#0C40#	"輸入的串流資料不正確"
+#0C41#	"不能夠開啟/建立檔案: %s"
+#0C42#	"錯誤: 不能夠建立對外部編碼器的管道"
+#0C43#	"GoGo DLL 需要一個浮點單位"
+#0C44#	"共%2d首音軌 (%5.2f MB) 硬碟可用空間 %5d MB"
+#0C45#	"播放第 %d 音軌(%02d:%02d:%02d)\n"
+#0C46#	" (範圍)"
+#0C47#	"不能夠開啟剪貼簿"
+#0C48#	"不能夠清空剪貼簿"
+#0C49#	"開啟連線"
+#0C4A#	"傳送哈囉字串"
+#0C4B#	"傳送統計指令"
+#0C4C#	"傳送通訊協定標準"
+#0C4D#	"傳送查詢"
+#0C4E#	"開始遠端查詢"
+#0C4F#	"得到遠端回應"
+#0C50#	"未知的 SMTP 伺服器位址, 請在 CDDB 查詢選項對話框內\n完整的輸入 SMTP 伺服器位址"
+#0C51#	"無法傳送字串給遠端伺服器"
+#0C52#	"連線至伺服器"
+#0C53#	"伺服器還未準備就緒"
+#0C54#	"傳送"
+#0C55#	"傳送資料"
+#0C56#	"傳送本文文字"
+#0C57#	"伺服器未回應"
+#0C58#	" (編碼器可用, 沒有版本訊息可用)"
+#0C59#	" Alpha %d"
+#0C5A#	" Beta %d"
+#0C5B#	"指定的位元率無法符合於選擇的輸出頻率"
+#0C5C#	" (不可用)"
+#0C5D#	"版本"
+#0C5E#	"引擎"
+#0C5F#	"不能夠開啟 %s 檔案"
+#0C60#	"檔案太小無法做比較"
+#0C61#	"第二個檔案有 %d 位元組位移"
+#0C62#	"第一個檔案有 %d 位元組位移"
+#0C63#	"檔案不同, 所以不能夠發現符合區塊"
+#0C64#	"檔案不同, 開始於 %d 位置"
+#0C65#	"沒有發現不同處,完全符合\n總共比較 %d 位元組"
+#0C66#	"CDex 組態"
+#0C67#	"請選擇一個資料夾"
+#0C68#	"請在列出的項目上選擇, 或按【取消】離開"
+#0C6A#	"找不到資料標籤"
+#0C6B#	"%s 檔案不是 MPEG RIFF-WAV 檔案"
+#0C6C#	"在 %s 檔案中不能夠發現格式標籤"
+#0C6D#	"執行自動偵測, 如果一般設定不做自動偵測工作,\n如要執行自動偵測, 請將一片音樂 CD 放入光碟機內\n您要繼續嗎?"
+#0C6E#	"全部完成轉換時間 (分:秒:毫秒)  %02d:%02d:%02d 等於 %d 個磁區"
+#0C6F#	"音軌名稱"
+#0C70#	"日期"
+#0C71#	"路徑"
+#0C72#	"大小 (MB)"
+#0C73#	"儲存"
+#0C74#	"第一個 / 第二個的檔案大小是 %d / %d 位元組"
+#0C75#	"確定"
+#0C76#	"第一個檔案名稱不正確"
+#0C77#	"第二個檔案名稱不正確"
+#0C78#	"無法設定 Ogg 編碼串流資料初值. 可能指定的位元率無法符合於選擇的輸出頻率, 嘗試更換品質設定."
+#0C79#  "編碼已經被放棄在 %s"
+#0C7A#  "音軌編碼成壓縮的聲音檔案已經完成, 作業時間共: %s"
+#0C7B#	"類型"
+#0C80#	"CDex 播放器\n\nCDex 播放器\n\n\nCDex.Document\nCDex Document"
+#0C81#	"請先選擇檔案"
+#0C82#	"自動"
+#0C83#	"預設值"
+#0C84#	"轉換錯誤: 輸入檔案名稱和輸出檔案名稱相同,\n請選擇不同的轉換輸出目錄!\n輸入檔案名稱  : %s\n輸出檔案名稱 : %s"
+#0C85#	"所支援的 Native NT SCSI 程式庫不支援您的作業系統\n如要使用 CDex , 您必須安裝 ASPI 驅動程式, 或檢視 CDex 說明檔的附加訊息\n"
+#0C86#	"錯誤: 無法載入 Windows ASPI 驅動程式.\n如要使用 CDex , 您必須安裝 ASPI 驅動程式, 或檢視 CDex 說明檔的附加訊息\n"
+#0C87#	"錯誤: 無法得到 ASPI 驅動程式狀態\n請檢查是否有安裝 ASPI 驅動程式, 或檢視 CDex 說明檔的附加訊息\n"
+#0C88#	"英文"
+#0C8F#  "..."
+#0C90#  "選擇目錄"
+#0C91#  "編碼器 (*.exe;*.bat)|*.exe;*.bat|所有檔案 (*.*)|*.*||"
+#0C92#  "選擇編碼器"
+#0C93#  "大"
+#0C94#  "小"
+#0C95#  "無"
+#0C96#  "標準"
+#0C97#  "讀取"
+#0C98#  "Atapi"
+#0C99#  "啟用"
+#0C9A#  "Density"
+#0C9B#  "Endian"
+#0C9C#  "結果"
+#0C9D#  "通過"
+#0C9E#  "失敗"
+#0C9F#  "載入 wnaspi32.dll 驅動程式失敗!\n使用【Native NT SCSI 程式庫】驅動程式選項代替嗎?"
+#0CA0#  "檢查另外/更新語言檔"
+
+#8003#	"選擇 CDex 組態\n組態"
+#8004#	"擷取 CD 音軌成 WAV 檔\n擷取 CD 音軌成 WAV 檔"
+#8005#	"擷取 CD 音軌成被壓縮的聲音檔\n擷取 CD 音軌成被壓縮的聲音檔"
+#8006#	"將 WAV 檔轉換成被壓縮的聲音檔\n將 WAV 轉換成被壓縮的聲音檔"
+#8007#	"擷取 CD 被選的音軌區段成 WAV 或被壓縮的聲音檔\n擷取 CD 被選的音軌區段成 WAV 或被壓縮的聲音檔"
+#800D#	"選擇取回的系統訊息\n選擇取回的系統訊息"
+#800E#	"組態光碟片設定\n組態光碟片設定"
+#800F#	"退出光碟片\n退出光碟片(Shift-F1)"
+#8010#	"快轉\n快轉"
+#8011#	"倒轉\n倒轉"
+#8012#	"跳到下一首音軌\n跳到下一首音軌(Shift-F3)"
+#8013#	"跳到上一首音軌\n跳到上一首音軌"
+#8015#	"播放一首音軌\n播放一首音軌(Shift-F4)"
+#8016#	"停止播放\n停止播放 (Shift-F5)"
+#8017#	"暫停/恢復播放\n暫停/恢復播放"
+#8018#	"從本地 CDDB 取回專輯訊息\n從本地 CDDB 讀取專輯訊息"
+#801A#	"從 CDPlayer.ini 檔案取得專輯訊息\n從 CDPlayer.ini 檔案讀取專輯訊息"
+#801B#	"從遠端 CDDB 取回專輯訊息\n從遠端 CDDB 取回專輯訊息"
+#801C#	"顯示或隱藏播放工具列"
+#801D#	"顯示或隱藏轉換工具列"
+#801E#	"跳到上一首音軌\n跳到上一首音軌(Shift-F2)"
+#801F#	"倒轉\n倒轉"
+#8022#	"將 MP3 檔轉換成 Riff-Wav 檔"
+#8023#	"複製音軌訊息到剪貼簿"
+#8024#	"重新命名被選擇的音軌"
+#8026#	"選擇所有音軌"
+#8027#	"將專輯訊息儲存至 CDPlayer.ini  檔案"
+#8028#	"將專輯訊息儲存至本地 CDDB 檔案"
+#8029#	"將 MP3 檔轉換成 WAV 檔\n將 MP3 檔轉換成 WAV 檔"
+#802A#	"重讀光碟片音軌訊息"
+#802B#	"顯示狀態"
+#802C#	"顯示被選擇的音軌讀取狀態訊息\n顯示被選擇的音軌讀取狀態訊息"
+#802D#	"比較二個 WAV 檔案的內容\n比較二個 WAV 檔案的內容"
+#802E#	"播放媒體檔案\n播放媒體檔案"
+#802F#	"清除這個 CD 的讀取狀態"
+#8030#  "刪去 MP2 或 MP3 檔案的 RIFF-WAV 標題\n刪去 MP2 或 MP3 檔案的 RIFF-WAV 標題"
+#8031#	"從類比輸入錄音\n從類比輸入錄音"
+#8032#	"從遠端 CDDB 資料庫查詢專輯訊息"
+#8033#	"取回 CD-Text 專輯訊息 (如果支援與可得的)"
+#8035#	"選擇檔案\n選擇檔案"
+#8036#	"選擇檔案\n選擇檔案"
+#8037#	"跳到上一首歌曲\n跳到上一首歌曲"
+#8038#	"跳到下一首歌曲\n跳到下一首歌曲"
+#8039#	"播放歌曲\n播放歌曲"
+#803A#	"停止播放的檔案\n停止播放的檔案"
+#803B#	"查詢 CDDB 封包\n查詢 CDDB 封包"
+#803E#	"重新編碼(轉碼)被壓縮的聲音檔(s)\n重新編碼(轉碼)被壓縮的聲音檔(s)"
+
+#8046#	"組態 Winamp 外掛模組\n組態 Winamp 外掛模組"
+#8047#	"加入或編輯種類清單\n加入或編輯種類清單"
+#8048#	"暫停播放\n暫停播放"
+#804B#	"隨機播放音軌\n隨機播放音軌"
+#804D#	"交換歌星/音軌檔 (為了 CD 多重歌星)\n交換歌星/音軌檔 (為了 CD 多重歌星)"
+#804E#	"選擇要用的 CD 光碟機\n選擇要用的 CD 光碟機"
+#804F#	"選擇設定檔\n選擇設定檔"
+#8050#	"將目前的設定儲存至設定檔\n將目前的設定儲存至設定檔"
+#8052#	"刪除設定檔\n刪除被選擇的設定檔"
+#8062#  "讀取來自 Winamp CD 資料庫的 CD 資料\n讀取來自 Winamp CD 資料庫的 CD 資料"
+#E000#	"CDex"
+#E001#	"閱讀說明文件，按 F1"
+#E100#	"建立新的文件\n開新檔案"
+#E101#	"開啟已存在的文件\n開啟舊檔"
+#E102#	"結束使用的文件\n結束"
+#E103#	"儲存使用的文件\n儲存"
+#E104#	"以一個新的名稱儲存使用的文件\n另存新檔"
+#E105#	"更改列印選項\n版面設定"
+#E106#	"更改列表機和列印選項\n列印設定"
+#E107#	"列印使用的文件\n列印"
+#E109#	"顯示整頁\n列印預覽"
+#E110#	"開啟這個文件"
+#E111#	"開啟這個文件"
+#E112#	"開啟這個文件"
+#E113#	"開啟這個文件"
+#E114#	"開啟這個文件"
+#E115#	"開啟這個文件"
+#E116#	"開啟這個文件"
+#E117#	"開啟這個文件"
+#E118#	"開啟這個文件"
+#E119#	"開啟這個文件"
+#E11A#	"開啟這個文件"
+#E11B#	"開啟這個文件"
+#E11C#	"開啟這個文件"
+#E11D#	"開啟這個文件"
+#E11E#	"開啟這個文件"
+#E11F#	"開啟這個文件"
+#E120#	"刪除選擇\n刪除"
+#E121#	"刪除每件事物\n刪除全部"
+#E123#	"剪下選取區並暫存在剪貼簿\n剪下"
+#E124#	"搜尋指定文字\n搜尋"
+#E125#	"文字暫存貼在剪貼簿\n貼上"
+#E128#	"重複上次動作\n重複"
+#E129#	"以不同的文字取代指定的文字\n取代"
+#E12A#	"選擇全部的文件\n全選"
+#E12B#	"復原上次動作\n復原"
+#E12C#	"重做未完成動作\n重做"
+#E135#	"分割使用的視窗\n分割"
+#E140#	"顯示程式資訊，版本號碼和版權\n關於"
+#E141#	"結束應用程式\n結束"
+#E142#	"開啟 CDex 說明\n開啟 CDex 說明"
+#E143#	"使用 CDex 手冊\n如何使用 CDex 說明"
+#E144#	"顯示有關該如何使用的教導說明\n說明"
+#E145#	"點在按鈕,選單和視窗上顯示說明\n說明"
+#E146#	"顯示目前工作或指令說明\n說明"
+#E150#	"切換到下一個視窗\n下一個視窗"
+#E151#	"切換到上一個視窗\n上一個視窗"
+#E700#	"EXT"
+#E701#	"CAP"
+#E702#	"NUM"
+#E703#	"SCRL"
+#E704#	"OVR"
+#E705#	"REC"
+#E800#	"顯示或隱藏工具列\n切換工具列"
+#E801#	"顯示或隱藏狀態列\n切換狀態列"
+#EF00#	"更改視窗大小"
+#EF01#	"更改視窗位置"
+#EF02#	"縮小視窗成一個圖示"
+#EF03#	"擴大到全視窗"
+#EF04#	"切換到下一個文件視窗"
+#EF05#	"切換到上一個文件視窗"
+#EF06#	"結束使用的視窗和提示儲存文件"
+#EF12#	"復原到標準視窗"
+#EF13#	"開啟工作清單"
+#F003#	"無標題"
+#F005# "關閉預覽列印模式\n取消預覽"

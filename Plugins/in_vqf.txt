@@ -1,0 +1,10 @@
+Thanks for installing the plugin!
+
+Yamaha VQF plugin for Winamp 2.x version 0.90
+THIS IS VERY BETA SOFTWARE! 
+
+Official distribution site: www.vqf.com
+
+This is a plugin to play TwinVQ (VQF) files in Winamp 2.03+.
+
+Have fun!

@@ -1,0 +1,91 @@
+Index: ./bindings/c/Makefile.am
+===================================================================
+RCS file: /home/kde/kdeextragear-2/taglib/bindings/c/Makefile.am,v
+retrieving revision 1.1
+diff -u -3 -p -r1.1 Makefile.am
+--- ./bindings/c/Makefile.am	17 Oct 2003 20:11:36 -0000	1.1
++++ ./bindings/c/Makefile.am	2 Dec 2003 05:27:54 -0000
+@@ -13,6 +13,6 @@ taglib_include_HEADERS = tag_c.h
+ taglib_includedir = $(includedir)/taglib
+ 
+ libtag_c_la_LDFLAGS = $(all_libraries) -no-undefined -version-info 0:0
+-libtag_c_la_LIBADD = ../../libtag.la
++libtag_c_la_LIBADD = ../../taglib/libtag.la
+ 
+ EXTRA_DIST = $(libtag_c_la_SOURCES) $(taglib_include_HEADERS)
+Index: ./tests/Makefile.am
+===================================================================
+RCS file: /home/kde/kdeextragear-2/taglib/tests/Makefile.am,v
+retrieving revision 1.2
+diff -u -3 -p -r1.2 Makefile.am
+--- ./tests/Makefile.am	3 Nov 2003 21:43:56 -0000	1.2
++++ ./tests/Makefile.am	2 Dec 2003 05:27:54 -0000
+@@ -3,7 +3,7 @@ INCLUDES = \
+         -I$(top_srcdir)/taglib/toolkit \
+         -I$(top_srcdir)/taglib/mpeg/id3v2
+ 
+-LDADD = ../libtag.la
++LDADD = ../taglib/libtag.la
+ 
+ check_PROGRAMS = toolkit-test
+ 
+Index: examples/Makefile.am
+===================================================================
+RCS file: /home/kde/kdeextragear-2/taglib/examples/Makefile.am,v
+retrieving revision 1.7
+diff -u -3 -p -r1.7 Makefile.am
+--- ./examples/Makefile.am	21 Jan 2004 00:17:57 -0000	1.7
++++ ./examples/Makefile.am	21 Jan 2004 02:28:27 -0000
+@@ -11,7 +11,7 @@ INCLUDES = \
+ 	-I$(top_srcdir)/taglib/mpeg \
+ 	-I$(top_srcdir)/taglib/mpeg/id3v1 \
+ 	-I$(top_srcdir)/taglib/mpeg/id3v2 \
+-	-I$(top_srcdir)/taglib/bindings/c
++	-I$(top_srcdir)/bindings/c
+ 
+-LDADD = ../libtag.la
++LDADD = ../taglib/libtag.la
+ tagreader_c_LDADD = ../bindings/c/libtag_c.la
+Index: Makefile.am
+===================================================================
+RCS file: /home/cvs/taglib/Makefile.am,v
+retrieving revision 1.4
+diff -u -3 -p -r1.4 Makefile.am
+--- Makefile.am	27 Jul 2004 14:54:22 -0000	1.4
++++ Makefile.am	7 Nov 2004 16:15:53 -0000
+@@ -1,4 +1,4 @@
+-SUBDIRS = taglib 
++SUBDIRS = taglib bindings tests
+ 
+ EXTRA_DIST = admin AUTHORS COPYING ChangeLog INSTALL README TODO taglib.lsm 
+ 
+@@ -21,3 +21,9 @@ package-messages:
+ dist-hook:
+ 	cd $(top_distdir) && perl admin/am_edit -padmin
+ 	cd $(top_distdir) && $(MAKE) -f admin/Makefile.common subdirs
++
++examples: examples-all
++
++examples-all:
++	cd examples ; \
++	$(MAKE) all
+Index: taglib/Makefile.am
+===================================================================
+RCS file: /home/kde/kdesupport/taglib/Makefile.am,v
+retrieving revision 1.31
+diff -u -3 -p -r1.31 Makefile.am
+--- taglib/Makefile.am	10 Sep 2004 01:54:20 -0000	1.31
++++ taglib/Makefile.am	7 Nov 2004 16:16:17 -0000
+@@ -22,12 +22,6 @@ bin_SCRIPTS = taglib-config
+ 
+ EXTRA_DIST = $(libtag_la_SOURCES) $(taglib_include_HEADERS)
+ 
+-examples: examples-all
+-
+-examples-all:
+-	cd examples ; \
+-	$(MAKE) all
+-
+ apidox:
+ 	$(mkinstalldirs) doc/api; \
+ 	if test ! -x doc/common; then \

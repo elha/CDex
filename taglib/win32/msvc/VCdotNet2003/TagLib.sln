@@ -1,0 +1,66 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TagLib", "TagLib.vcproj", "{DB721FA1-C383-4DCD-8CD8-E8E9A15E9FEF}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "framelist", "framelist\framelist.vcproj", "{662CB976-41FA-4E98-A4BA-436D679F04E7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DB721FA1-C383-4DCD-8CD8-E8E9A15E9FEF} = {DB721FA1-C383-4DCD-8CD8-E8E9A15E9FEF}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tagreader", "tagreader\tagreader.vcproj", "{EC19E1AC-BB41-4547-97C7-99630C90AAE5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DB721FA1-C383-4DCD-8CD8-E8E9A15E9FEF} = {DB721FA1-C383-4DCD-8CD8-E8E9A15E9FEF}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tagreader_c", "tagreader_c\tagreader_c.vcproj", "{15B3D04C-69BD-4E6F-BF39-0A3EA5201721}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DB721FA1-C383-4DCD-8CD8-E8E9A15E9FEF} = {DB721FA1-C383-4DCD-8CD8-E8E9A15E9FEF}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "strip-id3v1", "strip-id3v1\strip-id3v1.vcproj", "{68B06308-1A49-44BA-AF07-93C61AD141BE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DB721FA1-C383-4DCD-8CD8-E8E9A15E9FEF} = {DB721FA1-C383-4DCD-8CD8-E8E9A15E9FEF}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tagwriter", "tagwriter\tagwriter.vcproj", "{E5AA30E7-A477-4F34-8253-E84A5A8CE374}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DB721FA1-C383-4DCD-8CD8-E8E9A15E9FEF} = {DB721FA1-C383-4DCD-8CD8-E8E9A15E9FEF}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{DB721FA1-C383-4DCD-8CD8-E8E9A15E9FEF}.Debug.ActiveCfg = Debug|Win32
+		{DB721FA1-C383-4DCD-8CD8-E8E9A15E9FEF}.Debug.Build.0 = Debug|Win32
+		{DB721FA1-C383-4DCD-8CD8-E8E9A15E9FEF}.Release.ActiveCfg = Release|Win32
+		{DB721FA1-C383-4DCD-8CD8-E8E9A15E9FEF}.Release.Build.0 = Release|Win32
+		{662CB976-41FA-4E98-A4BA-436D679F04E7}.Debug.ActiveCfg = Debug|Win32
+		{662CB976-41FA-4E98-A4BA-436D679F04E7}.Debug.Build.0 = Debug|Win32
+		{662CB976-41FA-4E98-A4BA-436D679F04E7}.Release.ActiveCfg = Release|Win32
+		{662CB976-41FA-4E98-A4BA-436D679F04E7}.Release.Build.0 = Release|Win32
+		{EC19E1AC-BB41-4547-97C7-99630C90AAE5}.Debug.ActiveCfg = Debug|Win32
+		{EC19E1AC-BB41-4547-97C7-99630C90AAE5}.Debug.Build.0 = Debug|Win32
+		{EC19E1AC-BB41-4547-97C7-99630C90AAE5}.Release.ActiveCfg = Release|Win32
+		{EC19E1AC-BB41-4547-97C7-99630C90AAE5}.Release.Build.0 = Release|Win32
+		{15B3D04C-69BD-4E6F-BF39-0A3EA5201721}.Debug.ActiveCfg = Debug|Win32
+		{15B3D04C-69BD-4E6F-BF39-0A3EA5201721}.Debug.Build.0 = Debug|Win32
+		{15B3D04C-69BD-4E6F-BF39-0A3EA5201721}.Release.ActiveCfg = Release|Win32
+		{15B3D04C-69BD-4E6F-BF39-0A3EA5201721}.Release.Build.0 = Release|Win32
+		{68B06308-1A49-44BA-AF07-93C61AD141BE}.Debug.ActiveCfg = Debug|Win32
+		{68B06308-1A49-44BA-AF07-93C61AD141BE}.Debug.Build.0 = Debug|Win32
+		{68B06308-1A49-44BA-AF07-93C61AD141BE}.Release.ActiveCfg = Release|Win32
+		{68B06308-1A49-44BA-AF07-93C61AD141BE}.Release.Build.0 = Release|Win32
+		{E5AA30E7-A477-4F34-8253-E84A5A8CE374}.Debug.ActiveCfg = Debug|Win32
+		{E5AA30E7-A477-4F34-8253-E84A5A8CE374}.Debug.Build.0 = Debug|Win32
+		{E5AA30E7-A477-4F34-8253-E84A5A8CE374}.Release.ActiveCfg = Release|Win32
+		{E5AA30E7-A477-4F34-8253-E84A5A8CE374}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

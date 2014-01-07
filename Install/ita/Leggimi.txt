@@ -1,0 +1,80 @@
+INTRODUZIONE:
+===============================================================
+
+Cdex è un programma che può estrarre tracce Audio Digitali (DA) 
+da un CD Audio in file sul disco fisso. Le tracce audio  
+estratte possono essere salvate come file WAV o MP3 (MPEG-1 
+Audio Layer-3). CDex usa la libreria Adaptec ASPI Manager per 
+comunicare col dispositivo CD-ROM, quindi assicurati che tu 
+abbia installati i giusti driver ASPI (vedi anche la Guida e  
+la pagina delle FAQ!)
+
+L'ultima versiona di CDex può essere scaricata da 
+
+http://cdexos.sourceforge.net
+
+
+REQUISITI DI SISTEMA:
+===============================================================
+
+1)	Microsoft Windows 95/98/ME & Windows-NT4 SP3, Windows 2000
+2)	Adaptec ASPI per Win32 Manager
+3)	Drive CD capace di Estrazione Audio Digitale
+4)	Intel Pentium o processore compatibile
+
+
+COME INSTALLARE CDEX (FILE ZIP):
+===============================================================
+Non ci sono particolari richieste di installazione, estrai tutti 
+i file che sono nel file zip in una cartella dove vuoi 
+installare CDex. Una volta installato, puoi far partire CDex 
+cliccando su CDex.exe, o tu puoi creare un collegamento sul 
+dekstop. Tuttavia, se crei un collegamento sul desktop 
+assicurati di impostare il campo "Da:" nella cartella dove
+hai estratto i file di Cdex. Per informazioni più dettagliate, 
+consultare la Guida!
+
+
+PROBLEMI CONOSCIUTI:
+===============================================================
+Nessuno
+
+
+Bug, commenti & suggerimenti:
+===============================================================
+Bug, comportamenti indefiniti ecc. e suggerimenti possono essere 
+inoltrati all'autore (Albert Faber). Se hai una domanda, assicurati 
+che hai LETTO la GUIDA prima, se non riesci a trovare la risposta 
+alla tua domanda, consulta la pagina delle FAQ all'home page di  
+CDex. Se ha ancora problemi, puoi mandarmi una e-mail a 
+afaber@users.sourceforge.net
+
+
+
+Garanzia & licenza:
+===============================================================
+
+vedi il file di Guida per la licenza GNU
+
+
+Questa distribuzione di CDex (file ZIP) dovrebbe contenere i 
+seguenti file:
+===============================================================
+
+CDex.exe (l'eseguibile di CDex)
+LangDll.dll (Libreria risorse in italiano)
+lame_enc.dll (encoder Lame MPEG-I Layer 3)
+LibSnd.dll (libreria sonora)
+Leggimi.txt (questo file)
+CDex.hlp (la Guida di CDex)
+CDex.cnt (il File coi contenuti della Guida)
+CDRip.dll (file libreria con routine di estrazione CD)
+Changes.txt (log dei cambiamenti con informazioni di release)
+
+
+                    ======= ### ======
+
+Traduzione di Luca "LZP" Zanardo
+
+lzpsite@libero.it
+http://digilander.iol.it/lzpsite

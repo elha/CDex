@@ -1,0 +1,7 @@
+Was ist CDex? -- 
+CDex ist ein Exraktionswerkzeug (Ripping) für Audio Dateien von einer Audio CD. Die Dateien können sowohl in das WAV Format als auch in ein komprimiertes Format umgewandelt werden (CDex unterstützt mehrere Kodierer). Außerdem gibt es mehrere Optionen um in verschiedene Audio Formate zu konvertieren. Für mehr Details über die Kompatibilität von CDex lesen Sie bitte die Hilfedatei (englisch). CDex wird unter den GPL Richtlinien hergestellt (Die Hilfedatei für genaue Lizenzinformationen ansehen).
+
+Installationsoptionen:
+-- "CDex Full (empfohlen)" Volle Installation, mit Startmenü Einträgen und Desktopverknüpfung
+-- "Keine Verknüpfungen" Ähnlich der CDex Vollinstallation, außer den Verknüpfungen. 
+

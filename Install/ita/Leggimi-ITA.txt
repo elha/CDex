@@ -1,0 +1,28 @@
+========================
+    CDex 1.40 beta 8 
+ Italian Version by LZP
+========================
+
+Questa è la versione di CDex che ho tradotto in Italiano.
+
+CDex è un ottimo programma per estrarre tracce sonore da CD e comprimerle in MP3 o 
+altri formati. Usa le librerie LAME, il codec installato in Windows o qualsiasi altro
+compressore esterno. CDex è freeware.
+
+CDex è sviluppato da Albert L. Faber, l'ultima versione si trova a http://cdexos.sourceforge.net
+
+Attualmente la traduzione del programma è a buon punto: l'interfaccia è completamente 
+tradotta, mancano solo alcuni messaggi d'errore che non ho ancora tradotto.
+
+La guida in formato HELP di Windows è in inglese, ma ho realizzato una Guida all'uso 
+di CDex in italiano in formato HTML, veramente esaustiva, la trovate nello zip col 
+nome di "cdexguida.mht".
+
+
+Enjoy!
+
+
+LZP
+
+mail: lzpsite@libero.it
+http://digilander.iol.it/lzpsite
