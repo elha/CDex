@@ -1,4 +1,4 @@
-#define CDEX_VERSION_STRING "1.70 beta 4\0"
+#define CDEX_VERSION_STRING "1.71\0"
 
 
 
@@ -29,7 +29,7 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Albert L Faber\0"
             VALUE "FileDescription", "CDex CD-Ripper\0"
-            VALUE "FileVersion", "1.70\0"
+            VALUE "FileVersion", "1.71\0"
             VALUE "InternalName", "CDex\0"
             VALUE "LegalCopyright", "Copyright (C) 1998-2006\0"
             VALUE "OriginalFilename", "CDex.EXE\0"

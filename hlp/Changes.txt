@@ -4,6 +4,10 @@
 CDex is released under the terms of the GNU General Public License (GPL) 3
 
 
+// Version 1.71
+compile with VS2013
+fixed bug with non-ascii-chars in cddb-query 
+
 // Version 1.70 beta 3
 [ 1532259 ] CDDB HTTP request fixes
 [ 1573057 ] CDex crashes converting more than 7 tracks from mp3 to wav
