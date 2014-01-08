@@ -125,7 +125,7 @@ void PlayList::AddPLSEntry( CUString strEntry )
 									strCnv.ToT( CUString( _W( "File" ) + strNumber ) ),
 									NULL,
 									pszEntry,
-									sizeof( pszEntry ),
+									_countof( pszEntry ),
 									strCnv1.ToT( strPName ) );
 
 		if ( 0 == MakeEntry( strPName, strEntry ).Compare( CUString( pszEntry, CP_ACP ) ) )
@@ -180,7 +180,7 @@ void PlayList::AddM3UEntry(CUString strEntry)
 	if ( NULL != pFile )
 	{
 		// search if the entry is already present in the file
-		while ( _fgetts( pszEntry, sizeof( pszEntry ), pFile  ) )
+		while ( _fgetts( pszEntry, _countof( pszEntry ), pFile  ) )
 		{
 			// check if entry is present
 			if ( 0 == ( MakeEntry( strPName, strEntry ) + _W( "\n" ) ).Compare( pszEntry ) )
@@ -1007,7 +1007,7 @@ BOOL CDInfo::ReadCDPlayerIni()
 
 	ENTRY_TRACE( _T( "CDInfo::ReadCDPlayerIni()" ) );
 
-	GetWindowsDirectory( lpszPathName, sizeof( lpszPathName ) -1 );
+	GetWindowsDirectory( lpszPathName, _countof( lpszPathName ) -1 );
 	_tcscat( lpszPathName, _T( "\\CDPlayer.ini" ) );
 
 	cdPlayerIni.Read( lpszPathName );
@@ -1265,7 +1265,7 @@ BOOL CDInfo::ReadRemoteCDDBBatch( CWnd* pWnd, volatile BOOL& bAbort )
             break;
         }
 
-		TCHAR* linePtr = _fgetts( lpszQuery, sizeof( lpszQuery ), fp );
+		TCHAR* linePtr = _fgetts( lpszQuery, _countof( lpszQuery ), fp );
 
         fclose( fp );
 

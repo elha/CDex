@@ -86,7 +86,7 @@ void CRipInfoDB::DeleteTrack( int nTrack )
 			memset( lpszLine, 0x00, sizeof( lpszLine ) );
 
 			// Read the next line from the file
-			_fgetts( lpszLine, sizeof( lpszLine ), m_pFile );
+			_fgetts( lpszLine, _countof( lpszLine ), m_pFile );
 
 			nCurrentTrack= _ttoi( &lpszLine[ 1 ] );
 
@@ -143,7 +143,7 @@ BOOL CRipInfoDB::GetCRC(int nTrack, ULONG& crc)
 
 			// Read the next line from the file
 			_fgetts(	lpszLine,
-						sizeof( lpszLine ),
+						_countof( lpszLine ),
 						m_pFile );
 
 			// Get track number
@@ -201,7 +201,7 @@ CDEX_ERR CRipInfoDB::GetStatusInfo( int nTrack, DWORD& dwJitterErrors )
 
 			// Read the next line from the file
 			_fgetts(	lpszLine,
-						sizeof( lpszLine ),
+						_countof( lpszLine ),
 						m_pFile );
 
 			// Get track number
@@ -350,7 +350,7 @@ CUString CRipInfoDB::GetRipInfo( int nTrack )
 			memset(lpszLine,0x00,sizeof(lpszLine));
 
 			// Get the current line
-			_fgetts(lpszLine,sizeof(lpszLine),m_pFile);
+			_fgetts(lpszLine, _countof(lpszLine), m_pFile);
 
 			// Get track number
 			nCurrentTrack = _ttoi(&lpszLine[1]);

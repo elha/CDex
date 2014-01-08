@@ -5,16 +5,8 @@
       <Configuration>Debug_UNICODE</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Release_UNICODE|Win32">
       <Configuration>Release_UNICODE</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
@@ -35,16 +27,6 @@
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v120</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v120</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -54,25 +36,9 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>..\..\$(Configuration)\</OutDir>
-    <IntDir>$(Configuration)\</IntDir>
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>..\..\$(Configuration)\</OutDir>
-    <IntDir>$(Configuration)\</IntDir>
-    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">
     <OutDir>..\..\$(Configuration)\</OutDir>
@@ -84,85 +50,6 @@
     <IntDir>$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>.\;..\;..\include;..\include\id3;..\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeader />
-      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
-      <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>$(IntDir)vc70.pdb</ProgramDataBaseFileName>
-      <BrowseInformation>true</BrowseInformation>
-      <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <CompileAs>Default</CompileAs>
-    </ClCompile>
-    <Link>
-      <AdditionalDependencies>..\zlib\zlibD.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <ModuleDefinitionFile>.\Id3lib.def</ModuleDefinitionFile>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
-      <ImportLibrary>$(OutDir)id3Lib.lib</ImportLibrary>
-      <TargetMachine>MachineX86</TargetMachine>
-    </Link>
-    <Midl>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\Debug/id3lib.tlb</TypeLibraryName>
-      <HeaderFileName />
-    </Midl>
-    <ResourceCompile>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <Optimization>MaxSpeed</Optimization>
-      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>.\;..\;..\include;..\include\id3;..\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeader />
-      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
-      <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>$(IntDir)vc70.pdb</ProgramDataBaseFileName>
-      <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <CompileAs>Default</CompileAs>
-    </ClCompile>
-    <Link>
-      <AdditionalDependencies>..\zlib\zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <ModuleDefinitionFile>.\Id3lib.def</ModuleDefinitionFile>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <SubSystem>Windows</SubSystem>
-      <ImportLibrary>$(OutDir)id3Lib.lib</ImportLibrary>
-      <TargetMachine>MachineX86</TargetMachine>
-    </Link>
-    <Midl>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MkTypLibCompatible>true</MkTypLibCompatible>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\Release/id3lib.tlb</TypeLibraryName>
-      <HeaderFileName />
-    </Midl>
-    <ResourceCompile>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
-    </ResourceCompile>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
@@ -249,397 +136,232 @@
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\field.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\field_binary.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\field_integer.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\field_string_ascii.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\field_string_unicode.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\frame.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\frame_impl.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\frame_parse.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\frame_render.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\globals.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\header.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\header_frame.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\header_tag.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\helpers.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\io.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\io_decorators.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\io_helpers.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\misc_support.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\mp3_parse.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\readers.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\spec.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\tag.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\tag_file.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\tag_find.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\tag_impl.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\tag_parse.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\tag_parse_lyrics3.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\tag_parse_musicmatch.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\tag_parse_v1.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\tag_render.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\utils.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\src\writers.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">Disabled</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">UNICODE;_UNICODE;_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_UNICODE|Win32'">true</BrowseInformation>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">MaxSpeed</Optimization>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
-      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;__DLL;HAVE_CONFIG_H;ID3LIB_LINKOPTION=2</PreprocessorDefinitions>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -105,7 +105,7 @@ CUString CIni::GetValue( const CUString& strSection, const CUString& strItem, CU
 								strCnv2.ToT( strItem ),
 								strCnv3.ToT( strDefault ),
 								lpszValue,
-								sizeof( lpszValue),
+								_countof( lpszValue),
 								strCnv.ToT( m_strFileName ) );
 
 	return CUString( lpszValue, CP_UTF8 );

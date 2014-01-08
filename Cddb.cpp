@@ -957,17 +957,17 @@ BOOL CDdb::CheckForTestQuery( DWORD& dwDiscID, CUString& strQuery )
 		int numTracks = 0;
 
 
-		_fgetts( tmp, sizeof( tmp ), pFileTest );
+		_fgetts(tmp, _countof(tmp), pFileTest);
 
 		_stscanf( tmp, _T( "%lx" ), &dwDiscID );
 
-		_fgetts( tmp, sizeof( tmp ), pFileTest );
+		_fgetts(tmp, _countof(tmp), pFileTest);
 		_stscanf( tmp, _T( "%d" ), &numTracks );
 
 		strQuery.Format( _W( "cddb query %08lx %d" ), dwDiscID , numTracks );
 
 		// time stamps
-		_fgetts( tmp, sizeof( tmp ), pFileTest );
+		_fgetts(tmp, _countof(tmp), pFileTest);
 
 		if ( '\n' == tmp[ _tcslen( tmp ) -1 ] )
 		{
@@ -979,7 +979,7 @@ BOOL CDdb::CheckForTestQuery( DWORD& dwDiscID, CUString& strQuery )
         strQuery += CUString( tmp );
 
 		// total time
-		_fgetts( tmp, sizeof( tmp ), pFileTest );
+		_fgetts(tmp, _countof(tmp), pFileTest);
 		if ( '\n' == tmp[ _tcslen( tmp ) -1 ] )
 		{
 			tmp[ _tcslen( tmp ) -1 ] = '\0';
@@ -1052,7 +1052,7 @@ BOOL CDdb::RemoveFromCDDBBatch( const CUString& strLine )
 
 	if ( TRUE == bReturn )
 	{
-		while ( _fgetts( lpszQuery, sizeof( lpszQuery ), fp ) )
+		while (_fgetts(lpszQuery, _countof(lpszQuery), fp))
 		{
             CUString strLineInBatch( lpszQuery, CP_UTF8 );
             strLineInBatch.Replace( _W( "\r" ), _W( "" ) );

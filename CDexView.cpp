@@ -1932,7 +1932,7 @@ void CCDexView::OnDropFiles( HDROP hDropInfo )
 			TCHAR lpszFileName[1000];
 
 			// Get drop file name
-			::DragQueryFile( hDropInfo, i, lpszFileName, sizeof( lpszFileName ) );
+			::DragQueryFile( hDropInfo, i, lpszFileName, _countof( lpszFileName ) );
 
 			// set full file name
 			newTask.SetFullFileName( lpszFileName );
@@ -2491,7 +2491,7 @@ void CCDexView::OnPlayfiles()
 	sInfo.cb = sizeof( STARTUPINFO );
 
 
-	GetModuleFileName( NULL, szAppName, sizeof( szAppName ) );
+	GetModuleFileName( NULL, szAppName, _countof( szAppName ) );
 
 	strParam.Format( _W( "%s  /PLAY" ), (LPCWSTR)CUString( szAppName ) );
 

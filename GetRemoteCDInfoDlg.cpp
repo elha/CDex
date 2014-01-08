@@ -995,7 +995,15 @@ bool CGetRemoteCDInfoDlg::SetPreviewData()
     vector<WCHAR> vOutData( m_vReadResult.size() + 1 );
 
     // convert from ANSI code page to wide string
-    MultiByteToWideChar( m_codePage, 0, lpszInData, -1, &vOutData[0], m_vReadResult.size() );
+	int nResultChars = MultiByteToWideChar(m_codePage, 0, lpszInData, -1, &vOutData[0], m_vReadResult.size());
+	if (nResultChars == 0 && GetLastError() == ERROR_NO_UNICODE_TRANSLATION)
+		isPlainASCII = false;
+
+	for (int i = 0; i < nResultChars; i++)
+	{
+		if (vOutData[i] == 0xFFFD)
+			isPlainASCII = false;
+	}
 
     //if ( m_codePage == CP_UTF8 )
     //{
@@ -1014,19 +1022,6 @@ bool CGetRemoteCDInfoDlg::SetPreviewData()
 
     int sizeTest = vOutData.size();
 
-    for ( unsigned int i=0;i< vOutData.size(); i++ )
-    {
-        int ch = (int)vOutData[i];
-
-        if ( ( ch < 32 ) || ( ch > 126 ) )
-        {
-            if ( ( ch != 0 ) && ( ch != 10 ) &&  ( ch != 9 ) )
-            {
-                isPlainASCII = false;
-                break;
-            }
-        }
-    }
     int item = 0;
     while (! s.IsEmpty()) {
         CUString token = RemoveTokenWithSeparators( s, _W( "\n" ) );
@@ -1070,6 +1065,7 @@ void CGetRemoteCDInfoDlg::OnCbnSelchangeCodepageselection()
     }
 
     SetResponse( g_language.GetString( IDS_CDDB_CODEPAGE_RESUBMIT_GUIDANCE ) );
+
 }
 
 void CGetRemoteCDInfoDlg::OnBnClickedOk()

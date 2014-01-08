@@ -10,10 +10,13 @@
 
 [Dd]ebug/
 [Rr]elease/
+[Dd]ebug_UNICODE/
+[Rr]elease_UNICODE/
 x64/
 build/
 [Bb]in/
 [Oo]bj/
+/ID3Lib/zlib/*.lib
 
 # Enable "build/" folder in the NuGet Packages folder since NuGet packages use it for MSBuild targets
 !packages/*/build/
@@ -149,3 +152,6 @@ $RECYCLE.BIN/
 
 # Mac crap
 .DS_Store
+
+CDex.ini
+LocalCDDB/

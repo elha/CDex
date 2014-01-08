@@ -155,7 +155,7 @@ void CUString::GetEncodedString( vector<CHAR>& outputCharVector, unsigned int co
     WideCharToMultiByte( codePage , 0, m_pszString, -1, (LPSTR)&outputCharVector[0], outputCharVector.size(), NULL, NULL );
 }
 
-void CUString::GetAsVector( vector<CHAR>& outputCharVector ) const
+void CUString::GetAsVector( vector<CHAR>& outputCharVector, unsigned int codePage ) const
 {
     // get number of chars (include terminate char
 	int nChars = ( GetLength() + 1 ) * sizeof( WCHAR) ;
@@ -164,11 +164,23 @@ void CUString::GetAsVector( vector<CHAR>& outputCharVector ) const
     {
         outputCharVector.resize( nChars );
     }
-    // peform deep copy
-    memcpy( &outputCharVector[0], m_pszString, nChars );
+	
+	// do conversion
+	WideCharToMultiByte(codePage, 0, m_pszString, -1, (LPSTR)&outputCharVector[0], outputCharVector.size(), NULL, NULL);
 }
 
+void CUString::GetAsVector(vector<WCHAR>& outputCharVector) const
+{
+	// get number of chars (include terminate char
+	int nChars = GetLength() + 1;
 
+	if ((int)outputCharVector.size() < nChars)
+	{
+		outputCharVector.resize(nChars);
+	}
+	// peform deep copy
+	memcpy(&outputCharVector[0], m_pszString, nChars  * sizeof(WCHAR));
+}
 
 void CUString::ConcatCopy(LPCWSTR lpszData)
 {

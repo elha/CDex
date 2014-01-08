@@ -41,7 +41,8 @@ public:
     operator LPCWSTR() const	{ return m_pszString; }
 	WCHAR*	GetString() const { return m_pszString; } 
     void GetEncodedString( vector<CHAR>& outputString, unsigned int codePage ) const;
-    void GetAsVector( vector<CHAR>& outputString ) const;
+    void GetAsVector( vector<CHAR>& outputString, unsigned int codePage=CP_ACP ) const;
+	void GetAsVector( vector<WCHAR>& outputString) const;
     //vector<CHAR> GetAcpString() { return GetString( CP_ACP); }
     //vector<CHAR> GetUtf8String() { return GetString( CP_UTF8); }
 
@@ -145,6 +146,7 @@ inline bool operator!=(LPCWSTR s1, const CUString& s2)
 class CUStringConvert
 {
     vector<CHAR> convertBuffer;
+	vector<TCHAR> convertBufferT;
 
 public: 
     CUStringConvert( ):
@@ -168,11 +170,11 @@ public:
     }
     LPTSTR ToT( const CUString& strConvert ) { 
 #ifdef _UNICODE
-        strConvert.GetAsVector( convertBuffer ); 
+		strConvert.GetAsVector( convertBufferT ); 
 #else
         strConvert.GetEncodedString( convertBuffer, CP_ACP ); 
 #endif
-        return (LPTSTR)&convertBuffer[0];
+		return &convertBufferT[0];
     }
 };
 

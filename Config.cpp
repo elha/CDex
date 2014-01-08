@@ -251,7 +251,7 @@ CConfig::CConfig()
 
 	GetModuleFileName(	NULL, 
 						lpszModuleFileName,
-						sizeof( lpszModuleFileName ) );
+						_countof( lpszModuleFileName ) );
 
 	myVersion.Open( lpszModuleFileName );
 	m_strVersion=myVersion.GetProductVersion();
@@ -348,7 +348,7 @@ CConfig::CConfig()
 
 	TCHAR lpszTemp[ MAX_PATH + 1] = { _T( '\0' ),};
 
-	GetTempPath( sizeof( lpszTemp ), lpszTemp );
+	GetTempPath(_countof(lpszTemp), lpszTemp);
 
 	m_strTempDir = CUString( lpszTemp );
 
@@ -830,7 +830,7 @@ CDEX_ERR DoesDirExist(CUString& strDirTest,BOOL bVerbose)
 	TCHAR lpszCurDir[ MAX_PATH + 1 ] = { _T( '\0' ),};
 	
 	// Get current directory
-	_tgetcwd( lpszCurDir, sizeof( lpszCurDir ) );
+	_tgetcwd( lpszCurDir, _countof( lpszCurDir ) );
 
 	// Does the dir exist
     CUStringConvert strCnv;

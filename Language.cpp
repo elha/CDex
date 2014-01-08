@@ -415,9 +415,9 @@ void CLanguage::ParseLanguageFile( const CUString& strFileName )
 
 			if ( nStart >= 0 )
 			{
-				nStop = strRead.Find( '"', nStart + 1 );
+				nStop = strRead.ReverseFind( '"' );
 
-				if ( nStop > 2 )
+				if ( nStop > 2 && nStop > nStart )
 				{
 					lpszRead[ 0 ] = '\0';
 
