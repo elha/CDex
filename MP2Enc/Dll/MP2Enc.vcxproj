@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release NASM|Win32">
+      <Configuration>Release NASM</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_UNICODE|Win32">
+      <Configuration>Release_UNICODE</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{FA9228CC-8417-49C6-BED3-D315F123A45D}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">
+    <OutDir>..\..\$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">
+    <OutDir>..\..\$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\MP2EncDll___Win32_Release_NASM/MP2EncDll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\MP2EncDll___Win32_Release_NASM/</AssemblerListingLocation>
+      <ObjectFileName>.\MP2EncDll___Win32_Release_NASM/</ObjectFileName>
+      <ProgramDataBaseFileName>.\MP2EncDll___Win32_Release_NASM/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>msvcrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>.\MP2Enc.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(ProjectName).map</MapFileName>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\MP2EncDll___Win32_Release_NASM/MP2EncDll.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\Debug/MP2EncDll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\MP2Enc.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(ProjectName).map</MapFileName>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/MP2EncDll.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\Release/MP2EncDll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>msvcrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>.\MP2Enc.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(ProjectName).map</MapFileName>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/MP2EncDll.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\MP2EncDll___Win32_Release_NASM/MP2EncDll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\MP2EncDll___Win32_Release_NASM/</AssemblerListingLocation>
+      <ObjectFileName>.\MP2EncDll___Win32_Release_NASM/</ObjectFileName>
+      <ProgramDataBaseFileName>.\MP2EncDll___Win32_Release_NASM/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>msvcrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <ModuleDefinitionFile>.\MP2Enc.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(ProjectName).map</MapFileName>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\MP2EncDll___Win32_Release_NASM/MP2EncDll.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\AvailableBits.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BrowseInformation>
+    </ClCompile>
+    <ClCompile Include="Blade.c" />
+    <ClCompile Include="..\common.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BrowseInformation>
+    </ClCompile>
+    <ClCompile Include="..\FFT.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BrowseInformation>
+    </ClCompile>
+    <ClCompile Include="..\Layer2.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BrowseInformation>
+    </ClCompile>
+    <ClCompile Include="..\MP2Enc.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BrowseInformation>
+    </ClCompile>
+    <ClCompile Include="..\MpegError.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BrowseInformation>
+    </ClCompile>
+    <ClCompile Include="..\Psycho_0.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BrowseInformation>
+    </ClCompile>
+    <ClCompile Include="..\Psycho_I.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BrowseInformation>
+    </ClCompile>
+    <ClCompile Include="..\Psycho_II.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BrowseInformation>
+    </ClCompile>
+    <ClCompile Include="..\Subband.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BrowseInformation>
+    </ClCompile>
+    <ClCompile Include="..\tables.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BrowseInformation>
+    </ClCompile>
+    <ClCompile Include="..\TimeEval.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL;HAVE_NASM</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Full</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;DLLCOMPILE;LAYER2;_BLADEDLL</PreprocessorDefinitions>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</BrowseInformation>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MP2Enc.def" />
+    <CustomBuild Include="..\i386\cpu_feat.nas">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\i386\fft3dn.nas">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\i386\fftfpu.nas">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\i386\fftsse.nas">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\i386\ffttbl.nas">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release NASM|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_UNICODE|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Assembling %(Filename)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasmw -f win32 -i %(RootDir)%(Directory) -DWIN32 %(FullPath) -o  $(OutDir)%(Filename).obj
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\AvailableBits.h" />
+    <ClInclude Include="..\..\..\..\Program Files\Microsoft Visual Studio\Vc98\Include\Basetsd.h" />
+    <ClInclude Include="Blade.h" />
+    <ClInclude Include="..\common.h" />
+    <ClInclude Include="..\FFT.h" />
+    <ClInclude Include="..\Layer2.h" />
+    <ClInclude Include="..\Machine.h" />
+    <ClInclude Include="..\MP2Enc.h" />
+    <ClInclude Include="..\MpegError.h" />
+    <ClInclude Include="..\Psycho_0.h" />
+    <ClInclude Include="..\Psycho_I.h" />
+    <ClInclude Include="..\Psycho_II.h" />
+    <ClInclude Include="..\Settings.h" />
+    <ClInclude Include="..\Subband.h" />
+    <ClInclude Include="..\tables.h" />
+    <ClInclude Include="..\TimeEval.h" />
+    <ClInclude Include="..\types.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
