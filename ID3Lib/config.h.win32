@@ -138,10 +138,10 @@
 // The trivial "if" statement provides the correct scoping to the 
 // for loop
 
-#ifdef CXX_HAS_BUGGY_FOR_LOOPS
+// #ifdef CXX_HAS_BUGGY_FOR_LOOPS
 /* #undef for */
-#define for if(1) for
-#endif
+// #define for if(1) for
+// #endif
 
 //
 // If the C++ compiler we use doesn't have bool, then

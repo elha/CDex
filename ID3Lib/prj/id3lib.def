@@ -1,5 +1,4 @@
 LIBRARY "id3lib"
-VERSION 3.8.4
 
 EXPORTS 
 

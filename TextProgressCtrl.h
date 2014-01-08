@@ -4,7 +4,7 @@
 ** Copyright (C) 2006 - 2007 Georgy Berdyshev
 ** Copyright (C) 1999 - 2002 Albert L. Faber
 ** Copyright (C) Chris Maunder (chrismaunder@codeguru.com)
-** Copyright (C) Keith Rule - CMemDC class (keithr@europa.com)
+** Copyright (C) Keith Rule - CMemDCPrivate class (keithr@europa.com)
 **
 ** http://cdexos.sourceforge.net/
 ** http://sourceforge.net/projects/cdexos 

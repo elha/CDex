@@ -4,7 +4,7 @@
 ** Copyright (C) 2006 - 2007 Georgy Berdyshev
 ** Copyright (C) 1999 - 2007 Albert L. Faber
 ** Copyright (C) Chris Maunder (chrismaunder@codeguru.com)
-** Copyright (C) Keith Rule - CMemDC class (keithr@europa.com)
+** Copyright (C) Keith Rule - CMemDCPrivate class (keithr@europa.com)
 **
 ** http://cdexos.sourceforge.net/
 ** http://sourceforge.net/projects/cdexos 
@@ -36,12 +36,12 @@ static char THIS_FILE[] = __FILE__;
 
 #ifndef _MEMDC_H_
 
-class CMemDC : public CDC
+class CMemDCPrivate : public CDC
 {
 public:
 
     // constructor sets up the memory DC
-    CMemDC(CDC* pDC) : CDC()
+    CMemDCPrivate(CDC* pDC) : CDC()
     {
         ASSERT(pDC != NULL);
 
@@ -66,7 +66,7 @@ public:
     }
     
     // Destructor copies the contents of the mem DC to the original DC
-    ~CMemDC()
+    ~CMemDCPrivate()
     {
         if (m_bMemDC) 
         {    
@@ -85,14 +85,14 @@ public:
     }
 
     // Allow usage as a pointer
-    CMemDC* operator->() {return this;}
+    CMemDCPrivate* operator->() {return this;}
         
     // Allow usage as a pointer
-    operator CMemDC*() {return this;}
+    operator CMemDCPrivate*() {return this;}
 
 private:
     CBitmap  m_bitmap;      // Offscreen bitmap
-    CBitmap* m_pOldBitmap;  // bitmap originally found in CMemDC
+    CBitmap* m_pOldBitmap;  // bitmap originally found in CMemDCPrivate
     CDC*     m_pDC;         // Saves CDC passed in constructor
     CRect    m_rect;        // Rectangle of drawing area.
     BOOL     m_bMemDC;      // TRUE if CDC really is a Memory DC.
@@ -175,7 +175,7 @@ void CTextProgressCtrl::OnPaint()
     double Fraction = (double)(m_nPos - m_nMin) / ((double)(m_nMax - m_nMin));
 
 	CPaintDC PaintDC(this); // device context for painting
-    CMemDC dc(&PaintDC);
+    CMemDCPrivate dc(&PaintDC);
 	//CPaintDC dc(this);    // device context for painting (if not double buffering)
 
     LeftRect = RightRect = ClientRect;

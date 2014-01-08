@@ -595,7 +595,6 @@ void CDInfo::DumpToc(LPBYTE pbtBuffer,int nSize)
 	DWORD		dw;
 	unsigned	mins;
 	double		secnds;
-	extern double fmod(double,double);
 
 	// Open Dump File
 	CADebug myLogFile( CUString( _W( "CDEX_TOC.txt" ) ) );
