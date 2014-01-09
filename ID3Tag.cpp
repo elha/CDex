@@ -455,12 +455,10 @@ BOOL CID3Tag::SaveTag_v2()
         SetFrame( m_tagData.GetComment(), myTag, ID3FID_COMMENT );
         SetFrame( m_tagData.GetEncodedBy(), myTag, ID3FID_ENCODEDBY );
 
-        ID3_Frame frame;
+		ID3_Frame* pFrame = new ID3_Frame(ID3FID_CDID);
             
-        frame.SetID( ID3FID_CDID );
-
-        frame.Field( ID3FN_DATA ).Set(	m_tagData.GetRawToc(), 804 );
-        myTag.AddFrame( frame );
+        pFrame->Field( ID3FN_DATA ).Set(	m_tagData.GetRawToc(), 804 );
+        myTag.AddFrame( pFrame );
 
         ID3_AddTrack( &myTag, (uchar)m_tagData.GetTrackNumber() +  (uchar)m_tagData.GetTrackOffset(), (uchar)m_tagData.GetTotalTracks() + (uchar)m_tagData.GetTrackOffset(), true );
 
@@ -481,23 +479,23 @@ BOOL CID3Tag::SaveTag_v2()
 
         if ( bAddPicture && CDexFileExist( pictureFileName ) )
         {
-            frame.SetID(ID3FID_PICTURE);
+			ID3_Frame* pFrame = new ID3_Frame(ID3FID_PICTURE);
             if (    ( pictureFileName.Find( _W( ".jpg" ) ) > 0 ) ||
                     ( pictureFileName.Find( _W( ".jpeg" ) ) > 0 ) )
             {
-                frame.GetField(ID3FN_MIMETYPE)->Set( "image/jpeg" );
+				pFrame->GetField(ID3FN_MIMETYPE)->Set("image/jpeg");
             } else if ( pictureFileName.Find( _W( ".png" ) ) )
             {
-                frame.GetField(ID3FN_MIMETYPE)->Set("image/png");
+				pFrame->GetField(ID3FN_MIMETYPE)->Set("image/png");
             } else
             {
-                frame.GetField(ID3FN_MIMETYPE)->Set("image/unknown");
+				pFrame->GetField(ID3FN_MIMETYPE)->Set("image/unknown");
             }
-            frame.GetField(ID3FN_PICTURETYPE)->Set(03);
-            frame.GetField(ID3FN_DESCRIPTION)->Set( strCnv.ToACP( pictureComment ) );
-            frame.GetField(ID3FN_DATA)->FromFile( strCnv.ToACP( pictureFileName ) );
+			pFrame->GetField(ID3FN_PICTURETYPE)->Set(03);
+			pFrame->GetField(ID3FN_DESCRIPTION)->Set(strCnv.ToACP(pictureComment));
+			pFrame->GetField(ID3FN_DATA)->FromFile(strCnv.ToACP(pictureFileName));
             
-            myTag.AddFrame( frame );
+            myTag.AddFrame( pFrame );
         }
 
 		// set genre string for V2 tag
