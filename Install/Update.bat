@@ -1,23 +1,22 @@
 cls
 @echo on
 @REM Batch file for making a CDex release version
-@REM First parameter specifies the name, like cdex_140b6
+@REM First parameter specifies the name, like cdex_171
 @REM Second parameter specifies the language, currently the following
 @REM languages are supported:
 @REM lang_enu for the english version
 @REM lang_deu for the german version
 @REM lang_ita for the italian version
 @REM lang_esp for the spanish version
+@REM Third parameter specifies Release, like Release_UNICODE
+
 
 @set INSTALL_DIR=%CD%
-@set PACOMP=..\..\..\cdex_tools\pacomp\pacomp.EXE
-@set UPX=..\..\..\cdex_tools\upx.exe
 
 @set LANG=%2
 @SET CDEX_PATH=..\..
 @SET LAME_PATH=..\..\..\lame
 @set REL_OR_RELUNI=%3
-
 
 
 @echo =============================================================
@@ -124,11 +123,15 @@ goto lang_end
 
 :lang_end
 
-cd CDex
+goto make_zip
 
-%UPX% -9 *.dll
+:make_install
+
+REM not tested
+cd CDex
+..\..\tools\upx.exe -9 *.dll
 cd Plugins
-%UPX% -9 *.dll
+..\..\..\tools\upx.exe -9 *.dll
 cd %INSTALL_DIR%
 
 
@@ -144,7 +147,7 @@ echo =============================================================
 
 cd CDex
 del %INSTALL_DIR%\%1%LANG_EXT%.zip ,2>null
-%PACOMP% -c2 -a -p %INSTALL_DIR%\%1%LANG_EXT%.zip *.*
+..\7za a -tzip -r %INSTALL_DIR%\%1%LANG_EXT%.zip *.*
 cd %INSTALL_DIR%
 
 
