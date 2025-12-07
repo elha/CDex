@@ -448,7 +448,7 @@ typedef struct SCSI_INQUIRY_RESULT_TAG{
 
 
 // FUNCTION PROTOTYPES
-CDEX_ERR	InitAspiDll( bool& bUseNtScsi );
+CDEX_ERR	InitAspiDll();
 CDEX_ERR	DeInitAspiDll( );
 VOID*		Swap (VOID *p, int size);
 BYTE IsScsiError(LPSRB lpSrb);

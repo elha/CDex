@@ -214,41 +214,21 @@ CDEX_ERR CCDexApp::LoadCDRipLibrary()
 
 
 
-        bReturn = CR_Init( g_config.GetTransportLayer(), g_config.GetCDRipDebugLevel() );
+        bReturn = CR_Init( g_config.GetCDRipDebugLevel() );
 
 
         switch ( bReturn )
         {
-        case CDEX_NATIVEEASPINOTSUPPORTED:
-            CDexMessageBox( g_language.GetString( IDS_NATIVEASPINOTSUPPORTED ) );
-            break;
         case CDEX_FAILEDTOLOADASPIDRIVERS:
             CDexMessageBox( g_language.GetString( IDS_FAILEDTOLOADASPIDRIVERS ) );
             break;
         case CDEX_FAILEDTOGETASPISTATUS:
             CDexMessageBox( g_language.GetString( IDS_FAILEDTOGETASPISTATUS ) );
             break;
-        case CDEX_NATIVEEASPISUPPORTEDNOTSELECTED:
-            if ( IDYES == CDexMessageBox( g_language.GetString( IDS_ASPIFAILEDSUGGESTNATIVENTSCSI ), 
-                MB_YESNO ) )
-            {
-                // set native SCSI libaray option
-                g_config.SetTransportLayer( TRANSPLAYER_NTSCSI );
-                bReturn = CR_Init( g_config.GetTransportLayer(), g_config.GetCDRipDebugLevel() );
-            }
-            break;
-        case CDEX_NOCDROMDEVICES:
-            if ( IsWindowsNTOS() && ( TRANSPLAYER_NTSCSI != (const int)g_config.GetTransportLayer() ) )
-            {
 
-                if ( IDYES == CDexMessageBox( g_language.GetString( IDS_ASPIFAILEDSUGGESTNATIVENTSCSI ), 
-                    MB_YESNO ) )
-                {
-                    // change transport layer
-                    g_config.SetTransportLayer( TRANSPLAYER_NTSCSI );
-                    bReturn = CR_Init( g_config.GetTransportLayer(), g_config.GetCDRipDebugLevel() );				
-                }
-            }
+        case CDEX_NATIVEEASPINOTSUPPORTED:
+        case CDEX_NOCDROMDEVICES:
+            bReturn = CR_Init( g_config.GetCDRipDebugLevel() );				
             break;
 
         case CDEX_OK:
@@ -335,7 +315,8 @@ BOOL CCDexApp::InitInstance()
     }
 
 
-    CUString strVersionValue( g_language.GetString( IDS_CDEX_PLAYER_VERSION ) + g_config.GetVersion() );
+    CUString strVersionValue(g_language.GetString(IDS_CDEX_PLAYER_VERSION));
+    strVersionValue = strVersionValue.operator+=(g_config.GetVersion());    
     CUStringConvert strCnv;
 
     HWND hWndPlayer = FindWindowEx( NULL, NULL, NULL, strCnv.ToT( strVersionValue ) );

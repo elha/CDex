@@ -18,13 +18,11 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// English (U.S.) resources
+// Englisch (USA) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-#ifdef _WIN32
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
-#endif //_WIN32
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -34,7 +32,9 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON                    "res\\idr_cdex.ico"
+
 IDR_PLAYERFRAME         ICON                    "res\\idr_cdex.ico"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -42,41 +42,70 @@ IDR_PLAYERFRAME         ICON                    "res\\idr_cdex.ico"
 //
 
 IDB_VOLUME              BITMAP                  "res\\Volume.bmp"
+
 IDB_RECORDU             BITMAP                  "res\\RecordU.bmp"
+
 IDB_RECORDD             BITMAP                  "res\\RecordD.bmp"
+
 IDB_RECORDF             BITMAP                  "res\\RecordF.bmp"
+
 IDB_RECORDX             BITMAP                  "res\\RecordX.bmp"
+
 IDB_RECORDPAUSEU        BITMAP                  "res\\RecordPauseU.bmp"
+
 IDB_RECORDPAUSED        BITMAP                  "res\\RecordPauseD.bmp"
+
 IDB_RECORDPAUSEF        BITMAP                  "res\\RecordPauseF.bmp"
+
 IDB_RECORDPAUSEX        BITMAP                  "res\\RecordPauseX.bmp"
+
 IDB_RECORDSTOPU         BITMAP                  "res\\RecordStopU.bmp"
+
 IDB_RECORDSTOPD         BITMAP                  "res\\RecordStopD.bmp"
+
 IDB_RECORDSTOPF         BITMAP                  "res\\RecordStopF.bmp"
+
 IDB_RECORDSTOPX         BITMAP                  "res\\RecordStopX.bmp"
+
 IDB_CDEXLOGO            BITMAP                  "res\\logo.bmp"
+
 IDB_RECBAR256           BITMAP                  "res\\Recbar_256.bmp"
+
 IDB_RECBAR256D          BITMAP                  "res\\Recbar_256D.bmp"
+
 IDB_CDPLAYTOOLBAR_C     BITMAP                  "res\\CDPlayToolBarC.bmp"
+
 IDB_CDPLAYTOOLBAR_D     BITMAP                  "res\\CDPlayToolBarD.bmp"
+
 IDB_CDPLAYTOOLBAR_H     BITMAP                  "res\\CDPlayToolBarH.bmp"
+
 IDB_FILEPLAYTOOLBAR_C   BITMAP                  "res\\FilePlayToolBarC.bmp"
+
 IDB_FILEPLAYTOOLBAR_D   BITMAP                  "res\\FilePlayToolBarD.bmp"
+
 IDB_FILEPLAYTOOLBAR_H   BITMAP                  "res\\FilePlayToolBarH.bmp"
+
 IDB_UTILTOOLBAR_C       BITMAP                  "res\\UtilToolBarN.bmp"
+
 IDB_UTILTOOLBAR_D       BITMAP                  "res\\UtilToolBarD.bmp"
+
 IDB_UTILTOOLBAR_H       BITMAP                  "res\\UtilToolBarH.bmp"
+
 IDW_PLAYBAR             BITMAP                  "RES\\PlayBar.bmp"
+
 IDW_RECBAR              BITMAP                  "RES\\RecBar.bmp"
+
 IDW_PLAYFILEBAR         BITMAP                  "res\\PlayFileBar.bmp"
+
 IDW_UTILBAR             BITMAP                  "res\\UtilToolBar.bmp"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Accelerator
 //
 
-IDR_MAINFRAME ACCELERATORS 
+IDR_MAINFRAME ACCELERATORS
 BEGIN
     "A",            ID_EDIT_SELECTALL,      VIRTKEY, CONTROL, NOINVERT
     "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
@@ -129,7 +158,7 @@ BEGIN
     "#include ""afxres.rc""         // Standard components\r\n"
     "#include ""afxprint.rc""       // printing/print preview resources\r\n"
     "#include ""res\\languages.rc""\r\n"
-    "#include ""res\\version.rc2""\r\n"
+    "#include ""res\\version.rc2""\r\0"
 END
 
 #endif    // APSTUDIO_INVOKED
@@ -140,7 +169,7 @@ END
 // Toolbar
 //
 
-IDW_PLAYBAR TOOLBAR  16, 16
+IDW_PLAYBAR TOOLBAR 16, 16
 BEGIN
     BUTTON      ID_EJECT
     SEPARATOR
@@ -158,7 +187,7 @@ BEGIN
     SEPARATOR
 END
 
-IDW_RECBAR TOOLBAR  32, 32
+IDW_RECBAR TOOLBAR 32, 32
 BEGIN
     BUTTON      ID_TRACKS2WAV
     SEPARATOR
@@ -173,7 +202,7 @@ BEGIN
     BUTTON      ID_CONFIGURE
 END
 
-IDW_PLAYFILEBAR TOOLBAR  16, 16
+IDW_PLAYFILEBAR TOOLBAR 16, 16
 BEGIN
     BUTTON      ID_FILEOPEN
     SEPARATOR
@@ -186,7 +215,7 @@ BEGIN
     BUTTON      ID_STOP
 END
 
-IDW_UTILBAR TOOLBAR  16, 16
+IDW_UTILBAR TOOLBAR 16, 16
 BEGIN
     BUTTON      ID_PROFILESELECTION
     SEPARATOR
@@ -200,145 +229,98 @@ END
 // Dialog
 //
 
-IDD_PCOPYDIALOG DIALOG  0, 0, 312, 201
+IDD_PCOPYDIALOG DIALOG 0, 0, 312, 201
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Record partial tracks"
 FONT 8, "MS Shell Dlg"
 BEGIN
     EDITTEXT        IDC_FILENAME,14,25,276,14,ES_AUTOHSCROLL | WS_GROUP
-    CONTROL         "WAV file",IDC_OUTPUTTYPE,"Button",BS_AUTORADIOBUTTON | 
-                    WS_GROUP | WS_TABSTOP,86,50,69,10
-    CONTROL         "Compressed Audio File (Encoded)",IDC_MP3TYPE,"Button",
-                    BS_AUTORADIOBUTTON,160,50,135,10
+    CONTROL         "WAV file",IDC_OUTPUTTYPE,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,86,50,69,10
+    CONTROL         "Compressed Audio File (Encoded)",IDC_MP3TYPE,"Button",BS_AUTORADIOBUTTON,160,50,135,10
     EDITTEXT        IDC_STARTM,192,100,28,14,ES_AUTOHSCROLL | WS_GROUP
-    CONTROL         "Spin6",IDC_SPINSM,"msctls_updown32",UDS_WRAP | 
-                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
-                    UDS_ARROWKEYS | WS_GROUP | WS_TABSTOP,207,100,11,14
+    CONTROL         "Spin6",IDC_SPINSM,"msctls_updown32",UDS_WRAP | UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | WS_GROUP | WS_TABSTOP,207,100,11,14
     EDITTEXT        IDC_STARTS,227,100,28,14,ES_AUTOHSCROLL | WS_GROUP
-    CONTROL         "Spin6",IDC_SPINSS,"msctls_updown32",UDS_WRAP | 
-                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
-                    UDS_ARROWKEYS | WS_GROUP | WS_TABSTOP,236,100,11,14
+    CONTROL         "Spin6",IDC_SPINSS,"msctls_updown32",UDS_WRAP | UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | WS_GROUP | WS_TABSTOP,236,100,11,14
     EDITTEXT        IDC_STARTF,262,100,28,14,ES_AUTOHSCROLL | WS_GROUP
-    CONTROL         "Spin6",IDC_SPINSF,"msctls_updown32",UDS_WRAP | 
-                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
-                    UDS_ARROWKEYS | WS_GROUP | WS_TABSTOP,275,100,11,14
+    CONTROL         "Spin6",IDC_SPINSF,"msctls_updown32",UDS_WRAP | UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | WS_GROUP | WS_TABSTOP,275,100,11,14
     EDITTEXT        IDC_ENDM,192,122,28,14,ES_AUTOHSCROLL | WS_GROUP
-    CONTROL         "Spin6",IDC_SPINEM,"msctls_updown32",UDS_WRAP | 
-                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
-                    UDS_ARROWKEYS | WS_GROUP | WS_TABSTOP,207,117,11,14
+    CONTROL         "Spin6",IDC_SPINEM,"msctls_updown32",UDS_WRAP | UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | WS_GROUP | WS_TABSTOP,207,117,11,14
     EDITTEXT        IDC_ENDS,227,122,28,14,ES_AUTOHSCROLL | WS_GROUP
-    CONTROL         "Spin6",IDC_SPINES,"msctls_updown32",UDS_WRAP | 
-                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
-                    UDS_ARROWKEYS | WS_GROUP | WS_TABSTOP,236,118,11,14
+    CONTROL         "Spin6",IDC_SPINES,"msctls_updown32",UDS_WRAP | UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | WS_GROUP | WS_TABSTOP,236,118,11,14
     EDITTEXT        IDC_ENDF,262,122,28,14,ES_AUTOHSCROLL | WS_GROUP
-    CONTROL         "Spin6",IDC_SPINEF,"msctls_updown32",UDS_WRAP | 
-                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
-                    UDS_ARROWKEYS | WS_GROUP | WS_TABSTOP,275,118,11,14
+    CONTROL         "Spin6",IDC_SPINEF,"msctls_updown32",UDS_WRAP | UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | WS_GROUP | WS_TABSTOP,275,118,11,14
     DEFPUSHBUTTON   "OK",IDOK,95,175,50,14,WS_GROUP
     PUSHBUTTON      "Cancel",IDCANCEL,165,175,50,14,WS_GROUP
     LTEXT           "Track",IDC_STATIC_PCOPY_TRACK,86,87,100,8,WS_TABSTOP
     LTEXT           "Min",IDC_STATIC_PCOPY_MINUTE,192,87,24,8,WS_TABSTOP
     LTEXT           "Sec",IDC_STATIC_PCOPY_SECONDS,227,87,29,8,WS_TABSTOP
     LTEXT           "Frame",IDC_STATIC_PCOPY_FRAME,262,87,29,8,WS_TABSTOP
-    GROUPBOX        "File properties",IDC_STATIC_PCOPY_FILEPROPS,5,5,295,60,
-                    WS_GROUP | WS_TABSTOP
-    GROUPBOX        "Range (one file from start position to stop position)",
-                    IDC_STATIC_PCOPY_RANGESEL,5,70,295,94,WS_GROUP | 
-                    WS_TABSTOP
-    COMBOBOX        IDC_STARTTRACK,83,100,106,79,CBS_DROPDOWN | WS_VSCROLL | 
-                    WS_GROUP | WS_TABSTOP
-    COMBOBOX        IDC_ENDTRACK,83,124,106,57,CBS_DROPDOWN | WS_VSCROLL | 
-                    WS_GROUP | WS_TABSTOP
+    GROUPBOX        "File properties",IDC_STATIC_PCOPY_FILEPROPS,5,5,295,60,WS_GROUP | WS_TABSTOP
+    GROUPBOX        "Range (one file from start position to stop position)",IDC_STATIC_PCOPY_RANGESEL,5,70,295,94,WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_STARTTRACK,83,100,106,79,CBS_DROPDOWN | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_ENDTRACK,83,124,106,57,CBS_DROPDOWN | WS_VSCROLL | WS_GROUP | WS_TABSTOP
     LTEXT           "INFO",IDC_INFO,14,149,275,10,WS_TABSTOP
-    LTEXT           "Start Position",IDC_STATIC_PCOPY_STARTPOS,14,102,65,8,
-                    WS_TABSTOP
-    LTEXT           "Stop Position",IDC_STATIC_PCOPY_STOPPOS,14,127,65,8,
-                    WS_TABSTOP
-    LTEXT           "Output Type",IDC_STATIC_PCOPY_OUTPUTTYPE,14,50,65,8,
-                    WS_TABSTOP
+    LTEXT           "Start Position",IDC_STATIC_PCOPY_STARTPOS,14,102,65,8,WS_TABSTOP
+    LTEXT           "Stop Position",IDC_STATIC_PCOPY_STOPPOS,14,127,65,8,WS_TABSTOP
+    LTEXT           "Output Type",IDC_STATIC_PCOPY_OUTPUTTYPE,14,50,65,8,WS_TABSTOP
 END
 
-IDD_ENCODERPROPPAGE DIALOG  0, 0, 312, 201
+IDD_ENCODERPROPPAGE DIALOG 0, 0, 312, 201
 STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Encoder"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    CONTROL         "Convert to Riff WAV files",IDC_RIFFWAV,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,160,7,145,10
-    CONTROL         "",IDC_ENCOPTS,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,
-                    11,65,286,131
-    COMBOBOX        IDC_THREADPRIORITY,79,5,75,75,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_TABSTOP
-    LTEXT           "Thread Priority",IDC_STATIC_ENCPROPPAGE_THREADPRIORITY,
-                    5,7,70,9
-    COMBOBOX        IDC_ENCODERSEL,79,23,224,118,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_TABSTOP
-    GROUPBOX        "Encoder Options",IDC_STATIC_ENCPROPPAGE_ENCOPTIONS,5,50,
-                    299,150
+    CONTROL         "Convert to Riff WAV files",IDC_RIFFWAV,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,160,7,145,10
+    CONTROL         "",IDC_ENCOPTS,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,11,65,286,131
+    COMBOBOX        IDC_THREADPRIORITY,79,5,75,75,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Thread Priority",IDC_STATIC_ENCPROPPAGE_THREADPRIORITY,5,7,70,9
+    COMBOBOX        IDC_ENCODERSEL,79,23,224,118,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Encoder Options",IDC_STATIC_ENCPROPPAGE_ENCOPTIONS,5,50,299,150
     LTEXT           "Encoder",IDC_STATIC_ENCPROPPAGE_ENCODER,5,25,70,9
-    CONTROL         "Don't delete ripped WAV file after conversion",
-                    IDC_RETAINWAVFILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
-                    79,39,225,10
+    CONTROL         "Don't delete ripped WAV file after conversion",IDC_RETAINWAVFILE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,79,39,225,10
 END
 
 IDD_GENERICPROPPAGE DIALOGEX 0, 0, 317, 218
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
-    WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "General"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     EDITTEXT        IDC_TEMPDIR,90,5,217,14,ES_AUTOHSCROLL | ES_READONLY
-    CONTROL         "Normalize",IDC_NORMTRACK,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,13,42,57,10
+    CONTROL         "Normalize",IDC_NORMTRACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,42,57,10
     EDITTEXT        IDC_LNORMVALUE,105,38,31,14,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,30,52,11,
-                    14
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,30,52,11,14
     EDITTEXT        IDC_LNORMLEVEL,209,38,31,14,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,262,37,11,
-                    14
+    CONTROL         "Spin1",IDC_SPIN2,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,262,37,11,14
     EDITTEXT        IDC_HNORMVALUE,105,60,31,14,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SPIN4,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,120,67,11,
-                    14
+    CONTROL         "Spin1",IDC_SPIN4,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,120,67,11,14
     EDITTEXT        IDC_UNORMLEVEL,209,60,31,14,ES_AUTOHSCROLL
-    CONTROL         "Spin1",IDC_SPIN3,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,262,57,11,
-                    14
-    CONTROL         "Automatic shutdown after ripping / encoding",
-                    IDC_AUTOSHUTDOWN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,
-                    198,172,10
-    LTEXT           "If signal is <",IDC_STATIC_GENERAL_IFSIGNALLT,150,42,56,
-                    8
+    CONTROL         "Spin1",IDC_SPIN3,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,262,57,11,14
+    CONTROL         "Automatic shutdown after ripping / encoding",IDC_AUTOSHUTDOWN,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,198,172,10
+    LTEXT           "If signal is <",IDC_STATIC_GENERAL_IFSIGNALLT,150,42,56,8
     LTEXT           "%",IDC_STATIC,247,63,8,8
-    GROUPBOX        "Normalize Volume",IDC_STATIC_GENERAL_NORMALIZEVOL,5,28,
-                    305,60
+    GROUPBOX        "Normalize Volume",IDC_STATIC_GENERAL_NORMALIZEVOL,5,28,305,60
     LTEXT           "To",IDC_STATIC_GENERAL_TO,75,42,24,8
     LTEXT           "If signal is >",IDC_STATIC_GENERAL_SIGNALGT,150,63,56,8
     LTEXT           "%",IDC_STATIC,247,42,8,8
     LTEXT           "To",IDC_STATIC_GENERAL__TO,75,63,24,8
     LTEXT           "Temp directory",IDC_STATIC_GENERAL_TEMPDIR,8,10,72,8
-    CONTROL         "Digital CD Playback",IDC_DIGITALCDPLAYBACK,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,184,198,121,10
+    CONTROL         "Digital CD Playback",IDC_DIGITALCDPLAYBACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,184,198,121,10
     LTEXT           "%",IDC_STATIC,140,63,8,8
     LTEXT           "%",IDC_STATIC,140,42,8,8
 END
 
 IDD_COPYDIALOG DIALOGEX 0, 0, 252, 190
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | 
-    WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Record Tracks"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     PUSHBUTTON      "Cancel",IDCANCEL,91,167,61,14
-    CONTROL         "Progress1",IDC_RECORDCTRL,"msctls_progress32",WS_BORDER,
-                    7,58,238,14
-    CONTROL         "Progress1",IDC_JITTERCTRL,"msctls_progress32",WS_BORDER,
-                    7,100,238,14
+    CONTROL         "Progress1",IDC_RECORDCTRL,"msctls_progress32",WS_BORDER,7,58,238,14
+    CONTROL         "Progress1",IDC_JITTERCTRL,"msctls_progress32",WS_BORDER,7,100,238,14
     LTEXT           "Info1",IDC_INFO1,7,7,238,8,SS_NOPREFIX
-    CONTROL         "Info2",IDC_INFO2,"Static",SS_LEFTNOWORDWRAP | 
-                    SS_NOPREFIX | WS_GROUP,7,18,238,8
+    CONTROL         "Info2",IDC_INFO2,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | WS_GROUP,7,18,238,8
     LTEXT           "PEAKVALUE",IDC_PEAKVALUE,7,40,238,8,SS_NOPREFIX
     LTEXT           "Info3",IDC_INFO3,7,29,238,8,SS_NOPREFIX
     LTEXT           "Info4",IDC_INFO4,7,86,238,8,SS_NOPREFIX
@@ -350,8 +332,7 @@ STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "CD Drive"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
-    COMBOBOX        IDC_CDROMLIST,94,5,206,87,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_TABSTOP
+    COMBOBOX        IDC_CDROMLIST,94,5,206,87,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     EDITTEXT        IDC_READSIZE,94,24,40,14,ES_AUTOHSCROLL
     EDITTEXT        IDC_READRETRIES,260,24,40,14,ES_AUTOHSCROLL
     EDITTEXT        IDC_READOVERLAP,94,42,40,14,ES_AUTOHSCROLL
@@ -359,91 +340,60 @@ BEGIN
     EDITTEXT        IDC_CDSPEED,260,60,40,14,ES_AUTOHSCROLL
     EDITTEXT        IDC_ENDOFFSET,94,80,40,14,ES_AUTOHSCROLL
     EDITTEXT        IDC_SPINUPTIME,260,80,40,14,ES_AUTOHSCROLL
-    COMBOBOX        IDC_READMETHOD,93,100,116,67,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_READMETHOD,93,100,116,67,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     PUSHBUTTON      "Auto-Detect",IDC_DETECT,215,100,85,14
-    CONTROL         "Swap Left and Right Channels",IDC_SWAPLEFTRIGHT,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,7,139,174,10
-    CONTROL         "Eject CD when ripping has been completed",
-                    IDC_EJECTWHENFINISHED,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,7,154,174,10
-    CONTROL         "Enable Jitter Correction",IDC_JITTER,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,187,154,133,10
-    CONTROL         "Select All CD Tracks (by default)",
-                    IDC_SELECT_ALL_DEFAULT,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,7,169,174,10
-    CONTROL         "Use Native NT SCSI library",IDC_USENTSCSI,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,187,169,133,10
-    LTEXT           "CD-Rom",IDC_STATIC_CDROMSETTINGS_CDROM,7,5,83,14,
-                    SS_CENTERIMAGE
-    LTEXT           "Read Sectors",IDC_STATIC_CDROMSETTINGS_READSECTORS,7,24,
-                    83,14,SS_CENTERIMAGE
-    LTEXT           "Read Overlap",IDC_STATIC_CDROMSETTINGS_OVERLAP,7,42,83,
-                    14,SS_CENTERIMAGE
-    LTEXT           "CD-ROM Drive Type",IDC_STATIC_CDROMSETTINGS_CDROMTYPE,7,
-                    103,83,14,SS_CENTERIMAGE
-    LTEXT           "CD Speed",IDC_STATIC_CDROMSETTINGS_CDSPEED,153,60,97,14,
-                    SS_CENTERIMAGE
-    LTEXT           "Start Offset (sectors)",
-                    IDC_STATIC_CDROMSETTINGS_STARTOFFSET,7,60,83,14,
-                    SS_CENTERIMAGE
-    LTEXT           "End Offset (sectors)",
-                    IDC_STATIC_CDROMSETTINGS_ENDOFFSET,7,80,83,14,
-                    SS_CENTERIMAGE
-    LTEXT           "Spin up time (sec)",IDC_STATIC_CDROMSETTINGS_SPINUPTIME,
-                    153,80,97,14,SS_CENTERIMAGE
-    LTEXT           "Number of Retries",IDC_STATIC_CDROMSETTINGS_NUMRETRIES,
-                    153,24,97,14,SS_CENTERIMAGE
-    LTEXT           "Ripping Method",IDC_STATIC_CDROMSETTINGS_RIPPINGMETHOD,
-                    7,118,83,14,SS_CENTERIMAGE
-    CONTROL         "Lock CD during extraction",IDC_LOCKDURINGREAD,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,187,140,133,10
-    COMBOBOX        IDC_RIPPINGMETHOD,93,119,116,67,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_TABSTOP
-    CONTROL         "Use CD-Text (if available)",IDC_USECDTEXT,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,7,185,174,10
+    CONTROL         "Swap Left and Right Channels",IDC_SWAPLEFTRIGHT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,139,174,10
+    CONTROL         "Eject CD when ripping has been completed",IDC_EJECTWHENFINISHED,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,154,174,10
+    CONTROL         "Enable Jitter Correction",IDC_JITTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,187,154,133,10
+    CONTROL         "Select All CD Tracks (by default)",IDC_SELECT_ALL_DEFAULT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,169,174,10
+    LTEXT           "CD-Rom",IDC_STATIC_CDROMSETTINGS_CDROM,7,5,83,14,SS_CENTERIMAGE
+    LTEXT           "Read Sectors",IDC_STATIC_CDROMSETTINGS_READSECTORS,7,24,83,14,SS_CENTERIMAGE
+    LTEXT           "Read Overlap",IDC_STATIC_CDROMSETTINGS_OVERLAP,7,42,83,14,SS_CENTERIMAGE
+    LTEXT           "CD-ROM Drive Type",IDC_STATIC_CDROMSETTINGS_CDROMTYPE,7,103,83,14,SS_CENTERIMAGE
+    LTEXT           "CD Speed",IDC_STATIC_CDROMSETTINGS_CDSPEED,153,60,97,14,SS_CENTERIMAGE
+    LTEXT           "Start Offset (sectors)",IDC_STATIC_CDROMSETTINGS_STARTOFFSET,7,60,83,14,SS_CENTERIMAGE
+    LTEXT           "End Offset (sectors)",IDC_STATIC_CDROMSETTINGS_ENDOFFSET,7,80,83,14,SS_CENTERIMAGE
+    LTEXT           "Spin up time (sec)",IDC_STATIC_CDROMSETTINGS_SPINUPTIME,153,80,97,14,SS_CENTERIMAGE
+    LTEXT           "Number of Retries",IDC_STATIC_CDROMSETTINGS_NUMRETRIES,153,24,97,14,SS_CENTERIMAGE
+    LTEXT           "Ripping Method",IDC_STATIC_CDROMSETTINGS_RIPPINGMETHOD,7,118,83,14,SS_CENTERIMAGE
+    CONTROL         "Lock CD during extraction",IDC_LOCKDURINGREAD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,187,140,133,10
+    COMBOBOX        IDC_RIPPINGMETHOD,93,119,116,67,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Use CD-Text (if available)",IDC_USECDTEXT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,185,174,10
     LTEXT           "Sample offset",IDC_STATIC,153,45,82,8
     EDITTEXT        IDC_EDIT1,260,43,40,14,ES_AUTOHSCROLL
 END
 
-IDD_CDDBSETTINGS DIALOG  0, 0, 337, 196
+IDD_CDDBSETTINGS DIALOG 0, 0, 337, 196
 STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Remote CDDB"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    COMBOBOX        IDC_SERVERLIST,74,10,251,103,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_SERVERLIST,74,10,251,103,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     EDITTEXT        IDC_LOCATION,74,30,251,14,ES_AUTOHSCROLL
     EDITTEXT        IDC_ADDRESS,74,50,125,14,ES_AUTOHSCROLL
     EDITTEXT        IDC_PATH,268,50,56,14,ES_AUTOHSCROLL
-    COMBOBOX        IDC_PROTOCOL,74,71,125,55,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_TABSTOP
+    COMBOBOX        IDC_PROTOCOL,74,71,125,55,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     EDITTEXT        IDC_CDDBPORT,299,70,25,14,ES_AUTOHSCROLL
     EDITTEXT        IDC_EMAIL,74,93,125,14,ES_AUTOHSCROLL
     EDITTEXT        IDC_TIMEOUT,299,93,25,14,ES_AUTOHSCROLL
-    CONTROL         "Use Proxy",IDC_USEPROXY,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,5,116,65,10
+    CONTROL         "Use Proxy",IDC_USEPROXY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,116,65,10
     EDITTEXT        IDC_PROXYADDRESS,74,113,125,14,ES_AUTOHSCROLL
     EDITTEXT        IDC_PROXYPORT,299,113,25,14,ES_AUTOHSCROLL
-    CONTROL         "Authentication",IDC_USEAUTHENTICATION,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,5,134,65,10
+    CONTROL         "Authentication",IDC_USEAUTHENTICATION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,134,65,10
     EDITTEXT        IDC_PROXYUSER,74,132,125,14,ES_AUTOHSCROLL
-    EDITTEXT        IDC_PROXYPASSWORD,269,132,55,14,ES_PASSWORD | 
-                    ES_AUTOHSCROLL
-    CONTROL         "Auto connect to remote CDDB",IDC_AUTOCONNECT,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,5,155,310,10
+    EDITTEXT        IDC_PROXYPASSWORD,269,132,55,14,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         "Auto connect to remote CDDB",IDC_AUTOCONNECT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,155,310,10
     PUSHBUTTON      "Add Site",IDC_ADDSITE,5,170,75,14
     PUSHBUTTON      "Query Sites",IDC_QUERYSITES,87,170,75,14
     PUSHBUTTON      "Reset All",IDC_RESETBUTTON,168,170,75,14
     PUSHBUTTON      "Submit Options",IDC_SUBMITOPTS,249,170,75,14
     LTEXT           "Remote Server",IDC_STATIC_CDDBREMOTE_SERVER,5,15,65,8
-    LTEXT           "Your E-mail address",IDC_STATIC_CDDBREMOTE_EMAILADDRESS,
-                    5,96,65,8
-    LTEXT           "Proxy Port",IDC_STATIC_CDDBREMOTE_PROXYPORT,205,116,90,
-                    8
+    LTEXT           "Your E-mail address",IDC_STATIC_CDDBREMOTE_EMAILADDRESS,5,96,65,8
+    LTEXT           "Proxy Port",IDC_STATIC_CDDBREMOTE_PROXYPORT,205,116,90,8
     LTEXT           "Password",IDC_STATIC_CDDBREMOTE_PASSWORD,205,135,58,8
-    LTEXT           "Timeout (seconds)",IDC_STATIC_CDDBREMOTE_TIMEOUT,205,95,
-                    90,8
+    LTEXT           "Timeout (seconds)",IDC_STATIC_CDDBREMOTE_TIMEOUT,205,95,90,8
     LTEXT           "Address",IDC_STATIC_CDDBREMOTE_ADDRESS,5,55,65,8
     LTEXT           "Path",IDC_STATIC_CDDBREMOTE_PATH,205,55,58,8
     LTEXT           "Protocol",IDC_STATIC_CDDBREMOTE_PROTOCOL,5,73,65,8
@@ -451,140 +401,100 @@ BEGIN
     LTEXT           "Port",IDC_STATIC_CDDBREMOTE_PORT,205,73,90,8
 END
 
-IDD_MP3TORIFFWAV DIALOG  0, 0, 217, 102
-STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | 
-    WS_SYSMENU
+IDD_MP3TORIFFWAV DIALOG 0, 0, 217, 102
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Convert MP3 to RIFF-WAV"
 FONT 8, "MS Shell Dlg"
 BEGIN
     PUSHBUTTON      "Cancel",IDCANCEL,78,75,60,14
-    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,7,
-                    46,198,14
-    LTEXT           "Processing",IDC_STATIC_MPEGTORIFFWAV_PROCESSING,7,7,203,
-                    8,SS_NOPREFIX
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,7,46,198,14
+    LTEXT           "Processing",IDC_STATIC_MPEGTORIFFWAV_PROCESSING,7,7,203,8,SS_NOPREFIX
     LTEXT           "FileName",IDC_PROCESSFILENAME,7,25,198,8,SS_NOPREFIX
 END
 
 IDD_CDDBDIALOG DIALOGEX 0, 0, 287, 210
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
-    WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Accessing freedb"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,135,189,64,14,WS_DISABLED
     PUSHBUTTON      "Cancel",IDCANCEL,205,189,64,14
-    EDITTEXT        IDC_OUTPUT,7,42,273,110,ES_MULTILINE | ES_AUTOVSCROLL | 
-                    ES_READONLY | WS_VSCROLL
-    LTEXT           "Current Action",IDC_STATIC_CDDBDIALOG_CURRENT_ACTION,7,
-                    7,58,8
+    EDITTEXT        IDC_OUTPUT,7,42,273,110,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+    LTEXT           "Current Action",IDC_STATIC_CDDBDIALOG_CURRENT_ACTION,7,7,58,8
     LTEXT           "status",IDC_CURACTION,70,7,200,8
     LTEXT           "Message",IDC_STATIC_CDDBDIALOG_MESSAGE,7,21,268,8
-    COMBOBOX        IDC_CDDB_DLG_CAT,133,170,65,30,CBS_DROPDOWN | CBS_SORT | 
-                    NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
-    PUSHBUTTON      "Resubmit",IDC_CDDB_RESUBMIT,203,168,65,14,NOT 
-                    WS_VISIBLE
-    LTEXT           "freedb category",IDC_CDDB_CAT_SELECTION_TEXT,7,174,120,
-                    8,NOT WS_VISIBLE
+    COMBOBOX        IDC_CDDB_DLG_CAT,133,170,65,30,CBS_DROPDOWN | CBS_SORT | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Resubmit",IDC_CDDB_RESUBMIT,203,168,65,14,NOT WS_VISIBLE
+    LTEXT           "freedb category",IDC_CDDB_CAT_SELECTION_TEXT,7,174,120,8,NOT WS_VISIBLE
 END
 
-IDD_CDDBMATCH DIALOG  0, 0, 266, 150
+IDD_CDDBMATCH DIALOG 0, 0, 266, 150
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Found Inexact Match"
 FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,75,130,50,14
-    CONTROL         "List1",IDC_MATCHLIST,"SysListView32",LVS_REPORT | 
-                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,5,10,252,110
+    CONTROL         "List1",IDC_MATCHLIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,5,10,252,110
     PUSHBUTTON      "Cancel",IDCANCEL,140,130,50,14
 END
 
-IDD_ENCODERWINCODECMP3DLG DIALOG  0, 0, 264, 91
+IDD_ENCODERWINCODECMP3DLG DIALOG 0, 0, 264, 91
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
-    COMBOBOX        IDC_WINCODEC,105,7,152,63,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_TABSTOP
-    COMBOBOX        IDC_WINCODECFORMAT,105,29,152,63,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_TABSTOP
-    CONTROL         "On the fly MP3 Encoding",IDC_RTENCODING,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,7,53,250,10
+    COMBOBOX        IDC_WINCODEC,105,7,152,63,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_WINCODECFORMAT,105,29,152,63,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "On the fly MP3 Encoding",IDC_RTENCODING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,53,250,10
     LTEXT           "Windows MP3 Codec",IDC_STATIC_ENCWINOPTS_CODEC,7,9,93,8
-    LTEXT           "Codec Bitrate Selection",IDC_STATIC_ENCWINOPTS_CODECSEL,
-                    7,31,93,8
-    CONTROL         "High Quality",IDC_HIQUALITY,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,7,70,250,10
+    LTEXT           "Codec Bitrate Selection",IDC_STATIC_ENCWINOPTS_CODECSEL,7,31,93,8
+    CONTROL         "High Quality",IDC_HIQUALITY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,70,250,10
 END
 
-IDD_ENCODERLAMEDLLDLG DIALOG  0, 0, 281, 116
+IDD_ENCODERLAMEDLLDLG DIALOG 0, 0, 281, 116
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
-    COMBOBOX        IDC_MPEGVERSION,39,5,52,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_TABSTOP
-    COMBOBOX        IDC_MINBITRATE,133,5,57,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_TABSTOP
-    COMBOBOX        IDC_MAXBITRATE,220,5,60,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_TABSTOP
-    CONTROL         "Stereo",IDC_CHANNELSELECTION,"Button",
-                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,39,24,41,10
-    CONTROL         "J-stereo",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,90,25,
-                    53,10
-    CONTROL         "Forced Stereo",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,
-                    150,24,70,10
-    CONTROL         "Mono",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,225,24,54,
-                    10
-    CONTROL         "Private",IDC_PRIVATE,"Button",BS_AUTOCHECKBOX | 
-                    WS_GROUP | WS_TABSTOP,11,39,61,10
-    CONTROL         "Checksum",IDC_CRC,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
-                    WS_TABSTOP,79,39,61,10
-    CONTROL         "Original",IDC_ORIGINAL,"Button",BS_AUTOCHECKBOX | 
-                    WS_GROUP | WS_TABSTOP,145,39,61,10
-    CONTROL         "Copyright",IDC_COPYRIGHT,"Button",BS_AUTOCHECKBOX | 
-                    WS_GROUP | WS_TABSTOP,212,39,61,10
-    COMBOBOX        IDC_QUALITY,61,54,94,62,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_GROUP | WS_TABSTOP
-    CONTROL         "On-the-fly MP3 Encoding",IDC_RTENCODING,"Button",
-                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,160,55,118,10
-    COMBOBOX        IDC_VBRMETHOD,61,73,65,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_GROUP | WS_TABSTOP
-    COMBOBOX        IDC_VBR,61,91,66,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_MPEGVERSION,39,5,52,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_MINBITRATE,133,5,57,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_MAXBITRATE,220,5,60,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Stereo",IDC_CHANNELSELECTION,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,39,24,41,10
+    CONTROL         "J-stereo",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,90,25,53,10
+    CONTROL         "Forced Stereo",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,150,24,70,10
+    CONTROL         "Mono",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,225,24,54,10
+    CONTROL         "Private",IDC_PRIVATE,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,11,39,61,10
+    CONTROL         "Checksum",IDC_CRC,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,79,39,61,10
+    CONTROL         "Original",IDC_ORIGINAL,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,145,39,61,10
+    CONTROL         "Copyright",IDC_COPYRIGHT,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,212,39,61,10
+    COMBOBOX        IDC_QUALITY,61,54,94,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    CONTROL         "On-the-fly MP3 Encoding",IDC_RTENCODING,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,160,55,118,10
+    COMBOBOX        IDC_VBRMETHOD,61,73,65,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_VBR,61,91,66,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
     EDITTEXT        IDC_ABR,246,70,25,14,ES_AUTOHSCROLL | WS_GROUP
     LTEXT           "Bitrate Min",IDC_STATIC_ENCLAMEOPS_BRMIN,95,7,34,8
     LTEXT           "Mode",IDC_STATIC_ENCLAMEOPS_MODE,5,24,30,8
-    LTEXT           "Quality",IDC_STATIC_ENCLAMEOPS_QUALITY,5,56,55,8,
-                    WS_TABSTOP
-    LTEXT           "VBR Quality",IDC_STATIC_ENCLAMEOPS_VBRQUALITY,5,93,55,8,
-                    WS_TABSTOP
+    LTEXT           "Quality",IDC_STATIC_ENCLAMEOPS_QUALITY,5,56,55,8,WS_TABSTOP
+    LTEXT           "VBR Quality",IDC_STATIC_ENCLAMEOPS_VBRQUALITY,5,93,55,8,WS_TABSTOP
     LTEXT           "Max",IDC_STATIC_ENCLAMEOPS_BRMAX,196,7,19,8
-    LTEXT           "ABR (kpbs)",IDC_STATIC_ENCLAMEOPS_ABRKBPS,185,73,58,8,
-                    WS_TABSTOP
-    LTEXT           "VBR Method",IDC_STATIC_ENCLAMEOPS_VBRMETHOD,5,75,55,8,
-                    WS_TABSTOP
+    LTEXT           "ABR (kpbs)",IDC_STATIC_ENCLAMEOPS_ABRKBPS,185,73,58,8,WS_TABSTOP
+    LTEXT           "VBR Method",IDC_STATIC_ENCLAMEOPS_VBRMETHOD,5,75,55,8,WS_TABSTOP
     LTEXT           "Version",IDC_STATIC_ENCLAMEOPS_VERSION,5,7,30,8
-    LTEXT           "Output Samplerate",IDC_STATIC_ENCLAMEOPS_OUTSR,132,93,
-                    70,8,WS_TABSTOP
-    COMBOBOX        IDC_OUTSAMPLERATE,208,91,66,50,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    LTEXT           "Output Samplerate",IDC_STATIC_ENCLAMEOPS_OUTSR,132,93,70,8,WS_TABSTOP
+    COMBOBOX        IDC_OUTSAMPLERATE,208,91,66,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
 END
 
-IDD_ENCODERDOSMPPDLG DIALOG  0, 0, 261, 101
+IDD_ENCODERDOSMPPDLG DIALOG 0, 0, 261, 101
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT           "Parameter string",IDC_STATIC_ENCDOSMPP_PARAMSTRING,7,43,
-                    248,8
+    LTEXT           "Parameter string",IDC_STATIC_ENCDOSMPP_PARAMSTRING,7,43,248,8
     EDITTEXT        IDC_EXTENCOPTS,7,57,246,14,ES_AUTOHSCROLL
-    LTEXT           "Path to Musepack encoder",IDC_STATIC_ENCDOSMPP_ENCPATH,
-                    7,6,228,8
-    CONTROL         "Hide MSDOS window",IDC_HIDE_DOSBOX,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,7,82,115,10
-    CONTROL         "On-the-fly encoding",IDC_ON_THE_FLY,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,135,82,120,10
+    LTEXT           "Path to Musepack encoder",IDC_STATIC_ENCDOSMPP_ENCPATH,7,6,228,8
+    CONTROL         "Hide MSDOS window",IDC_HIDE_DOSBOX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,82,115,10
+    CONTROL         "On-the-fly encoding",IDC_ON_THE_FLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,135,82,120,10
     EDITTEXT        IDC_EXTENC,7,20,233,14,ES_AUTOHSCROLL | ES_READONLY
 END
 
-IDD_GENINFO DIALOG  0, 0, 317, 191
+IDD_GENINFO DIALOG 0, 0, 317, 191
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "General Information"
 FONT 8, "MS Shell Dlg"
@@ -599,100 +509,80 @@ BEGIN
     LTEXT           "ASPI Manager",IDC_STATIC_GENINFO_ASPIMANAGER,7,35,78,8
     LTEXT           "OS Version",IDC_STATIC_GENINFO_OSVERSION,7,49,78,8
     PUSHBUTTON      "Copy to Clipboard",IDC_COPYTOCLIP,9,165,120,14
-    LTEXT           "AspiVersion1",IDC_ASPIVERSION1,0,100,217,8,SS_NOPREFIX | 
-                    NOT WS_VISIBLE
-    EDITTEXT        IDC_DETAILEDDRIVEINFO,10,65,295,95,ES_MULTILINE | 
-                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | 
-                    WS_VSCROLL
+    LTEXT           "AspiVersion1",IDC_ASPIVERSION1,0,100,217,8,SS_NOPREFIX | NOT WS_VISIBLE
+    EDITTEXT        IDC_DETAILEDDRIVEINFO,10,65,295,95,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
 END
 
-IDD_DROPASK DIALOG  0, 0, 242, 90
+IDD_DROPASK DIALOG 0, 0, 242, 90
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Select options for dropped files"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    CONTROL         "Output RIFF WAV file",IDC_RIFFWAV,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,5,5,230,10
-    CONTROL         "Delete WAV file after encoding",IDC_DELETEWAV,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,5,20,230,10
+    CONTROL         "Output RIFF WAV file",IDC_RIFFWAV,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,5,230,10
+    CONTROL         "Delete WAV file after encoding",IDC_DELETEWAV,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,20,230,10
     PUSHBUTTON      "Normalize",IDC_NORMALIZE,5,43,99,14
     PUSHBUTTON      "Encode",IDC_ENCODE,135,43,99,14
     PUSHBUTTON      "Normalize + Encode",IDC_NORMANDENC,5,64,99,14
     PUSHBUTTON      "Cancel",IDCANCEL,135,64,99,14
 END
 
-IDD_ENCODERDOSVQFDLG DIALOG  0, 0, 260, 76
+IDD_ENCODERDOSVQFDLG DIALOG 0, 0, 260, 76
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT           "Path to VQF encoder",IDC_STATIC_ENCDOSVQF_PATH,7,7,228,
-                    8
-    COMBOBOX        IDC_VQFMODE,155,49,92,62,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_TABSTOP
+    LTEXT           "Path to VQF encoder",IDC_STATIC_ENCDOSVQF_PATH,7,7,228,8
+    COMBOBOX        IDC_VQFMODE,155,49,92,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     LTEXT           "VQF mode",IDC_STATIC_ENCDOSVQF_MODE,7,51,118,8
     EDITTEXT        IDC_EXTENC,5,24,230,14,ES_AUTOHSCROLL | ES_READONLY
 END
 
-IDD_FILENAMEINFO DIALOG  0, 0, 312, 196
+IDD_FILENAMEINFO DIALOG 0, 0, 312, 196
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Filename info options"
 FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,125,177,50,14
-    LTEXT           "File name format string can contain the following identifiers",
-                    IDC_STATIC_FILENAMEINFO_INDENTIFIERS,10,10,280,8
-    LTEXT           "Examples:\n%1\\%2\\%4      creates the output file Artist\\Album\\TrackName.mp3 (or .wav)\n%1 - %2 - %3  creates the output file Artist - Album - TrackNumber.mp3 (or .wav)\n%l1 - %u2 create the output file artist - ALBUM.mp3 (or .wav)",
-                    IDC_STATIC_FILENAMEINFO_EXAMPLES,10,139,295,36
+    LTEXT           "File name format string can contain the following identifiers",IDC_STATIC_FILENAMEINFO_INDENTIFIERS,10,10,280,8
+    LTEXT           "Examples:\n%1\\%2\\%4      creates the output file Artist\\Album\\TrackName.mp3 (or .wav)\n%1 - %2 - %3  creates the output file Artist - Album - TrackNumber.mp3 (or .wav)\n%l1 - %u2 create the output file artist - ALBUM.mp3 (or .wav)",IDC_STATIC_FILENAMEINFO_EXAMPLES,10,139,295,36
     LTEXT           "INFO",IDC_STATIC_FILENAMEINFO_INFO,10,25,285,70
-    LTEXT           "The backslash charachter (\\) might also be used to indicate a directory separation\nThough. you should not use it as the first character !",
-                    IDC_STATIC_FILENAMEINFO_BACKSLASH,10,110,295,24
+    LTEXT           "The backslash charachter (\\) might also be used to indicate a directory separation\nThough. you should not use it as the first character !",IDC_STATIC_FILENAMEINFO_BACKSLASH,10,110,295,24
 END
 
-IDD_MP3TOWAV DIALOG  0, 0, 222, 101
-STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | 
-    WS_SYSMENU
+IDD_MP3TOWAV DIALOG 0, 0, 222, 101
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Convert MPEG to WAV"
 FONT 8, "MS Shell Dlg"
 BEGIN
     PUSHBUTTON      "Abort",IDCANCEL,75,75,50,14
-    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,5,
-                    53,205,14
-    LTEXT           "Processing",IDC_STATIC_MPEGTOWAV_PROCESSING,5,5,200,8,
-                    SS_NOPREFIX
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,5,53,205,14
+    LTEXT           "Processing",IDC_STATIC_MPEGTOWAV_PROCESSING,5,5,200,8,SS_NOPREFIX
     LTEXT           "FileName",IDC_PROCESSFILENAME,5,20,205,8,SS_NOPREFIX
     LTEXT           "TimeInfo",IDC_TIMEINFO,5,35,205,8
 END
 
-IDD_RIPSTATUS DIALOG  0, 0, 302, 166
+IDD_RIPSTATUS DIALOG 0, 0, 302, 166
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Detailed Ripping Status Information"
 FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON   "Close",IDOK,120,145,50,14
-    EDITTEXT        IDC_RIPSTATUS,10,5,285,135,ES_MULTILINE | ES_AUTOVSCROLL | 
-                    ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL
+    EDITTEXT        IDC_RIPSTATUS,10,5,285,135,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL
 END
 
-IDD_ENCODERWMA8DLLDLG DIALOG  0, 0, 265, 82
+IDD_ENCODERWMA8DLLDLG DIALOG 0, 0, 265, 82
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
-    COMBOBOX        IDC_BITRATE,55,9,67,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_GROUP | WS_TABSTOP
-    CONTROL         "On the fly MP3 Encoding",IDC_RTENCODING,"Button",
-                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,141,10,119,10
-    CONTROL         "Enable Digital Rights Management",IDC_USEDRM,"Button",
-                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,10,30,245,10
-    CONTROL         "Mono",IDC_CHANNELS,"Button",BS_AUTORADIOBUTTON | NOT 
-                    WS_VISIBLE | WS_GROUP | WS_TABSTOP,65,50,45,10
-    CONTROL         "Stereo",IDC_CHANNELS1,"Button",BS_AUTORADIOBUTTON | NOT 
-                    WS_VISIBLE,115,50,55,10
+    COMBOBOX        IDC_BITRATE,55,9,67,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    CONTROL         "On the fly MP3 Encoding",IDC_RTENCODING,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,141,10,119,10
+    CONTROL         "Enable Digital Rights Management",IDC_USEDRM,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,10,30,245,10
+    CONTROL         "Mono",IDC_CHANNELS,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE | WS_GROUP | WS_TABSTOP,65,50,45,10
+    CONTROL         "Stereo",IDC_CHANNELS1,"Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE,115,50,55,10
     LTEXT           "Bitrate",IDC_STATIC_ENCWMA8OPTS_BITRATE,10,11,40,8
-    LTEXT           "Channels",IDC_STATIC_ENCWMA8OPTS_CHANNELS,10,51,50,8,
-                    NOT WS_VISIBLE
+    LTEXT           "Channels",IDC_STATIC_ENCWMA8OPTS_CHANNELS,10,51,50,8,NOT WS_VISIBLE
 END
 
-IDD_FILECOMPARE DIALOG  0, 0, 257, 177
+IDD_FILECOMPARE DIALOG 0, 0, 257, 177
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Compare two WAV files"
 FONT 8, "MS Shell Dlg"
@@ -705,321 +595,220 @@ BEGIN
     LTEXT           "",IDC_OFFSET,10,70,240,8
     LTEXT           "",IDC_FILESIZE,10,85,240,8
     LTEXT           "Static",IDC_CHARDIFFERENT,10,100,240,20
-    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,
-                    10,135,240,14
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,10,135,240,14
     PUSHBUTTON      "Cancel",IDCANCEL,134,156,65,14
     LTEXT           "First filename",IDC_STATIC_COMPARE_FIRSTNAME,10,8,220,8
-    LTEXT           "Second filename",IDC_STATIC_COMPARE_SECONDNAME,10,39,
-                    220,8
+    LTEXT           "Second filename",IDC_STATIC_COMPARE_SECONDNAME,10,39,220,8
     LTEXT           "Progress",IDC_STATIC_COMPARE_PROGRESS,10,125,240,8
 END
 
-IDD_ENCODERBLADEDLLDLG DIALOG  0, 0, 271, 86
+IDD_ENCODERBLADEDLLDLG DIALOG 0, 0, 271, 86
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
-    CONTROL         "On-the-fly MP3 Encoding",IDC_RTENCODING,"Button",
-                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,143,7,125,10
-    LTEXT           "Bitrate",IDC_STATIC_ENCBLDTAB_BITRATE,5,8,50,8,
-                    WS_TABSTOP
-    COMBOBOX        IDC_BITRATE,65,6,67,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_GROUP | WS_TABSTOP
-    LTEXT           "Channels",IDC_STATIC_ENCBLDTAB_CHANNELS,5,25,60,8,
-                    WS_TABSTOP
-    CONTROL         "Stereo",IDC_CHANNELSELECTION,"Button",
-                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,5,40,55,10
-    CONTROL         "J-stereo",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | 
-                    WS_DISABLED,65,40,55,10
-    CONTROL         "Dual",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON | 
-                    WS_DISABLED,130,40,55,10
-    CONTROL         "Mono",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,195,40,60,
-                    10
-    CONTROL         "Private",IDC_PRIVATE,"Button",BS_AUTOCHECKBOX | 
-                    WS_GROUP | WS_TABSTOP,5,66,55,10
-    CONTROL         "Checksum",IDC_CRC,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
-                    WS_TABSTOP,65,66,59,10
-    CONTROL         "Original",IDC_ORIGINAL,"Button",BS_AUTOCHECKBOX | 
-                    WS_GROUP | WS_TABSTOP,130,66,60,10
-    CONTROL         "Copyright",IDC_COPYRIGHT,"Button",BS_AUTOCHECKBOX | 
-                    WS_GROUP | WS_TABSTOP,195,66,60,10
+    CONTROL         "On-the-fly MP3 Encoding",IDC_RTENCODING,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,143,7,125,10
+    LTEXT           "Bitrate",IDC_STATIC_ENCBLDTAB_BITRATE,5,8,50,8,WS_TABSTOP
+    COMBOBOX        IDC_BITRATE,65,6,67,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    LTEXT           "Channels",IDC_STATIC_ENCBLDTAB_CHANNELS,5,25,60,8,WS_TABSTOP
+    CONTROL         "Stereo",IDC_CHANNELSELECTION,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,5,40,55,10
+    CONTROL         "J-stereo",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,65,40,55,10
+    CONTROL         "Dual",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,130,40,55,10
+    CONTROL         "Mono",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,195,40,60,10
+    CONTROL         "Private",IDC_PRIVATE,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,5,66,55,10
+    CONTROL         "Checksum",IDC_CRC,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,65,66,59,10
+    CONTROL         "Original",IDC_ORIGINAL,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,130,66,60,10
+    CONTROL         "Copyright",IDC_COPYRIGHT,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,195,66,60,10
 END
 
-IDD_ENCODERDOSXINGDLG DIALOG  0, 0, 266, 106
+IDD_ENCODERDOSXINGDLG DIALOG 0, 0, 266, 106
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
-    CONTROL         "CBR",IDC_CBRORVBR,"Button",BS_AUTORADIOBUTTON | 
-                    WS_GROUP | WS_TABSTOP,5,39,35,10
+    CONTROL         "CBR",IDC_CBRORVBR,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,5,39,35,10
     CONTROL         "VBR",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,5,57,35,10
-    COMBOBOX        IDC_BITRATE,94,38,59,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_BITRATE,94,38,59,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
     EDITTEXT        IDC_VBRSCALE,94,55,59,14,ES_AUTOHSCROLL | WS_GROUP
-    CONTROL         "Original",IDC_ORIGINAL,"Button",BS_AUTOCHECKBOX | 
-                    WS_GROUP | WS_TABSTOP,165,39,98,10
-    CONTROL         "Copyright",IDC_COPYRIGHT,"Button",BS_AUTOCHECKBOX | 
-                    WS_GROUP | WS_TABSTOP,165,57,98,10
-    CONTROL         "Filter High Frequencies",IDC_FILTERHIGHFREQ,"Button",
-                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,165,76,98,10
-    CONTROL         "Force Simple Stereo",IDC_SIMPLESTEREO,"Button",
-                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,5,76,140,10
-    CONTROL         "Down mix to mono",IDC_DOWNMIX,"Button",BS_AUTOCHECKBOX | 
-                    WS_GROUP | WS_TABSTOP,165,92,98,10
+    CONTROL         "Original",IDC_ORIGINAL,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,165,39,98,10
+    CONTROL         "Copyright",IDC_COPYRIGHT,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,165,57,98,10
+    CONTROL         "Filter High Frequencies",IDC_FILTERHIGHFREQ,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,165,76,98,10
+    CONTROL         "Force Simple Stereo",IDC_SIMPLESTEREO,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,5,76,140,10
+    CONTROL         "Down mix to mono",IDC_DOWNMIX,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,165,92,98,10
     CONTROL         "Let encoder choose sample rate",IDC_ENCSAMPLERATE,
-                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,5,92,
-                    145,10
-    LTEXT           "Encoder path",IDC_STATIC_ENCDOSXING_PATH,5,6,228,8,
-                    WS_TABSTOP
-    LTEXT           "Bitrate",IDC_STATIC_ENCDOSXING_BITRATE,45,40,45,8,
-                    WS_TABSTOP
-    LTEXT           "VBR Scale",IDC_STATIC_ENCDOSXING_VBRSCALE,45,58,45,8,
-                    WS_TABSTOP
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,5,92,145,10
+    LTEXT           "Encoder path",IDC_STATIC_ENCDOSXING_PATH,5,6,228,8,WS_TABSTOP
+    LTEXT           "Bitrate",IDC_STATIC_ENCDOSXING_BITRATE,45,40,45,8,WS_TABSTOP
+    LTEXT           "VBR Scale",IDC_STATIC_ENCDOSXING_VBRSCALE,45,58,45,8,WS_TABSTOP
     EDITTEXT        IDC_EXTENC,5,19,230,14,ES_AUTOHSCROLL | ES_READONLY
 END
 
-IDD_ENCODERWAVDLG DIALOG  0, 0, 226, 96
+IDD_ENCODERWAVDLG DIALOG 0, 0, 226, 96
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT           "Samplerate",IDC_STATIC_ENCWAVOPTS_SAMPLERATE,10,44,75,8
-    COMBOBOX        IDC_SAMPLERATE,97,42,123,50,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_SAMPLERATE,97,42,123,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     LTEXT           "Channels",IDC_STATIC_ENCWAVOPTS_CHANNELS,10,61,75,8
-    CONTROL         "Stereo",IDC_CHANNELS,"Button",BS_AUTORADIOBUTTON | 
-                    WS_GROUP | WS_TABSTOP,97,60,55,10
-    CONTROL         "Mono",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | 
-                    WS_TABSTOP,161,60,50,10
-    LTEXT           "Compression",IDC_STATIC_ENCWAVOPTS_COMPRESSION,10,28,75,
-                    8
-    COMBOBOX        IDC_COMPRESSION,97,26,123,80,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Stereo",IDC_CHANNELS,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,97,60,55,10
+    CONTROL         "Mono",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,161,60,50,10
+    LTEXT           "Compression",IDC_STATIC_ENCWAVOPTS_COMPRESSION,10,28,75,8
+    COMBOBOX        IDC_COMPRESSION,97,26,123,80,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     LTEXT           "Format",IDC_STATIC_ENCWAVOPTS_FORMAT,10,12,75,8
-    COMBOBOX        IDC_FORMAT,97,10,123,80,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_TABSTOP
-    CONTROL         "On the fly Encoding",IDC_RTENCODING,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,10,75,200,10
+    COMBOBOX        IDC_FORMAT,97,10,123,80,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "On the fly Encoding",IDC_RTENCODING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,75,200,10
 END
 
-IDD_ENCODERFAACDLLDLG DIALOG  0, 0, 231, 106
+IDD_ENCODERFAACDLLDLG DIALOG 0, 0, 231, 106
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
-    COMBOBOX        IDC_MINBITRATE,85,13,75,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_GROUP | WS_TABSTOP
-    CONTROL         "MPEG-2",IDC_MPEGVERSION,"Button",BS_AUTORADIOBUTTON | 
-                    WS_GROUP | WS_TABSTOP,168,14,62,10
-    CONTROL         "MPEG-4",IDC_RADIO7,"Button",BS_AUTORADIOBUTTON,168,29,
-                    62,10
-    COMBOBOX        IDC_PROFILE,85,28,75,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_GROUP | WS_TABSTOP
-    COMBOBOX        IDC_BANDWIDTH,85,46,75,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_GROUP | WS_TABSTOP
-    CONTROL         "Use LFE",IDC_USELFE,"Button",BS_AUTOCHECKBOX | 
-                    WS_DISABLED | WS_GROUP | WS_TABSTOP,133,68,43,10
-    CONTROL         "Use MS Stereo",IDC_USEMS,"Button",BS_AUTOCHECKBOX | 
-                    WS_GROUP | WS_TABSTOP,7,68,93,10
-    LTEXT           "Bitrate / channel",IDC_STATIC_FAACENCOPTS_BITRATE,7,15,
-                    73,8,WS_TABSTOP
-    LTEXT           "Bandwidth (Hz)",IDC_STATIC_FAACENCOPTS_BANDWIDTH,7,50,
-                    73,8,WS_TABSTOP
-    LTEXT           "Profile",IDC_STATIC_FAACENCOPTS_PROFILE,7,30,73,8,
-                    WS_TABSTOP
-    CONTROL         "Allow Temporal Noise Shaping (TNS)",IDC_ALLOWTNS,"Button",
-                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,7,84,193,10
+    COMBOBOX        IDC_MINBITRATE,85,13,75,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    CONTROL         "MPEG-2",IDC_MPEGVERSION,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,168,14,62,10
+    CONTROL         "MPEG-4",IDC_RADIO7,"Button",BS_AUTORADIOBUTTON,168,29,62,10
+    COMBOBOX        IDC_PROFILE,85,28,75,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_BANDWIDTH,85,46,75,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    CONTROL         "Use LFE",IDC_USELFE,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_GROUP | WS_TABSTOP,133,68,43,10
+    CONTROL         "Use MS Stereo",IDC_USEMS,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,7,68,93,10
+    LTEXT           "Bitrate / channel",IDC_STATIC_FAACENCOPTS_BITRATE,7,15,73,8,WS_TABSTOP
+    LTEXT           "Bandwidth (Hz)",IDC_STATIC_FAACENCOPTS_BANDWIDTH,7,50,73,8,WS_TABSTOP
+    LTEXT           "Profile",IDC_STATIC_FAACENCOPTS_PROFILE,7,30,73,8,WS_TABSTOP
+    CONTROL         "Allow Temporal Noise Shaping (TNS)",IDC_ALLOWTNS,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,7,84,193,10
 END
 
-IDD_RIFFWAVTOMP3 DIALOG  0, 0, 232, 94
+IDD_RIFFWAVTOMP3 DIALOG 0, 0, 232, 94
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Strip RIFF-WAV header from MPEG file(s)"
 FONT 8, "MS Shell Dlg"
 BEGIN
     PUSHBUTTON      "Abort",IDABORT,90,74,65,14
-    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,7,
-                    46,208,14
-    LTEXT           "Processing",IDC_STATIC_RIFFWAVTOMP3_PROCESSING,7,7,208,
-                    8
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,7,46,208,14
+    LTEXT           "Processing",IDC_STATIC_RIFFWAVTOMP3_PROCESSING,7,7,208,8
     LTEXT           "FileName",IDC_PROCESSFILENAME,7,25,208,8
 END
 
 IDD_FILENAMEPROPPAGE DIALOGEX 0, 0, 317, 186
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
-    WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Filenames"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
-    EDITTEXT        IDC_FILEFORMAT,75,17,208,14,ES_AUTOHSCROLL,0,
-                    HIDC_FILEFORMAT
+    EDITTEXT        IDC_FILEFORMAT,75,17,208,14,ES_AUTOHSCROLL,0,HIDC_FILEFORMAT
     PUSHBUTTON      "?",IDC_FNAMEFORMATINFO,288,17,22,14
     EDITTEXT        IDC_CNVOUTDIR,75,48,205,14,ES_AUTOHSCROLL | ES_READONLY
     EDITTEXT        IDC_MP3OUDIR,75,68,205,14,ES_AUTOHSCROLL | ES_READONLY
     PUSHBUTTON      "Char Subst",IDC_ILLEGAL_CHARS,6,86,59,14
-    CONTROL         "Split trackname to Artist, Track using split character:",
-                    IDC_SPLITTRACKNAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
-                    75,89,215,10
+    CONTROL         "Split trackname to Artist, Track using split character:",IDC_SPLITTRACKNAME,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,75,89,215,10
     EDITTEXT        IDC_SPLITCHAR,290,85,16,14,ES_AUTOHSCROLL
-    EDITTEXT        IDC_PLAYLISTFORMAT,75,129,211,14,ES_AUTOHSCROLL,0,
-                    HIDC_PLAYLISTFORMAT
+    EDITTEXT        IDC_PLAYLISTFORMAT,75,129,211,14,ES_AUTOHSCROLL,0,HIDC_PLAYLISTFORMAT
     PUSHBUTTON      "?",IDC_PLAYLISTFMTINFO,290,129,22,14
-    CONTROL         "Add Files to M3U playlist",IDC_M3UPLAYLIST,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,75,165,115,10
-    CONTROL         "Add Files to PLS playlist",IDC_PLSPLAYLIST,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,200,165,110,10
+    CONTROL         "Add Files to M3U playlist",IDC_M3UPLAYLIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,75,165,115,10
+    CONTROL         "Add Files to PLS playlist",IDC_PLSPLAYLIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,200,165,110,10
     LTEXT           "Static",IDC_PLAYLISTDEMO,75,151,202,8
     LTEXT           "Filename",IDC_STATIC_FILEPROP_FILENAME,7,35,63,8
-    GROUPBOX        "Output filename format and directories",
-                    IDC_STATIC_FILEPROP_OUTPUTDIRS,0,4,315,110
+    GROUPBOX        "Output filename format and directories",IDC_STATIC_FILEPROP_OUTPUTDIRS,0,4,315,110
     LTEXT           "WAV -> MP3",IDC_STATIC_FILEPROP_WAVTOMPEG,5,51,63,8
-    LTEXT           "Recorded Tracks",IDC_STATIC_FILEPROP_RECORDEDTRACKS,5,
-                    71,63,8
+    LTEXT           "Recorded Tracks",IDC_STATIC_FILEPROP_RECORDEDTRACKS,5,71,63,8
     LTEXT           "Static",IDC_FNAMEDEMO,75,36,202,8,0,WS_EX_TRANSPARENT
-    LTEXT           "Filename Format",IDC_STATIC_FILEPROP_FILEFORMAT,7,20,63,
-                    8
+    LTEXT           "Filename Format",IDC_STATIC_FILEPROP_FILEFORMAT,7,20,63,8
     LTEXT           "File Name",IDC_STATIC_FILEPROP_PLSFILE,10,151,63,8
-    LTEXT           "File Name Format",IDC_STATIC_FILEPROP_PLSFORMAT,10,132,
-                    63,8
-    LTEXT           "Type",IDC_STATIC_FILEPROP_FILEFORMAT_PLSTYPE,10,166,63,
-                    8
-    GROUPBOX        "Playlist",IDC_STATIC_FILEPROP_FILEFORMATPLAYLIST,0,116,
-                    315,65
+    LTEXT           "File Name Format",IDC_STATIC_FILEPROP_PLSFORMAT,10,132,63,8
+    LTEXT           "Type",IDC_STATIC_FILEPROP_FILEFORMAT_PLSTYPE,10,166,63,8
+    GROUPBOX        "Playlist",IDC_STATIC_FILEPROP_FILEFORMATPLAYLIST,0,116,315,65
 END
 
-IDD_RECORDFILES DIALOG  0, 0, 317, 206
+IDD_RECORDFILES DIALOG 0, 0, 317, 206
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Record from Analog Input"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    COMBOBOX        IDC_SAMPLERATE,89,5,50,80,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_GROUP | WS_TABSTOP
-    CONTROL         "Free Length",IDC_FREELENGTH,"Button",BS_AUTORADIOBUTTON | 
-                    WS_GROUP | WS_TABSTOP,9,29,76,10
-    CONTROL         "Record for just:",IDC_FREELENGTH1,"Button",
-                    BS_AUTORADIOBUTTON | WS_TABSTOP,89,29,80,10
+    COMBOBOX        IDC_SAMPLERATE,89,5,50,80,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    CONTROL         "Free Length",IDC_FREELENGTH,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,9,29,76,10
+    CONTROL         "Record for just:",IDC_FREELENGTH1,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,89,29,80,10
     EDITTEXT        IDC_RECORDINGTIME,174,27,30,14,ES_AUTOHSCROLL | WS_GROUP
-    COMBOBOX        IDC_RECORDINGDEVICE,89,45,216,70,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_RECORDINGDEVICE,89,45,216,70,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
     EDITTEXT        IDC_RECFILENAME,89,91,216,14,ES_AUTOHSCROLL | WS_GROUP
-    CONTROL         "Add sequential numbers to filename, starting with: ",
-                    IDC_ADDSEQUENCENUMBER,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,10,113,265,10
+    CONTROL         "Add sequential numbers to filename, starting with: ",IDC_ADDSEQUENCENUMBER,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,113,265,10
     EDITTEXT        IDC_SEQUENCESTART,289,110,15,14,ES_AUTOHSCROLL
-    COMBOBOX        IDC_ENCODERTYPE,89,134,216,70,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
-    LTEXT           "Recording Status",
-                    IDC_STATIC_RECORDFILES_RECORDINGSTATUS,9,158,75,8
+    COMBOBOX        IDC_ENCODERTYPE,89,134,216,70,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    LTEXT           "Recording Status",IDC_STATIC_RECORDFILES_RECORDINGSTATUS,9,158,75,8
     LTEXT           "Static",IDC_RECORDSTATUS,89,158,210,8,SS_NOPREFIX
     PUSHBUTTON      "Record",IDC_RECORD,9,178,65,15,WS_GROUP
     PUSHBUTTON      "Pause",IDC_PAUSE,78,178,65,15,WS_GROUP
     PUSHBUTTON      "Stop",IDC_STOP,147,178,65,15,WS_GROUP
     PUSHBUTTON      "Cancel",IDCANCEL,242,178,65,14,WS_GROUP
-    CONTROL         "Mono",IDC_RECORD_CHANNELS,"Button",BS_AUTORADIOBUTTON | 
-                    WS_GROUP | WS_TABSTOP,199,10,45,10
-    CONTROL         "Stereo",IDC_RECORD_CHANNELS1,"Button",
-                    BS_AUTORADIOBUTTON | WS_TABSTOP,249,10,50,10
+    CONTROL         "Mono",IDC_RECORD_CHANNELS,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,199,10,45,10
+    CONTROL         "Stereo",IDC_RECORD_CHANNELS1,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,249,10,50,10
     LTEXT           "Channels",IDC_BITRATE,144,10,45,8
     LTEXT           "seconds",IDC_STATIC_RECORDFILES_SECONDS,209,30,40,8
-    LTEXT           "Input Device",IDC_STATIC_RECORDFILES_RECORDINGDEVICE,9,
-                    50,75,8
-    LTEXT           "Output Filename",IDC_STATIC_RECORDFILES_FILENAME,10,95,
-                    75,8
-    LTEXT           "Output File Type",IDC_STATIC_RECORDFILES_OUTPUTTYPE,9,
-                    137,75,8
-    LTEXT           "Sample Rate",IDC_STATIC_RECORDFILES_SAMPLERATE,9,10,76,
-                    8
-    EDITTEXT        IDC_RECORDINGOUTPUTDIR,89,69,206,14,ES_AUTOHSCROLL | 
-                    ES_READONLY
-    LTEXT           "Output Directory",IDC_STATIC_RECORDFILES_FILEDIRECTORY,
-                    10,72,75,8
+    LTEXT           "Input Device",IDC_STATIC_RECORDFILES_RECORDINGDEVICE,9,50,75,8
+    LTEXT           "Output Filename",IDC_STATIC_RECORDFILES_FILENAME,10,95,75,8
+    LTEXT           "Output File Type",IDC_STATIC_RECORDFILES_OUTPUTTYPE,9,137,75,8
+    LTEXT           "Sample Rate",IDC_STATIC_RECORDFILES_SAMPLERATE,9,10,76,8
+    EDITTEXT        IDC_RECORDINGOUTPUTDIR,89,69,206,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Output Directory",IDC_STATIC_RECORDFILES_FILEDIRECTORY,10,72,75,8
 END
 
-IDD_SUBMITOPTS DIALOG  0, 0, 237, 166
+IDD_SUBMITOPTS DIALOG 0, 0, 237, 166
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "freedb Submission options"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT           "Submit using:",IDC_STATIC_CDDB_SUBMITOPTS_SUBMITVIA,10,
-                    5,210,8,WS_TABSTOP
-    CONTROL         "E-mail",IDC_SUBMITVIA,"Button",BS_AUTORADIOBUTTON | 
-                    WS_GROUP | WS_TABSTOP,10,20,90,10
-    CONTROL         "Via HTTP",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,111,21,
-                    109,8
+    LTEXT           "Submit using:",IDC_STATIC_CDDB_SUBMITOPTS_SUBMITVIA,10,5,210,8,WS_TABSTOP
+    CONTROL         "E-mail",IDC_SUBMITVIA,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,10,20,90,10
+    CONTROL         "Via HTTP",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,111,21,109,8
     EDITTEXT        IDC_EMAILADDRESS,10,50,210,14,ES_AUTOHSCROLL | WS_GROUP
     EDITTEXT        IDC_SMTPSERVER,10,81,210,14,ES_AUTOHSCROLL | WS_GROUP
-    LTEXT           "SMTP server address",
-                    IDC_STATIC_CDDB_SUBMITOPTS_SMTPSERVERADDR,10,68,210,8,
-                    WS_TABSTOP
-    LTEXT           "Submission HTTP address (excluding path)",
-                    IDC_STATIC_CDDB_SUBMITOPTS_SUBMISSIONPATH,10,103,210,8,
-                    WS_TABSTOP
+    LTEXT           "SMTP server address",IDC_STATIC_CDDB_SUBMITOPTS_SMTPSERVERADDR,10,68,210,8,WS_TABSTOP
+    LTEXT           "Submission HTTP address (excluding path)",IDC_STATIC_CDDB_SUBMITOPTS_SUBMISSIONPATH,10,103,210,8,WS_TABSTOP
     EDITTEXT        IDC_HTMLADDRESS,10,115,210,14,ES_AUTOHSCROLL | WS_GROUP
     DEFPUSHBUTTON   "OK",IDOK,61,145,50,14,WS_GROUP
     PUSHBUTTON      "Cancel",IDCANCEL,126,145,50,14,WS_GROUP
-    LTEXT           "Submission e-mail address",
-                    IDC_STATIC_CDDB_SUBMITOPTS_EMAILADDRESS,10,38,210,8,
-                    WS_TABSTOP
+    LTEXT           "Submission e-mail address",IDC_STATIC_CDDB_SUBMITOPTS_EMAILADDRESS,10,38,210,8,WS_TABSTOP
 END
 
-IDD_ENCODERVORBISDLLDLG DIALOG  0, 0, 296, 121
+IDD_ENCODERVORBISDLLDLG DIALOG 0, 0, 296, 121
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
-    CONTROL         "Stereo",IDC_CHANNELSELECTION,"Button",
-                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,55,7,45,10
-    CONTROL         "Mono",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,107,7,43,
-                    10
-    CONTROL         "On the fly Encoding",IDC_RTENCODING,"Button",
-                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,155,7,115,10
-    CONTROL         "Use Quality setting (recommended)",
-                    IDC_USEQUALITYSETTING,"Button",BS_AUTOCHECKBOX | 
-                    WS_GROUP | WS_TABSTOP,10,24,255,10
-    SCROLLBAR       IDC_QUALITYSETTINGSCROLL,10,40,200,8,WS_GROUP | 
-                    WS_TABSTOP
-    COMBOBOX        IDC_MINBITRATE,119,66,55,56,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
-    COMBOBOX        IDC_BITRATE,119,82,55,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_GROUP | WS_TABSTOP
-    COMBOBOX        IDC_MAXBITRATE,119,98,55,56,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
-    LTEXT           "Channels",IDC_STATIC_ENCOGGOPTS_CHANNELS,10,8,40,8,
-                    WS_TABSTOP
+    CONTROL         "Stereo",IDC_CHANNELSELECTION,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,55,7,45,10
+    CONTROL         "Mono",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,107,7,43,10
+    CONTROL         "On the fly Encoding",IDC_RTENCODING,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,155,7,115,10
+    CONTROL         "Use Quality setting (recommended)",IDC_USEQUALITYSETTING,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,10,24,255,10
+    SCROLLBAR       IDC_QUALITYSETTINGSCROLL,10,40,200,8,WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_MINBITRATE,119,66,55,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_BITRATE,119,82,55,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_MAXBITRATE,119,98,55,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    LTEXT           "Channels",IDC_STATIC_ENCOGGOPTS_CHANNELS,10,8,40,8,WS_TABSTOP
     LTEXT           "QUALSETTING",IDC_QUALITYSETTING,215,40,75,8,WS_TABSTOP
-    LTEXT           "Minimal Bitrate",IDC_STATIC_ENCVORBIS_MINBR,18,68,97,8,
-                    WS_TABSTOP
-    LTEXT           "Nominal Bitrate",IDC_STATIC_ENCVORBIS_NOMBR,18,84,97,8,
-                    WS_TABSTOP
-    LTEXT           "Maximum Bitrate",IDC_STATIC_ENCVORBIS_MAXBR,18,100,97,8,
-                    WS_TABSTOP
-    GROUPBOX        "Use Bitrate manager",IDC_STATIC_ENCOGGOPTS_MGTBITRATE,
-                    10,56,255,59
+    LTEXT           "Minimal Bitrate",IDC_STATIC_ENCVORBIS_MINBR,18,68,97,8,WS_TABSTOP
+    LTEXT           "Nominal Bitrate",IDC_STATIC_ENCVORBIS_NOMBR,18,84,97,8,WS_TABSTOP
+    LTEXT           "Maximum Bitrate",IDC_STATIC_ENCVORBIS_MAXBR,18,100,97,8,WS_TABSTOP
+    GROUPBOX        "Use Bitrate manager",IDC_STATIC_ENCOGGOPTS_MGTBITRATE,10,56,255,59
 END
 
-IDD_OPEN_FILE DIALOG  0, 0, 342, 211
+IDD_OPEN_FILE DIALOG 0, 0, 342, 211
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Open File Dialog"
 FONT 8, "MS Shell Dlg"
 BEGIN
     EDITTEXT        IDC_EDIT_DIR,71,5,249,14,ES_AUTOHSCROLL | ES_READONLY
-    CONTROL         "List1",IDC_LIST_REQUESTED_FILES,"SysListView32",
-                    LVS_REPORT | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,
-                    5,39,330,110
-    CONTROL         "Look in subfolders",IDC_RECURSIVE_DIR,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,5,157,95,10
-    CONTROL         "Delete Original",IDC_DELETE_ORIGINAL,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,5,174,95,10
-    CONTROL         "Normalize",IDC_NORMALIZE,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,104,157,75,10
-    CONTROL         "RIFF-WAV",IDC_RIFF_WAV,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,104,174,78,10
+    CONTROL         "List1",IDC_LIST_REQUESTED_FILES,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,5,39,330,110
+    CONTROL         "Look in subfolders",IDC_RECURSIVE_DIR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,157,95,10
+    CONTROL         "Delete Original",IDC_DELETE_ORIGINAL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,174,95,10
+    CONTROL         "Normalize",IDC_NORMALIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,104,157,75,10
+    CONTROL         "RIFF-WAV",IDC_RIFF_WAV,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,104,174,78,10
     CONTROL         "Keep Original Directory Layout",IDC_KEEPDIRLAYOUT,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,185,157,145,10
     PUSHBUTTON      "Settings",IDC_SETTINGS,5,190,70,14
     PUSHBUTTON      "Select All",IDC_SELECT_ALL,91,190,70,14
     PUSHBUTTON      "Open",IDC_FILE_OPEN,177,190,70,14
     PUSHBUTTON      "Cancel",IDCANCEL,263,190,70,14
-    LTEXT           "Available Files:",IDC_STATIC_OPENFILES_AVIALABLEFILES,5,
-                    25,315,8
+    LTEXT           "Available Files:",IDC_STATIC_OPENFILES_AVIALABLEFILES,5,25,315,8
     LTEXT           "Directory",IDC_STATIC_OPENFILES_DIRECTORY,5,10,60,8
 END
 
-IDD_RPLC_ILLEGAL DIALOG  0, 0, 237, 141
+IDD_RPLC_ILLEGAL DIALOG 0, 0, 237, 141
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Character Substitution"
 FONT 8, "MS Shell Dlg"
@@ -1045,221 +834,155 @@ BEGIN
     LTEXT           "| :=",IDC_STATIC,50,46,10,8
     LTEXT           "* :=",IDC_STATIC,90,46,12,8
     LTEXT           "? :=",IDC_STATIC,130,46,13,8
-    GROUPBOX        "Illegal Filename Characters",
-                    IDC_STATIC_RPLC_ILLEGALCHARS,5,5,225,65
-    GROUPBOX        "Other (substition is not mandatory)",
-                    IDC_STATIC_RPLC_OTHERS,5,75,225,35
+    GROUPBOX        "Illegal Filename Characters",IDC_STATIC_RPLC_ILLEGALCHARS,5,5,225,65
+    GROUPBOX        "Other (substition is not mandatory)",IDC_STATIC_RPLC_OTHERS,5,75,225,35
     LTEXT           "space :=",IDC_STATIC_RPLC_SPACE,20,95,45,8
 END
 
-IDD_ENCODERGOGODLLDLG DIALOG  0, 0, 261, 116
+IDD_ENCODERGOGODLLDLG DIALOG 0, 0, 261, 116
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
-    CONTROL         "MPEG-1",IDC_VERSION,"Button",BS_AUTORADIOBUTTON | 
-                    WS_GROUP | WS_TABSTOP,5,10,55,10
-    CONTROL         "MPEG-2",IDC_VERSION1,"Button",BS_AUTORADIOBUTTON,70,10,
-                    50,10
-    CONTROL         "On-the-fly MP3 Encoding",IDC_RTENCODING,"Button",
-                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,130,10,125,10
-    COMBOBOX        IDC_MINBITRATE,45,30,67,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_GROUP | WS_TABSTOP
-    COMBOBOX        IDC_VBR,205,30,48,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_GROUP | WS_TABSTOP
-    CONTROL         "Mono",IDC_CHANNELSELECTION,"Button",BS_AUTORADIOBUTTON | 
-                    WS_GROUP | WS_TABSTOP,45,50,44,10
-    CONTROL         "Stereo",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,92,50,48,
-                    10
-    CONTROL         "J-Stereo",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,140,50,
-                    53,10
-    CONTROL         "MS-Stereo",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,200,
-                    50,55,10
-    CONTROL         "Use MMX/3DNow",IDC_USE_SIMD,"Button",BS_AUTOCHECKBOX | 
-                    WS_GROUP | WS_TABSTOP,5,71,130,10
-    CONTROL         "Use Psycho-acoustics",IDC_USE_PSY,"Button",
-                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,145,71,110,10
+    CONTROL         "MPEG-1",IDC_VERSION,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,5,10,55,10
+    CONTROL         "MPEG-2",IDC_VERSION1,"Button",BS_AUTORADIOBUTTON,70,10,50,10
+    CONTROL         "On-the-fly MP3 Encoding",IDC_RTENCODING,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,130,10,125,10
+    COMBOBOX        IDC_MINBITRATE,45,30,67,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_VBR,205,30,48,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    CONTROL         "Mono",IDC_CHANNELSELECTION,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,45,50,44,10
+    CONTROL         "Stereo",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,92,50,48,10
+    CONTROL         "J-Stereo",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,140,50,53,10
+    CONTROL         "MS-Stereo",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,200,50,55,10
+    CONTROL         "Use MMX/3DNow",IDC_USE_SIMD,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,5,71,130,10
+    CONTROL         "Use Psycho-acoustics",IDC_USE_PSY,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,145,71,110,10
     CONTROL         "Apply Low-Pass filter for low bitrates",IDC_USE_LPF,
-                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,5,90,
-                    250,8
-    LTEXT           "Variable Bitrate",IDC_STATIC_GOGOENCOPTS_VARBITRATE,130,
-                    32,70,8,WS_TABSTOP
-    LTEXT           "Bitrate",IDC_STATIC_GOGOENCOPTS_BITRATE,5,32,35,8,
-                    WS_TABSTOP
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,5,90,250,8
+    LTEXT           "Variable Bitrate",IDC_STATIC_GOGOENCOPTS_VARBITRATE,130,32,70,8,WS_TABSTOP
+    LTEXT           "Bitrate",IDC_STATIC_GOGOENCOPTS_BITRATE,5,32,35,8,WS_TABSTOP
     LTEXT           "Mode",IDC_STATIC_GOGOENCOPTS_MODE,5,51,35,8,WS_TABSTOP
 END
 
-IDD_ENCODERMP2DLLDLG DIALOG  0, 0, 266, 126
+IDD_ENCODERMP2DLLDLG DIALOG 0, 0, 266, 126
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
-    CONTROL         "MPEG-1",IDC_VERSION,"Button",BS_AUTORADIOBUTTON | 
-                    WS_GROUP | WS_TABSTOP,9,10,60,10
-    CONTROL         "MPEG-2",IDC_VERSION1,"Button",BS_AUTORADIOBUTTON,80,10,
-                    60,10
-    LTEXT           "Bitrate",IDC_STATIC_ENCMP2OPTS_BITRATE,9,30,51,8,
-                    WS_TABSTOP
-    COMBOBOX        IDC_BITRATE,65,25,67,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_GROUP | WS_TABSTOP
-    CONTROL         "On-the-fly MP2 Encoding",IDC_RTENCODING,"Button",
-                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,140,10,125,10
-    LTEXT           "Channels",IDC_STATIC_ENCMP2OPTS_CHANNELS,9,46,51,8,
-                    WS_TABSTOP
-    CONTROL         "Stereo",IDC_CHANNELSELECTION,"Button",
-                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,65,45,45,10
-    CONTROL         "J-stereo",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,115,45,
-                    55,10
-    CONTROL         "Dual",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON | 
-                    WS_DISABLED,174,45,40,10
-    CONTROL         "Mono",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,215,45,45,
-                    10
-    CONTROL         "Private",IDC_PRIVATE,"Button",BS_AUTOCHECKBOX | 
-                    WS_GROUP | WS_TABSTOP,9,65,52,10
-    CONTROL         "Checksum",IDC_CRC,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
-                    WS_TABSTOP,75,65,62,10
-    CONTROL         "Original",IDC_ORIGINAL,"Button",BS_AUTOCHECKBOX | 
-                    WS_GROUP | WS_TABSTOP,150,65,45,10
-    CONTROL         "Copyright",IDC_COPYRIGHT,"Button",BS_AUTOCHECKBOX | 
-                    WS_GROUP | WS_TABSTOP,200,65,60,10
-    CONTROL         "Write Ancillary Data (Antex)",IDC_WRITE_ANCIL,"Button",
-                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,9,81,127,10
-    CONTROL         "Allow no padding",IDC_NO_PADDING,"Button",
-                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,150,80,110,10
-    LTEXT           "VBR (experimental)",IDC_STATIC_ENCMP2OPTS_VBREXP,9,103,
-                    131,8,WS_TABSTOP
-    COMBOBOX        IDC_VBR,145,100,65,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_GROUP | WS_TABSTOP
+    CONTROL         "MPEG-1",IDC_VERSION,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,9,10,60,10
+    CONTROL         "MPEG-2",IDC_VERSION1,"Button",BS_AUTORADIOBUTTON,80,10,60,10
+    LTEXT           "Bitrate",IDC_STATIC_ENCMP2OPTS_BITRATE,9,30,51,8,WS_TABSTOP
+    COMBOBOX        IDC_BITRATE,65,25,67,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    CONTROL         "On-the-fly MP2 Encoding",IDC_RTENCODING,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,140,10,125,10
+    LTEXT           "Channels",IDC_STATIC_ENCMP2OPTS_CHANNELS,9,46,51,8,WS_TABSTOP
+    CONTROL         "Stereo",IDC_CHANNELSELECTION,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,65,45,45,10
+    CONTROL         "J-stereo",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,115,45,55,10
+    CONTROL         "Dual",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,174,45,40,10
+    CONTROL         "Mono",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,215,45,45,10
+    CONTROL         "Private",IDC_PRIVATE,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,9,65,52,10
+    CONTROL         "Checksum",IDC_CRC,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,75,65,62,10
+    CONTROL         "Original",IDC_ORIGINAL,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,150,65,45,10
+    CONTROL         "Copyright",IDC_COPYRIGHT,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,200,65,60,10
+    CONTROL         "Write Ancillary Data (Antex)",IDC_WRITE_ANCIL,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,9,81,127,10
+    CONTROL         "Allow no padding",IDC_NO_PADDING,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,150,80,110,10
+    LTEXT           "VBR (experimental)",IDC_STATIC_ENCMP2OPTS_VBREXP,9,103,131,8,WS_TABSTOP
+    COMBOBOX        IDC_VBR,145,100,65,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
 END
 
-IDD_LOCALCDDBPROPPAGE DIALOG  0, 0, 342, 146
+IDD_LOCALCDDBPROPPAGE DIALOG 0, 0, 342, 146
 STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Local CDDB"
 FONT 8, "MS Shell Dlg"
 BEGIN
     EDITTEXT        IDC_CDDBPATH,15,29,290,14,ES_AUTOHSCROLL | ES_READONLY
-    CONTROL         "Windows-format CDDB Files",IDC_CDDBTYPE,"Button",
-                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,17,86,133,10
-    CONTROL         "Unix-format CDDB Files",IDC_UNIXCDDB,"Button",
-                    BS_AUTORADIOBUTTON | WS_TABSTOP,155,86,150,10
-    CONTROL         "Store in CDPlayer.ini File",IDC_STCDINI,"Button",
-                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,17,102,133,10
-    CONTROL         "Store in local CDDB",IDC_STLOCALCDDB,"Button",
-                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,155,102,150,10
-    CONTROL         "Use Long Directory Names",IDC_LONGDIRNAMES,"Button",
-                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,17,118,133,10
-    CONTROL         "Write as MS-DOS text files ",IDC_DOSFILES,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,155,118,150,10
+    CONTROL         "Windows-format CDDB Files",IDC_CDDBTYPE,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,17,86,133,10
+    CONTROL         "Unix-format CDDB Files",IDC_UNIXCDDB,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,155,86,150,10
+    CONTROL         "Store in CDPlayer.ini File",IDC_STCDINI,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,17,102,133,10
+    CONTROL         "Store in local CDDB",IDC_STLOCALCDDB,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,155,102,150,10
+    CONTROL         "Use Long Directory Names",IDC_LONGDIRNAMES,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,17,118,133,10
+    CONTROL         "Write as MS-DOS text files ",IDC_DOSFILES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,155,118,150,10
     LTEXT           "CDDB Path",IDC_STATIC_LOCALCDDB_CDDBPATH,15,16,290,8
-    GROUPBOX        "Local CDDB Settings",IDC_STATIC_LOCALCDDB_SETTINGS,5,0,
-                    325,140
-    EDITTEXT        IDC_WINAMPDBPATH,15,62,290,14,ES_AUTOHSCROLL | 
-                    ES_READONLY
-    LTEXT           "Winamp in_cdda.cdb path (Winamp 2.78 format)",
-                    IDC_STATIC_LOCALCDDB_WINAMPDB,15,49,290,8
+    GROUPBOX        "Local CDDB Settings",IDC_STATIC_LOCALCDDB_SETTINGS,5,0,325,140
+    EDITTEXT        IDC_WINAMPDBPATH,15,62,290,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Winamp in_cdda.cdb path (Winamp 2.78 format)",IDC_STATIC_LOCALCDDB_WINAMPDB,15,49,290,8
 END
 
-IDD_CDRDAO DIALOG  0, 0, 317, 206
+IDD_CDRDAO DIALOG 0, 0, 317, 206
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "CD Recording Dialog"
 FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,195,180,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,250,180,50,14
-    COMBOBOX        IDC_CDDRIVE,65,10,235,30,CBS_DROPDOWN | CBS_SORT | 
-                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CDDRIVE,65,10,235,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
     LTEXT           "CD-Drive",IDC_STATIC,10,15,50,8
     PUSHBUTTON      "Start Burning",IDC_RECORD,140,180,50,14
-    EDITTEXT        IDC_OUTPUT,5,115,295,50,ES_MULTILINE | ES_AUTOVSCROLL | 
-                    ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    EDITTEXT        IDC_OUTPUT,5,115,295,50,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
 END
 
-IDD_MPEGTOWAVSETTINGS DIALOG  0, 0, 202, 95
+IDD_MPEGTOWAVSETTINGS DIALOG 0, 0, 202, 95
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "MPEG To WAV Settings"
 FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,65,75,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,125,75,50,14
-    COMBOBOX        IDC_OUTFREQ,80,10,115,60,CBS_DROPDOWN | WS_VSCROLL | 
-                    WS_TABSTOP
+    COMBOBOX        IDC_OUTFREQ,80,10,115,60,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
     LTEXT           "Output Frequency",IDC_STATIC,10,15,58,8
 END
 
-IDD_ENCODERDOSDLG DIALOG  0, 0, 261, 126
+IDD_ENCODERDOSDLG DIALOG 0, 0, 261, 126
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
-    LTEXT           "Parameter string",IDC_STATIC_ENCDOSDLG_PARAMSTRING,7,38,
-                    243,8
+    LTEXT           "Parameter string",IDC_STATIC_ENCDOSDLG_PARAMSTRING,7,38,243,8
     EDITTEXT        IDC_EXTENCOPTS,7,51,246,14,ES_AUTOHSCROLL
     LTEXT           "Encoder path",IDC_STATIC_ENCDOSDLG_ENCPATH,7,7,243,8
-    COMBOBOX        IDC_BITRATE,53,71,67,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_TABSTOP
+    COMBOBOX        IDC_BITRATE,53,71,67,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     LTEXT           "Bitrate",IDC_STATIC_ENCDOSDLG_BITRATE,7,73,43,8
-    CONTROL         "On-the-fly Encoding",IDC_ON_THE_FLY,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,10,111,115,10
-    CONTROL         "Hide DOS box window",IDC_HIDE_DOSBOX,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,10,96,115,10
+    CONTROL         "On-the-fly Encoding",IDC_ON_THE_FLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,111,115,10
+    CONTROL         "Hide DOS box window",IDC_HIDE_DOSBOX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,96,115,10
     EDITTEXT        IDC_EXTENTION,214,70,40,14,ES_AUTOHSCROLL
-    LTEXT           "File Extension",IDC_STATIC_ENCDOSDLG_FILEEXT,145,73,60,
-                    8
-    CONTROL         "Send WAV header to stdin",IDC_SENDWAVTOSTDIN,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,135,96,120,10
+    LTEXT           "File Extension",IDC_STATIC_ENCDOSDLG_FILEEXT,145,73,60,8
+    CONTROL         "Send WAV header to stdin",IDC_SENDWAVTOSTDIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,135,96,120,10
     EDITTEXT        IDC_EXTENC,7,20,233,14,ES_AUTOHSCROLL | ES_READONLY
 END
 
-IDD_ENCODERNTTVQFDLLDLG DIALOG  0, 0, 246, 71
+IDD_ENCODERNTTVQFDLLDLG DIALOG 0, 0, 246, 71
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
-    CONTROL         "On the fly MP3 Encoding",IDC_RTENCODING,"Button",
-                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,15,45,220,10
-    COMBOBOX        IDC_MINBITRATE,110,6,67,56,CBS_DROPDOWNLIST | WS_VSCROLL | 
-                    WS_GROUP | WS_TABSTOP
-    CONTROL         "Mono",IDC_CHANNELSELECTION,"Button",BS_AUTORADIOBUTTON | 
-                    WS_GROUP | WS_TABSTOP,170,27,48,10
-    CONTROL         "Stereo",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,110,27,
-                    53,10
-    LTEXT           "Bitrate per channel",IDC_STATIC_ENCNTTVQFOPTS_BITRPC,15,
-                    8,90,8,WS_TABSTOP
-    LTEXT           "Channels",IDC_STATIC_ENCNTTVQFOPTS_CHANNELS,15,28,90,8,
-                    WS_TABSTOP
+    CONTROL         "On the fly MP3 Encoding",IDC_RTENCODING,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,15,45,220,10
+    COMBOBOX        IDC_MINBITRATE,110,6,67,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    CONTROL         "Mono",IDC_CHANNELSELECTION,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,170,27,48,10
+    CONTROL         "Stereo",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,110,27,53,10
+    LTEXT           "Bitrate per channel",IDC_STATIC_ENCNTTVQFOPTS_BITRPC,15,8,90,8,WS_TABSTOP
+    LTEXT           "Channels",IDC_STATIC_ENCNTTVQFOPTS_CHANNELS,15,28,90,8,WS_TABSTOP
 END
 
-IDD_CONFIG_WINAMP_INPLUGIN DIALOG  0, 0, 292, 170
+IDD_CONFIG_WINAMP_INPLUGIN DIALOG 0, 0, 292, 170
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Configure Winamp Input Plugins"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | 
-                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
-                    WS_TABSTOP,15,5,260,135
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,15,5,260,135
     PUSHBUTTON      "About",IDC_ABOUT,100,147,50,14
     PUSHBUTTON      "Configure",IDC_CONFIGURE,162,147,50,14
     DEFPUSHBUTTON   "Close",IDOK,224,147,50,14
 END
 
-IDD_EDIT_GENRES DIALOG  0, 0, 257, 186
+IDD_EDIT_GENRES DIALOG 0, 0, 257, 186
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Add / Edit Genres"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | 
-                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
-                    WS_TABSTOP,5,5,245,125
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,5,5,245,125
     EDITTEXT        IDC_EDIT_GENRE,5,138,90,14,ES_AUTOHSCROLL
-    COMBOBOX        IDC_EDIT_CDDBGENRE,110,139,65,90,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_TABSTOP
-    EDITTEXT        IDC_EDIT_ID3V1ID,190,138,40,14,ES_AUTOHSCROLL | 
-                    ES_NUMBER
-    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | 
-                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,230,138,
-                    11,14
+    COMBOBOX        IDC_EDIT_CDDBGENRE,110,139,65,90,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_ID3V1ID,190,138,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,230,138,11,14
     PUSHBUTTON      "Insert New",IDC_INSERTNEW,5,165,75,14
     DEFPUSHBUTTON   "OK",IDOK,89,165,75,14
     PUSHBUTTON      "Cancel",IDCANCEL,173,165,75,14
 END
 
-IDD_FILEOVERWRITE DIALOG  0, 0, 317, 86
+IDD_FILEOVERWRITE DIALOG 0, 0, 317, 86
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "File Overwrite Warning"
 FONT 8, "MS Shell Dlg"
@@ -1269,23 +992,19 @@ BEGIN
     PUSHBUTTON      "No",IDC_MYNO,161,60,60,14
     LTEXT           "The file",IDC_STATIC_FILEOVERWRITE_FOLLINE,15,5,295,8
     LTEXT           "Static",IDC_FILENAME,15,20,295,8,SS_NOPREFIX
-    LTEXT           "already exists.  Replace the existing file?",
-                    IDC_STATIC_FILEOVERWRITE_DOESEXIST,15,39,295,8
+    LTEXT           "already exists.  Replace the existing file?",IDC_STATIC_FILEOVERWRITE_DOESEXIST,15,39,295,8
     PUSHBUTTON      "No to A&ll",IDC_NOTOALL,234,60,60,14
 END
 
-IDD_TITLEINFO DIALOG  0, 0, 411, 141
+IDD_TITLEINFO DIALOG 0, 0, 411, 141
 STYLE DS_SETFONT | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
     EDITTEXT        IDC_ARTIST,52,6,148,14,ES_AUTOHSCROLL
     EDITTEXT        IDC_TITLE,51,27,148,14,ES_AUTOHSCROLL
-    COMBOBOX        IDC_GENRE,241,7,75,114,CBS_DROPDOWNLIST | CBS_SORT | 
-                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_GENRE,241,7,75,114,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
     EDITTEXT        IDC_YEAR,241,27,75,14,ES_AUTOHSCROLL
-    CONTROL         "List2",IDC_TRACKLIST,"SysListView32",LVS_REPORT | 
-                    LVS_SHOWSELALWAYS | LVS_EDITLABELS | WS_BORDER | 
-                    WS_TABSTOP,5,45,403,87
+    CONTROL         "List2",IDC_TRACKLIST,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_EDITLABELS | WS_BORDER | WS_TABSTOP,5,45,403,87
     LTEXT           "Artist",IDC_TITLEINFO_ARTIST,7,9,38,8
     LTEXT           "Album",IDC_TITLEINFO_TITLE,7,30,38,8
     LTEXT           "Genre",IDC_TITLEINFO_GENRE,205,9,31,8
@@ -1294,36 +1013,31 @@ BEGIN
     EDITTEXT        IDC_TRACKOFFSET,386,6,20,14,ES_AUTOHSCROLL
 END
 
-IDD_ABOUTBOX DIALOG  0, 0, 257, 186
+IDD_ABOUTBOX DIALOG 0, 0, 257, 186
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "About the CDex audio CD extractor program"
 FONT 8, "MS Shell Dlg"
 BEGIN
     LTEXT           "CDex Version ",IDC_CDEXVERSION,6,133,144,8,SS_NOPREFIX
     DEFPUSHBUTTON   "Close",ID_CLOSE,190,163,55,14,WS_GROUP
-    LTEXT           "Copyright (C) 1998-2006 Albert L Faber",IDC_STATIC,6,
-                    146,235,8
-    RTEXT           "http://cdexos.sourceforge.net",IDC_CDEXHYPERLINK,150,
-                    133,96,8
+    LTEXT           "Copyright (C) 1998-2006 Albert L Faber",IDC_STATIC,6,146,235,8
+    RTEXT           "http://cdexos.sourceforge.net",IDC_CDEXHYPERLINK,150,133,96,8
     CONTROL         "",IDC_CDEXLOGO,"Static",SS_BLACKFRAME,4,5,246,123
     LTEXT           "",IDC_ABOUT_TRANSLATOR_URL,6,170,155,8
     LTEXT           "",IDC_ABOUT_TRANSLATOR_INFO,6,159,167,8
 END
 
-IDD_AUTODETECT DIALOG  0, 0, 312, 199
+IDD_AUTODETECT DIALOG 0, 0, 312, 199
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Auto-Detection Results"
 FONT 8, "MS Shell Dlg"
 BEGIN
-    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | WS_BORDER | 
-                    WS_TABSTOP,7,41,298,122
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,7,41,298,122
     DEFPUSHBUTTON   "OK",IDOK,119,180,57,14
     PUSHBUTTON      "Abort",IDC_ABORT,184,180,57,14
     PUSHBUTTON      "Close",IDCANCEL,248,180,57,14
-    LTEXT           "Below is a list with the test modes; select one of the modes that has the status 'Pass', and press the OK button",
-                    IDC_STATIC_AUTODETECT_LISTDESCRIPTION,7,17,293,21
-    LTEXT           "MMC status",IDC_STATIC_AUTODETECT_MMCSTATUS,7,7,58,8,
-                    NOT WS_VISIBLE
+    LTEXT           "Below is a list with the test modes; select one of the modes that has the status 'Pass', and press the OK button",IDC_STATIC_AUTODETECT_LISTDESCRIPTION,7,17,293,21
+    LTEXT           "MMC status",IDC_STATIC_AUTODETECT_MMCSTATUS,7,7,58,8,NOT WS_VISIBLE
     LTEXT           "MMC Status",IDC_MMCSTATUS,70,7,230,8,NOT WS_VISIBLE
 END
 
@@ -1331,20 +1045,16 @@ IDD_PLAYERVIEW DIALOGEX 0, 0, 285, 150
 STYLE DS_SETFONT | WS_CHILD | WS_BORDER
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
-    CONTROL         "Slider1",IDC_POSITION,"msctls_trackbar32",TBS_BOTH | 
-                    TBS_NOTICKS | WS_TABSTOP,5,10,145,15
-    CONTROL         "Slider2",IDC_VOLUME,"msctls_trackbar32",TBS_VERT | 
-                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,157,5,15,34
+    CONTROL         "Slider1",IDC_POSITION,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,5,10,145,15
+    CONTROL         "Slider2",IDC_VOLUME,"msctls_trackbar32",TBS_VERT | TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,157,5,15,34
     PUSHBUTTON      "Details",IDC_DETAILS,210,10,50,14
-    CONTROL         "",IDC_PLAYER_VOLUME_ICON,"Static",SS_BLACKFRAME | NOT 
-                    WS_VISIBLE,181,20,15,13,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_PLAYER_VOLUME_ICON,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,181,20,15,13,WS_EX_TRANSPARENT
     LTEXT           "Static",IDC_TIMEINFO,10,30,135,15
     LTEXT           "Static",IDC_FILENAME,10,50,255,15,SS_NOPREFIX
-    LISTBOX         IDC_PLAYLIST,10,70,255,75,WS_VSCROLL | WS_HSCROLL | 
-                    WS_TABSTOP
+    LISTBOX         IDC_PLAYLIST,10,70,255,75,WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
 END
 
-IDD_SAVEPROFILE DIALOG  0, 0, 186, 60
+IDD_SAVEPROFILE DIALOG 0, 0, 186, 60
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Enter profile name"
 FONT 8, "MS Shell Dlg"
@@ -1354,82 +1064,58 @@ BEGIN
     PUSHBUTTON      "Cancel",IDCANCEL,107,39,50,14
 END
 
-IDD_ENCODERAPEDLLDLG DIALOG  0, 0, 226, 89
+IDD_ENCODERAPEDLLDLG DIALOG 0, 0, 226, 89
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
-    CONTROL         "Mono",IDC_CHANNELSELECTION,"Button",BS_AUTORADIOBUTTON | 
-                    WS_GROUP | WS_TABSTOP,92,7,51,10
-    CONTROL         "Stereo",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,148,7,65,
-                    10
-    COMBOBOX        IDC_APETAGFORMAT,93,26,120,50,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
-    COMBOBOX        IDC_APECOMPRESSIONLEVEL,93,50,120,50,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
-    LTEXT           "Compression level",
-                    IDC_STATIC_ENCAPETAB_COMPRESSIONLEVEL,7,52,83,8,
-                    WS_TABSTOP
-    LTEXT           "Channels",IDC_STATIC_ENCAPETAB_CHANNELS,7,8,73,8,
-                    WS_TABSTOP
-    LTEXT           "Tag Format",IDC_STATIC_ENCAPETAB_TAGFORMAT,7,28,83,8,
-                    WS_TABSTOP
+    CONTROL         "Mono",IDC_CHANNELSELECTION,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,92,7,51,10
+    CONTROL         "Stereo",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,148,7,65,10
+    COMBOBOX        IDC_APETAGFORMAT,93,26,120,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_APECOMPRESSIONLEVEL,93,50,120,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    LTEXT           "Compression level",IDC_STATIC_ENCAPETAB_COMPRESSIONLEVEL,7,52,83,8,WS_TABSTOP
+    LTEXT           "Channels",IDC_STATIC_ENCAPETAB_CHANNELS,7,8,73,8,WS_TABSTOP
+    LTEXT           "Tag Format",IDC_STATIC_ENCAPETAB_TAGFORMAT,7,28,83,8,WS_TABSTOP
 END
 
-IDD_ENCODERFLACDLLDLG DIALOG  0, 0, 296, 121
+IDD_ENCODERFLACDLLDLG DIALOG 0, 0, 296, 121
 STYLE DS_SETFONT | DS_CONTROL | WS_CHILD
 FONT 8, "MS Shell Dlg"
 BEGIN
-    CONTROL         "Stereo",IDC_CHANNELSELECTION,"Button",
-                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,55,7,45,10
-    CONTROL         "Mono",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,107,7,43,
-                    10
-    CONTROL         "On the fly Encoding",IDC_RTENCODING,"Button",
-                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,155,7,115,10
-    LTEXT           "Channels",IDC_STATIC_ENCOGGOPTS_CHANNELS,10,8,40,8,
-                    WS_TABSTOP
-    LTEXT           "Compression level setting",IDC_COMPRESSIONLEVELSETTING,
-                    5,75,130,8,WS_TABSTOP
-    COMBOBOX        IDC_COMPRESSION_LEVEL,160,70,129,62,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    CONTROL         "Stereo",IDC_CHANNELSELECTION,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,55,7,45,10
+    CONTROL         "Mono",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,107,7,43,10
+    CONTROL         "On the fly Encoding",IDC_RTENCODING,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,155,7,115,10
+    LTEXT           "Channels",IDC_STATIC_ENCOGGOPTS_CHANNELS,10,8,40,8,WS_TABSTOP
+    LTEXT           "Compression level setting",IDC_COMPRESSIONLEVELSETTING,5,75,130,8,WS_TABSTOP
+    COMBOBOX        IDC_COMPRESSION_LEVEL,160,70,129,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
 END
 
 IDD_CREATECUESHEET DIALOGEX 0, 0, 336, 205
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
-    WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Dialog"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     PUSHBUTTON      "Close",IDCLOSE,279,184,50,14
-    EDITTEXT        IDC_EDIT1,7,7,322,148,ES_MULTILINE | ES_AUTOVSCROLL | 
-                    ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    EDITTEXT        IDC_EDIT1,7,7,322,148,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
     PUSHBUTTON      "Save",IDC_BUTTON1,99,184,79,14
-    CONTROL         "Include PreGaps",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,7,164,135,10
-    CONTROL         "Include ISRC codes",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,155,164,156,10
+    CONTROL         "Include PreGaps",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,164,135,10
+    CONTROL         "Include ISRC codes",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,155,164,156,10
     PUSHBUTTON      "Copy to clipboard",IDC_COPYTOCLIPBOARD,7,184,79,14
 END
 
 IDD_GETREMOTECDINFO DIALOGEX 0, 0, 313, 258
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
-    WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Accessing freedb"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     PUSHBUTTON      "Cancel",IDCANCEL,242,237,64,14
-    EDITTEXT        IDC_OUTPUT,7,18,299,40,ES_MULTILINE | ES_AUTOVSCROLL | 
-                    ES_READONLY | WS_VSCROLL
+    EDITTEXT        IDC_OUTPUT,7,18,299,40,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
     LTEXT           "Message",IDC_STATIC_CDDBDIALOG_MESSAGE,7,4,268,8
-    COMBOBOX        IDC_CODEPAGESELECTION,132,193,134,89,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_TABSTOP
-    LTEXT           "Code page mapping",IDC_CDDB_CAT_SELECTION_TEXT2,9,196,
-                    120,8
-    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SINGLESEL | 
-                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,70,299,100
+    COMBOBOX        IDC_CODEPAGESELECTION,132,193,134,89,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Code page mapping",IDC_CDDB_CAT_SELECTION_TEXT2,9,196,120,8
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,70,299,100
     PUSHBUTTON      "Next",IDC_CDDB_READ,158,237,65,14
-    CONTROL         "Resubmit entry (recommended when code page is  not set to UTF-8)",
-                    IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,178,
-                    259,10
+    CONTROL         "Resubmit entry (recommended when code page is  not set to UTF-8)",IDC_CHECK1,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,178,259,10
 END
 
 IDD_CDEXMSGBOX DIALOGEX 0, 0, 186, 61
@@ -1440,15 +1126,13 @@ BEGIN
 END
 
 IDD_CONFIGDLG DIALOGEX 0, 0, 350, 207
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
-    WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Dialog"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,228,186,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,293,186,50,14
-    CONTROL         "",IDC_TREE1,"SysTreeView32",TVS_NOSCROLL | WS_BORDER | 
-                    WS_TABSTOP,7,7,83,186
+    CONTROL         "",IDC_TREE1,"SysTreeView32",TVS_NOSCROLL | WS_BORDER | WS_TABSTOP,7,7,83,186
     LTEXT           "Static",IDC_STATIC,91,7,252,177
 END
 
@@ -1457,33 +1141,22 @@ STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Tag Options"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
-    COMBOBOX        IDC_TRACKNUMBERSETTING,100,60,65,60,CBS_DROPDOWNLIST | 
-                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_TRACKNUMBERSETTING,100,60,65,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     EDITTEXT        IDC_ID3COMMENT,100,76,210,14,ES_AUTOHSCROLL
     EDITTEXT        IDC_ID3V2ENCODEDBY,100,93,210,14,ES_AUTOHSCROLL
-    LTEXT           "Tag comment field",IDC_STATIC_GENERAL_COMMENTFIELD,10,
-                    78,85,8
-    LTEXT           "ID3 Tag Version",IDC_STATIC_GENERAL_ID3VERSION,10,43,85,
-                    8
-    LTEXT           "Encoded-by field",IDC_STATIC_GENERAL_ENCODEDBYFIELD,10,
-                    97,85,8
-    LTEXT           "Track Nr Format",IDC_STATIC_GENERAL_TRACKNUMBER,10,63,
-                    55,8
-    CONTROL         "ID3_V1",IDC_ID3V1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
-                    100,42,46,10
-    CONTROL         "ID3_V2.3",IDC_ID3V23,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,154,42,54,10
-    CONTROL         "ID3_V2.4",IDC_ID3V24,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,214,42,65,10
-    EDITTEXT        IDC_TAGOPTSPICTURE,100,150,200,14,ES_AUTOHSCROLL | 
-                    ES_READONLY
-    LTEXT           "Picture Text",IDC_STATIC_TAGOPTIONS_PICTURETEXT,10,177,
-                    85,8
+    LTEXT           "Tag comment field",IDC_STATIC_GENERAL_COMMENTFIELD,10,78,85,8
+    LTEXT           "ID3 Tag Version",IDC_STATIC_GENERAL_ID3VERSION,10,43,85,8
+    LTEXT           "Encoded-by field",IDC_STATIC_GENERAL_ENCODEDBYFIELD,10,97,85,8
+    LTEXT           "Track Nr Format",IDC_STATIC_GENERAL_TRACKNUMBER,10,63,55,8
+    CONTROL         "ID3_V1",IDC_ID3V1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,100,42,46,10
+    CONTROL         "ID3_V2.3",IDC_ID3V23,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,154,42,54,10
+    CONTROL         "ID3_V2.4",IDC_ID3V24,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,214,42,65,10
+    EDITTEXT        IDC_TAGOPTSPICTURE,100,150,200,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Picture Text",IDC_STATIC_TAGOPTIONS_PICTURETEXT,10,177,85,8
     EDITTEXT        IDC_ID3V2ENCODEDBY3,100,173,200,14,ES_AUTOHSCROLL
     LTEXT           "Picture",IDC_STATIC_TAGOPTIONS_Picture,10,153,85,8
     GROUPBOX        "Picture options",IDC_TAGOPTSPICTUREGROUP,5,113,323,87
-    CONTROL         "Add picture",IDC_ADDPICTURE,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,99,131,202,10
+    CONTROL         "Add picture",IDC_ADDPICTURE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,99,131,202,10
 END
 
 
@@ -1493,7 +1166,7 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO 
+GUIDELINES DESIGNINFO
 BEGIN
     IDD_PCOPYDIALOG, DIALOG
     BEGIN
@@ -2365,7 +2038,7 @@ END
 // Menu
 //
 
-IDR_MAINFRAME MENU 
+IDR_MAINFRAME MENU
 BEGIN
     POPUP "&File"
     BEGIN
@@ -2377,19 +2050,15 @@ BEGIN
     POPUP "&Edit"
     BEGIN
         MENUITEM "Select All\tCtrl+A",          ID_EDIT_SELECTALL
-        MENUITEM "&Copy album info to Clipboard", 
-                                                ID_EDIT_COPYTRACKSTOCLIPBOARD
-
+        MENUITEM "&Copy album info to Clipboard", ID_EDIT_COPYTRACKSTOCLIPBOARD
         MENUITEM "&Rename Track\tF2",           ID_EDIT_RENAMETRACK
         POPUP "&Modify Track Name"
         BEGIN
-            MENUITEM "&First character of every word in Caps", 
-                                                    ID_TRACKNAME_MOD_FCEW
+            MENUITEM "&First character of every word in Caps", ID_TRACKNAME_MOD_FCEW
             MENUITEM "First character in &Caps",    ID_TRACKNAME_MOD_FCC
             MENUITEM "All characters &lower case",  ID_TRACKNAME_MOD_AL
             MENUITEM "All characters &upper case",  ID_TRACKNAME_MOD_AU
             MENUITEM "&Swap Artist<->Track",        ID_EDIT_MODIFYTRACKNAME_EXCHANGEARTISTTRACK
-
         END
         MENUITEM SEPARATOR
         MENUITEM "Re&fresh Track List\tF5",     ID_EDIT_REFRESH
@@ -2399,20 +2068,15 @@ BEGIN
     POPUP "&Convert"
     BEGIN
         MENUITEM "Extract CD track(s) to WAV file\tF8", ID_TRACKS2WAV
-        MENUITEM "Extract CD track(s) to a Compressed Audio File\tF9", 
-                                                ID_TRACKS2MP3
+        MENUITEM "Extract CD track(s) to a Compressed Audio File\tF9", ID_TRACKS2MP3
         MENUITEM "Extract a section of the CD\tF10", ID_PTRACKS2MP3
         MENUITEM SEPARATOR
         MENUITEM "Re-encode Compressed Audio File(s)", ID_MPEGTOMPEG
-        MENUITEM "Convert WAV file(s) to Compressed Audio file(s)\tF11", 
-                                                ID_WAV2MP3
-        MENUITEM "Convert Compressed Audio File(s) to WAV file(s)\tF12", 
-                                                ID_MP3TOWAV
+        MENUITEM "Convert WAV file(s) to Compressed Audio file(s)\tF11", ID_WAV2MP3
+        MENUITEM "Convert Compressed Audio File(s) to WAV file(s)\tF12", ID_MP3TOWAV
         MENUITEM SEPARATOR
-        MENUITEM "Add RIFF-WAV(s) header to MP2 or MP3 file(s)", 
-                                                ID_MP3TORIFFWAV
-        MENUITEM "Strip the RIFF-WAV header(s) from MP2 or MP3 file(s)", 
-                                                ID_RIFFWAVTOMP3
+        MENUITEM "Add RIFF-WAV(s) header to MP2 or MP3 file(s)", ID_MP3TORIFFWAV
+        MENUITEM "Strip the RIFF-WAV header(s) from MP2 or MP3 file(s)", ID_RIFFWAVTOMP3
     END
     POPUP "&Tools"
     BEGIN
@@ -2474,7 +2138,7 @@ BEGIN
     END
 END
 
-IDR_RTRACK MENU 
+IDR_RTRACK MENU
 BEGIN
     POPUP "RightButton"
     BEGIN
@@ -2488,7 +2152,7 @@ BEGIN
     END
 END
 
-IDR_PLAYERFRAME MENU 
+IDR_PLAYERFRAME MENU
 BEGIN
     POPUP "&File"
     BEGIN
@@ -2541,12 +2205,24 @@ END
 
 IDR_HTML_CDEXCONFIGDLG  HTML                    "CDexConfigDlg.htm"
 
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_CDPROPPAGE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
 /////////////////////////////////////////////////////////////////////////////
 //
 // String Table
 //
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_BAD_SESSION         "Cannot open an Internet Session.  Please check your internet configuration."
     IDS_APPNAME             "CDex"
@@ -2559,14 +2235,14 @@ BEGIN
     IDS_GETCDDBBUTTON       "Get album information from remote freedb\nGet album information from remote freedb"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDR_MAINFRAME           "CDex Ripper\n\nCDex Ripper\n\n\nCDex.Document\nCDex Document"
     IDS_CDEXVERSION         "CDex Version "
     IDS_NOARTIST            "no artist"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDR_PLAYERFRAME         "CDex Player\n\nCDex Player\n\n\nCDex.Document\nCDex Document"
     IDS_NOFILES_SELECTED    "No files selected"
@@ -2590,13 +2266,13 @@ BEGIN
     IDS_DDX_GFLDR_EDIT_TEXT "..."
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_APP_TITLE       "CDex"
     AFX_IDS_IDLEMESSAGE     "Press F1 for help on the CDex audio CD extractor program"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_INDICATOR_EXT        "EXT"
     ID_INDICATOR_CAPS       "CAP"
@@ -2606,7 +2282,7 @@ BEGIN
     ID_INDICATOR_REC        "REC"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_FILE_NEW             "Create a new document\nNew"
     ID_FILE_OPEN            "Open an existing document\nOpen"
@@ -2619,7 +2295,7 @@ BEGIN
     ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_APP_ABOUT            """Display CDex information, version number, and copyright\nAbout"
     ID_APP_EXIT             "Quit the application\nExit"
@@ -2630,7 +2306,7 @@ BEGIN
     ID_HELP                 "Show help for current task or command\nHelp"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_FILE_MRU_FILE1       "Open this document"
     ID_FILE_MRU_FILE2       "Open this document"
@@ -2650,18 +2326,18 @@ BEGIN
     ID_FILE_MRU_FILE16      "Open this document"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
     ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_EDIT_CLEAR           "Erase the selection\nErase"
     ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
@@ -2675,13 +2351,13 @@ BEGIN
     ID_EDIT_REDO            "Redo the previously undone action\nRedo"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
     ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_SCSIZE          "Resize the window"
     AFX_IDS_SCMOVE          "Move the window"
@@ -2692,25 +2368,25 @@ BEGIN
     AFX_IDS_SCCLOSE         "Quit the application"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     AFX_IDS_SCRESTORE       "Restore the window to normal size"
     AFX_IDS_SCTASKLIST      "Activate Task List"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_ABOUTBOX            "&About cdex..."
     IDS_SAVE_FILE_AS        "Save as..."
     IDS_OPEN_FILE           "Open"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_INDICATOR_CONTROLS   "Indicator Contrl"
     ID_INDICATOR_MISC       "Misc"
@@ -2719,7 +2395,7 @@ BEGIN
     IDS_EJECTBUTTON         "Eject CD"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_DDX_GFLDR_TT_MODIFY "Select Directory"
     IDS_EXTENCFILESELECTION "Encoders (*.exe;*.bat)|*.exe;*.bat|All Files (*.*)|*.*||"
@@ -2740,7 +2416,7 @@ BEGIN
                             "Failed to load the wnaspi32.dll driver!\nUse the ""Native NT SCSI library"" driver option instead?"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_CONFIGURE            "Select to configure CDex\nConfigure"
     ID_TRACKS2WAV           "Extract CD track(s) to WAV file(s)\nExtract CD track(s) to WAV file(s)"
@@ -2752,7 +2428,7 @@ BEGIN
     ID_EJECT                "Eject CD\nEject CD (Shift-F1)"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_SKIPFORWARD          "Fast Forward\nFast Forward"
     ID_SKIPREWIND           "Fast Rewind\nFast Rewind"
@@ -2770,7 +2446,7 @@ BEGIN
     ID_SKIPBACK             "Fast Rewind\nFast Rewind"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_MP3TORIFFWAV         "Adds RIFF-WAV header(s) to MP2 or MP3 file(s)\nAdds RIFF-WAV header(s) to MP2 or MP3 file(s)"
     ID_EDIT_COPYTRACKSTOCLIPBOARD "Copy album information to the clipboard"
@@ -2788,7 +2464,7 @@ BEGIN
     ID_OPTION_CLEARSTATUS   "Clear the ripping status of this CD"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_NOTITLE             "no title"
     IDS_GENRE               "Genre"
@@ -2808,7 +2484,7 @@ BEGIN
     IDS_STATUS              "Status"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_CDEX_VERSION        "CDex Version "
     IDS_WRONG_ARTIST_FIELD  "Artist field contains invalid characters\n Replace invalid characters with spaces"
@@ -2828,7 +2504,7 @@ BEGIN
     IDS_EXTRACT_TRACK_TITLE "Extracting track %d (%d%% completed, file %d/%d)"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_PEAK_VALUE          "Peak Value %4.2f dB = %3d %%"
     IDS_NUM_JITTER_ERRORS   "Jitter (errors: %d)"
@@ -2853,7 +2529,7 @@ BEGIN
     IDS_JITTER_ERROR_MSG    "Jitter errors have occured.  Please see help file to solve jitter problems.\n\n"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_YEAR                "Year"
     IDS_DATATRACK           "DataTrack"
@@ -2877,7 +2553,7 @@ BEGIN
     IDS_CDDB_OK_READONLY    "OK, read only\r\n"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_RIFFWAVTOMP3         "Strip the RIFF-WAV header(s) from MP2 or MP3 file(s)\nStrip the RIFF-WAV header(s) from MP2 or MP3 file(s)"
     ID_TOOLS_RECORDFILES    "Record a WAV or an MP3 from your computer's analog input\nRecord from analog input"
@@ -2894,7 +2570,7 @@ BEGIN
     ID_MPEGTOMPEG           "Re-encode (transcode) Compressed Audio File(s)\nRe-encode (transcode) Compressed Audio File(s)"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_CDDB_NO_MATCH_FOUND "No match found\n"
     IDS_CDDB_OK_RESPONSE    "OK Response\n"
@@ -2917,7 +2593,7 @@ BEGIN
     IDS_CONVERT_BUTTON_TEXT "Convert"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_CONFIGURE_WIN_PLUGINS 
                             "Configures the Winamp Plugins\nConfigures the Winamp Plugins"
@@ -2930,13 +2606,13 @@ BEGIN
     ID_PROFILESELECTION     "Select profile\nSelect profile"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_SAVEPROFILE          "Save current settings to profile\nSave current settings to profile"
     ID_DELETEPROFILE        "Delete profile\nDelete selected profile"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_MODULE_NAME         "Module Name"
     IDS_MODULE_INFO         "Module Info"
@@ -2960,7 +2636,7 @@ BEGIN
     IDS_LOADLIBRARY_FAILED  "Could not load the encoder %s\nMake sure that you start CDex.exe where the DLLs are located\nIf you have created a short-cut, make sure the working directory is set correctly"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_ENCODER_ERROR_INVALIDINPUTSTREAM "Invalid Input Stream"
     IDS_ENCODER_ERROR_COULDNOTOPENFILE "Could not open/create file: %s"
@@ -2982,7 +2658,7 @@ BEGIN
     IDS_CDDB_ACTION_GETREMOTERESPONSE "Getting remote response"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_CDDB_ERROR_UNKNOWNSMTPSERVER 
                             "Unknown SMTP server address.  Please fill out the\nSMTP server address in the CDDB submit options screen."
@@ -3005,7 +2681,7 @@ BEGIN
     IDS_ERROR_COULDNOTOPENFILE "Could not open file %s"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_ERROR_FILES2SMALL2COMPARE "Filesize is too small for a comparison"
     IDS_FILECOMP_SECFILEOFFSET "Second file has an offset of %d bytes"
@@ -3028,7 +2704,7 @@ BEGIN
     IDS_OPEN_FILENAME       "Filename"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_OPEN_DATE           "Date"
     IDS_OPEN_PATH           "Path"
@@ -3045,12 +2721,12 @@ BEGIN
     IDS_OPEN_TYPE           "Type"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     ID_CDDB_WINAMPDB        "Read album data from Winamp CD database\nRead album data from Winamp CD database"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_CHECKFORADDITIONAL_LANGUAGE_FILES 
                             "Check for Additional/updates Language files"
@@ -3062,18 +2738,18 @@ BEGIN
     IDS_CUESHEETFILESELECTION "Cue sheets (*.cue)|*.cue|All Files (*.*)|*.*||"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_CHECKSUM            "CRC"
     IDS_ISRC                "ISRC"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_PREGAP              "Gap"
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_CDDB_ERROR_FAILED_TO_CONNECT 
                             "Failed to make connection, please check network/proxy settings"
@@ -3088,7 +2764,7 @@ BEGIN
                             "When selecting a code page other than UTF-8  is recommended to re-submit the CDDB entry."
 END
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_CDDB_PREVIEW        "Preview"
     IDS_DETECT_GAPS         "Detect Gaps"
@@ -3097,7 +2773,7 @@ BEGIN
     IDS_DETECTGAPFORTRACK   "Detect gap for track %d"
 END
 
-#endif    // English (U.S.) resources
+#endif    // Englisch (USA) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

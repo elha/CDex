@@ -195,7 +195,7 @@ public:
 	int		GetProtocol(int iIndex)	const {return m_vRemoteSites[iIndex].m_nProtocol;}
 	int		GetProtocol()	const {return m_vRemoteSites[m_nActiveSite].m_nProtocol;}
 	
-	WORD	GetNumSites() const {return m_vRemoteSites.size();}
+	WORD	GetNumSites() const {return (WORD)m_vRemoteSites.size();}
 	int		GetActiveSite() const {return m_nActiveSite;}
 	void 	SetActiveSite(int nActiveSite) {m_nActiveSite=nActiveSite;}
 
@@ -600,9 +600,6 @@ public:
 	
     void    SaveCDRomSettings();
     void    LoadCDRomSettings();
-
-    int GetTransportLayer();
-    void SetTransportLayer( int transportLayer );
 
     int GetCDRipDebugLevel() const { 
             int debugLevel = 0;

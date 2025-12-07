@@ -73,15 +73,15 @@
 	
 #elif (defined (WIN32) || defined (_WIN32))
 
-	#undef   HAVE_LRINT_REPLACEMENT
-	#define  HAVE_LRINT_REPLACEMENT 1
+	//#undef   HAVE_LRINT_REPLACEMENT
+	//#define  HAVE_LRINT_REPLACEMENT 1
 	#include	<math.h>
 
 	/*
 	**	Win32 doesn't seem to have these functions. 
 	**	Therefore implement inline versions of these functions here.
 	*/
-	
+	/*
 	__inline long int 
 	lrint (double flt)
 	{	int intgr;
@@ -104,7 +104,7 @@
 			} ;
 			
 		return intgr ;
-	}
+	}*/
 
 #elif (defined (__MWERKS__) && defined (macintosh))
 

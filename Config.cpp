@@ -1329,18 +1329,3 @@ void CConfig::SaveCDRomSettings()
     myIni.SetValue( _T( "CD-ROM" ), _T( "nActive" ), currentSelection );
 }
 
-
-int CConfig::GetTransportLayer()
-{
-    int transportLayer = 0;
-
-    CIni& myIni = GetIni();
-    transportLayer = myIni.GetValue( _T( "CD-ROM" ), _T( "nTransportLayer" ), transportLayer );
-    return transportLayer;
-}
-
-void CConfig::SetTransportLayer( int transportLayer )
-{
-    CIni& myIni = GetIni();
-    myIni.SetValue( _T( "CD-ROM" ), _T( "nTransportLayer" ), transportLayer );
-}

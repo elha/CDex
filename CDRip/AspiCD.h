@@ -57,7 +57,6 @@ private:
 	BYTE			m_SenseData[SENSE_LEN];
 	BYTE			m_btLastError;
 	int				m_nTimeOut;
-	bool			m_bUseNtScsi;
 	bool			m_bAvailable;
 
 public:

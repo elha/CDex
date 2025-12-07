@@ -42,8 +42,6 @@ GETASPI32DLLVERSION		GetASPI32DLLVersion=NULL;
 TRANSLATEASPI32ADDRESS	TranslateASPI32Address;
 */
 
-BOOL bUseNtScsi = FALSE;
-
 
 VOID *Swap (VOID *p, int size)
 {
@@ -108,148 +106,42 @@ CDEX_ERR DeInitAspiDll( )
 
 }
 
-CDEX_ERR InitAspiDll( bool& bUseNtScsi )
+CDEX_ERR InitAspiDll( )
 {
 	CDEX_ERR bReturn = CDEX_OK;
 	TCHAR lpszPathName[ MAX_PATH + 1 ] = {'\0',};
 
-	ENTRY_TRACE( _T( "InitAspiDLL( %d )" ), bUseNtScsi );
+	ENTRY_TRACE( _T( "InitAspiDLL( )" ) );
 
-	if ( FALSE == bUseNtScsi ) 
+	LTRACE( _T( "Try to use the Native NT SCSI libraries" ) );
+
+	// Use native NT SCSI library
+	if ( NtScsiInit() > 0 )
 	{
-		LTRACE( _T( "Try to use the ASPI libraries" ) );
-
-		// try to load DLL ( no path )
-		_tcscpy( lpszPathName, _T( "wnaspi32.dll" ) );
-
-		hAspiLib = LoadLibrary( lpszPathName );
-
-		LTRACE( _T( "Trying to load DLL: \"%s\", results: %d" ), lpszPathName, hAspiLib );
-
-		// check result
-		if ( NULL == hAspiLib )
-		{
-			// try to load DLL from the system directory
-			GetSystemDirectory( lpszPathName, MAX_PATH );
-
-			_tcscat( lpszPathName, _T( "\\wnaspi32.dll" ) );
-			
-			hAspiLib = LoadLibrary( lpszPathName );
-
-			LTRACE( _T( "Trying to load DLL: \"%s\", results: %d" ), lpszPathName, hAspiLib );
-
-			// if failed, try the windows\system directory
-			if ( NULL == hAspiLib )
-			{
-				// try to load DLL from the system directory
-				GetWindowsDirectory( lpszPathName, MAX_PATH );
-
-				_tcscat( lpszPathName, _T( "\\wnaspi32.dll" ) );
-
-				hAspiLib = LoadLibrary( lpszPathName );
-
-				LTRACE( _T( "Trying to load DLL: \"%s\", results: %d" ), lpszPathName, hAspiLib );
-			}
-
-			// try to use the ASPI library installed by Nero
-			if (NULL == hAspiLib)
-			{
-				HKEY	ahead;
-
-				if (RegOpenKey( HKEY_LOCAL_MACHINE, _T( "Software\\Ahead\\Shared" ), &ahead ) == ERROR_SUCCESS)
-				{
-					DWORD	size;
-					DWORD	type;
-
-					RegQueryValueEx( ahead, _T( "NeroAPI" ), 0, &type, 0, &size );
-					RegQueryValueEx( ahead, _T( "NeroAPI" ), 0, &type, (BYTE *) &lpszPathName, &size );
-
-					RegCloseKey( ahead );
-
-					_tcscpy( lpszPathName,  _T( "\\wnaspi32.dll" ) );
-
-					hAspiLib = LoadLibrary( lpszPathName );
-				}
-			}
-		}
-
-		// check ASPI results
-		if ( NULL == hAspiLib )
-		{
-			OSVERSIONINFO	osVersion;
-
-			memset( &osVersion, 0x00, sizeof( osVersion ) );
-
-			osVersion.dwOSVersionInfoSize = sizeof( osVersion );
-
-			GetVersionEx( &osVersion );
-
-			if ( VER_PLATFORM_WIN32_NT == osVersion.dwPlatformId )
-			{
-				LTRACE( _T( "Native SCSI supported, but not selected" ) );
-				bReturn = CDEX_NATIVEEASPISUPPORTEDNOTSELECTED;
-			}
-			else
-			{
-				LTRACE( _T( "Native NOT SCSI supported, platform ID = %d" ), osVersion.dwPlatformId );
-				bReturn = CDEX_FAILEDTOLOADASPIDRIVERS;
-			}
-
-		}
+		LTRACE( _T( "Use of Native NT SCSI libraries supported, return OK" ) );
+		bReturn = CDEX_OK;
 	}
 	else
 	{
-		LTRACE( _T( "Try to use the Native NT SCSI libraries" ) );
-
-		// Use native NT SCSI library
-		if ( NtScsiInit() > 0 )
+		if (NtScsiGetNumAdapters() > 0)
 		{
-			LTRACE( _T( "Use of Native NT SCSI libraries supported, return OK" ) );
-			bReturn = CDEX_OK;
+			LTRACE(_T("Native SCSI supported but no CD ROM Found"));
+
+			bReturn = CDEX_NOCDROMDEVICES;
+
 		}
 		else
 		{
-			LTRACE( _T( "Native NOT SCSI supported" ) );
+			LTRACE(_T("Native SCSI NOT supported"));
 			bReturn = CDEX_NATIVEEASPINOTSUPPORTED;
 		}
 	}
 
 	if ( CDEX_OK == bReturn )
 	{
-		if ( FALSE == bUseNtScsi )
-		{
-			GetASPI32SupportInfo	=(GETASPI32SUPPORTINFO)GetProcAddress(hAspiLib,TEXT_GETASPI32SUPPORTINFO);
-			SendASPI32Command		=(SENDASPI32COMMAND)GetProcAddress(hAspiLib,TEXT_SENDASPI32COMMAND);
-			//	GetASPI32Buffer			=(GETASPI32BUFFER)GetProcAddress(hAspiLib,TEXT_GETASPI32BUFFER);
-			//	FreeASPI32Buffer		=(FREEASPI32BUFFER)GetProcAddress(hAspiLib,TEXT_FREEASPI32BUFFER);
-			//	GetASPI32DLLVersion		=(GETASPI32DLLVERSION)GetProcAddress(hAspiLib,TEXT_GETASPI32DLLVERSION);
-			//	TranslateASPI32Address	=(TRANSLATEASPI32ADDRESS)GetProcAddress(hAspiLib,TEXT_TRANSLATEASPI32ADDRESS);
-		}
-		else
-		{
-			GetASPI32SupportInfo	= NtScsiGetASPI32SupportInfo;
-			SendASPI32Command		= NtScsiSendASPI32Command;
-		}
-
-		if (	GetASPI32SupportInfo	==NULL	|| 
-				SendASPI32Command		==NULL
-	//			GetASPI32Buffer			==NULL	||
-	//			FreeASPI32Buffer		==NULL	
-	//			|| TRUE
-	//			GetASPI32DLLVersion		==NULL	|| 
-	//			TranslateASPI32Address	==NULL
-				)
-		{
-			LTRACE( _T( "InitAspiDLL::Invalid Pointer: GetASPI32SupportInfo=%p, SendASPI32Command=%p"), GetASPI32SupportInfo, SendASPI32Command );
-
-			FreeLibrary( hAspiLib );
-			hAspiLib = NULL;
-
-			GetASPI32SupportInfo = NULL;
-			SendASPI32Command = NULL;
-
-			bReturn = CDEX_FAILEDTOLOADASPIDRIVERS;
-		}
+		GetASPI32SupportInfo	= NtScsiGetASPI32SupportInfo;
+		SendASPI32Command		= NtScsiSendASPI32Command;
+		bReturn = CDEX_OK;
 	}
 
 	EXIT_TRACE( _T( "InitAspiDLL, return value %d" ), bReturn );

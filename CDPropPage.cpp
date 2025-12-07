@@ -55,7 +55,6 @@ CDPropPage::CDPropPage() :
 	m_psp.dwFlags |= PSP_USETITLE;
 
 	//{{AFX_DATA_INIT(CDPropPage)
-	m_bUseNtScsi = FALSE;
 	m_bFirstBlockOnly = FALSE;
 	m_bMultipleRead = FALSE;
 	m_nMultipleReadCount = 0;
@@ -103,7 +102,6 @@ void CDPropPage::GetCDParams()
 	}		
 
 	m_nRetries =	cdParams.nAspiRetries;
-    m_bUseNtScsi = ( TRANSPLAYER_NTSCSI == g_config.GetTransportLayer() );
 	m_bFirstBlockOnly = cdParams.bMultiReadFirstOnly;
 	m_bMultipleRead = cdParams.bEnableMultiRead;
 	m_nMultipleReadCount = cdParams.nMultiReadCount;
@@ -176,7 +174,6 @@ void CDPropPage::DoDataExchange(CDataExchange* pDX)
 	DDX_Text(pDX, IDC_READRETRIES, m_nRetries);
 	DDX_Check(pDX, IDC_EJECTWHENFINISHED, m_bEjectWhenFinished);
 	DDX_Check(pDX, IDC_SELECT_ALL_DEFAULT, m_bSelectAll);
-	DDX_Check(pDX, IDC_USENTSCSI, m_bUseNtScsi);
 	DDX_Check(pDX, IDC_LOCKDURINGREAD, m_bLockDuringRead);
 	DDX_Control(pDX, IDC_RIPPINGMETHOD, m_RippingMethod);
 	DDX_Check(pDX, IDC_USECDTEXT, m_bUseCDText);
@@ -215,7 +212,6 @@ BEGIN_MESSAGE_MAP(CDPropPage, CPropertyPage)
 	ON_CBN_SELCHANGE(IDC_CDROMLIST, OnSelchangeCdromlist)
 	ON_BN_CLICKED(IDC_JITTER, OnJitter)
 	ON_CBN_SELCHANGE(IDC_RIPPINGMETHOD, OnSelchangeRippingmethod)
-	ON_BN_CLICKED(IDC_USENTSCSI, OnUsentscsi)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -279,16 +275,6 @@ BOOL CDPropPage::OnInitDialog()
 
 	// Update the control parameters
 	GetCDParams();
-
-	if ( IsWindowsNTOS() )
-	{
-		m_UseNtScsi.EnableWindow( TRUE );
-	}
-	else
-	{
-		m_bUseNtScsi = FALSE;
-		m_UseNtScsi.EnableWindow( FALSE );
-	}
 
 	EnDisAbleControls();
 
@@ -402,23 +388,3 @@ void CDPropPage::OnJitter()
 	EnDisAbleControls();
 		   
 }
-
-void CDPropPage::OnUsentscsi() 
-{
-	CWaitCursor waitCursor;
-
-	UpdateData( TRUE );
-
-	// save settings
-    g_config.SetTransportLayer( m_bUseNtScsi );
-	g_config.SaveCDRomSettings();
-
-	((CCDexApp*)AfxGetApp())->LoadCDRipLibrary();
-
-    FillCDRiveSelection();
-
-    m_bUseNtScsi = g_config.GetTransportLayer();
-
-	UpdateData( FALSE );
-}
-

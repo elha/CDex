@@ -29,9 +29,9 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Albert L Faber\0"
             VALUE "FileDescription", "CDex CD-Ripper\0"
-            VALUE "FileVersion", "1.71\0"
+            VALUE "FileVersion", "1.72\0"
             VALUE "InternalName", "CDex\0"
-            VALUE "LegalCopyright", "Copyright (C) 1998-2006\0"
+            VALUE "LegalCopyright", "Copyright (C) 1998-2025\0"
             VALUE "OriginalFilename", "CDex.EXE\0"
             VALUE "ProductName", "CDex Application\0"
             VALUE "ProductVersion", CDEX_VERSION_STRING

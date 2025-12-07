@@ -154,8 +154,6 @@ DWORD CToc::GetSize(int nTrack)
 CDRomSettings::CDRomSettings()
 {
 	memset( m_lpszIniFname, 0x00, sizeof( m_lpszIniFname ) );
-    m_nTransportLayer = TRANSPLAYER_ASPI;
-    // m_nTransportLayer = TRANSPLAYER_NTSCSI;
 	m_nActive = 0;
 }
 
@@ -324,20 +322,6 @@ void CDRomSettings::UpdateDriveSettings()
 		default:
 			assert( FALSE );
 	}
-}
-
-
-
-
-
-int CDRomSettings::GetTransportLayer()
-{
-	return m_nTransportLayer;
-}
-
-void CDRomSettings::SetTransportLayer( int nValue )
-{
-	m_nTransportLayer = nValue;
 }
 
 

@@ -60,7 +60,7 @@ extern "C" {
 #define     CDEX_FAILEDTOLOADASPIDRIVERS        0x00000009
 #define     CDEX_NATIVEEASPINOTSUPPORTED        0x0000000A
 #define     CDEX_FAILEDTOGETASPISTATUS          0x0000000B
-#define		CDEX_NATIVEEASPISUPPORTEDNOTSELECTED 0x0000000C
+//#define		CDEX_NATIVEEASPISUPPORTEDNOTSELECTED 0x0000000C
 
 
 #define HASTAT_OK					0x00	 // Host adapter did not detect an error.
@@ -257,9 +257,7 @@ struct TOCENTRY
 
 // Call init before anything else
 // TransportLayer
-// 0 = ASPI drivers
-// 1 = Native NT scsi drivers
-DLLEXPORT CDEX_ERR CCONV CR_Init( int nTransportLayer, int debugLevel );
+DLLEXPORT CDEX_ERR CCONV CR_Init( int debugLevel );
 
 // Call DeIni when ripping library is no longer needed
 DLLEXPORT CDEX_ERR CCONV CR_DeInit();

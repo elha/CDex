@@ -71,7 +71,6 @@ private:
 	vector<CDROMPARAMS>         m_CDParams;
 	vector<CToc>				m_Toc;
 	TCHAR						m_lpszIniFname[ MAX_PATH + 1 ];
-	INT							m_nTransportLayer;
 public:
 	CToc&	GetToc() {return m_Toc[m_nActive];}
 

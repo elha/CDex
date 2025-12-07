@@ -73,7 +73,7 @@ DLLEXPORT CDEX_ERR CCONV CR_DeInit( )
 }
 
 
-DLLEXPORT CDEX_ERR CCONV CR_Init( int transportLayer, int debugLevel )
+DLLEXPORT CDEX_ERR CCONV CR_Init( int debugLevel )
 {
 	CDEX_ERR bReturn = CDEX_OK;
 
@@ -82,15 +82,14 @@ DLLEXPORT CDEX_ERR CCONV CR_Init( int transportLayer, int debugLevel )
 	
 	SetDebugLevel( debugLevel );
 
-	ENTRY_TRACE( _T( "CR_Init, ini file name = transportLayer =%d, debugLevel = %d " ) , transportLayer, debugLevel );
+	ENTRY_TRACE( _T( "CR_Init debugLevel = %d " ) , debugLevel );
 
 	CR_DeInit();
 
 	assert( NULL == pExtract );
 
 	// create new extract model
-	pExtract = new CCDExtract;
-    pExtract->SetTransportLayer( transportLayer );
+	pExtract = new CCDExtract;    
 
 	if ( pExtract == NULL )
 	{

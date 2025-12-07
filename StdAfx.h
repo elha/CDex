@@ -26,6 +26,8 @@
 #include "AfxTempl.h"
 #include "AFXPRIV.H"
 
+#include "afxres.h"
+
 #include "CDexUserMsg.h"
 #include "Logging/Logging.h"
 

@@ -59,8 +59,6 @@ CAspiCD::CAspiCD()
 	// Clear last error value
 	m_btLastError = SS_COMP;
 
-	m_bUseNtScsi = FALSE;
-
 	m_bAvailable = FALSE;
 
 	EXIT_TRACE( _T( "CAspiCD::CAspiCD()" ) );
@@ -2032,9 +2030,7 @@ void CAspiCD::LogSenseData()
 
 CDEX_ERR CAspiCD::Init()
 {
-    m_bUseNtScsi = ( TRANSPLAYER_NTSCSI == GetTransportLayer() );
-
-	CDEX_ERR bReturn = InitAspiDll( m_bUseNtScsi );
+	CDEX_ERR bReturn = InitAspiDll();
 
 
 	// Load the ASPI dll;
