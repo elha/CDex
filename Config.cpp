@@ -969,16 +969,7 @@ void CRemoteSites::AddDefaultSites()
 	// This site (both CDDB protocl as well as HTTP protocol are ALWAYS available)
 
 	// The http protocol site
-	AddSite( _T("freedb.freedb.org" ), _T( "freedb, Random freedb server" ), _T( "/~cddb/cddb.cgi" ),80,OPTIONS_CDDB_USEHTTP );
-
-	// The cddp protocol site
-	AddSite( _T("freedb.freedb.org" ), _T( "freedb, freedb, Random freedb server" ), _T( "-" ),888,OPTIONS_CDDB_USETCPIP );
-
-	// The http protocol site
-	// AddSite( _T("cddb.cddb.com" ), _T( "Carmel, IN USA" ), _T( "/~cddb/cddb.cgi" ),80,OPTIONS_CDDB_USEHTTP );
-
-	// The cddp protocol site
-	// AddSite( _T("cddb.cddb.com" ), _T( "Carmel, IN USA" ), _T( "-" ),888,OPTIONS_CDDB_USETCPIP );
+	AddSite( _T("gnudb.gnudb.org" ), _T( "gnudb.gnudb.org"), _T( "/~cddb/cddb.cgi" ),80,OPTIONS_CDDB_USEHTTP );
 }
 
 
