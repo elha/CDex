@@ -34,6 +34,7 @@
 // static int g_nReportMissing = QueryModuleDebugLevel( _T( "ReportMissingLangIDs" ) );
 static int g_nReportMissing = TRUE;
 // QueryModuleDebugLevel( _T( "ReportMissingLangIDs" ) );
+static TCHAR missingTxtPath[_MAX_PATH + 1];
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
@@ -52,7 +53,12 @@ CLanguage::CLanguage()
 	m_dwCodePageID			= 1252;		// STANDARD CODE PAGE ANSI INTERNATIONAL
 	m_dwSubLangID			= SUBLANG_DEFAULT;
 	m_dwLangID				= LANG_ENGLISH;
+
+	memset(missingTxtPath, 0, _MAX_PATH + 1);
+	GetTempPath(_MAX_PATH, missingTxtPath);
+	_tcsncat(missingTxtPath, _T("missing.txt"), _MAX_PATH);
 }
+
 
 CLanguage::~CLanguage()
 {
@@ -84,7 +90,7 @@ void CLanguage::ReportMissingID( int nID, const CUString& strEnglish, int nType 
 
         EncodeTab( strWrite );
 
-		if ( cFile.Open(	_T( "c:\\temp\\missing.txt" ),
+		if ( cFile.Open(missingTxtPath,
 							CFile::modeReadWrite | CFile::modeNoTruncate | CFile::modeCreate ) )
 		{
             while ( cFile.ReadString( strRead ) )
@@ -136,7 +142,7 @@ void CLanguage::ReportChangedID( int nID, const CUString& strResource, const CUS
 
         EncodeTab( strWrite );
 
-		if ( cFile.Open(	_T( "c:\\temp\\missing.txt" ),
+		if ( cFile.Open(	missingTxtPath,
 							CFile::modeReadWrite | CFile::modeNoTruncate | CFile::modeCreate ) )
 		{
             while ( cFile.ReadString( strRead ) )
